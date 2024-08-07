@@ -1,0 +1,1 @@
+alpha+=fade_speed;

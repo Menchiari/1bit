@@ -1,0 +1,1 @@
+if activate==true {instance_create(obj_death);}

@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shd_1bit_blood",
+  "name":"shd_1bit_blood",
+  "parent":{
+    "name":"Shaders",
+    "path":"folders/Shaders.yy",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

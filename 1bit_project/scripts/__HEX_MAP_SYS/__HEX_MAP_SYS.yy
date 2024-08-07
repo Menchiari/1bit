@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__HEX_MAP_SYS",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__HEX_MAP_SYS",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,1 @@
+draw_sprite_ext(sprite_index,image_index,x,y,scale*dir*scale_variation,scale*scale_variation2,rot,color,alpha);

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_sm_collide_hit",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_sm_collide_hit",
+  "parent":{
+    "name":"state_machine",
+    "path":"folders/Scripts/state_machine.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

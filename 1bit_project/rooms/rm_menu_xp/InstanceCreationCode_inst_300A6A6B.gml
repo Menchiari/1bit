@@ -1,0 +1,1 @@
+start_room=rm_menu;
