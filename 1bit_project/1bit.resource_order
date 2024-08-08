@@ -492,6 +492,7 @@
     {"name":"spr_patrol_node","order":9,"path":"sprites/spr_patrol_node/spr_patrol_node.yy",},
     {"name":"spr_shadow","order":5,"path":"sprites/spr_shadow/spr_shadow.yy",},
     {"name":"spr_tileset","order":13,"path":"sprites/spr_tileset/spr_tileset.yy",},
+    {"name":"spr_ui_frames","order":14,"path":"sprites/spr_ui_frames/spr_ui_frames.yy",},
     {"name":"spr_ui_mainmenu","order":7,"path":"sprites/spr_ui_mainmenu/spr_ui_mainmenu.yy",},
     {"name":"spr_ui_menu_button_char","order":6,"path":"sprites/spr_ui_menu_button_char/spr_ui_menu_button_char.yy",},
     {"name":"spr_ui_menu_char","order":5,"path":"sprites/spr_ui_menu_char/spr_ui_menu_char.yy",},
@@ -513,6 +514,8 @@
     {"name":"spr_ui_weapons_sword","order":10,"path":"sprites/spr_ui_weapons_sword/spr_ui_weapons_sword.yy",},
     {"name":"spr_ui_weapons","order":6,"path":"sprites/spr_ui_weapons/spr_ui_weapons.yy",},
     {"name":"spr_usethis","order":3,"path":"sprites/spr_usethis/spr_usethis.yy",},
+    {"name":"TileSet3","order":35,"path":"tilesets/TileSet3/TileSet3.yy",},
+    {"name":"ts_02","order":2,"path":"tilesets/ts_02/ts_02.yy",},
     {"name":"ts_reset","order":1,"path":"tilesets/ts_reset/ts_reset.yy",},
   ],
 }
