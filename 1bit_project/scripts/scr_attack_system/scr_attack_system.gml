@@ -65,7 +65,7 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 						if instance_exists(obj_hero) {if enemy!=obj_hero.id {damage_value._color=c_red;}}
 						if instance_exists(obj_ally) {if enemy!=obj_ally.id {damage_value._color=c_red;}}
 												
-						show_debug_message(string(object_get_name(enemy))+" has blocked an attack from "+string(object_get_name(object_index)));						
+						//show_debug_message(string(object_get_name(enemy))+" has blocked an attack from "+string(object_get_name(object_index)));						
 					}
 					
 	//if not blocking					
