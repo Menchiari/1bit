@@ -35,12 +35,16 @@ trigger_spawn_b=sit_getup_b;
 trigger_spawn=false;
 trigger_distance=40;
 
+max_sentences=5;
 speech_text="";
 speech_text_1="HOLD AND SWIPE\nTO SMASH\nTHAT DOOR";
 speech_text_2="SHORT HOLD\nWILL BLOCK\nATTACKS";
 speech_text_3="LONG HOLD\nWILL CHARGE\nYOUR ATTACK";
 speech_text_4="ONCE YOU'RE OUT\nYOU'RE ON\nYOUR OWN";
 speech_text_5="";
+speech_text_6="";
+speech_text_7="";
+speech_text_8="";
 speech_distance=60;
 
 //custom
