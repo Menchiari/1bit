@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_ui_weapons_hands",
   "bboxMode":0,
-  "bbox_bottom":9,
+  "bbox_bottom":10,
   "bbox_left":5,
   "bbox_right":11,
   "bbox_top":6,
