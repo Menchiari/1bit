@@ -1,64 +1,64 @@
 #,object_name,name,hp,str,res,spd,chr,weapon,armor,helm,theme,pts,man,,tot_str mn,tot_str_mx,total res,hero attack,hits to kill enemy,hero hp loss,hits to kill hero
-0,obj_hero,main hero,1,0.75,1.5,1,0,broken sword,rusty chainmail,no headwear,00_null,6,1,,1.50,3.00,4.38,-,,-,
-1,obj_character,dummy,1,1,1,1,0,bare hands,naked,no headwear,00_null,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-2,obj_neutral,default,1,1,1,1,1,bare hands,naked,no headwear,00_null,1,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-3,obj_enemy_sleeping,prison guard,0.33,0.33,0.33,1,0,broken sword,rusty chainmail,copper helm,01_camp,1,3,,0.66,1.32,0.98,1.5~3.1,0~0,0.2~0.3,3~7
-4,obj_enemy_patrol,coutryard guard,1,1,1,1,0,broken sword,knight's armor,rusty helm,01_camp,11,3,,2.00,4.00,8.32,0.2~0.4,3~6,0.5~0.9,1~2
-5,obj_neutral,slave,0.2,1,1,1,0,sharp stick,torn clothes,no headwear,01_camp,2,1,,1.00,2.00,1.26,1.2~2.4,0~0,0.2~0.5,2~4
-6,obj_enemy_guard,guard,1,0.5,1,1,0,broken sword,guard's uniform,guard helm,01_camp,6,2,,1.00,2.00,5.28,0.3~0.6,2~4,0.2~0.5,2~4
-7,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_camp,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-8,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_camp,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-9,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_camp,2,4,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-10,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_camp,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-11,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_camp,2,2,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-12,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_camp,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-13,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_camp,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-14,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_camp,2,2,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-15,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,02_plains,2,2,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-16,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,02_plains,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-17,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,02_plains,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-18,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,02_plains,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-19,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,03_woods,2,2,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-20,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,03_woods,2,2,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-21,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,04_castle_ruins,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-22,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,04_castle_ruins,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-23,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,05_castle_fortress,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-24,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,05_castle_fortress,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-25,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,05_castle_fortress,2,4,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-26,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,06_castle_dungeon,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-27,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,06_castle_dungeon,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-28,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,06_castle_dungeon,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-29,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,07_forest,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-30,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,07_forest,2,2,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-31,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,08_evil_village,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-32,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,10_tundra,2,5,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-33,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,10_tundra,2,3,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-34,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,11_snow_camps,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-35,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,11_snow_camps,2,2,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-36,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,11_snow_camps,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-37,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,12_mountains,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-38,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,12_mountains,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-39,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,12_mountains,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-40,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,14_metal_fort,2,30,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-41,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,15_desert,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-42,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,15_desert,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-43,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,15_desert,2,3,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-44,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,16_city_camps,2,3,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-45,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,17_city_rural,2,4,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-46,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,18_city_downtown,2,30,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-47,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,21_hangar,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-48,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,18_city_downtown,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-49,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_directions,2,3,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-50,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_directions,2,4,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-51,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_directions,2,2,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-52,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_directions,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-53,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_directions,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-54,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_directions,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-55,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_villages,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-56,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_villages,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-57,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_villages,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-58,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_villages,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-59,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_villages,2,2,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-60,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_villages,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-61,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_villages,2,3,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
-62,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_villages,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.1~0.2,4~9
+0,obj_hero,main hero,1,0.75,1,1,0,broken sword,rusty chainmail,no headwear,00_null,5,1,,1.50,3.00,2.92,-,,-,
+1,obj_character,dummy,1,1,1,1,0,bare hands,naked,no headwear,00_null,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+2,obj_neutral,default,1,1,1,1,1,bare hands,naked,no headwear,00_null,1,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+3,obj_enemy_sleeping,prison guard,0.33,0.33,0.33,1,0,broken sword,rusty chainmail,copper helm,01_camp,1,3,,0.66,1.32,0.98,1.5~3.1,0~0,0.2~0.5,2~4
+4,obj_enemy_patrol,coutryard guard,1,1,1,1,0,broken sword,knight's armor,rusty helm,01_camp,11,3,,2.00,4.00,8.32,0.2~0.4,3~6,0.7~1.4,1~1
+5,obj_neutral,slave,0.2,1,1,1,0,sharp stick,torn clothes,no headwear,01_camp,2,1,,1.00,2.00,1.26,1.2~2.4,0~0,0.3~0.7,1~3
+6,obj_enemy_guard,guard,1,0.5,1,1,0,broken sword,guard's uniform,guard helm,01_camp,6,2,,1.00,2.00,5.28,0.3~0.6,2~4,0.3~0.7,1~3
+7,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_camp,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+8,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_camp,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+9,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_camp,2,4,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+10,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_camp,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+11,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_camp,2,2,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+12,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_camp,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+13,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_camp,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+14,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_camp,2,2,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+15,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,02_plains,2,2,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+16,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,02_plains,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+17,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,02_plains,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+18,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,02_plains,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+19,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,03_woods,2,2,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+20,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,03_woods,2,2,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+21,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,04_castle_ruins,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+22,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,04_castle_ruins,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+23,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,05_castle_fortress,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+24,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,05_castle_fortress,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+25,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,05_castle_fortress,2,4,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+26,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,06_castle_dungeon,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+27,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,06_castle_dungeon,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+28,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,06_castle_dungeon,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+29,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,07_forest,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+30,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,07_forest,2,2,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+31,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,08_evil_village,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+32,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,10_tundra,2,5,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+33,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,10_tundra,2,3,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+34,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,11_snow_camps,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+35,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,11_snow_camps,2,2,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+36,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,11_snow_camps,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+37,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,12_mountains,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+38,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,12_mountains,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+39,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,12_mountains,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+40,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,14_metal_fort,2,30,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+41,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,15_desert,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+42,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,15_desert,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+43,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,15_desert,2,3,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+44,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,16_city_camps,2,3,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+45,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,17_city_rural,2,4,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+46,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,18_city_downtown,2,30,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+47,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,21_hangar,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+48,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,18_city_downtown,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+49,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_directions,2,3,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+50,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_directions,2,4,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+51,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_directions,2,2,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+52,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_directions,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+53,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_directions,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+54,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_directions,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+55,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_villages,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+56,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_villages,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+57,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_villages,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+58,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_villages,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+59,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_villages,2,2,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+60,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_villages,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+61,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_villages,2,3,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
+62,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_villages,2,1,,0.50,1.00,1.00,1.5~3,0~1,0.2~0.3,3~6
