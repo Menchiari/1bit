@@ -273,6 +273,7 @@
     {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
     {"id":{"name":"rm_test2b","path":"rooms/rm_test2b/rm_test2b.yy",},},
     {"id":{"name":"rm_world","path":"rooms/rm_world/rm_world.yy",},},
+    {"id":{"name":"rm_world","path":"rooms/rm_world/rm_world.yy",},},
     {"id":{"name":"__HEX_MAP_SYS","path":"scripts/__HEX_MAP_SYS/__HEX_MAP_SYS.yy",},},
     {"id":{"name":"csv_npc_import","path":"scripts/csv_npc_import/csv_npc_import.yy",},},
     {"id":{"name":"draw_sprite_shadow","path":"scripts/draw_sprite_shadow/draw_sprite_shadow.yy",},},
@@ -707,6 +708,7 @@
     {"children":[
         {"roomId":{"name":"rm_map","path":"rooms/rm_map/rm_map.yy",},},
       ],"groupName":"PROC",},
+    {"roomId":{"name":"rm_world","path":"rooms/rm_world/rm_world.yy",},},
   ],
   "templateType":null,
   "TextureGroups":[
