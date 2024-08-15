@@ -2,5 +2,6 @@
   "FolderOrderSettings":[],
   "ResourceOrderSettings":[
     {"name":"obj_ui_shop_rpg","order":1,"path":"objects/obj_ui_shop_rpg/obj_ui_shop_rpg.yy",},
+    {"name":"spr_helm_headband","order":1,"path":"sprites/spr_helm_headband/spr_helm_headband.yy",},
   ],
 }

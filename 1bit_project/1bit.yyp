@@ -576,6 +576,7 @@
     {"id":{"name":"spr_helm_god","path":"sprites/spr_helm_god/spr_helm_god.yy",},},
     {"id":{"name":"spr_helm_guard","path":"sprites/spr_helm_guard/spr_helm_guard.yy",},},
     {"id":{"name":"spr_helm_hat","path":"sprites/spr_helm_hat/spr_helm_hat.yy",},},
+    {"id":{"name":"spr_helm_headband","path":"sprites/spr_helm_headband/spr_helm_headband.yy",},},
     {"id":{"name":"spr_helm_hood_assassin","path":"sprites/spr_helm_hood_assassin/spr_helm_hood_assassin.yy",},},
     {"id":{"name":"spr_helm_hood_old","path":"sprites/spr_helm_hood_old/spr_helm_hood_old.yy",},},
     {"id":{"name":"spr_helm_hood","path":"sprites/spr_helm_hood/spr_helm_hood.yy",},},
