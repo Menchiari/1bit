@@ -33,7 +33,7 @@ function scr_sm_death(){
 			equip_armor(assigned_armor);
 			equip_helm(assigned_helm);
 			name=assigned_name;
-			given_name=choose("corpse","corpse","corpse","corpse","corpse","corpse","cadaver","body","body","body","body","body","body","body","corpse","corpse","corpse","corpse","corpse","corpse","cadaver","body","body","body","body","body","body","body","arsehole","idiot","fool","body","scum","turd");
+			given_name=choose(name, name, name, name, name, name, name, name,"corpse","corpse","corpse","corpse","cadaver","cadaver","body","body","body","body","body","body","fool","body");
 			var sense=choose("eye","ear","eye","ear","touch","nose","tongue","other","other");
 			var part1="";
 			var part2="";
@@ -135,7 +135,8 @@ function scr_sm_death(){
 				break;
 			}
 			var part2=choose(".","...",". It's not a pretty sight.","... not much left of it.",". Makes me uncomfortable.","!",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".","","","");
-			description="this "+given_name+part1//+part2;
+			var description_chance=irandom_range(0,100);
+			if description_chance>90{description="this "+given_name+part1/*+part2;*/} else {description="dead "+name};
 		}
 	}
 	

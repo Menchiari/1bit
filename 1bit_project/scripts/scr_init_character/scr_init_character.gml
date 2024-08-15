@@ -17,6 +17,7 @@ function scr_init_character(){
 	dialogue_positive="";
 	dialogue_neutral="";
 	dialogue_negative="";
+	death_description="";
 	speech_text=choose(dialogue_positive,dialogue_neutral,dialogue_negative)//"";
 	speech_visible=false;
 	speech_verbose=false;//extended speech especially in AI states

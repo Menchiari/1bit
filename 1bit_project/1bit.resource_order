@@ -1,4 +1,6 @@
 {
   "FolderOrderSettings":[],
-  "ResourceOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"obj_ui_shop_rpg","order":1,"path":"objects/obj_ui_shop_rpg/obj_ui_shop_rpg.yy",},
+  ],
 }
