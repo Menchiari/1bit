@@ -163,7 +163,7 @@ function spawn_npc_test(_x, _y, _rnd_npc,_npc_list) constructor{
 	var _npc = _npc_list[_rnd_npc]
 	
 	var npc_obj = _npc.obj_name;
-	if npc_obj = -1 {npc_obj = obj_enemy; show_debug_message("Error Spawning " + string(_npc.name)+", object does not exist. Base enemy spawned instead.");}
+	if npc_obj = -1 {npc_obj = this_npc; show_debug_message("Error Spawning " + string(_npc.name)+", object does not exist. Base enemy spawned instead.");}
 	
 	var this_npc = instance_create_depth(_x,_y,-y,npc_obj);
 	

@@ -11,8 +11,9 @@ idle_b=idle_zombieb;
 idle_speed=random_range(.05,.2)
 
 //customize ai
-control=controls.null;
-ai_state=ai_states.null;
+//control=controls.null;
+//ai_state=ai_states.null;
+ai_type=ai_types.ai_zombie;
 ai_timer_attack1=50;
 ai_timer_attack2=50;
 ai_responsiveness=1;

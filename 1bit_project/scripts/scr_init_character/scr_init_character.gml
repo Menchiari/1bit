@@ -121,7 +121,7 @@ function scr_init_character(){
 	dest_y=y;
 	click_x=x;
 	click_y=y;
-	run_distance_enemy=50;//range to check for always-run if enemy is around
+	run_distance_enemy=70;//range to check for always-run if enemy is around
 	run_distance_min=run_distance_enemy-1//28;//distance before character runs instead of walking (uses same as enemy finder)
 	run_distance=run_distance_min;
 	swipe_threshold=10;
