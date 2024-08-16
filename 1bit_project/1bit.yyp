@@ -90,6 +90,7 @@
     {"id":{"name":"fnt_dialogue","path":"fonts/fnt_dialogue/fnt_dialogue.yy",},},
     {"id":{"name":"fnt_shop","path":"fonts/fnt_shop/fnt_shop.yy",},},
     {"id":{"name":"obj_ally_ai","path":"objects/obj_ally_ai/obj_ally_ai.yy",},},
+    {"id":{"name":"obj_ally_end_var","path":"objects/obj_ally_end_var/obj_ally_end_var.yy",},},
     {"id":{"name":"obj_ally_farmer","path":"objects/obj_ally_farmer/obj_ally_farmer.yy",},},
     {"id":{"name":"obj_ally_guard","path":"objects/obj_ally_guard/obj_ally_guard.yy",},},
     {"id":{"name":"obj_ally_kid","path":"objects/obj_ally_kid/obj_ally_kid.yy",},},
