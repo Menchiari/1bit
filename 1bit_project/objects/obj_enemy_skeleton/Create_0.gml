@@ -26,7 +26,7 @@ trigger_spawn_idle_b=wakeup_ground_a;
 trigger_spawn_a=wakeup_ground_a;
 trigger_spawn_b=wakeup_ground_b;
 trigger_spawn=false;
-trigger_distance=50;
+trigger_distance=30;
 
 trigger=false;
 

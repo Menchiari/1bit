@@ -3,6 +3,7 @@
   "%Name":"obj_ally_end_var",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_ally_end_var",
@@ -12,8 +13,8 @@
     "path":"folders/Objects/Characters/RPG.yy",
   },
   "parentObjectId":{
-    "name":"obj_ally_start_ally",
-    "path":"objects/obj_ally_start_ally/obj_ally_start_ally.yy",
+    "name":"obj_ally_start_neutral",
+    "path":"objects/obj_ally_start_neutral/obj_ally_start_neutral.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -39,6 +40,8 @@
     {"$GMObjectProperty":"v1","%Name":"sp7","filters":[],"listItems":[],"multiselect":false,"name":"sp7","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"\"","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"sp8","filters":[],"listItems":[],"multiselect":false,"name":"sp8","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"\"","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"rng6","filters":[],"listItems":[],"multiselect":false,"name":"rng6","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"60","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"spawn_death_x","filters":[],"listItems":[],"multiselect":false,"name":"spawn_death_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"960","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"spawn_death_y","filters":[],"listItems":[],"multiselect":false,"name":"spawn_death_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1550","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
