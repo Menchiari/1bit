@@ -15,10 +15,13 @@ if instance_exists(obj_hero)
 		}
 		instance_destroy(destroy);
 		
-		ini_open("save.sav");
-		open=ini_write_real("DEBUG","DOOR"+string(id),1);
-		ini_close();
-		
+	if (file_exists("save.sav"))
+	{
+	    ini_open("save.sav");
+	    ini_write_real("DEBUG", "DOOR" + string(id), 1);
+	    ini_close();
+	}
+
 		instance_destroy();
 	}
 }

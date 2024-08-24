@@ -15,7 +15,7 @@ idle_speed=random_range(.05,.2)
 
 //customize ai
 ai_type=ai_types.ai_zombie;
-ai_timer_attack1=50;
+ai_timer_attack1=20;
 ai_timer_attack2=50;
 ai_responsiveness=1;
 
@@ -26,7 +26,7 @@ trigger_spawn_idle_b=wakeup_ground_a;
 trigger_spawn_a=wakeup_ground_a;
 trigger_spawn_b=wakeup_ground_b;
 trigger_spawn=false;
-trigger_distance=50;
+trigger_distance=30;
 
 trigger=false;
 

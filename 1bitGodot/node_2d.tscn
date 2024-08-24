@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://beasp4hm1mw4f"]
+
+[ext_resource type="Texture2D" uid="uid://do28otag4hi6e" path="res://spr_bg_largebackgrounds.png" id="1_ylhr3"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="SprBgLargebackgrounds" type="Sprite2D" parent="."]
+texture = ExtResource("1_ylhr3")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 320, 240)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+texture_filter = 1
+anchor_mode = 0

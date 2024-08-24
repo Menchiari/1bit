@@ -39,5 +39,5 @@
     "path":"sprites/spr_collider_tile_centered/spr_collider_tile_centered.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

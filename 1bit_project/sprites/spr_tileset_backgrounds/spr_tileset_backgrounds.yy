@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_tileset_backgrounds",
   "bboxMode":0,
-  "bbox_bottom":641,
+  "bbox_bottom":959,
   "bbox_left":0,
   "bbox_right":898,
   "bbox_top":0,
@@ -19,6 +19,7 @@
   "height":960,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"24c437f1-b4e3-4f32-8be1-70fcd606dd76","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"24c437f1-b4e3-4f32-8be1-70fcd606dd76","opacity":60.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"f0ca9e89-8aa0-4bfc-8d20-05783d59528e","blendMode":0,"displayName":"default","isLocked":false,"name":"f0ca9e89-8aa0-4bfc-8d20-05783d59528e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_tileset_backgrounds",

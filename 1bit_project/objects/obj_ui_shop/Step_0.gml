@@ -132,3 +132,6 @@ if active==1
 		y=yoriginal;
 	}
 }
+
+//destroys the shop if there is nothing there
+if weapon.index==0 && armor.index==0 && helm.index==0 {instance_destroy();}

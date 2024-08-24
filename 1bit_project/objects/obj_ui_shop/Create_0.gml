@@ -1,8 +1,8 @@
 scr_init_character();
 
-equip_weapon(global.weapons[irandom_range(0,29)]);//15
-equip_armor(global.armors[irandom_range(0,31)]);
-equip_helm(global.helms[irandom_range(0,32)]);
+equip_weapon(global.weapons[irandom_range(1,63)]);
+equip_armor(global.armors[irandom_range(0,42)]);
+equip_helm(global.helms[irandom_range(0,35)]);
 
 chosen_column=3;
 button_pressed=0;
@@ -62,6 +62,6 @@ cx2=x-xoff+109;
 cy2=y-yoff+68;
 
 stats=false;
+shop=false;
 
 if collision_point(x,y,obj_neutral_death,true,true) {instance_destroy();}
-//alarm[0]=2;

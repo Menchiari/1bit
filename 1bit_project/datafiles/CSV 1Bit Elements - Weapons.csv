@@ -1,19 +1,19 @@
 99,name,weapon_animset,price,weight,atk_dmg_light,atk_dmg_strong,atk_dmg_variation,atk_spd,bullets,description eng,strength,avg price,count,incomplete
 0,bare hands,weapons.null,0,0,0.5,0.75,0.25,1.1,0,no weapon,0.5~1,,32,
-1,cigarette pack,weapons.hands,100,0.1,0.5,1,0.25,1.2,0,An old pack of cigarettes. They reek of moist tobacco and oil,0.5~1.25,$13,4,
-2,leather strips,weapons.hands,5,0,0.5,1,0,1.1,0,sturdy leather strips that can be wrapped around one's knuckles,0.5~1,$11,3,
+1,cigarette pack,weapons.hands,100,0.1,0.5,1,0.25,1.2,0,An old pack of cigarettes reeks of moist tobacco and oil,0.5~1.25,$13,4,
+2,leather strips,weapons.hands,5,0,0.5,1,0,1.1,0,sturdy leather strips can be wrapped around knuckles,0.5~1,$11,3,
 3,metal ring,weapons.hands,15,0,0.6,1.25,0.5,1,0,an old metal ring with sharp and pointy edges,0.6~1.75,$19,3,
 4,leather gloves,weapons.hands,20,0.1,1,1.3,0,1,0,an elegant type of leather gloves,1~1.3,$15,3,
-5,sharp keys,weapons.hands,30,0,1.1,1.5,0.5,1,0,these keys can be used as a weapon if held tight in one's fist,1.1~2,$23,2,
+5,sharp keys,weapons.hands,30,0,1.1,1.5,0.5,1,0,these keys can be deadly if held tight in one's fist,1.1~2,$23,2,
 6,rusty chain,weapons.hands,8,0.25,1.35,1.75,1,0.9,0,a thick chain can be wrapped around one's hands,1.35~2.75,$30,3,
 7,iron gloves,weapons.hands,25,5,1.5,2,1,0.8,0,a pair of heavy and uncomfortable iron gloves,1.5~3,$9,1,
-8,nail gloves,weapons.hands,50,2,1.75,2.25,1.5,1,0,these gloves have several pointy nails coming out of them,1.75~3.75,$32,3,
-9,brass knucles,weapons.hands,80,0,1.85,2.35,1,1,0,fancy brass knucles can be used to make punches more deadly,1.85~3.35,$38,1,
+8,nail gloves,weapons.hands,50,2,1.75,2.25,1.5,1,0,these gloves have nails coming out of them,1.75~3.75,$32,3,
+9,brass knucles,weapons.hands,80,0,1.85,2.35,1,1,0,fancy brass knucles for deadly punches,1.85~3.35,$38,1,
 10,heavy claws,weapons.hands,70,1,2,2.5,1.5,1,0,dangerously sharp claws from a wild angry beast,2~4,$40,3,
 11,boxing gloves,weapons.hands,50,0.5,0.25,1,0,1.3,0,"not sure what these are, but they seem kind of useless",0.25~1,$8,1,
-12,brute force pills,weapons.hands,150,0.05,0.5,3.5,3.5,0.5,0,munching on these pills makes your fists as strong as steel,0.5~7,$71,1,"""shotgun part"""
+12,brute force pills,weapons.hands,150,0.05,0.5,3.5,3.5,0.5,0,chewing these pills makes your fists as strong as steel,0.5~7,$71,1,"""shotgun part"""
 13,speed vials,weapons.hands,150,0.05,1.5,4,2,2,0,sniffing these vials makes your fists as fast as bolts,1.5~6,$64,2,"""old revolver"""
-14,thick spit,weapons.hands,50,0.05,0.25,0.5,0.15,0.9,3,chewing on these gummies makes your spit as sharp as gems,0.25~2.6,$7,1,"""rusty shotgun"""
+14,thick spit,weapons.hands,50,0.05,0.25,0.5,0.15,0.9,3,these gummies make your spit as sharp as gems,0.25~2.6,$7,1,"""rusty shotgun"""
 15,electric gloves,weapons.hands,150,0.5,3,5,0,1,0,"they spark, they glow, they look very dangerous...",3~5,$55,3,
 16,wet paint brush,weapons.dagger,25,0.05,0.6,0.7,0.1,1.2,0,"a nicely crafted brush, made for the ancient art of paint",0.6~0.8,$9,2,
 17,wooden spoon,weapons.dagger,3,0.25,0.05,0.5,0.5,1.1,0,grandma's favorite weapon,0.05~1,$9,1,

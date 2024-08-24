@@ -31,18 +31,18 @@ if active==1
 		switch(chosen_column)
 		{
 			case 0:
-				draw_text(x-xoff+63,y-yoff+19,weapon.name);
+				draw_text(x-xoff+63,y-yoff+20,weapon.name);
 				if weapon.bullets==0 {var wpn_type="type: melee";}
 				else {var wpn_type="bullets: "+string(weapon.bullets);}
 				if stats==false
 				{
 					draw_set_halign(fa_center);
-					draw_text_ext(x-xoff+63,y-yoff+53,weapon.description,6,87);
+					draw_text_ext(x-xoff+63,y-yoff+54,weapon.description,6,87);
 				}
 				else
 				{
 					draw_set_halign(fa_left);
-					draw_text_ext(x-xoff+23,y-yoff+53,
+					draw_text_ext(x-xoff+23,y-yoff+54,
 					"strength: "+string(weapon.atk_dmg_light)+"~"+string(weapon.atk_dmg_strong+weapon.atk_dmg_variation)
 					+"\n"+"speed: "+string(weapon.atk_spd*100)+"%"
 					+"\n"+"weight: "+string(weapon.weight)+"Kg"

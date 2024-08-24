@@ -27,6 +27,15 @@ switch sentence
 	case 4:
 	speech_text=speech_text_5;
 	break;
+	case 5:
+	speech_text=speech_text_6;
+	break;
+	case 6:
+	speech_text=speech_text_7;
+	break;
+	case 7:
+	speech_text=speech_text_8;
+	break;
 	default:
 	sentence=0;
 	break;

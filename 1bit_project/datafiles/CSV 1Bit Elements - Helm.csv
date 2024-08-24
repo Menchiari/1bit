@@ -1,4 +1,4 @@
-35,name,price,defence_helm,weight,-fear/+respect,sprite_helm,description eng,1.1,count
+36,name,price,defence_helm,weight,-fear/+respect,sprite_helm,description eng,1.1,count
 0,no headwear,0,1.00,0,0,character_head,no headwear,1,14
 1,stray hat,2,1.21,0.25,1,spr_helm_strayhat,an old stray hat,1.1,5
 2,filthy hat,8,1.21,0.5,-1,spr_helm_filthyhat,this old hat smells like cheese,1.1,2
@@ -35,7 +35,7 @@
 33,owl clan mask,100,2.20,1,-1,spr_helm_mask,the ancient mask of an evil owl clan member,2,0
 34,filthy hood,5,1.65,1,-1,spr_helm_hood,a smelly old hood coverd in dirt and dead leaves,1.5,1
 35,worn hat,5,1.00,0.25,0,spr_helm_fedora,this very old hat has been worn for several decades,1,2
-36,,,,,,,,,0
+36,headband,5,1.00,0.05,0,spr_helm_headband,a piece of cloth wrapped around the skull's head,1,0
 37,,,,,,,,,0
 38,,,,,,,,,0
 39,,,,,,,,,0
