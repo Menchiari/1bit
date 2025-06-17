@@ -7,8 +7,8 @@ event_inherited();
 skin_color=c_white;
 blood_active=false;
 
-character_head=choose(spr_head_skull);
-character_body=choose(spr_body_skeleton);
+character_head=choose(spr_head_skull,spr_head_skull);
+character_body=choose(spr_body_skeleton,spr_body_skeleton);
 idle_a=idle_zombiea;
 idle_b=idle_zombieb;
 idle_speed=random_range(.05,.2)

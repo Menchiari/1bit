@@ -56,6 +56,6 @@ if point_distance(x,y,obj_region_center_desert.x,obj_region_center_desert.y)<dis
 if point_distance(x,y,obj_region_center_dungeon.x,obj_region_center_dungeon.y)<distance {sprite_index=choose(spr_hex_walls_ruins,spr_hex_walls_ruins_broken);}
 if point_distance(x,y,obj_region_center_mountain.x,obj_region_center_mountain.y)<distance {sprite_index=choose(spr_hex_walls,spr_hex_walls_wood,spr_hex_walls_ruins);}
 if point_distance(x,y,obj_region_center_witch.x,obj_region_center_witch.y)<distance {sprite_index=spr_hex_walls_wood;}
-if point_distance(x,y,obj_region_center_downtown.x,obj_region_center_downtown.y)<distance {sprite_index=choose(spr_hex_walls);}
+if point_distance(x,y,obj_region_center_downtown.x,obj_region_center_downtown.y)<distance {sprite_index=choose(spr_hex_walls,spr_hex_walls);}
 if point_distance(x,y,obj_region_center_hangar.x,obj_region_center_hangar.y)<distance {sprite_index=choose(spr_hex_walls,spr_hex_walls_ruins);}
 if point_distance(x,y,obj_region_center.x,obj_region_center.y)>obj_map.radius*13 {sprite_index=spr_hex_walls;}

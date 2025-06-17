@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"csv_npc_import",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"csv_npc_import",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,64 @@
+#,object_name,name,hp,str,res,spd,chr,weapon,armor,helm,theme,pts,man,,tot_str mn,tot_str_mx,total res,hero attack,hits to kill enemy,hero hp loss,hits to kill hero
+0,obj_hero,main hero,1,1,1.25,1,0,cracked staff,rusty chainmail,great helm,00_null,9,1,,1.50,2.75,6.53,-,,-,
+1,obj_character,dummy,1,1,1,1,0,bare hands,naked,no headwear,00_null,2,1,,0.50,1.00,1.00,1.5~2.8,0~1,0.1~0.2,7~13
+2,obj_neutral,messenger,1,1,1,1,1,bare hands,naked,no headwear,00_null,1,1,,0.50,1.00,1.00,1.5~2.8,0~1,0.1~0.2,7~13
+3,obj_ally_townsfolk,peasant,1,1,1,1,1,bare hands,basic clothes,no headwear,01_camp,2,3,,0.50,1.00,1.26,1.2~2.2,0~1,0.1~0.2,7~13
+4,obj_ally_townsfolk,kind peasant,1,1,1,1,1,bare hands,basic clothes,hat,01_camp,2,3,,0.50,1.00,1.73,0.9~1.6,1~1,0.1~0.2,7~13
+5,obj_ally_townsfolk,moody peasant,1,1,1,1,1,silver fork,basic clothes,filthy hat,01_camp,2,1,,0.75,1.25,1.52,1~1.8,1~1,0.1~0.2,5~9
+6,obj_ally_townsfolk_female,young lady,1,1,1,1,1,bare hands,pretty dress,wig,01_camp,2,2,,0.50,1.00,1.38,1.1~2,1~1,0.1~0.2,7~13
+7,obj_ally_townsfolk,nobleman,1,1,1,1,1,old knife,elegant clothes,warm hood,01_camp,4,1,,2.00,3.50,1.73,0.9~1.6,1~1,0.3~0.5,2~3
+8,obj_ally_townsfolk,madman,1,1,1,1,-1,crafty shiv,torn clothes,top hat,01_camp,4,1,,0.75,2.50,1.80,0.8~1.5,1~1,0.1~0.4,3~9
+9,obj_ally_townsfolk,villager,1,1,1,1,1,leather strips,basic clothes,stray hat,01_camp,2,4,,0.50,1.00,1.52,1~1.8,1~1,0.1~0.2,7~13
+10,obj_ally_townsfolk,merchant,1,1,1,1,0,leather gloves,worn jacket,no headwear,01_camp,3,1,,1.00,1.30,1.38,1.1~2,1~1,0.2~0.2,5~7
+11,obj_ally_townsfolk_female,nun,1,1,0.75,1,2,bare hands,nun habit,warm hood,01_camp,2,2,,0.50,1.00,1.86,0.8~1.5,1~1,0.1~0.2,7~13
+12,obj_ally_townsfolk,innkeeper,1,1,1,1,0,sharp keys,clumsy coat,hat,01_camp,3,1,,1.10,2.00,1.90,0.8~1.4,1~1,0.2~0.3,3~6
+13,obj_dog,dog,1,1,1,1,1,bare hands,naked,no headwear,01_camp,1,1,,0.50,1.00,1.00,1.5~2.8,0~1,0.1~0.2,7~13
+14,obj_ally_townsfolk,farmer,1,1,1,1,1,farmer's rake,worn jacket,stray hat,01_camp,4,2,,2.00,4.00,1.67,0.9~1.6,1~1,0.3~0.6,2~3
+15,obj_neutral,visitor,1,1,1,1,0,rusty dagger,torn clothes,coonskin cap,02_plains,4,2,,1.50,3.00,1.66,0.9~1.7,1~1,0.2~0.5,2~4
+16,obj_neutral,prophet,1,0.75,1,1,0,metal rod,priest robe,stray hat,02_plains,6,1,,1.50,3.75,3.63,0.4~0.8,1~2,0.2~0.6,2~4
+17,obj_ally,painter,1,1,1,1,0,wet paint brush,worn jacket,clumsy cap,02_plains,3,1,,0.60,0.80,1.82,0.8~1.5,1~1,0.1~0.1,8~11
+18,obj_mercenary_kid,curious kid,2,1,1,1.5,1,sharp stick,basic clothes,no headwear,02_plains,6,1,,1.00,2.00,1.26,1.2~2.2,1~2,0.2~0.3,3~7
+19,obj_merchant_traveller,homeless peasant,1,1.6,1,0.8,0,crafty shiv,torn clothes,clumsy cap,03_woods,5,2,,1.20,4.00,1.66,0.9~1.7,1~1,0.2~0.6,2~5
+20,obj_mercenary,hungry bandit,1,1,1,1.2,0,broken sword,torn clothes,tin hat,03_woods,6,2,,2.00,4.00,1.80,0.8~1.5,1~1,0.3~0.6,2~3
+21,obj_neutral,fool,2,2,1,2,-1,nail gloves,bikini,bucket,04_castle_ruins,26,1,,3.50,7.50,0.83,1.8~3.3,1~1,0.5~1.1,1~2
+22,obj_mercenary,angry priest,3,2,2,0.75,2,ancient sword,priest robe,warm hood,04_castle_ruins,30,1,,4.00,13.00,8.25,0.2~0.3,9~17,0.6~2,1~2
+23,obj_dog,guard dog,1,1,1,1,-1,bare hands,naked,no headwear,05_castle_fortress,2,1,,0.50,1.00,1.00,1.5~2.8,0~1,0.1~0.2,7~13
+24,obj_neutral,fat priest,5,1,2,0.75,0,broom stick,heavy pelt,wooden cap,05_castle_fortress,18,1,,1.00,2.75,4.46,0.3~0.6,8~15,0.2~0.4,2~7
+25,obj_mercenary,knight,2,2,2,1.2,1,sharp sword,knight's armor,knight's helm,05_castle_fortress,68,4,,6.00,14.00,18.48,0.1~0.1,13~25,0.9~2.1,0~1
+26,obj_enemy_large,minotaur,10,3,2,0.9,-3,large claymore,heavy pelt,demon's helm,06_castle_dungeon,142,1,,12.00,33.00,8.91,0.2~0.3,32~59,1.8~5.1,0~1
+27,obj_ally,king,3,1.5,1,1,2,rapier,king's cape,silver crown,06_castle_dungeon,24,1,,7.50,16.50,2.40,0.6~1.1,3~5,1.1~2.5,0~1
+28,obj_ally,queen,3,1,1,1,2,golden staff,queen's dress,golden crown,06_castle_dungeon,16,1,,4.50,11.00,3.00,0.5~0.9,3~6,0.7~1.7,1~1
+29,obj_merchant,forest witch,3,3,1,1.25,-1,broom stick,pretty dress,assassin's hood,07_forest,28,1,,3.00,8.25,1.67,0.9~1.6,2~3,0.5~1.3,1~2
+30,obj_mercenary_traveller,wanderer,1,5,3,0.9,1,cigarette pack,warm pelt,filthy hat,07_forest,23,2,,2.50,6.25,4.79,0.3~0.6,2~3,0.4~1,1~3
+31,obj_merchant,evil witch,10,5,1,1,0,metal ring,pretty dress,assassin's hood,08_evil_village,46,1,,3.00,8.75,1.67,0.9~1.6,6~11,0.5~1.3,1~2
+32,obj_mercenary_traveller,lone traveller,1,1,1,1,1,heavy claws,warm pelt,viking helm,10_tundra,6,5,,2.00,4.00,3.27,0.5~0.8,1~2,0.3~0.6,2~3
+33,obj_neutral,lost peasant,1,1,1,1,1,metal ring,basic clothes,warm hood,10_tundra,2,3,,0.60,1.75,1.73,0.9~1.6,1~1,0.1~0.3,4~11
+34,obj_ally_farmer,lonely farmer,1,1,1,1,1,farmer's rake,warm pelt,stray hat,11_snow_camps,4,1,,2.00,4.00,1.60,0.9~1.7,1~1,0.3~0.6,2~3
+35,obj_mercenary_traveller,lone survivor,2,3,2,0.9,-1,sharp machete,assassin's cloth,warm hood,11_snow_camps,46,2,,9.00,19.50,4.13,0.4~0.7,3~6,1.4~3,0~1
+36,obj_merchant_traveller,helpless merchant,3,2,2,1.5,0,broken katana,warm pelt,stray hat,11_snow_camps,34,1,,4.00,9.00,3.19,0.5~0.9,3~6,0.6~1.4,1~2
+37,obj_enemy_large,frozen madman,10,5,5,0.666,-3,bare hands,naked,no headwear,12_mountains,47,1,,2.50,5.00,5.00,0.3~0.6,18~33,0.4~0.8,1~3
+38,obj_merchant,hermit,1,5,1,1,1,shiny shimitar,nomad's cape,demon's helm,12_mountains,305,1,,50.00,67.50,11.55,0.1~0.2,4~8,7.7~10.3,0~0
+39,obj_mercenary_large,giant,500,5,0.1,0.6,1,tree branch,metal plate,no headwear,12_mountains,91,1,,5.50,12.50,0.22,6.9~12.7,39~72,0.8~1.9,1~1
+40,obj_enemy,banned soul,1,1,1,1,1,golden dagger,steel armor,roman helm,14_metal_fort,8,30,,0.50,2.50,6.93,0.2~0.4,3~5,0.1~0.4,3~13
+41,obj_mercenary,genius,5,5,1,1.18,1,bo staff,naked,bandana,15_desert,116,1,,12.50,25.00,1.00,1.5~2.8,2~3,1.9~3.8,0~1
+42,obj_neutral,greedy sheriff,1,1,1,1,1,pistol,tuxido,top hat,15_desert,7,1,,5.00,7.00,1.89,0.8~1.5,1~1,0.8~1.1,1~1
+43,obj_merchant_traveller,nomad,1,1,1,1,1,shiny shimitar,nomad's cape,bandana,15_desert,15,3,,10.00,13.50,4.20,0.4~0.7,2~3,1.5~2.1,0~1
+44,obj_merchant,drug dealer,2,2,1,1,-1,speed vials,leather armor,leather fedora,16_city_camps,21,3,,3.00,12.00,2.77,0.5~1,2~4,0.5~1.8,1~2
+45,obj_merchant,hard drug dealer,1,1,1,1,1,brute force pills,elegant clothes,bionic headset,17_city_rural,7,4,,0.50,7.00,4.16,0.4~0.7,2~3,0.1~1.1,1~13
+46,obj_neutral,regular citizen,1,1,1,1,1,bare hands,basic clothes,silver crown,18_city_downtown,2,30,,0.50,1.00,1.26,1.2~2.2,0~1,0.1~0.2,7~13
+47,obj_mercenary,the boxer,5,10,10,1.25,5,boxing gloves,king's cape,no headwear,21_hangar,226,1,,2.50,10.00,24.00,0.1~0.1,44~80,0.4~1.5,1~3
+48,obj_merchant,croccodille trash,0.5,5,1,0.5,-2,thick spit,torn clothes,filthy hood,18_city_downtown,7,1,,1.25,3.25,2.08,0.7~1.3,0~1,0.2~0.5,2~5
+49,obj_ally_townsfolk_female,friendly lady,1,1,1,1,1,bare hands,pretty dress,no headwear,01_directions,2,3,,0.50,1.00,1.38,1.1~2,1~1,0.1~0.2,7~13
+50,obj_ally_townsfolk,friendly man,1,1,1,1,1,bare hands,basic clothes,leather fedora,01_directions,2,4,,0.50,1.00,1.66,0.9~1.7,1~1,0.1~0.2,7~13
+51,obj_ally_kid,friendly boy,1,1,1,1,1,bare hands,basic clothes,worn hat,01_directions,2,2,,0.50,1.00,1.26,1.2~2.2,0~1,0.1~0.2,7~13
+52,obj_dog,friendly dog,1,1,1,1,1,bare hands,basic clothes,no headwear,01_directions,2,1,,0.50,1.00,1.26,1.2~2.2,0~1,0.1~0.2,7~13
+53,obj_ally,hip artist,1,1,1,1,1,wet paint brush,elegant clothes,wig,01_directions,1,1,,0.60,0.80,1.26,1.2~2.2,0~1,0.1~0.1,8~11
+54,obj_ally,lost convict,5,1,2,1,1,nail gloves,convict uniform,no headwear,01_directions,12,1,,1.75,3.75,2.00,0.8~1.4,4~7,0.3~0.6,2~4
+55,obj_neutral,invalid,1,1,1,1,1,wooden spoon,basic clothes,tin hat,01_villages,2,1,,0.05,1.00,1.80,0.8~1.5,1~1,0~0.2,7~131
+56,obj_neutral,old scout,1,1,1,1,1,silver fork,basic clothes,copper helm,01_villages,2,1,,0.75,1.25,1.94,0.8~1.4,1~1,0.1~0.2,5~9
+57,obj_mercenary,lonely traveller,1,1,1,1,1,rusty machete,nomad's cape,viking helm,01_villages,13,1,,2.50,4.50,10.40,0.1~0.3,4~7,0.4~0.7,1~3
+58,obj_ally,old man,1,1,1,1,1,cigarette pack,basic clothes,worn hat,01_villages,2,1,,0.50,1.25,1.26,1.2~2.2,0~1,0.1~0.2,5~13
+59,obj_ally_townsfolk_female,girl,1,1,1,1,1,letter opener,pretty dress,no headwear,01_villages,3,2,,1.00,2.25,1.38,1.1~2,1~1,0.2~0.3,3~7
+60,obj_ally,midget,1,1,1,1,1,metal piece,wooden armor,copper helm,01_villages,5,1,,1.00,4.00,3.23,0.5~0.9,1~2,0.2~0.6,2~7
+61,obj_ally_townsfolk_female,old lady,1,1,1,1,1,leather gloves,pretty dress,wig,01_villages,2,3,,1.00,1.30,1.38,1.1~2,1~1,0.2~0.2,5~7
+62,obj_ally_kid,kid,1,1,1,1,1,wooden plank,wooden armor,bucket,01_villages,5,1,,0.75,3.25,3.47,0.4~0.8,1~2,0.1~0.5,2~9

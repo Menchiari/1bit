@@ -1,0 +1,10 @@
+event_inherited();
+size=3;
+posx=16;
+posy=12;
+color=c_white;
+alpha=1;
+font=fnt_ancientgods;
+text="CONTINUE";
+type=3;
+start_room=global.chosen_room;

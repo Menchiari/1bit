@@ -1,0 +1,2 @@
+draw_healthbar(room_width/2,room_height-5,room_width,room_height-5,hp,c_white,c_black,c_black,0,true,true);
+draw_healthbar(room_width/2,room_height-5,room_width,room_height-5,hp,c_white,c_black,c_black,1,true,true);

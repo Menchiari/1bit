@@ -78,7 +78,7 @@ function helm_struct(_name, _price, _weight, _defence, _charisma, _sprite, _desc
 
 }
 
-function equip_helm(_helm) constructor{
+function equip_helm(_helm) {
 	//show_debug_message("Equipping: "+string(_helm))
 	helm = new helm_struct(_helm.name,_helm.price,_helm.weight,_helm.defence,_helm.charisma,_helm.sprite,_helm.description, _helm.index);
 	if helm.sprite = undefined || _helm.name = "no headwear"

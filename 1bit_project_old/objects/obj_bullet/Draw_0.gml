@@ -1,0 +1,1 @@
+draw_line_color(x,y,xprevious,yprevious,c_white,c_gray);

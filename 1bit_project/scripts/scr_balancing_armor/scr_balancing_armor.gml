@@ -98,7 +98,7 @@ function armor_struct(_name, _price, _weight, _defence, _charisma, _sprite, _des
 
 }
 
-function equip_armor(_armor) constructor{
+function equip_armor(_armor) {
 	armor =  new armor_struct(_armor.name,_armor.price,_armor.weight,_armor.defence,_armor.charisma,_armor.sprite,_armor.description, _armor.index);
 	if armor.sprite = undefined || _armor.name = "naked"
 	{armor.sprite = character_body;}

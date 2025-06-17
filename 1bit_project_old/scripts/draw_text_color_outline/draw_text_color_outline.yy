@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"draw_text_color_outline",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_text_color_outline",
+  "parent":{
+    "name":"tools",
+    "path":"folders/Scripts/tools.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

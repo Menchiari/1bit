@@ -1,0 +1,99 @@
+42,name,price,defence_armor,weight,-fear/+respect,sprite_body,description eng,material,1.2,count
+0,naked,0,1.00,0,-2,character_body,no armor,flesh,1,6
+1,bikini,50,0.50,0,3,spr_body_bikini,very tight and pretty!,flesh,0.5,1
+2,torn clothes,2,1.26,0.5,-1,spr_body_clothes,"smelly old clothes, they reek of putrefaction",cloth,1.05,5
+3,basic clothes,5,1.26,0.5,0,spr_body_clothes,very basic clothes,cloth,1.05,13
+4,clumsy coat,10,1.38,5,-1,spr_body_coat,this coat feels really awkward,leather,1.15,1
+5,pretty dress,50,1.38,1,2,spr_body_dress,this dress makes me melt <3,cloth,1.15,6
+6,elegant clothes,60,1.26,1,3,spr_body_clothes,high quality fabric and a very refined design,cloth,1.05,3
+7,tuxido,120,1.32,1,5,spr_body_tuxido,such an elegant outfit!,cloth,1.1,1
+8,warm pelt,10,1.32,2,0,spr_body_pelt,the cozy fur of this pelt keeps you very warm,cape,1.1,4
+9,worn jacket,10,1.38,3,1,spr_body_coat,"old and consumed, yet quite comfortable",leather,1.15,3
+10,nun habit,12,1.80,5,3,spr_body_dress_nun,"it has a coif, secured by a wimple, with a veil at the back",cape,1.5,1
+11,priest robe,15,3.00,5,3,spr_body_cape_priest,the smelly robe of an ugly priest,cape,2.5,2
+12,assassin's cloth,25,1.50,5,-2,spr_body_cape,"an intimidating cape, usually worn by assassins",cape,1.25,1
+13,heavy pelt,15,1.62,10,1,spr_body_pelt,"this pelt is sturdy, unfortunately also very heavy",cape,1.35,2
+14,tin plate,10,1.80,15,-1,spr_body_plate,seems like a tin plate could work as an armor,metal_thin,1.5,0
+15,leather coat,20,1.80,5,1,spr_body_coat,a nice and stylish leather coat,leather,1.5,0
+16,copper plate,50,2.10,10,0,spr_body_plate,thick copper plate with two strings attached,metal_thick,1.75,0
+17,metal plate,35,2.16,25,-1,spr_body_plate,"sturdy and heavy, has two straps attached",metal_thick,1.8,1
+18,ceramic armor,40,2.22,20,0,spr_body_armor,an armor made out of a resistant type of ceramic,ceramic,1.85,0
+19,rusty chainmail,50,1.92,8,-1,spr_body_chainmail,"it's very rusty and delicate, but it does the job",chainmail,1.6,1
+20,wooden armor,45,2.10,15,0,spr_body_armor_leather,a light and tough armor made out of wood,wood,1.75,2
+21,leather armor,60,2.10,5,0,spr_body_armor_leather,this armor is fairly resistant and very comfortable,leather,1.75,1
+22,heavy chainmail,40,2.40,15,0,spr_body_chainmail,a vest made out of small metal rings tied together,chainmail,2,0
+23,bronze armor,55,3.00,20,0,spr_body_armor,"a smooth and thick armor, made out of heavy bronze",metal_thick,2.5,0
+24,light chainmail,60,2.40,5,0,spr_body_chainmail,"wedge riveted mail, showing both sides of the rings",chainmail,2,0
+25,iron armor,70,3.60,25,0,spr_body_armor_metal,a regular strong and resistant type of armor,metal_thick,3,0
+26,steel armor,75,3.60,18,0,spr_body_armor_metal,"light and practical, this armor is also very sturdy",metal_thin,3,1
+27,knight's armor,120,4.20,30,3,spr_body_armor_knight,a beautifully forged armor made out of silver and steel,metal_thick,3.5,1
+28,king's cape,250,2.40,2,2,spr_body_cape,the cape of a corrupted king,cape,2,2
+29,queen's dress,350,3.00,1.5,3,spr_body_dress,an excellent dress hand made by an noble tailor,cloth,2.5,1
+30,golden armor,500,4.32,45,5,spr_body_armor_gold,this golden armor has been forged as a gift for the gods,metal_thick,3.6,0
+31,silver armor,400,4.32,20,5,spr_body_armor_gold,silver lines decorate this beautiful type of southern armor,metal_thin,3.6,0
+32,demon's armor,100,4.80,25,-3,spr_body_armor_demon,spikes and skulls hang from this old demonic armor,ceramic,4,0
+33,titan armor,125,3.60,10,3,spr_body_armor,"this armor is strong, light, and extremely comfortable",metal_thin,3,0
+34,guard's uniform,150,3.00,5,-3,spr_body_uniform,the uniform of the chosen guards from the place of gods,cloth,2.5,0
+35,bionic armor,500,6.00,20,-4,spr_body_armor_bionic,a magical armor made out of metal scrap and soft wires,chainmail,5,0
+36,god's vest,1000,6.00,0,5,spr_body_vest,the vest of the gods: never to be spoken of,leather,5,0
+37,hunter's gaun,10,1.80,3,-3,spr_body_cape,"an intimidating cape, usually worn by assassins",cape,1.5,0
+38,nomad's cape,80,4.20,0.2,2,spr_body_cape,this cape can protect you from the deadly sun of the desert,cape,3.5,3
+39,old military coat,80,2.10,2,1,spr_body_armor,"Despite being old, it's warm, comfortable, resistant, and elegant",leather,1.75,0
+40,convict uniform,10,1.00,2,-4,spr_body_uniform,"bright color, strong odor, a metal device near the calf",cloth,1,1
+41,torn jacket,10,1.32,3,-1,spr_body_coat,this smelly coat used to be a fine piece of clothing,leather,1.1,0
+42,farmer's clothes,10,1.21,2,1,spr_body_coat,clothes used by farmers during the current season,leather,1.01,0
+43,,,,,,,,,,0
+44,,,,,,,,,,0
+45,,,,,,,,,,0
+46,,,,,,,,,,0
+47,,,,,,,,,,0
+48,,,,,,,,,,0
+49,,,,,,,,,,0
+50,,,,,,,,,,0
+51,,,,,,,,,,0
+52,,,,,,,,,,0
+53,,,,,,,,,,0
+54,,,,,,,,,,0
+55,,,,,,,,,,0
+56,,,,,,,,,,0
+57,,,,,,,,,,0
+58,,,,,,,,,,0
+59,,,,,,,,,,0
+60,,,,,,,,,,0
+61,,,,,,,,,,0
+62,,,,,,,,,,0
+63,,,,,,,,,,0
+64,,,,,,,,,,0
+65,,,,,,,,,,0
+66,,,,,,,,,,0
+67,,,,,,,,,,0
+68,,,,,,,,,,0
+69,,,,,,,,,,0
+70,,,,,,,,,,0
+71,,,,,,,,,,0
+72,,,,,,,,,,0
+73,,,,,,,,,,0
+74,,,,,,,,,,0
+75,,,,,,,,,,0
+76,,,,,,,,,,0
+77,,,,,,,,,,0
+78,,,,,,,,,,0
+79,,,,,,,,,,0
+80,,,,,,,,,,0
+81,,,,,,,,,,0
+82,,,,,,,,,,0
+83,,,,,,,,,,0
+84,,,,,,,,,,0
+85,,,,,,,,,,0
+86,,,,,,,,,,0
+87,,,,,,,,,,0
+88,,,,,,,,,,0
+89,,,,,,,,,,0
+90,,,,,,,,,,0
+91,,,,,,,,,,0
+92,,,,,,,,,,0
+93,,,,,,,,,,0
+94,,,,,,,,,,0
+95,,,,,,,,,,0
+96,,,,,,,,,,0
+97,,,,,,,,,,0

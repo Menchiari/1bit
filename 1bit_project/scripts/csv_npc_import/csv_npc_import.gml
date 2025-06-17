@@ -19,7 +19,7 @@ function npc_struct(_obj_name, _name,_hp,_str,_res,_spd,_char,_weapon,_armor,_he
 }
 
 
-function csv_npc_import() constructor {
+function csv_npc_import() {
 	#region npc csv import & theme
 	show_debug_message("IMPORTING NPC DATA")
 	global.NPCs = array_create(1,0);
@@ -159,7 +159,7 @@ function csv_npc_import() constructor {
 	
 }
 
-function spawn_npc_test(_x, _y, _rnd_npc,_npc_list) constructor{
+function spawn_npc_test(_x, _y, _rnd_npc,_npc_list) {
 	var _npc = _npc_list[_rnd_npc]
 	
 	var npc_obj = _npc.obj_name;
@@ -189,7 +189,7 @@ function spawn_npc_test(_x, _y, _rnd_npc,_npc_list) constructor{
 
 #region levelling treshold import and stuff
 	
-function csv_level_import(csv_file) constructor {
+function csv_level_import(csv_file) {
 	var file_grid = load_csv(csv_file);
 	var ww = ds_grid_width(file_grid);
 	var hh = ds_grid_height(file_grid);
@@ -219,7 +219,7 @@ function csv_level_import(csv_file) constructor {
 }
 
 
-function get_lvl(_stat_list, _player_stat) constructor {
+function get_lvl(_stat_list, _player_stat) {
 	
 	var current_lvl = ds_list_find_index(_stat_list, _player_stat);
 	
@@ -244,7 +244,7 @@ function get_lvl_gain(_stat_list, _player_stat) {
 
 }
 
-function get_xp_cost(_current_lvl, _lvl_gain) constructor{
+function get_xp_cost(_current_lvl, _lvl_gain) {
 	var xp_cost = 0;
 	
 	if _lvl_gain = 0
@@ -271,7 +271,7 @@ function decor_struct(_sprite, _type) constructor
 	type = _type;
 }
 
-function csv_decor_import(csv_file) constructor
+function csv_decor_import(csv_file) 
 {
 	var file_grid = load_csv(csv_file);
 	var ww = ds_grid_width(file_grid);
@@ -300,7 +300,7 @@ function csv_decor_import(csv_file) constructor
 }
 
 
-function pick_decor(_theme) constructor 
+function pick_decor(_theme)  
 {
 	var rnd;
 	do

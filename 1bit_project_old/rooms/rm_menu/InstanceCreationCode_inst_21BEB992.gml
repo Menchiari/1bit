@@ -1,0 +1,1 @@
+if !file_exists("save.sav") instance_destroy();

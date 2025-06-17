@@ -1,5 +1,5 @@
 /// @description type of ground
-sprite=choose(spr_hex_test_bg);
+sprite=choose(spr_hex_test_bg,spr_hex_test_bg);
 color=merge_color(c_ltgray,c_white,random_range(0.75,1))
 alpha=random_range(.85,1);
 
@@ -20,7 +20,7 @@ if point_distance(x,y,obj_region_center_dungeon.x,obj_region_center_dungeon.y)<d
 
 if point_distance(x,y,obj_region_center_mountain.x,obj_region_center_mountain.y)<distance 
 {
-	sprite=choose(spr_hex_test_bg);
+	sprite=choose(spr_hex_test_bg,spr_hex_test_bg);
 	color=merge_color(c_ltgray,c_white,random_range(0.75,1))
 	alpha=random_range(.85,1);
 }
@@ -41,7 +41,7 @@ if point_distance(x,y,obj_region_center_downtown.x,obj_region_center_downtown.y)
 
 if point_distance(x,y,obj_region_center_hangar.x,obj_region_center_hangar.y)<distance 
 {
-	sprite=choose(spr_bg_hex_ruins_bg);
+	sprite=choose(spr_bg_hex_ruins_bg,spr_bg_hex_ruins_bg);
 	color=merge_color(c_black,c_white,random_range(0.25,.28))
 	alpha=random_range(.9,1);
 }
