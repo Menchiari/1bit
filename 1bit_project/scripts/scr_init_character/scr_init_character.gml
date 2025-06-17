@@ -1,6 +1,6 @@
 function scr_init_character(){
 
-	control=controls.keyboard;
+	control=global.control_type;
 	state=states.idle;
 
 #region initialize character sprites
