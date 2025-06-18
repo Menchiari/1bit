@@ -9,5 +9,5 @@ if state!=states.spawn
 	draw_line_color(x-(hp*hp_length)-1,y-hp_height,x+(hp*hp_length)+1,y-hp_height,0,0);
 	draw_line_color(x-hp*hp_length,y-hp_height-1,x+hp*hp_length,y-hp_height-1,0,0);
 	draw_line_color(x-hp*hp_length,y-hp_height+1,x+hp*hp_length,y-hp_height+1,0,0);
-	draw_line_color(x-hp*hp_length,y-hp_height,x+hp*hp_length,y-hp_height,c_white,c_white);
+	draw_line_color(x-hp*hp_length,y-hp_height,x+hp*hp_length,y-hp_height,hp_line_color,hp_line_color);
 }

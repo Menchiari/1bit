@@ -16,3 +16,10 @@ else
 	obj_hero.x=x;obj_hero.y=y;
 }
 if instance_number(obj_hero)>1 {instance_destroy(obj_hero);}
+
+with obj_hero
+{
+	//trigger_spawn=false;
+	//state=states.spawn;
+	//speed=0;
+}

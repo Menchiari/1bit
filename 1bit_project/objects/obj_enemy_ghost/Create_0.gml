@@ -5,3 +5,5 @@
 event_inherited();
 
 character_head=choose(spr_head_infected,spr_head_skull,spr_head_beard,spr_head_female);
+blood_active=false;
+hp_line_color=c_black;

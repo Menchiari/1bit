@@ -5,6 +5,7 @@ character_head=choose(spr_head,spr_head_infected);
 skin_color=c_orange;
 main_color=c_white;
 speech_color=c_orange;
+hp_line_color=c_white;
 
 control=controls.ai;
 faction=factions.enemy;

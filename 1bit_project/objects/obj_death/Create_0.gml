@@ -1,5 +1,3 @@
-global.deathcount+=1;
-
 depth=global.depth_ui+1;
 if instance_exists(obj_time_freeze) instance_destroy(obj_time_freeze);
 if instance_exists(obj_fx_flash) instance_destroy(obj_fx_flash);

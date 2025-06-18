@@ -198,8 +198,8 @@ function equip_weapon(_weapon) {
 				attack_b=attack_3_b;
 				attack_fr=attack_3_fr;
 				animset_weapon_image_speed=1;
-				animset_atk1_time=100;
-				animset_atk2_time=200;
+				animset_atk1_time=10;
+				animset_atk2_time=20;
 				animset_attack_range=12;
 				animset_attack_range_strong=15;
 				animset_atk1_sp=4;
