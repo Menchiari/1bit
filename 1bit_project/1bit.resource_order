@@ -4,9 +4,17 @@
   ],
   "ResourceOrderSettings":[
     {"name":"obj_ally_end_var","order":1,"path":"objects/obj_ally_end_var/obj_ally_end_var.yy",},
+    {"name":"obj_elements_tree_city","order":2,"path":"objects/obj_elements_tree_city/obj_elements_tree_city.yy",},
+    {"name":"obj_elements_tree_hangar","order":3,"path":"objects/obj_elements_tree_hangar/obj_elements_tree_hangar.yy",},
+    {"name":"obj_elements_tree_palms","order":4,"path":"objects/obj_elements_tree_palms/obj_elements_tree_palms.yy",},
+    {"name":"obj_elements_tree_ruins","order":1,"path":"objects/obj_elements_tree_ruins/obj_elements_tree_ruins.yy",},
+    {"name":"obj_elements_tree_winter","order":5,"path":"objects/obj_elements_tree_winter/obj_elements_tree_winter.yy",},
     {"name":"obj_gameover","order":1,"path":"objects/obj_gameover/obj_gameover.yy",},
+    {"name":"obj_nextroom_custom","order":1,"path":"objects/obj_nextroom_custom/obj_nextroom_custom.yy",},
     {"name":"obj_ui_shop_rpg","order":1,"path":"objects/obj_ui_shop_rpg/obj_ui_shop_rpg.yy",},
+    {"name":"rm_boat","order":2,"path":"rooms/rm_boat/rm_boat.yy",},
     {"name":"rm_gameover","order":1,"path":"rooms/rm_gameover/rm_gameover.yy",},
+    {"name":"spr_bg_boat","order":1,"path":"sprites/spr_bg_boat/spr_bg_boat.yy",},
     {"name":"spr_helm_headband","order":1,"path":"sprites/spr_helm_headband/spr_helm_headband.yy",},
   ],
 }

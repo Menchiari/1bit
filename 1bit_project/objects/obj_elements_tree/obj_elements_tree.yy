@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_elements_trees_ruins",
-    "path":"sprites/spr_elements_trees_ruins/spr_elements_trees_ruins.yy",
+    "name":"spr_elements_trees",
+    "path":"sprites/spr_elements_trees/spr_elements_trees.yy",
   },
   "spriteMaskId":null,
   "visible":true,

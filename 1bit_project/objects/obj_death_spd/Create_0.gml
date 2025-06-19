@@ -12,7 +12,7 @@ spd_lvl =		get_lvl(global.lvl_spd, global.player_spd);
 spd_lvl_gain =	get_lvl_gain(global.lvl_spd, global.player_spd);
 xp_cost =		get_xp_cost(spd_lvl,spd_lvl_gain);
 
-if spd_lvl_gain = 0
+if spd_lvl_gain = 0 || global.deathcount==1 || global.deathcount==1 || global.deathcount==6 || global.deathcount==14 || global.deathcount==22
 {speech_text="I have nothing \nto offer.."; activate=false; instance_destroy();}
 else
 {speech_text="slaughter me \nto be faster";}

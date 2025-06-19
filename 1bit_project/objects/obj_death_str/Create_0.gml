@@ -11,7 +11,7 @@ str_lvl =		get_lvl(global.lvl_str, global.player_str);
 str_lvl_gain =	get_lvl_gain(global.lvl_str, global.player_str);
 xp_cost =		get_xp_cost(str_lvl,str_lvl_gain);
 
-if str_lvl_gain = 0
+if str_lvl_gain = 0 || global.deathcount==1 || global.deathcount==1 || global.deathcount==6 || global.deathcount==14 || global.deathcount==22
 {speech_text="I have nothing \nto offer.."; activate=false; instance_destroy();}
 else
 {speech_text="execute me to\nget stronger";}

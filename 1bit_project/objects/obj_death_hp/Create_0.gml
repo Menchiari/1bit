@@ -11,7 +11,7 @@ hp_lvl =		get_lvl(global.lvl_hp, global.player_hp_max);
 hp_lvl_gain =	get_lvl_gain(global.lvl_hp, global.player_hp_max);
 xp_cost =		get_xp_cost(hp_lvl,hp_lvl_gain);
 
-if hp_lvl_gain = 0
+if hp_lvl_gain = 0 || global.deathcount==1 || global.deathcount==6 || global.deathcount==14 || global.deathcount==22
 {speech_text="I have nothing \nto offer.."; activate=false; instance_destroy();}
 else
 {speech_text="drain my life\nto gain health";}

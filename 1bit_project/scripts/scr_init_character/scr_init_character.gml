@@ -19,11 +19,24 @@ function scr_init_character(){
 	dialogue_negative="";
 	death_description="";
 	speech_text=choose(dialogue_positive,dialogue_neutral,dialogue_negative)//"";
+	speech_text_enemy="...";
+	max_sentences=1;
+	speech_text_1="";
+	speech_text_2="";
+	speech_text_3="";
+	speech_text_4="";
+	speech_text_5="";
+	speech_text_6="";
+	speech_text_7="";
+	speech_text_8="";
+	speech_without_enemies=true;
 	speech_visible=false;
 	speech_verbose=false;//extended speech especially in AI states
 	speech_distance=50;
+	speech_distance_enemy=100;
 	speech_color=c_white;
 	speech_color_bk=c_black;
+	
 #endregion
 #region animation frames
 	idle_a=0;
