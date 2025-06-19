@@ -15,3 +15,6 @@ trigger_spawn_idle_a=var_idle_a;
 trigger_spawn_idle_b=var_idle_b;
 
 idle_speed=var_idle_speed;
+
+speech_text_enemy=sp_enemy;
+speech_without_enemies=enemiesspeech;

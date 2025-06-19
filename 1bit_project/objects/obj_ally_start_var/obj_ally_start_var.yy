@@ -52,6 +52,8 @@
         "spr_head_skull",
         "spr_head",
       ],"multiselect":false,"name":"var_character_head","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_head_female1","varType":6,},
+    {"$GMObjectProperty":"v1","%Name":"enemiesspeech","filters":[],"listItems":[],"multiselect":false,"name":"enemiesspeech","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"sp_enemy","filters":[],"listItems":[],"multiselect":false,"name":"sp_enemy","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"!!!\"","varType":2,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

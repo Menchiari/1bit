@@ -8,7 +8,7 @@
     "TileSerialiseData":[],
   },
   "name":"ts_backgrounds_fg",
-  "out_columns":4,
+  "out_columns":5,
   "out_tilehborder":0,
   "out_tilevborder":0,
   "parent":{
@@ -34,5 +34,5 @@
   "tileWidth":180,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":12,
+  "tile_count":15,
 }
