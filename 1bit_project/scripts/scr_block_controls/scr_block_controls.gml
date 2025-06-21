@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_block_controls(){
-	if control=controls.touch
+	if control==controls.touch
 	{
 		if mouse_check_button_released(mb_any)
 		{	
@@ -42,12 +42,12 @@ function scr_block_controls(){
 			}		
 		}
 	}
-	else if control=controls.gamepad
+	else if control==controls.gamepad
 	{
 	//gamepad controls
 	}
 	
-	else if control=controls.keyboard
+	else if control==controls.keyboard
 	{
 	//keyboard controls
 	}

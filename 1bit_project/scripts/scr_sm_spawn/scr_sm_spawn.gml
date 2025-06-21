@@ -18,7 +18,7 @@ function scr_sm_spawn(){
 			state=states.idle;
 		}
 	}
-	if control=controls.touch
+	if control==controls.touch
 	{
 		if mouse_check_button_released(mb_any)
 		{

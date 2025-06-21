@@ -35,7 +35,7 @@ function scr_sm_walk(){
 	scr_character_move(dest_x,dest_y,walk_sp,1.5);
 
 //controls
-	if control=controls.touch
+	if control==controls.touch
 	{
 		if mouse_pressed==true
 		{

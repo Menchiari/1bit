@@ -11,14 +11,17 @@ function scr_state_machine(){
 ////////////////////
 //////controls//////
 ////////////////////
-	if control=controls.touch
+	if control==controls.touch
 	{
-		if mouse_check_button_pressed(mb_any) {timer=0; mouse_pressed=true;}
-		if mouse_check_button_released(mb_any){mouse_pressed=false;}
+		if mouse_check_button_pressed(mb_any)
+		{timer=0; mouse_pressed=true;}
+		
+		if mouse_check_button_released(mb_any)
+		{mouse_pressed=false;}
 	}
 	
 //artificial intelligence controls
-	if control=controls.ai {scr_ai_main();}
+	if control==controls.ai {scr_ai_main();}
 
 //state machine
 	sprite_index=sprite_skin;
@@ -39,6 +42,7 @@ function scr_state_machine(){
 		case states.block_hit: scr_sm_block_hit() break;
 		case states.hit: scr_sm_hit() break;
 		case states.collide_hit: scr_sm_collide_hit() break;
+		case states.sit: scr_sm_sit() break;
 		case states.death: scr_sm_death() break;
 		default: break;
 	}

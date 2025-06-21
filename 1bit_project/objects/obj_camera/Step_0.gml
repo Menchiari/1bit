@@ -23,8 +23,8 @@ camera_set_view_mat(camera,vm);
 
 if instance_exists(obj_hero)
 {
-	var gapx=32//24;
-	var gapy=48//32;
+	var gapx=30//24;
+	var gapy=40//32;
 	if obj_hero.x<x-(global.res_x/2)+gapx/2 && mouse_x<x-(global.res_x/2)+gapx/2 {obj_hero.dest_x=x-(global.res_x/2)-gapx-1; obj_hero.dest_y=obj_hero.y;}
 	if obj_hero.x>x+(global.res_x/2)-gapx/2 && mouse_x>x+(global.res_x/2)-gapx/2 {obj_hero.dest_x=x+(global.res_x/2)+gapx+1; obj_hero.dest_y=obj_hero.y;}
 	if obj_hero.y<(y-global.res_y/2)+gapy/2 && mouse_y<(y-global.res_y/2)+gapy/2 {obj_hero.dest_y=y-(global.res_y/2)-gapy-1; obj_hero.dest_x=obj_hero.x;}

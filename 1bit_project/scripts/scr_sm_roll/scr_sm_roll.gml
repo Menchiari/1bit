@@ -22,7 +22,7 @@ function scr_sm_roll(){
 	else {invincible=false;}
 	
 //controls
-	if control=controls.touch
+	if control==controls.touch
 	{
 		//scr_flip_check_mouse(x-(click_x-dest_x),y-(click_y-dest_y),1);
 	}

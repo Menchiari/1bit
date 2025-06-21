@@ -23,6 +23,7 @@ enum states
 	block_hit,
 	hit,
 	collide_hit,
+	sit,
 	death
 }
 enum ai_types

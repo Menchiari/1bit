@@ -13,7 +13,7 @@
 11,obj_enemy_skeleton,skeleton,1,2.5,2,1,0,bare hands,naked,no headwear,01_camp,4,2,,0.50,1.25,2.00,0.1~0.2,5~13,1~2.5,0~1
 12,obj_enemy_skeleton,skeleton,1,1,1,1,0,guard's sword,naked,no headwear,01_camp,5,1,,2.25,5.00,1.00,0.2~0.4,3~7,4.5~10,0~0
 13,obj_enemy_ghost,ghost,5,2.5,2.5,1.5,-3,bare hands,naked,no headwear,01_camp,24,1,,0.50,1.25,2.50,0.1~0.2,33~83,1~2.5,0~1
-14,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,01_camp,1,2,,0.20,0.50,1.00,0.2~0.4,3~7,0.4~1,1~3
+14,obj_neutral_townsfolk,farmer,1,1,1,1,0,silver fork,basic clothes,stray hat,01_camp,3,2,,0.75,1.25,1.52,0.1~0.2,4~10,1.5~2.5,0~1
 15,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,02_plains,1,2,,0.20,0.50,1.00,0.2~0.4,3~7,0.4~1,1~3
 16,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,02_plains,1,1,,0.20,0.50,1.00,0.2~0.4,3~7,0.4~1,1~3
 17,obj_enemy,default,1,1,1,1,0,bare hands,naked,no headwear,02_plains,1,1,,0.20,0.50,1.00,0.2~0.4,3~7,0.4~1,1~3

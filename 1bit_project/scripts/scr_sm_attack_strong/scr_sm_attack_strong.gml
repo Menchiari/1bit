@@ -36,7 +36,7 @@ function scr_sm_attack_strong(){
 	scr_attack_system(attack_fr,attack_range_strong,weapon.atk_dmg_strong,weapon.atk_dmg_variation,2,atk_push_speed_divider);
 	
 	//controls
-	if control=controls.touch
+	if control==controls.touch
 	{
 		scr_flip_check_mouse(x-(click_x-dest_x),y-(click_y-dest_y),1);
 	}
