@@ -16,7 +16,7 @@
     {"name":"rm_boat","order":2,"path":"rooms/rm_boat/rm_boat.yy",},
     {"name":"rm_gameover","order":1,"path":"rooms/rm_gameover/rm_gameover.yy",},
     {"name":"scr_sm_sit","order":1,"path":"scripts/scr_sm_sit/scr_sm_sit.yy",},
-    {"name":"spr_bg_boat","order":1,"path":"sprites/spr_bg_boat/spr_bg_boat.yy",},
+    {"name":"spr_env_boat","order":1,"path":"sprites/spr_env_boat/spr_env_boat.yy",},
     {"name":"spr_helm_headband","order":1,"path":"sprites/spr_helm_headband/spr_helm_headband.yy",},
   ],
 }

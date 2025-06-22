@@ -27,8 +27,8 @@
   },
   "spriteNoExport":false,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"tg_tilesets",
+    "path":"texturegroups/tg_tilesets",
   },
   "tileAnimationFrames":[
     {"$GMTileAnimation":"","%Name":"animation_1","frames":[1616,1676,],"name":"animation_1","resourceType":"GMTileAnimation","resourceVersion":"2.0",},

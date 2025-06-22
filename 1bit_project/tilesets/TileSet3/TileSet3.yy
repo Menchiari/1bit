@@ -20,8 +20,8 @@
   "spriteId":null,
   "spriteNoExport":false,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"tg_tilesets",
+    "path":"texturegroups/tg_tilesets",
   },
   "tileAnimationFrames":[],
   "tileAnimationSpeed":15.0,

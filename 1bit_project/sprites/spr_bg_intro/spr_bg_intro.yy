@@ -83,8 +83,8 @@
   "swatchColours":null,
   "swfPrecision":2.525,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"tg_bg",
+    "path":"texturegroups/tg_bg",
   },
   "type":0,
   "VTile":false,
