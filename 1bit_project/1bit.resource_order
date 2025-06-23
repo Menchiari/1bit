@@ -1,9 +1,13 @@
 {
   "FolderOrderSettings":[
+    {"name":"Cinematics","order":1,"path":"folders/Objects/Cinematics.yy",},
     {"name":"NewImports","order":1,"path":"folders/Sprites/NewImports.yy",},
   ],
   "ResourceOrderSettings":[
     {"name":"obj_ally_end_var","order":1,"path":"objects/obj_ally_end_var/obj_ally_end_var.yy",},
+    {"name":"obj_asset_boat","order":3,"path":"objects/obj_asset_boat/obj_asset_boat.yy",},
+    {"name":"obj_cin_boatrotate_fg","order":1,"path":"objects/obj_cin_boatrotate_fg/obj_cin_boatrotate_fg.yy",},
+    {"name":"obj_cin_boatrotate_sideview","order":2,"path":"objects/obj_cin_boatrotate_sideview/obj_cin_boatrotate_sideview.yy",},
     {"name":"obj_elements_tree_city","order":2,"path":"objects/obj_elements_tree_city/obj_elements_tree_city.yy",},
     {"name":"obj_elements_tree_hangar","order":3,"path":"objects/obj_elements_tree_hangar/obj_elements_tree_hangar.yy",},
     {"name":"obj_elements_tree_palms","order":4,"path":"objects/obj_elements_tree_palms/obj_elements_tree_palms.yy",},
@@ -16,6 +20,10 @@
     {"name":"rm_boat","order":2,"path":"rooms/rm_boat/rm_boat.yy",},
     {"name":"rm_gameover","order":1,"path":"rooms/rm_gameover/rm_gameover.yy",},
     {"name":"scr_sm_sit","order":1,"path":"scripts/scr_sm_sit/scr_sm_sit.yy",},
+    {"name":"spr_boat","order":4,"path":"sprites/spr_boat/spr_boat.yy",},
+    {"name":"spr_cin_boatrotate_fg","order":3,"path":"sprites/spr_cin_boatrotate_fg/spr_cin_boatrotate_fg.yy",},
+    {"name":"spr_cin_boatrotate","order":2,"path":"sprites/spr_cin_boatrotate/spr_cin_boatrotate.yy",},
+    {"name":"spr_cin_boatsideview","order":5,"path":"sprites/spr_cin_boatsideview/spr_cin_boatsideview.yy",},
     {"name":"spr_env_boat","order":1,"path":"sprites/spr_env_boat/spr_env_boat.yy",},
     {"name":"spr_helm_headband","order":1,"path":"sprites/spr_helm_headband/spr_helm_headband.yy",},
   ],

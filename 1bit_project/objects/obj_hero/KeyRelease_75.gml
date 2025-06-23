@@ -1,3 +1,4 @@
+/// @description Kill all enemies
 var enemy=collision_circle(x,y,500,obj_enemy,1,1)
 if instance_exists(enemy)
 {

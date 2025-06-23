@@ -20,6 +20,6 @@ if instance_number(obj_hero)>1 {instance_destroy(obj_hero);}
 with obj_hero
 {
 	//trigger_spawn=false;
-	//state=states.spawn;
+	state=states.sit;
 	//speed=0;
 }

@@ -1,0 +1,1 @@
+if instance_exists(obj_hero){obj_hero.state=states.idle;}

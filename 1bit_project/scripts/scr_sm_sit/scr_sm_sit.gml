@@ -1,12 +1,15 @@
 function scr_sm_sit(){
-	x=round(x);
-	y=round(y);
 	speed=0;
+	path_end();
 	
 	scr_animation_reverse(trigger_spawn_idle_b,trigger_spawn_idle_a,-idle_speed);
 	
 	if control==controls.touch
 	{
+		dest_x=x;
+		dest_y=y;
+		click_x=x;
+		click_y=y;
 		if mouse_check_button_released(mb_any)
 		{
 			image_speed=idle_speed;

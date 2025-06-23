@@ -30,7 +30,11 @@ if instance_exists(obj_hero)
 	if obj_hero.y<(y-global.res_y/2)+gapy/2 && mouse_y<(y-global.res_y/2)+gapy/2 {obj_hero.dest_y=y-(global.res_y/2)-gapy-2; obj_hero.dest_x=obj_hero.x;}
 	if obj_hero.y>(y+global.res_y/2)-gapy/2 && mouse_y>(y+global.res_y/2)-gapy/2 {obj_hero.dest_y=y+(global.res_y/2)+gapy+2; obj_hero.dest_x=obj_hero.x;}
 		
-	if instance_exists(obj_camera_pos) && obj_hero.state=states.idle
+	if instance_exists(obj_camera_pos) && (
+	obj_hero.state=states.idle
+	|| obj_hero.state=states.spawn
+	|| obj_hero.state=states.sit
+	)
 	{
 		//reposition the camera
 		var newcam=instance_nearest(obj_hero.x,obj_hero.y,obj_camera_pos);
