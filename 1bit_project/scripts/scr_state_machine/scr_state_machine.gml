@@ -26,7 +26,7 @@ function scr_state_machine(){
 //state machine
 	sprite_index=sprite_skin;
 	if hp>hp_max {hp=hp_max;}
-	if hp<hp_min && hp>0 {hp+=hp_recharge/room_speed;}
+	if hp<hp_min && hp>0 {hp+=hp_recharge/game_get_speed(gamespeed_fps)/*room_speed*/;}
 	if hp<=0 {state=states.death;}
 
 	switch state

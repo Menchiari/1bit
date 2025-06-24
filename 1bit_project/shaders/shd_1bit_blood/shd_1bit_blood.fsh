@@ -11,7 +11,7 @@ uniform float flicker;
 
 void main()
 {
-    vec2 uv = fragCoord.xy / iResolution.xy;
+    vec2 uv = v_vTexcoord;//vec2 uv = fragCoord.xy / iResolution.xy;
     
     vec3 c = vec3(0.0);
     float alpha = 1.0;

@@ -15,6 +15,7 @@ hp=global.player_hp_max;
 res=global.player_res;
 str=global.player_str;
 spd=global.player_spd;
+dialogue_death_chance=0;
 
 invincibility_timer=global.player_invincibility_timer;
 

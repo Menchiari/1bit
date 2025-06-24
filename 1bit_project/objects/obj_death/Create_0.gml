@@ -18,8 +18,8 @@ alarm[1]=start_all+20+variety;//remove time
 alarm[2]=start_all+25+variety;//remove flash
 alarm[3]=start_all+variety+235;//destroy
 
-alarm[4]=room_speed*2;
-alarm[5]=room_speed*6;
+alarm[4]=game_get_speed(gamespeed_fps)*2//room_speed*2;
+alarm[5]=game_get_speed(gamespeed_fps)*6//room_speed*6;
 
 fadeout=false;
 

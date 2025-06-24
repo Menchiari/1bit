@@ -1,3 +1,4 @@
+init_globals();
 scr_init_character();
 active=true;
 

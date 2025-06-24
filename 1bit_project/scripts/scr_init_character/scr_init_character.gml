@@ -18,8 +18,8 @@ function scr_init_character(){
 	dialogue_neutral="";
 	dialogue_negative="";
 	dialogue_death="";
-	dialogue_death_chance=100;
-	dialogue_death_duration=random_range(3,5);
+	dialogue_death_chance=15;
+	dialogue_death_duration=random_range(3,5); //in seconds the dialogue that spawns
 	death_description="";
 	speech_text=choose(dialogue_positive,dialogue_neutral,dialogue_negative)//"";
 	speech_text_enemy="...";
@@ -219,7 +219,7 @@ function scr_init_character(){
 		
 	main_color=c_white;
 	blood_active=true;
-	wait_spawn_time=room_speed*5;
+	wait_spawn_time=game_get_speed(gamespeed_fps)*5; //room_speed*5;
 #endregion
 #region balancing stats
 	faction=factions.neutral;

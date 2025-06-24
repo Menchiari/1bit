@@ -45,6 +45,7 @@ if global.deathcount>=15 {speech_text=string(global.deathcount-23)+" deaths left
 if global.deathcount==22 {speech_text="ready to die?"}
 speech_color=c_red;
 speech_distance=30;
+dialogue_death_chance=0;
 
 //custom
 sentence=0;

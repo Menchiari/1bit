@@ -17,7 +17,7 @@ if active==true
 //main code
 	instance_activate_object(self);
 	depth=-y;
-	scr_controls();
+	//scr_controls();
 	scr_state_machine();
 	scr_collisions();
 }

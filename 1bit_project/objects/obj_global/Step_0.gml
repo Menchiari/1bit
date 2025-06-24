@@ -11,7 +11,8 @@ else {UI=true;}
 
 {////////////////////////SHADER////////////////////////////
 //set time
-time += 1 / room_speed;
+time += 1 / game_get_speed(gamespeed_fps);
+//show_debug_message(string(time));
 //set flicker
 if active_flicker==true flk = random_range(-flicker_amt,0);
 else flk = 0;

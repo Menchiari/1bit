@@ -31,7 +31,6 @@ y=0;
 res_x=global.res_x //room_width;
 res_y=global.res_y //room_height;
 
-
 //debug stuff
 
 debug=true;

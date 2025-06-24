@@ -146,7 +146,7 @@ function scr_sm_death(){
 	//Spawn death number
 	if irandom_range(0,100)<=dialogue_death_chance
 	{
-		dialogue_death_instance=instance_create_depth(x,y-20,-y,obj_ui_number)
+		dialogue_death_instance=instance_create_depth(x,y-16,-y,obj_ui_number)
 		if dialogue_death==""
 		{
 			if faction=factions.enemy
@@ -191,10 +191,11 @@ function scr_sm_death(){
 				);
 			}
 		}
-		dialogue_death_instance.color=speech_color;
+		dialogue_death_instance.speed=0;
+		dialogue_death_instance._color=speech_color;
 		dialogue_death_instance.spdy=.25;
-		dialogue_death_instance.spdx=random_range(-.25,.25);
-		dialogue_death_instance.duration=dialogue_death_duration;
+		dialogue_death_instance.spdx=random_range(-.1,.1);
+		dialogue_death_instance.duration=game_get_speed(gamespeed_fps)*dialogue_death_duration;
 	}
 	
 	instance_destroy();

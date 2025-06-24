@@ -102,7 +102,6 @@ enum weapons_animset
 	shotgun,
 	null
 }
-
 enum terrains
 {
 	wood,
@@ -124,7 +123,7 @@ function init_globals(){
 	global.depth_floor=0;
 	global.room_speed_default=25;
 	global.gamma_default=1;
-	room_speed=global.room_speed_default;
+	game_set_speed(global.room_speed_default,gamespeed_fps);//room_speed=global.room_speed_default;
 	global.shader=shd_1bit_blood;
 	global.res_x=180//280;//220;
 	global.res_y=320//400;//380;

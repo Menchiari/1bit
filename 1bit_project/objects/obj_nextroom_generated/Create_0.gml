@@ -1,2 +1,2 @@
 once=true;
-wait_time=room_speed*.75;
+wait_time=game_get_speed(gamespeed_fps)*.75;

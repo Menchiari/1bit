@@ -4,7 +4,7 @@ if active==true
 	{
 		//if collision_point(mouse_x,mouse_y,self,true,false)
 		//{
-			alarm[0]=room_speed;
+			alarm[0]=game_get_speed(gamespeed_fps);//room_speed;
 			active=false;
 			var fade=instance_create(obj_fx_fadeout);
 			fade.fade_speed=.1;

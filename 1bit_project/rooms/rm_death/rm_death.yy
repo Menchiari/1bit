@@ -49,8 +49,8 @@
   ],
   "name":"rm_death",
   "parent":{
-    "name":"OLD",
-    "path":"folders/Rooms/OLD.yy",
+    "name":"Rooms",
+    "path":"folders/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
