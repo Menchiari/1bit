@@ -1,6 +1,8 @@
 {
   "FolderOrderSettings":[
     {"name":"Cinematics","order":1,"path":"folders/Objects/Cinematics.yy",},
+    {"name":"faces","order":2,"path":"folders/Objects/faces.yy",},
+    {"name":"faces","order":2,"path":"folders/Sprites/faces.yy",},
     {"name":"NewImports","order":1,"path":"folders/Sprites/NewImports.yy",},
   ],
   "ResourceOrderSettings":[
@@ -25,6 +27,9 @@
     {"name":"spr_cin_boatrotate","order":2,"path":"sprites/spr_cin_boatrotate/spr_cin_boatrotate.yy",},
     {"name":"spr_cin_boatsideview","order":5,"path":"sprites/spr_cin_boatsideview/spr_cin_boatsideview.yy",},
     {"name":"spr_env_boat","order":1,"path":"sprites/spr_env_boat/spr_env_boat.yy",},
+    {"name":"spr_faces_AI_default","order":3,"path":"sprites/spr_faces_AI_default/spr_faces_AI_default.yy",},
+    {"name":"spr_faces_intro_end","order":2,"path":"sprites/spr_faces_intro_end/spr_faces_intro_end.yy",},
+    {"name":"spr_faces_intro_mock","order":1,"path":"sprites/spr_faces_intro_mock/spr_faces_intro_mock.yy",},
     {"name":"spr_helm_headband","order":1,"path":"sprites/spr_helm_headband/spr_helm_headband.yy",},
   ],
 }

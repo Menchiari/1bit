@@ -17,6 +17,9 @@ function scr_init_character(){
 	dialogue_positive="";
 	dialogue_neutral="";
 	dialogue_negative="";
+	dialogue_death="";
+	dialogue_death_chance=100;
+	dialogue_death_duration=random_range(3,5);
 	death_description="";
 	speech_text=choose(dialogue_positive,dialogue_neutral,dialogue_negative)//"";
 	speech_text_enemy="...";

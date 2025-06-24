@@ -1,6 +1,9 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_sm_death(){
+	speed=0;
+	path_end();
+	
 	if blood_active==true {instance_create_depth(x,y,-y,obj_fx_blood);}
 	
 	var dead_man=instance_create_depth(x,y,-y,obj_dead);
@@ -138,6 +141,60 @@ function scr_sm_death(){
 			var description_chance=irandom_range(0,100);
 			if description_chance>90{description="this "+given_name+part1/*+part2;*/} else {description="dead "+name};
 		}
+	}
+	
+	//Spawn death number
+	if irandom_range(0,100)<=dialogue_death_chance
+	{
+		dialogue_death_instance=instance_create_depth(x,y-20,-y,obj_ui_number)
+		if dialogue_death==""
+		{
+			if faction=factions.enemy
+			{
+				dialogue_death_instance.text=choose(
+				"damn you!",
+				"this can't be",
+				"how dare you",
+				"nooo...",
+				"I can't..",
+				"you fool..",
+				"you bastard",
+				"you coward..",
+				"help...",
+				"I'm sorry",
+				"well done",
+				"oh, shit.",
+				"fuck..",
+				"waaaaahh!!",
+				"ooooohhhh",
+				"sgharbfh..",
+				""
+				);
+			}
+			else
+			{
+				dialogue_death_instance.text=choose(
+				"why..?",
+				"what have I done to you?",
+				"what...?",
+				"oh no...",
+				"...",
+				"I'm sorry...",
+				"why?!",
+				"oh..no..",
+				"mercy...",
+				"please no...",
+				"god no!",
+				"so... is this it?",
+				"I beg you...",
+				""
+				);
+			}
+		}
+		dialogue_death_instance.color=speech_color;
+		dialogue_death_instance.spdy=.25;
+		dialogue_death_instance.spdx=random_range(-.25,.25);
+		dialogue_death_instance.duration=dialogue_death_duration;
 	}
 	
 	instance_destroy();

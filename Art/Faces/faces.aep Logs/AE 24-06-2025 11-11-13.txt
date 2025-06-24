@@ -1,0 +1,22 @@
+Adobe After Effects v25.2.2 Windows 64 render log for project “faces.aep”
+
+Rendering started on 24/06/2025 at 11:11:13
+
+  24/06/2025 11:11:13: Starting composition “intro_default”.
+
+  Output To: E:\Git\1bit\Art\Faces\Intro\intro_default\intro_default_[##].png    24/06/2025 11:11:16: Finished composition “intro_default”.
+
+
+  24/06/2025 11:11:16: Starting composition “intro_mock”.
+
+  Output To: E:\Git\1bit\Art\Faces\Intro\intro_mock\intro_mock_[##].png    24/06/2025 11:11:17: Finished composition “intro_mock”.
+
+
+  24/06/2025 11:11:17: Starting composition “intro_end”.
+
+  Output To: E:\Git\1bit\Art\Faces\Intro\intro_end\intro_end_[##].png    24/06/2025 11:11:20: Finished composition “intro_end”.
+
+
+  Total Time Elapsed: 7 Seconds
+Log closed on 24/06/2025 at 11:11:20
+
