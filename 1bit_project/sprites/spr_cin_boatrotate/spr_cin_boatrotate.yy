@@ -207,8 +207,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"tg_cinematics_boat",
+    "path":"texturegroups/tg_cinematics_boat",
   },
   "type":0,
   "VTile":false,

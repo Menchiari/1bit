@@ -30,10 +30,7 @@
     "name":"tg_tilesets",
     "path":"texturegroups/tg_tilesets",
   },
-  "tileAnimationFrames":[
-    {"$GMTileAnimation":"","%Name":"animation_1","frames":[1616,1676,],"name":"animation_1","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
-    {"$GMTileAnimation":"","%Name":"animation_2","frames":[1617,1677,],"name":"animation_2","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
-  ],
+  "tileAnimationFrames":[],
   "tileAnimationSpeed":3.0,
   "tileHeight":8,
   "tilehsep":0,

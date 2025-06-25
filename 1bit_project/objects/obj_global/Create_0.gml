@@ -28,8 +28,10 @@ flicker_amt = 0.025;
 active_flicker = true;
 x=0;
 y=0;
-res_x=global.res_x //room_width;
-res_y=global.res_y //room_height;
+res_x=global.res_x; //room_width;
+res_y=global.res_y; //room_height;
+global_xp=global.xp;
+global_helms=global.helms;
 
 //debug stuff
 

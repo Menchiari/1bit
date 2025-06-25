@@ -1,7 +1,7 @@
 //movement
 if instance_exists(obj_hero)
 {
-	if point_distance(x,y,obj_hero.x,obj_hero.y)<global.res_y*1.5 {active=true;}
+	if point_distance(x,y,obj_hero.x,obj_hero.y)<res_y*1.25 {active=true;}
 	else {active=false;}
 	//charisma
 	if dialogue_variation==true

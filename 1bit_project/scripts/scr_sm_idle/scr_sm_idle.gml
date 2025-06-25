@@ -8,6 +8,7 @@ function scr_sm_idle(){
 	image_speed=idle_speed;
 	timer+=1;
 	speech_visible=false;
+	idle_timer-=1;
 
 	//movement
 	if speed>.5 {speed-=idle_sp_decrease;}
@@ -22,6 +23,7 @@ function scr_sm_idle(){
 			click_x=mouse_x;click_y=mouse_y;
 			scr_flip_check_mouse(dest_x,dest_y,1);
 			state=states.block;
+			idle_timer=idle_timer_setup;
 		}
 	}
 	
@@ -35,7 +37,14 @@ function scr_sm_idle(){
 				state=states.walk;
 				dest_x=x+irandom_range(-30,30);
 				dest_y=y+irandom_range(-30,30);
+				idle_timer=idle_timer_setup;
 			}
 		}
+	}
+	
+	if idle_timer<=0
+	{
+		state=states.sit;
+		idle_timer=idle_timer_setup;
 	}
 }

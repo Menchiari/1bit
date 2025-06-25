@@ -2,7 +2,7 @@ function scr_sm_sit(){
 	speed=0;
 	path_end();
 	
-	scr_animation_reverse(trigger_spawn_idle_b,trigger_spawn_idle_a,-idle_speed);
+	scr_animation_reverse(trigger_spawn_a,trigger_spawn_b,idle_speed);
 	
 	if control==controls.touch
 	{

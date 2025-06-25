@@ -13,8 +13,8 @@ if UI==true
 	//draw_rectangle_color(border,border,room_width-border,room_height-border,c_white,c_white,c_white,c_white,true);
 	var camx=camera_get_view_x(view_get_camera(view_current));
 	var camy=camera_get_view_y(view_get_camera(view_current));
-	var camwidth=global.res_x; //room_width//180//camera_get_view_width(view_get_camera(view_current));
-	var camheight=global.res_y; //room_height//320//camera_get_view_height(view_get_camera(view_current));
+	var camwidth=res_x; //room_width//180//camera_get_view_width(view_get_camera(view_current));
+	var camheight=res_y; //room_height//320//camera_get_view_height(view_get_camera(view_current));
 	
 	if instance_exists(obj_camera)
 	{
@@ -39,7 +39,7 @@ if UI==true
 
 		//debug todo remove
 			var height=-3
-			var pos_x=5+3//+((global.res_x-180)/4);//added+30 because of 240 resolution
+			var pos_x=5+3//somehow solved?
 			var pos_a=3+2+height;
 			var pos_b=9+2+height;
 			var pos_c=15+2+height;
@@ -47,7 +47,7 @@ if UI==true
 		//XP
 			draw_set_halign(fa_right);
 			draw_set_valign(fa_top);
-			draw_text_color_outline(camx+(camwidth/2)-pos_x,camy-(camheight/2)+pos_a,"XP "+string(round(global.xp)),c_white,1);
+			draw_text_color_outline(camx+(camwidth/2)-pos_x,camy-(camheight/2)+pos_a,"XP "+string(round(global_xp)),c_white,1);
 			draw_text_color_outline(camx+(camwidth/2)-pos_x,camy-(camheight/2)+pos_b,"spd "+string(obj_hero.spd),c_white,1);
 			draw_text_color_outline(camx+(camwidth/2)-pos_x,camy-(camheight/2)+pos_c,"res "+string(obj_hero.res),c_white,1);
 			draw_text_color_outline(camx+(camwidth/2)-pos_x,camy-(camheight/2)+pos_d,"str "+string(obj_hero.str),c_white,1);
@@ -62,6 +62,9 @@ if UI==true
 	
 	else
 	{
+		camwidth=room_width; //room_width//180//camera_get_view_width(view_get_camera(view_current));
+		camheight=room_height; //room_height//320//camera_get_view_height(view_get_camera(view_current));
+
 		draw_rectangle_color(camx+border,camy+border,camwidth-(border*2),camheight-(border*2),c_white,c_white,c_white,c_white,true);
 
 		//Hero UI
@@ -87,13 +90,13 @@ if UI==true
 		//XP
 			draw_set_halign(fa_right);
 			draw_set_valign(fa_top);
-			draw_text_color_outline(camwidth-pos_x,camx+pos_a,"XP "+string(round(global.xp)),c_white,1);
+			draw_text_color_outline(camwidth-pos_x,camx+pos_a,"XP "+string(round(global_xp)),c_white,1);
 			//draw_text_color_outline(camwidth-pos_x,camx+pos_b,"LIVES "+string(global.player_lives),c_white,1);
 		//EQUIP
 			draw_set_halign(fa_left);
 			draw_text_color_outline(camx+pos_x,camy+pos_a,obj_hero.weapon.name,c_white,1);
 			draw_text_color_outline(camx+pos_x,camy+pos_b,obj_hero.armor.name,c_white,1);
-			if obj_hero.helm!=global.helms[0] {draw_text_color_outline(camx+pos_x,camy+pos_c,obj_hero.helm.name,c_white,1);}
+			if obj_hero.helm!=global_helms[0] {draw_text_color_outline(camx+pos_x,camy+pos_c,obj_hero.helm.name,c_white,1);}
 		}
 	}
 

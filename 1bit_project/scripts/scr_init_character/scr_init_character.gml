@@ -288,5 +288,8 @@ function scr_init_character(){
 	//setup
 	alarm[0]=1;//refresh main variables
 	alarm[1]=collision_check_time;
+	
+	idle_timer_setup=game_get_speed(gamespeed_fps)*8;
+	idle_timer=idle_timer_setup;
 #endregion
 }

@@ -125,7 +125,8 @@ function init_globals(){
 	global.gamma_default=1;
 	game_set_speed(global.room_speed_default,gamespeed_fps);//room_speed=global.room_speed_default;
 	global.shader=shd_1bit_blood;
-	// Global Resolution: this resolution has to be the same as the one in the room rm_setup, obj_camera_pos, obj_camera, obj_hero
+	// Global Resolution:
+	// For border change the resolution in room rm_setup, obj_camera_pos, obj_camera, obj_hero
 	global.res_x=240//180//280;//220;
 	global.res_y=320//400;//380;
 

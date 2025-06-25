@@ -51,10 +51,17 @@ if enable
 	shader_set_uniform_f(gamma,g);
 	shader_set_uniform_f(flicker,flk);
 }
-//draw_surface(application_surface,0,0);   // draw exactly as before
-draw_surface_stretched(application_surface,0,0,res_x,res_y);
+if instance_exists(obj_camera)
+{
+	draw_surface_stretched(application_surface,0,0,res_x,res_y);
+	display_set_gui_size(res_x,res_y);
+}
+else
+{
+	surface_resize(application_surface,room_width,room_height);
+	draw_surface_stretched(application_surface,0,0,res_x,res_y);
+	display_set_gui_size(res_x,res_y);
+}
 
-//display_set_gui_maximise(2,2,scr_w/2-surf_w,scr_h/2-surf_h); //pixel ratio
-display_set_gui_size(res_x,res_y);
 
 shader_reset();
