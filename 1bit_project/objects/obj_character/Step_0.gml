@@ -3,6 +3,11 @@ if instance_exists(obj_hero)
 {
 	if point_distance(x,y,obj_hero.x,obj_hero.y)<res_y*1.25 {active=true;}
 	else {active=false;}
+}
+
+if active==true
+{
+//main code
 	//charisma
 	if dialogue_variation==true
 	{
@@ -10,11 +15,6 @@ if instance_exists(obj_hero)
 		else if obj_hero.charisma-charisma>=1 {speech_text=dialogue_positive;}
 		else {speech_text=dialogue_neutral;}
 	}
-}
-
-if active==true
-{
-//main code
 	instance_activate_object(self);
 	depth=-y;
 	//scr_controls();

@@ -1,6 +1,6 @@
 function scr_ai_target_check(){
 //check target
-	repeat(5)
+	repeat(2)
 	{
 		var xcheck=x+random_range(ai_search_range,-ai_search_range);
 		var ycheck=y+random_range(ai_search_range,-ai_search_range);
