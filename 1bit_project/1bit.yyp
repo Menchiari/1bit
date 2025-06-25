@@ -396,6 +396,9 @@
     {"id":{"name":"snd_footstep_walk_asf_7","path":"sounds/snd_footstep_walk_asf_7/snd_footstep_walk_asf_7.yy",},},
     {"id":{"name":"snd_footstep_walk_asf_8","path":"sounds/snd_footstep_walk_asf_8/snd_footstep_walk_asf_8.yy",},},
     {"id":{"name":"snd_footstep_walk_asf_9","path":"sounds/snd_footstep_walk_asf_9/snd_footstep_walk_asf_9.yy",},},
+    {"id":{"name":"_1bitblood_lut","path":"sprites/_1bitblood_lut/_1bitblood_lut.yy",},},
+    {"id":{"name":"cga_lut","path":"sprites/cga_lut/cga_lut.yy",},},
+    {"id":{"name":"red_lut","path":"sprites/red_lut/red_lut.yy",},},
     {"id":{"name":"spr_01_camp_center_a","path":"sprites/spr_01_camp_center_a/spr_01_camp_center_a.yy",},},
     {"id":{"name":"spr_01_camp_collision_a","path":"sprites/spr_01_camp_collision_a/spr_01_camp_collision_a.yy",},},
     {"id":{"name":"spr_01_camp_collision_b","path":"sprites/spr_01_camp_collision_b/spr_01_camp_collision_b.yy",},},
@@ -757,5 +760,6 @@
     {"$GMTextureGroup":"","%Name":"tg_bg","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"tg_bg","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
     {"$GMTextureGroup":"","%Name":"tg_tilesets","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"tg_tilesets","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
     {"$GMTextureGroup":"","%Name":"tg_faces","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"tg_faces","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"LUT","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"LUT","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
   ],
 }

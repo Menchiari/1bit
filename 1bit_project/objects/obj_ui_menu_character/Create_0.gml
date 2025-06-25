@@ -9,3 +9,5 @@ weight=0;
 strength1=0;
 strength2=0;
 resistance=0;
+
+x=room_width/2-sprite_width/2;

@@ -1,8 +1,6 @@
 varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
 
-varying vec2 fragCoord;
-
 uniform vec2 iResolution;
 uniform float iGlobalTime;
 uniform int palette;
@@ -11,7 +9,7 @@ uniform float flicker;
 
 void main()
 {
-    vec2 uv = v_vTexcoord;//vec2 uv = fragCoord.xy / iResolution.xy;
+    vec2 uv = v_vTexcoord;
     
     vec3 c = vec3(0.0);
     float alpha = 1.0;

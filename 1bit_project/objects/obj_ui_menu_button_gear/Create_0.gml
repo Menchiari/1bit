@@ -1,6 +1,8 @@
 scr_loadgame();
 scr_init_character();
 
+x=room_width/2-sprite_width/2;
+
 lineax1=random_range(0,sprite_width);
 lineax2=random_range(0,sprite_width);
 linebx1=random_range(0,sprite_width);

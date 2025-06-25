@@ -1,5 +1,5 @@
 ///@description Shader effect
-
+#region fucked up code
 /*
 //original
 if(enable)
@@ -33,18 +33,28 @@ else
 //shader_reset();
 //display_set_gui_size(res_x,res_y);
 
-//test3
+#endregion
+//ScreenResolution
+var scr_w = display_get_width();   // horizontal pixels
+var scr_h = display_get_height();  // vertical pixels
+var surf_w = surface_get_width(application_surface);
+var surf_h = surface_get_height(application_surface);
+
 draw_clear_alpha(c_black,1);              // paint the whole screen black
 
-shader_set(shader);
-shader_set_uniform_f(iResolution,res_x,res_y);
-shader_set_uniform_f(iGlobalTime,time);
-shader_set_uniform_f(palette,p);
-shader_set_uniform_f(gamma,g);
-shader_set_uniform_f(flicker,flk);
+if enable
+{
+	shader_set(shader);
+	shader_set_uniform_f(iResolution,res_x,res_y);
+	shader_set_uniform_f(iGlobalTime,time);
+	shader_set_uniform_f(palette,p);
+	shader_set_uniform_f(gamma,g);
+	shader_set_uniform_f(flicker,flk);
+}
+//draw_surface(application_surface,0,0);   // draw exactly as before
+draw_surface_stretched(application_surface,0,0,res_x,res_y);
 
-draw_surface(application_surface,0,0);   // draw exactly as before
+//display_set_gui_maximise(2,2,scr_w/2-surf_w,scr_h/2-surf_h); //pixel ratio
+display_set_gui_size(res_x,res_y);
+
 shader_reset();
-
-display_set_gui_size(res_x,res_y);        // GUI still matches base res
-

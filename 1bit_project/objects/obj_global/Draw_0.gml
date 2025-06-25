@@ -20,6 +20,7 @@ if UI==true
 	{
 		camx=obj_camera.x;
 		camy=obj_camera.y;
+		camwidth=180;
 		draw_rectangle_color(camx-(camwidth/2)+border,camy-(camheight/2)+border,camx+(camwidth/2)-(border*2),camy+(camheight/2)-(border*2),c_white,c_white,c_white,c_white,true);
 		//Hero UI
 		if instance_exists(obj_hero)
@@ -38,7 +39,7 @@ if UI==true
 
 		//debug todo remove
 			var height=-3
-			var pos_x=5+3;
+			var pos_x=5+3//+((global.res_x-180)/4);//added+30 because of 240 resolution
 			var pos_a=3+2+height;
 			var pos_b=9+2+height;
 			var pos_c=15+2+height;
