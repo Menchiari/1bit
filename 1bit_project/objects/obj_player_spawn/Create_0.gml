@@ -7,19 +7,19 @@ if instance_exists(obj_asset_bonfire)
 }
 
 
-if !instance_exists(obj_hero)
+if instance_exists(obj_hero)
 {
-	instance_create(obj_hero);
+	obj_hero.x=x;obj_hero.y=y;
+	if instance_number(obj_hero)>1 {instance_destroy(obj_hero);}
+
+	with obj_hero
+	{
+		//trigger_spawn=false;
+		state=states.sit;
+		//speed=0;
+	}
 }
 else
 {
-	obj_hero.x=x;obj_hero.y=y;
-}
-if instance_number(obj_hero)>1 {instance_destroy(obj_hero);}
-
-with obj_hero
-{
-	//trigger_spawn=false;
-	state=states.sit;
-	//speed=0;
+	instance_create(obj_hero);
 }

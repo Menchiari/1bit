@@ -13,14 +13,13 @@ if UI==true
 	//draw_rectangle_color(border,border,room_width-border,room_height-border,c_white,c_white,c_white,c_white,true);
 	var camx=camera_get_view_x(view_get_camera(view_current));
 	var camy=camera_get_view_y(view_get_camera(view_current));
-	var camwidth=res_x; //room_width//180//camera_get_view_width(view_get_camera(view_current));
-	var camheight=res_y; //room_height//320//camera_get_view_height(view_get_camera(view_current));
+	var camwidth=182//camera_get_view_width(view_camera[0]); //res_x; //room_width//180//camera_get_view_width(view_get_camera(view_current));
+	var camheight=320//camera_get_view_height(view_camera[0]); //res_y; //room_height//320//camera_get_view_height(view_get_camera(view_current));
 	
 	if instance_exists(obj_camera)
 	{
 		camx=obj_camera.x;
 		camy=obj_camera.y;
-		camwidth=180;
 		draw_rectangle_color(camx-(camwidth/2)+border,camy-(camheight/2)+border,camx+(camwidth/2)-(border*2),camy+(camheight/2)-(border*2),c_white,c_white,c_white,c_white,true);
 		//Hero UI
 		if instance_exists(obj_hero)

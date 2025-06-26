@@ -1,121 +1,124 @@
-#region enums
+function init_enums(){
+	#region enums
 //enums
-enum controls
-{
-	null,
-	keyboard,
-	gamepad,
-	touch,
-	ai
+	enum controls
+	{
+		null,
+		keyboard,
+		gamepad,
+		touch,
+		ai
+	}
+	enum states
+	{
+		null,
+		spawn,
+		idle,
+		walk,
+		run,
+		block,
+		breathe,
+		roll,
+		attack,
+		attack_strong,
+		block_hit,
+		hit,
+		collide_hit,
+		sit,
+		sit_idle,
+		death
+	}
+	enum ai_types
+	{
+		ai_test,
+		ai_basic,
+		ai_zombie,
+		ai_aggressive
+	}
+	enum ai_states
+	{
+		idle,
+		wander,
+		follow,
+		guard,
+		patrol,
+		alert,
+		chase,
+		search,
+		fight,
+		flee,
+		null
+	}
+	enum factions
+	{
+		ally,
+		enemy,
+		neutral,
+		everyone
+	}
+	enum armors
+	{
+		angel,
+		naked,
+		chainmail,
+		crusader,
+		infected,
+		metal,
+		pelt,
+		skeleton,
+		vest,
+		metal_extreme,
+		cape,
+		null
+	}
+	enum helms
+	{
+		head,
+		bishop,
+		roman,
+		rusty,
+		small1,
+		small2,
+		strayhat1,
+		hood,
+		null
+	}
+	enum weapons
+	{
+		hands,
+		dagger,
+		sword,
+		stick,
+		katana,
+		katana_extreme,
+		shotgun,
+		null
+	}
+	enum weapons_animset
+	{
+		hands,
+		dagger,
+		sword,
+		stick,
+		katana,
+		shotgun,
+		null
+	}
+	enum terrains
+	{
+		wood,
+		wood_wet,
+		stone,
+		stone_wet,
+		mud,
+		blood
+	}
+	#endregion
 }
-enum states
-{
-	null,
-	spawn,
-	idle,
-	walk,
-	run,
-	block,
-	breathe,
-	roll,
-	attack,
-	attack_strong,
-	block_hit,
-	hit,
-	collide_hit,
-	sit,
-	sit_idle,
-	death
-}
-enum ai_types
-{
-	ai_test,
-	ai_basic,
-	ai_zombie,
-	ai_aggressive
-}
-enum ai_states
-{
-	idle,
-	wander,
-	follow,
-	guard,
-	patrol,
-	alert,
-	chase,
-	search,
-	fight,
-	flee,
-	null
-}
-enum factions
-{
-	ally,
-	enemy,
-	neutral,
-	everyone
-}
-enum armors
-{
-	angel,
-	naked,
-	chainmail,
-	crusader,
-	infected,
-	metal,
-	pelt,
-	skeleton,
-	vest,
-	metal_extreme,
-	cape,
-	null
-}
-enum helms
-{
-	head,
-	bishop,
-	roman,
-	rusty,
-	small1,
-	small2,
-	strayhat1,
-	hood,
-	null
-}
-enum weapons
-{
-	hands,
-	dagger,
-	sword,
-	stick,
-	katana,
-	katana_extreme,
-	shotgun,
-	null
-}
-enum weapons_animset
-{
-	hands,
-	dagger,
-	sword,
-	stick,
-	katana,
-	shotgun,
-	null
-}
-enum terrains
-{
-	wood,
-	wood_wet,
-	stone,
-	stone_wet,
-	mud,
-	blood
-}
-#endregion
 
-#region GLOBAL VARIABLES
 function init_globals(){
+	#region GLOBAL VARIABLES
+	
 //setup
 	global.control_type=controls.gamepad;
 
@@ -140,7 +143,6 @@ function init_globals(){
 
 	if !audio_group_is_loaded(ag_character) {audio_group_load(ag_character);}
 	
-}
 //random seed
 	ini_open("random.seed")
 	default_seed=current_second+current_hour+current_day+current_year;
@@ -171,7 +173,7 @@ function init_globals(){
 #endregion
 #region player balancing
 	
-	//csv import
+//csv import
 	scr_balancing_helm();
 	scr_balancing_armor();
 	scr_balancing_weapon();
@@ -195,10 +197,11 @@ function init_globals(){
 	global.player_spd=ds_list_find_value(global.lvl_spd,0);
 	global.player_invincibility_timer=40;
 
-//progression todo make it saveable
+//progression saveable in scr_savegame and scr_loadgame
 	global.xp=0;
 	global.deathcount=0;
 	global.player_lives=0;
+	global.face_progress=0;
 	
 	global.unlock_wpn=ds_list_create();
 	//Staring Weapons
@@ -218,3 +221,4 @@ function init_globals(){
 	scr_loadgame();
 
 #endregion
+}

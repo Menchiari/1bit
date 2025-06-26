@@ -1,5 +1,6 @@
 /////////////////////GLOBAL/////////////////////
-scr_global();
+init_enums();
+init_globals();//scr_global();
 
 depth=global.depth_ui;
 

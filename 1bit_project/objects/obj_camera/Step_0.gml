@@ -63,5 +63,8 @@ if instance_exists(obj_hero)
 	//}
 }
 
-instance_deactivate_object(obj_character);
-instance_activate_region(x-(global.res_x*2),y-(global.res_y*2),global.res_x*4,global.res_y*4,true);
+if instance_exists(obj_character)
+{
+	instance_deactivate_object(obj_character);
+	instance_activate_region(x-(global.res_x*2),y-(global.res_y*2),global.res_x*4,global.res_y*4,true);
+}

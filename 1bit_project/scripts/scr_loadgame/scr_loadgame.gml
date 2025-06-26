@@ -8,6 +8,7 @@ if file_exists("save.sav")
 		global.xp=ini_read_real("savegame"+string(global.slot),"xp",global.xp);
 		global.player_lives=ini_read_real("savegame"+string(global.slot),"lives",global.player_lives);
 		global.deathcount=ini_read_real("savegame"+string(global.slot),"deathcount",global.deathcount);
+		global.face_progress=ini_read_real("savegame"+string(global.slot),"deathcount",global.face_progress);
 	
 		var ds_unlock_wpn = ini_read_string("savegame"+string(global.slot),"unlock_wpn",global.unlock_wpn);
 		var ds_unlock_arm = ini_read_string("savegame"+string(global.slot),"unlock_arm",global.unlock_arm);
