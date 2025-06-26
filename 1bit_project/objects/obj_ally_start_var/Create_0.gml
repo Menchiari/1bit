@@ -11,8 +11,8 @@ speech_text_7=sp7;
 speech_text_8=sp8;
 speech_distance=rng6;
 
-trigger_spawn_idle_a=var_idle_a;
-trigger_spawn_idle_b=var_idle_b;
+trigger_spawn_idle_a=sit_idle_a_var;
+trigger_spawn_idle_b=sit_idle_b_var;
 
 idle_speed=var_idle_speed;
 

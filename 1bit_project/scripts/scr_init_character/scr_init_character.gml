@@ -123,7 +123,7 @@ function scr_init_character(){
 	wakeup_ground_b=159;
 #endregion
 #region spawning variables
-	trigger_spawn_idle_a=sit_idle_b;
+	trigger_spawn_idle_a=sit_idle_a;
 	trigger_spawn_idle_b=sit_idle_b;//sit_idle_a;
 	trigger_spawn_a=sit_getup_a;
 	trigger_spawn_b=sit_getup_b;

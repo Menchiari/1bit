@@ -19,7 +19,7 @@
   "height":8,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"badb24a5-e2b5-464c-9ccf-c55ada82f118","blendMode":0,"displayName":"default","isLocked":false,"name":"badb24a5-e2b5-464c-9ccf-c55ada82f118","opacity":25.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"badb24a5-e2b5-464c-9ccf-c55ada82f118","blendMode":0,"displayName":"default","isLocked":false,"name":"badb24a5-e2b5-464c-9ccf-c55ada82f118","opacity":24.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_collider_tile",
   "nineSlice":null,

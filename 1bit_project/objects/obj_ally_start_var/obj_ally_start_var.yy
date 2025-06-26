@@ -41,8 +41,6 @@
     {"$GMObjectProperty":"v1","%Name":"sp7","filters":[],"listItems":[],"multiselect":false,"name":"sp7","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"\"","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"sp8","filters":[],"listItems":[],"multiselect":false,"name":"sp8","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"\"","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"rng6","filters":[],"listItems":[],"multiselect":false,"name":"rng6","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"60","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"var_idle_a","filters":[],"listItems":[],"multiselect":false,"name":"var_idle_a","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"138","varType":1,},
-    {"$GMObjectProperty":"v1","%Name":"var_idle_b","filters":[],"listItems":[],"multiselect":false,"name":"var_idle_b","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"138","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"var_idle_speed","filters":[],"listItems":[],"multiselect":false,"name":"var_idle_speed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.01","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"var_character_head","filters":[],"listItems":[
         "spr_head",
@@ -55,6 +53,8 @@
     {"$GMObjectProperty":"v1","%Name":"enemiesspeech","filters":[],"listItems":[],"multiselect":false,"name":"enemiesspeech","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
     {"$GMObjectProperty":"v1","%Name":"sp_enemy","filters":[],"listItems":[],"multiselect":false,"name":"sp_enemy","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"!!!\"","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"flipped","filters":[],"listItems":[],"multiselect":false,"name":"flipped","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"sit_idle_a_var","filters":[],"listItems":[],"multiselect":false,"name":"sit_idle_a_var","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"choose(126,127,135,136,137,138)","varType":4,},
+    {"$GMObjectProperty":"v1","%Name":"sit_idle_b_var","filters":[],"listItems":[],"multiselect":false,"name":"sit_idle_b_var","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"sit_idle_a_var","varType":4,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

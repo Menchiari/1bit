@@ -43,6 +43,7 @@ function scr_state_machine(){
 		case states.hit: scr_sm_hit() break;
 		case states.collide_hit: scr_sm_collide_hit() break;
 		case states.sit: scr_sm_sit() break;
+		case states.sit_idle: scr_sm_sit_idle() break;
 		case states.death: scr_sm_death() break;
 		default: break;
 	}

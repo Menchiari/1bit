@@ -27,9 +27,9 @@ str=10;
 res=.5;
 
 //spawn event
-state=states.spawn;
-trigger_spawn_idle_a=95;
-trigger_spawn_idle_b=102;
+state=states.sit_idle;
+sit_idle_a=95; //trigger_spawn_idle_a=95;
+sit_idle_b=102; //trigger_spawn_idle_b=102;
 trigger_spawn_a=sit_getup_a;
 trigger_spawn_b=sit_getup_b;
 trigger_spawn=false;

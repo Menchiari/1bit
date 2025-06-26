@@ -1,2 +1,2 @@
-trigger_text="Don't come near!"
-if global.deathcount==2 {trigger_text="you again?"}
+text_var="Don't come near!"
+if global.deathcount==2 {text_var="you again?"}

@@ -29,6 +29,7 @@ function scr_sm_idle(){
 	
 	if control==controls.ai
 	{
+		timer=idle_timer_setup;
 		if collision_point(x,y,obj_character,false,true)
 		{
 			var chance=irandom_range(0,30)

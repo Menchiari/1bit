@@ -24,6 +24,7 @@ enum states
 	hit,
 	collide_hit,
 	sit,
+	sit_idle,
 	death
 }
 enum ai_types

@@ -32,3 +32,6 @@ ai_state=ai_state_var;
 hp_max=hp_var;
 str=str_var;
 res=res_var;
+
+sit_idle_a=sit_idle_a_var;
+sit_idle_b=sit_idle_b_var;
