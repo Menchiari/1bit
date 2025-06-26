@@ -35,3 +35,5 @@ res=res_var;
 
 sit_idle_a=sit_idle_a_var;
 sit_idle_b=sit_idle_b_var;
+
+dir=dir_var;

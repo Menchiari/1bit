@@ -6,7 +6,7 @@ ini_open("save.sav")
 	ini_write_real("savegame"+string(global.slot),"xp",global.xp);
 	ini_write_real("savegame"+string(global.slot),"lives",global.player_lives);
 	ini_write_real("savegame"+string(global.slot),"deathcount",global.deathcount);	
-	ini_write_real("savegame"+string(global.slot),"deathcount",global.face_progress);
+	ini_write_real("savegame"+string(global.slot),"faceprogress",global.face_progress);
 
 	var ds_unlock_wpn = ds_list_write(global.unlock_wpn);
 	var ds_unlock_arm = ds_list_write(global.unlock_arm);
@@ -20,6 +20,12 @@ ini_open("save.sav")
 	ini_write_real("savegame"+string(global.slot),"player_arm",global.player_armor.index);
 	ini_write_real("savegame"+string(global.slot),"player_hlm",global.player_helm.index);
 	
+ini_close();
+
+ini_open("save_death.sav")
+	{
+		ini_write_real("savegame"+string(global.slot),"faceprogressdeath",global.face_progress_death);
+	}
 ini_close();
 }
 

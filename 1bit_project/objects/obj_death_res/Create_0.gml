@@ -13,7 +13,7 @@ res_lvl_gain =	get_lvl_gain(global.lvl_res, global.player_res);
 xp_cost =		get_xp_cost(res_lvl,res_lvl_gain);
 
 
-if res_lvl_gain = 0 || global.deathcount==1 || global.deathcount==6 || global.deathcount==14 || global.deathcount==22
+if res_lvl_gain = 0
 {speech_text="I have nothing \nto offer.."; activate=false; instance_destroy();}
 else
 {speech_text="kill me to\nresist pain";}

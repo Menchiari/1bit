@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_face_intro_default",
+  "%Name":"obj_face_intro_death",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_face_intro_default",
+  "name":"obj_face_intro_death",
   "overriddenProperties":[],
   "parent":{
     "name":"faces",

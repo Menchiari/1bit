@@ -38,11 +38,11 @@ trigger_distance=40;
 speech_text="slay me to\nreawaken";
 if global.deathcount==3 {speech_text="you have\nno idea..."}
 if global.deathcount==4 {speech_text="slay me to\nfind out"}
-if global.deathcount==6 {speech_text="The perfection of the few\nis built on the\nsuffering of the many"}
+if global.deathcount==5 {speech_text="The perfection of the few\nis built on the\nsuffering of the many"}
 if global.deathcount==7 {speech_text="That's the only reason\nyou even exist at all"}
-if global.deathcount==14 {speech_text="thought you could\nlive forever?"}
-if global.deathcount>=15 {speech_text=string(global.deathcount-23)+" deaths left"}
-if global.deathcount==22 {speech_text="ready to die?"}
+if global.deathcount==10 {speech_text="thought you could\nlive forever?"}
+if global.deathcount>=11 {speech_text=string(global.deathcount-16)+" deaths left"}
+if global.deathcount==15 {speech_text="ready to die?"}
 speech_color=c_red;
 speech_distance=30;
 dialogue_death_chance=0;

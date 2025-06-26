@@ -1,6 +1,6 @@
 function scr_loadgame(){
 if file_exists("save.sav")
-{
+	{
 	ini_open("save.sav")
 		global.room_list=ini_read_real("savegame"+string(global.slot),"roomlist",global.room_list);
 		global.chosen_room=ini_read_real("savegame"+string(global.slot),"room",global.chosen_room);
@@ -8,7 +8,7 @@ if file_exists("save.sav")
 		global.xp=ini_read_real("savegame"+string(global.slot),"xp",global.xp);
 		global.player_lives=ini_read_real("savegame"+string(global.slot),"lives",global.player_lives);
 		global.deathcount=ini_read_real("savegame"+string(global.slot),"deathcount",global.deathcount);
-		global.face_progress=ini_read_real("savegame"+string(global.slot),"deathcount",global.face_progress);
+		global.face_progress=ini_read_real("savegame"+string(global.slot),"faceprogress",global.face_progress);
 	
 		var ds_unlock_wpn = ini_read_string("savegame"+string(global.slot),"unlock_wpn",global.unlock_wpn);
 		var ds_unlock_arm = ini_read_string("savegame"+string(global.slot),"unlock_arm",global.unlock_arm);
@@ -36,6 +36,12 @@ if file_exists("save.sav")
 		//global.player_armor=global.armors[ini_read_real("savegame"+string(global.slot),"armor",global.player_armor)];
 		//global.player_helm=global.helms[ini_read_real("savegame"+string(global.slot),"helm",global.player_helm)];
 	
+	ini_close();
+	}
+if file_exists("save_death.sav")
+	{
+	ini_open("save_death.sav")
+		global.face_progress_death=ini_read_real("savegame"+string(global.slot),"faceprogressdeath",global.face_progress_death);
 	ini_close();
 	}
 }

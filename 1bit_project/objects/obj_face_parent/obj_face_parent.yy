@@ -1,20 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_face_intro_default",
+  "%Name":"obj_face_parent",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_face_intro_default",
+  "name":"obj_face_parent",
   "overriddenProperties":[],
   "parent":{
     "name":"faces",
     "path":"folders/Objects/faces.yy",
   },
-  "parentObjectId":{
-    "name":"obj_face_parent",
-    "path":"objects/obj_face_parent/obj_face_parent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

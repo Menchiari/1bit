@@ -202,6 +202,7 @@ function init_globals(){
 	global.deathcount=0;
 	global.player_lives=0;
 	global.face_progress=0;
+	global.face_progress_death=0;
 	
 	global.unlock_wpn=ds_list_create();
 	//Staring Weapons
