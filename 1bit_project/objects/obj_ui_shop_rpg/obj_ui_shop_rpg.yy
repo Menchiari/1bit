@@ -30,9 +30,9 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"selected_weapon","filters":[],"listItems":[],"multiselect":false,"name":"selected_weapon","rangeEnabled":true,"rangeMax":63.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
-    {"$GMObjectProperty":"v1","%Name":"selected_armor","filters":[],"listItems":[],"multiselect":false,"name":"selected_armor","rangeEnabled":true,"rangeMax":42.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
-    {"$GMObjectProperty":"v1","%Name":"selected_helm","filters":[],"listItems":[],"multiselect":false,"name":"selected_helm","rangeEnabled":true,"rangeMax":36.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"selected_weapon","filters":[],"listItems":[],"multiselect":false,"name":"selected_weapon","rangeEnabled":true,"rangeMax":63.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"irandom_range(0,63)","varType":4,},
+    {"$GMObjectProperty":"v1","%Name":"selected_armor","filters":[],"listItems":[],"multiselect":false,"name":"selected_armor","rangeEnabled":true,"rangeMax":42.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"irandom_range(0,42)","varType":4,},
+    {"$GMObjectProperty":"v1","%Name":"selected_helm","filters":[],"listItems":[],"multiselect":false,"name":"selected_helm","rangeEnabled":true,"rangeMax":36.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"irandom_range(0,36)","varType":4,},
     {"$GMObjectProperty":"v1","%Name":"title_name","filters":[],"listItems":[],"multiselect":false,"name":"title_name","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"tap to swap an item\"","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"description_shop","filters":[],"listItems":[],"multiselect":false,"name":"description_shop","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"you find some items\"","varType":2,},
   ],

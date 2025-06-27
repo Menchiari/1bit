@@ -4,4 +4,4 @@
 // Inherit the parent event
 event_inherited();
 
-character_head=choose(spr_head_female,spr_head_female1);
+character_head=choose(spr_head_female,spr_head_female1_old);

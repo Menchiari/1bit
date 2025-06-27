@@ -2,7 +2,7 @@
 event_inherited();
 
 //customize character
-character_head=choose(spr_head,spr_head_female1);
+character_head=choose(spr_head,spr_head_female1_old);
 state=states.spawn;
 idle_speed=random_range(.05,.2)
 
