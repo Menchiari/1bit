@@ -3,7 +3,7 @@ if active==true
 {
 	//text
 	var drawgui_divider=1;
-	var separation=round(6*drawgui_divider); //sitance between text lines
+	var separation=round(5.5*drawgui_divider); //sitance between text lines
 	var maxpixels=150*drawgui_divider; //how long the text line in pixels
 	var text_x=x*drawgui_divider//camera_get_view_width(view_current);//x;
 	var text_y=y*drawgui_divider///camera_get_view_height(view_current);;//y;

@@ -7,6 +7,10 @@ if only_once==true
 		obj_hero.dest_x=destination_x;
 		obj_hero.dest_y=destination_y;
 		once=false;
+		if fader==true
+		{
+			instance_create(obj_fx_fadein_fast);
+		}
 	}
 }
 else

@@ -25,6 +25,11 @@ function scr_sm_idle(){
 			state=states.block;
 			idle_timer=idle_timer_setup;
 		}
+			if idle_timer<=0
+		{
+			state=states.sit;
+			idle_timer=idle_timer_setup;
+		}
 	}
 	
 	if control==controls.ai
@@ -41,11 +46,5 @@ function scr_sm_idle(){
 				idle_timer=idle_timer_setup;
 			}
 		}
-	}
-	
-	if idle_timer<=0
-	{
-		state=states.sit;
-		idle_timer=idle_timer_setup;
 	}
 }
