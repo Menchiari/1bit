@@ -1,8 +1,8 @@
 if instance_exists(obj_asset_bonfire)
 {
 	ini_open("save.sav");
-	x=ini_read_real("DEBUG","PLAYERSPAWN_X",x);
-	y=ini_read_real("DEBUG","PLAYERSPAWN_Y",y);
+	x=ini_read_real("DEBUG","PLAYERSPAWN_X_"+string(room_get_name(room)),x);
+	y=ini_read_real("DEBUG","PLAYERSPAWN_Y_"+string(room_get_name(room)),y);
 	ini_close();
 }
 

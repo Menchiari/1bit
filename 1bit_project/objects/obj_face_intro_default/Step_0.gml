@@ -112,11 +112,11 @@ case 2:
 		break;
 		case 4:
 			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
-			txt="doing thing that you hate"; //the text to be said - the speed of the next phase is dependent on the length
+			txt="doing things that you hate"; //the text to be said - the speed of the next phase is dependent on the length
 		break;
 		case 5:
 			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
-			txt="for people you don't like..."; //the text to be said - the speed of the next phase is dependent on the length
+			txt="perhaps for someone\nyou don't like..."; //the text to be said - the speed of the next phase is dependent on the length
 		break;
 		case 6:
 			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop

@@ -30,6 +30,9 @@
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"nextroom","filters":[],"listItems":[],"multiselect":false,"name":"nextroom","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"rm_boat","path":"rooms/rm_boat/rm_boat.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"rm_boat","varType":5,},
     {"$GMObjectProperty":"v1","%Name":"wait_time","filters":[],"listItems":[],"multiselect":false,"name":"wait_time","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"coordinates","filters":[],"listItems":[],"multiselect":false,"name":"coordinates","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"teleport_x","filters":[],"listItems":[],"multiselect":false,"name":"teleport_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"teleport_y","filters":[],"listItems":[],"multiselect":false,"name":"teleport_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
