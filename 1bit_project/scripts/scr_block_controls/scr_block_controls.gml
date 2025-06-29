@@ -15,9 +15,22 @@ function scr_block_controls(){
 				if timer<roll_time
 				{
 					if point_distance(x,y,mouse_x,mouse_y)>run_distance
-					||collision_circle(x,y,run_distance_enemy,obj_enemy,false,true)//todo make opposing faction rather than just enemy faction
-					{state=states.run;}
-					else {state=states.walk;}
+					{
+						state=states.run;
+					}
+					else
+					{
+						state=states.walk;
+						var temp_enemy=collision_circle(x,y,run_distance_enemy,obj_enemy,false,true)//todo make opposing faction rather than just enemy faction
+						if instance_exists(temp_enemy)
+						{
+							if temp_enemy.ai_state=ai_states.alert
+							|| temp_enemy.ai_state=ai_states.chase
+							|| temp_enemy.ai_state=ai_states.fight
+							|| temp_enemy.ai_state=ai_states.flee
+							{state=states.run;}
+						}
+					}
 				}
 				else
 				{
