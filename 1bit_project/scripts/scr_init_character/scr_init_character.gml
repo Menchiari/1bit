@@ -70,7 +70,7 @@ function scr_init_character(){
 	attack_charge3_b=49;
 	attack_3_a=50;
 	attack_3_b=55;
-	attack_3_fr=51;
+	attack_3_fr=52;
 	attack_charge_shotgun_a=161;
 	attack_charge_shotgun_b=162;
 	attack_shotgun_a=163;

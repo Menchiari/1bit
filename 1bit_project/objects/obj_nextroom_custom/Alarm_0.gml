@@ -1,8 +1,8 @@
-room_goto(nextroom);
-if coordinates==true
-{obj_hero.x=teleport_x;obj_hero.y=teleport_y;}
-once=true;
-if instance_exists(obj_fx_fadeout)
+/// @description delayed step event
+alarm[0]=10;
+if place_meeting(x,y,obj_hero) && once==true
 {
-	instance_destroy(obj_fx_fadeout);
+	alarm[1]=wait_time;
+	once=false;
+	instance_create(obj_fx_fadeout);
 }

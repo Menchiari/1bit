@@ -11,7 +11,8 @@ txt_progress_spd=0.5;
 
 timer=0;
 wait_time=game_get_speed(gamespeed_fps)*3;
-idle_time=game_get_speed(gamespeed_fps)*5;
+idle_time=game_get_speed(gamespeed_fps)*4;
+idle_time_default=idle_time;
 
 state="wait";
 sprite=sprite_index;
@@ -22,5 +23,13 @@ face_progress=global.face_progress;
 face_progress_death=global.face_progress_death;
 
 next_room=rm_menu_character;
+switch global.story_progress
+{
+	case 0:
+	next_room=rm_story_1;
+	break;
+	default:
+	break;
+}
 
 show_debug_message(string(face_progress)+" face progress")

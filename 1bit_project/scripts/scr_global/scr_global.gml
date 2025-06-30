@@ -120,7 +120,7 @@ function init_globals(){
 	#region GLOBAL VARIABLES
 	
 //setup
-	global.control_type=controls.gamepad;
+	global.control_type=controls.gamepad;//probably unused? todo check and fix
 
 	global.depth_ui_front=-8000;
 	global.depth_ui=-5000;
@@ -136,7 +136,7 @@ function init_globals(){
 
 	global.blood_color=c_orange;//c_fuchsia;//c_red;
 
-	global.orientation=0;// 0=portrait, 90=landscape;
+	global.orientation=0;// 0=portrait, 90=landscape; //deprecated
 
 	global.slot=0;
 	global.chosen_room=rm_start;
@@ -201,6 +201,7 @@ function init_globals(){
 	global.xp=0;
 	global.deathcount=0;
 	global.player_lives=0;
+	global.story_progress=0;
 	global.face_progress=0;
 	global.face_progress_death=0;
 	

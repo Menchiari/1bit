@@ -58,7 +58,7 @@ function equip_weapon(_weapon) {
 				animset_atk1_time=8;
 				animset_atk2_time=20;
 				
-				animset_attack_range=12;
+				animset_attack_range=13;
 				animset_attack_range_strong=15;
 				animset_atk1_sp=4;
 				animset_atk1_sp_decrease=.3;
@@ -200,7 +200,7 @@ function equip_weapon(_weapon) {
 				animset_weapon_image_speed=1;
 				animset_atk1_time=10;
 				animset_atk2_time=20;
-				animset_attack_range=12;
+				animset_attack_range=13;
 				animset_attack_range_strong=15;
 				animset_atk1_sp=4;
 				animset_atk1_sp_decrease=.3;

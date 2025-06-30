@@ -48,7 +48,7 @@ case 0:
 		case 8:
 			instance_create(obj_fx_fadeout);
 			alarm[0]=game_get_speed(gamespeed_fps)*2
-			next_room=rm_story_1;
+			//next_room=rm_story_1;
 		break;
 		default:
 		break;
@@ -83,7 +83,6 @@ case 1:
 		case 6:
 			instance_create(obj_fx_fadeout);
 			alarm[0]=game_get_speed(gamespeed_fps)*2
-			next_room=rm_menu_character;
 		break;
 		default:
 		break;
@@ -112,11 +111,11 @@ case 2:
 		break;
 		case 4:
 			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
-			txt="doing things that you hate"; //the text to be said - the speed of the next phase is dependent on the length
+			txt="pretending to be useful"; //the text to be said - the speed of the next phase is dependent on the length
 		break;
 		case 5:
 			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
-			txt="perhaps for someone\nyou don't like..."; //the text to be said - the speed of the next phase is dependent on the length
+			txt="by following rules blindly"; //the text to be said - the speed of the next phase is dependent on the length
 		break;
 		case 6:
 			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
@@ -152,7 +151,7 @@ case 2:
 		case 12://last phase, for some reason it can't be default, must be there to end the scene
 			instance_create(obj_fx_fadeout);//creates a fade out
 			alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
-			next_room=rm_death;//pick the room you want
+			if global.story_progress>0 next_room=rm_death;//pick the room you want
 		break;
 		default:
 		break;
@@ -193,7 +192,7 @@ case 3:
 		case 8://last phase, for some reason it can't be default, must be there to end the scene
 			instance_create(obj_fx_fadeout);//creates a fade out
 			alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
-			next_room=rm_menu_character;//pick the room you want
+			//next_room=rm_menu_character;//pick the room you want
 		break;
 		default:
 		break;

@@ -1,0 +1,17 @@
+Adobe After Effects v25.2.2 Windows 64 render log for project “foregrounds.aep”
+
+Rendering started on 30/06/2025 at 11:33:05
+
+  30/06/2025 11:33:05: Starting composition “spr_dither_fade1”.
+
+  Output To: E:\Git\1bit\Art\FX\spr_dither_fade1.png    30/06/2025 11:33:05: Finished composition “spr_dither_fade1”.
+
+
+  30/06/2025 11:33:05: Starting composition “spr_dither_fade2”.
+
+  Output To: E:\Git\1bit\Art\FX\spr_dither_fade2.png    30/06/2025 11:33:05: Finished composition “spr_dither_fade2”.
+
+
+  Total Time Elapsed: 0 Seconds
+Log closed on 30/06/2025 at 11:33:05
+

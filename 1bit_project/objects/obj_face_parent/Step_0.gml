@@ -32,7 +32,8 @@ switch state
 	break;
 	case "talk_intense":
 		image_speed=image_speed_default;
-		if image_index>=image_number-1 {image_speed=image_number-1;}
+		idle_time=game_get_speed(gamespeed_fps)*1;
+		if image_index>=image_number-1 {image_index=image_number-1;}
 		if timer>=length*txt_speed
 		{
 			if txt_auto==true
@@ -58,6 +59,7 @@ switch state
 	break;
 	case "idle":
 		image_speed = 0;
+		idle_time=idle_time_default;
 		blink_hold = (blink_hold > 0) ? blink_hold - 1 : (irandom_range(0, 30) == 0 ? 5 : 0); //holds for 5 frames
 		image_index = (blink_hold > 0);
 		

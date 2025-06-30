@@ -9,6 +9,7 @@ if instance_exists(obj_hero)
 		if point_distance(x,y,obj_hero.x,obj_hero.y)<10
 		{
 			global.xp+=xp_value;
+			if instance_exists(obj_global) {obj_global.global_xp=global.xp;}
 			instance_destroy();
 		}
 	}
