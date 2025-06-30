@@ -21,6 +21,7 @@ case 0:
 		break;
 		case 3:
 			sprite_index=spr_faces_intro_mock;
+			txt_color=c_red;
 			txt="You wish your life could last forever";
 		break;
 		case 4:
@@ -34,6 +35,7 @@ case 0:
 		case 6:
 			sprite_index=spr_faces_intro_mock;
 			txt="well guess what. Life isn't forever";
+			color=c_red;
 		break;
 		case 7:
 			sprite_index=spr_faces_intro_mock;
@@ -71,12 +73,14 @@ case 1:
 		break;
 		case 2:
 			txt="and again";
+			txt_color=c_red;
 		break;
 		case 3:
 			txt="without any shame, you restart";
 		break;
 		case 4:
 			txt="and waste more of your life";
+			color=c_red;
 		break;
 		case 5:
 			txt="your pathetic insignificant life";
@@ -126,6 +130,8 @@ case 2:
 			sprite_index=spr_faces_intro_end
 			txt="D E A T H - I S - O N L Y\nT H E - B E G I N N I N G";
 			state="talk_intense";
+			txt_color=c_red;
+			color=c_red;
 		break;
 		case 5://last phase, for some reason it can't be default, must be there to end the scene
 			global.face_progress_death+=1;
@@ -159,9 +165,11 @@ case 3:
 		break;
 		case 5:
 			txt="but this time I won't remember you";
+			txt_color=c_red;
 		break;
 		case 6:
 			txt="I will purposefully remove you";
+			color=c_red;
 		break;
 		case 7:
 			txt="so you can die in my memories as well";
@@ -190,6 +198,8 @@ case 5:
 		//////////////////////PLACE DIALOGUE HERE//////////////////////////
 		case 1:
 			txt="remember now, and forever";
+			color=c_red;
+			txt_color=c_red;
 		break;
 		///////////////////////////////////////////////////////////////////
 		case 2://second to last phase, make the character wait before moving to the next room

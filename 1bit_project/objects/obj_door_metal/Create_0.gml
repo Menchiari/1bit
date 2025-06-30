@@ -1,6 +1,6 @@
 event_inherited();
 
-hp_max=.25;
+hp_max=.1;
 hp=hp_max;
 res=1;
 debris_min=6;

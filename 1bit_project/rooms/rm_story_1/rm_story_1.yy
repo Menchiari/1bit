@@ -195,7 +195,7 @@
           -6249,-2147483648,-4,0,16,3322,268436832,3521,1374,1372,3521,3521,2600,3581,268439037,1376,0,0,3244,
           3521,3581,-47,-2147483648,-5,0,-2,3581,1,3641,-4,3581,8,3641,268439097,268439037,1376,3244,3581,3581,
           3641,-49,-2147483648,-2,0,-286,-2147483648,1,0,-4046,-2147483648,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_01","path":"tilesets/ts_01/ts_01.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_fg","path":"tilesets/ts_fg/ts_fg.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRAssetLayer":"","%Name":"foregrounds","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_6C96EB07","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_6C96EB07","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_bg_story_house_int_fg","path":"sprites/spr_bg_story_house_int_fg/spr_bg_story_house_int_fg.yy",},"x":180.0,"y":960.0,},
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_1D5D1AF8","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_1D5D1AF8","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_bg_story_house_fg","path":"sprites/spr_bg_story_house_fg/spr_bg_story_house_fg.yy",},"x":223.5,"y":460.0,},
@@ -407,7 +407,7 @@
           1,268439447,-46,-2147483648,1,268439447,-7,-2147483648,-8,0,-4,-2147483648,1,268439447,-46,-2147483648,
           1,268439447,-9,-2147483648,-4,0,-2,-2147483648,1,0,-3,-2147483648,1,268439447,-46,-2147483648,1,268439447,
           -19,-2147483648,1,268439447,-46,-2147483648,1,268439447,-19,-2147483648,1,268439447,-2703,-2147483648,
-        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_01","path":"tilesets/ts_01/ts_01.yy",},"userdefinedDepth":true,"visible":true,"x":0,"y":0,},
+        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_fg","path":"tilesets/ts_fg/ts_fg.yy",},"userdefinedDepth":true,"visible":true,"x":0,"y":0,},
     {"$GMRAssetLayer":"","%Name":"backgrounds","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_6C98EFFB","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_6C98EFFB","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_bg_story_house_int","path":"sprites/spr_bg_story_house_int/spr_bg_story_house_int.yy",},"x":180.0,"y":960.0,},
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_1F5641A2","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_1F5641A2","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"interior1","path":"sprites/interior1/interior1.yy",},"x":365.0,"y":707.0,},

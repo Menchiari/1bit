@@ -15,4 +15,4 @@ if gamepad_axis_value(0,gp_axislh)>0 || gamepad_axis_value(0,gp_axislv)>0
 	dest_y=gamepad_axis_value(0,gp_axislv)*walk_sp*10;
 }
 
-show_debug_message(string(depth)+" hero depth")
+//show_debug_message(string(depth)+" hero depth")
