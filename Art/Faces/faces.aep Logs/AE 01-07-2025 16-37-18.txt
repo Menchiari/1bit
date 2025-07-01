@@ -1,0 +1,37 @@
+Adobe After Effects v25.2.2 Windows 64 render log for project “faces.aep”
+
+Rendering started on 01/07/2025 at 16:37:18
+
+  01/07/2025 16:37:18: Starting composition “spr_faces_princess_bigquestion”.
+
+  Output To: E:\Git\1bit\Art\Faces\spr_faces_princess_bigquestion\spr_faces_princess_bigquestion_[##].png    01/07/2025 16:37:22: Finished composition “spr_faces_princess_bigquestion”.
+
+
+  01/07/2025 16:37:22: Starting composition “spr_faces_princess_faces”.
+
+  Output To: E:\Git\1bit\Art\Faces\spr_faces_princess_faces\spr_faces_princess_faces_[##].png    01/07/2025 16:37:25: Finished composition “spr_faces_princess_faces”.
+
+
+  01/07/2025 16:37:25: Starting composition “spr_faces_princess_important”.
+
+  Output To: E:\Git\1bit\Art\Faces\spr_faces_princess_important\spr_faces_princess_important_[##].png    01/07/2025 16:37:36: Finished composition “spr_faces_princess_important”.
+
+
+  01/07/2025 16:37:37: Starting composition “spr_faces_princess_politesmile”.
+
+  Output To: E:\Git\1bit\Art\Faces\spr_faces_princess_politesmile\spr_faces_princess_politesmile_[##].png    01/07/2025 16:37:42: Finished composition “spr_faces_princess_politesmile”.
+
+
+  01/07/2025 16:37:42: Starting composition “spr_faces_princess_sad”.
+
+  Output To: E:\Git\1bit\Art\Faces\spr_faces_princess_sad\spr_faces_princess_sad_[##].png    01/07/2025 16:37:46: Finished composition “spr_faces_princess_sad”.
+
+
+  01/07/2025 16:37:46: Starting composition “spr_faces_princess_wonder”.
+
+  Output To: E:\Git\1bit\Art\Faces\spr_faces_princess_wonder\spr_faces_princess_wonder_[##].png    01/07/2025 16:37:49: Finished composition “spr_faces_princess_wonder”.
+
+
+  Total Time Elapsed: 31 Seconds
+Log closed on 01/07/2025 at 16:37:49
+

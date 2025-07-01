@@ -1,0 +1,27 @@
+Adobe After Effects v25.2.2 Windows 64 render log for project “faces.aep”
+
+Rendering started on 01/07/2025 at 17:22:42
+
+  01/07/2025 17:22:42: Starting composition “spr_faces_death_default”.
+
+  Output To: E:\Git\1bit\Art\Faces\spr_faces_death_default\spr_faces_death_default_[##].png    01/07/2025 17:22:47: Finished composition “spr_faces_death_default”.
+
+
+  01/07/2025 17:22:47: Starting composition “spr_faces_death_laugh”.
+
+  Output To: E:\Git\1bit\Art\Faces\spr_faces_death_laugh\spr_faces_death_laugh_[##].png    01/07/2025 17:22:51: Finished composition “spr_faces_death_laugh”.
+
+
+  01/07/2025 17:22:51: Starting composition “spr_faces_death_mock”.
+
+  Output To: E:\Git\1bit\Art\Faces\spr_faces_death_mock\spr_faces_death_mock_[##].png    01/07/2025 17:22:56: Finished composition “spr_faces_death_mock”.
+
+
+  01/07/2025 17:22:56: Starting composition “spr_faces_death_outro”.
+
+  Output To: E:\Git\1bit\Art\Faces\spr_faces_death_outro\spr_faces_death_outro_[##].png    01/07/2025 17:22:59: Finished composition “spr_faces_death_outro”.
+
+
+  Total Time Elapsed: 17 Seconds
+Log closed on 01/07/2025 at 17:22:59
+

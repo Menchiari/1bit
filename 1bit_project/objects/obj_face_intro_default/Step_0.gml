@@ -89,6 +89,9 @@ case 1:
 	}
 break;
 case 2:
+	txt_phase=1; //no need to explain reference
+break;
+case 3:
 	switch txt_phase //thinking of life
 	{
 		case 0:
@@ -157,7 +160,7 @@ case 2:
 		break;
 	}
 break;
-case 3:
+case 4:
 	switch txt_phase //you never quit
 	{
 		case 0:

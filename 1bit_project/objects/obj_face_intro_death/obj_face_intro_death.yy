@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_faces_intro_default",
-    "path":"sprites/spr_faces_intro_default/spr_faces_intro_default.yy",
+    "name":"spr_faces_death_default",
+    "path":"sprites/spr_faces_death_default/spr_faces_death_default.yy",
   },
   "spriteMaskId":null,
   "visible":true,

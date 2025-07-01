@@ -12,20 +12,20 @@ case 0:
 		break;
 		//////////////////////PLACE DIALOGUE HERE//////////////////////////
 		case 1:
-			sprite_index=spr_faces_intro_mock;
+			sprite_index=spr_faces_death_default;
 			txt="Oh would you look at that?";
 		break;
 		case 2:
-			sprite_index=spr_faces_intro_mock;
+			sprite_index=spr_faces_death_default;
 			txt="You want to continue do you?";
 		break;
 		case 3:
-			sprite_index=spr_faces_intro_mock;
+			sprite_index=spr_faces_death_mock;
 			txt_color=c_red;
 			txt="You wish your life could last forever";
 		break;
 		case 4:
-			sprite_index=spr_faces_intro_default;
+			sprite_index=spr_faces_death_laugh;
 			txt="like a pathetic coward";
 		break;
 		case 5:
@@ -33,20 +33,20 @@ case 0:
 			wait_time=game_get_speed(gamespeed_fps)*1;
 		break;
 		case 6:
-			sprite_index=spr_faces_intro_mock;
+			sprite_index=spr_faces_death_default;
 			txt="well guess what. Life isn't forever";
 			color=c_red;
 		break;
 		case 7:
-			sprite_index=spr_faces_intro_mock;
+			sprite_index=spr_faces_death_laugh;
 			txt="you will die and rot one day";
 		break;
 		case 8:
-			sprite_index=spr_faces_intro_mock;
+			sprite_index=spr_faces_death_laugh;
 			txt="maybe sooner than you think";
 		break;
 		case 9:
-			sprite_index=spr_faces_intro_end;
+			sprite_index=spr_faces_death_outro;
 			state="talk_intense";
 			txt="maybe in this very moment";
 		break;
@@ -92,7 +92,7 @@ case 1:
 			txt="enjoy your death, again";
 		break;
 		case 8:
-			sprite_index=spr_faces_intro_end;
+			sprite_index=spr_faces_death_outro;
 			state="talk_intense";
 			txt="but this time don't come back";
 		break;
@@ -112,10 +112,11 @@ case 2:
 	switch txt_phase //how many times
 	{
 		case 0:
+			sprite_index=spr_faces_intro_default
 		break;
 		//////////////////////PLACE DIALOGUE HERE//////////////////////////
 		case 1:
-			txt="You did come back";
+			txt="You came back";
 		break;
 		case 2:
 			sprite_index=spr_faces_intro_mock
@@ -148,6 +149,7 @@ case 3:
 	switch txt_phase //last message
 	{
 		case 0:
+			sprite_index=spr_faces_intro_default
 		break;
 		//////////////////////PLACE DIALOGUE HERE//////////////////////////
 		case 1:
@@ -194,6 +196,7 @@ case 5:
 	switch txt_phase //death is only the beginning
 	{
 		case 0:
+			sprite_index=spr_faces_death_default
 		break;
 		//////////////////////PLACE DIALOGUE HERE//////////////////////////
 		case 1:
@@ -203,7 +206,7 @@ case 5:
 		break;
 		///////////////////////////////////////////////////////////////////
 		case 2://second to last phase, make the character wait before moving to the next room
-			sprite_index=spr_faces_intro_default
+			sprite_index=spr_faces_death_outro
 			txt="death is only the beginning";
 			state="talk_intense";
 		break;
