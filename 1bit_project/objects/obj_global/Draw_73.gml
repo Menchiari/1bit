@@ -5,9 +5,11 @@ if display_mouse==true
 	draw_point_color(mouse_x,mouse_y+1,c_black);
 }
 
-//Main UI
+//Main UI - deactivate rooms with no UI here
 if UI==true
 && room!=rm_death
+&& room!=rm_boat
+&& room!=rm_faces_boss_intro
 {
 	var border=2;
 	//draw_rectangle_color(border,border,room_width-border,room_height-border,c_white,c_white,c_white,c_white,true);

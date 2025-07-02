@@ -131,7 +131,7 @@ function init_globals(){
 	global.shader=shd_1bit_blood;
 	// Global Resolution:
 	// For border change the resolution in room rm_setup, obj_camera_pos, obj_camera, obj_hero
-	global.res_x=240//180//280;//220;
+	global.res_x=200//180//280;//220;
 	global.res_y=320//400;//380;
 
 	global.blood_color=c_orange;//c_fuchsia;//c_red;

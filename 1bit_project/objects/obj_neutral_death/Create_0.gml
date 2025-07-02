@@ -40,9 +40,21 @@ if global.deathcount==3 {speech_text="you have\nno idea..."}
 if global.deathcount==4 {speech_text="slay me to\nfind out"}
 if global.deathcount==5 {speech_text="The perfection of the few\nis built on the\nsuffering of the many"}
 if global.deathcount==7 {speech_text="That's the only reason\nyou even exist at all"}
-if global.deathcount==10 {speech_text="thought you could\nlive forever?"}
-if global.deathcount>=11 {speech_text=string(global.deathcount-16)+" deaths left"}
+if global.deathcount==8 {speech_text="thought you could\nlive forever?"}
+if global.deathcount>=9 {speech_text=string(global.deathcount-16)+" deaths left"}
 if global.deathcount==15 {speech_text="ready to die?"}
+
+if (global.deathcount==3
+|| global.deathcount==4
+|| global.deathcount==5
+|| global.deathcount==7
+|| global.deathcount==8)
+&& (object_index==obj_death_hp
+|| object_index==obj_death_res
+|| object_index==obj_death_spd
+|| object_index==obj_death_str)
+{activate=false; instance_destroy();}
+
 speech_color=c_red;
 speech_distance=30;
 dialogue_death_chance=0;

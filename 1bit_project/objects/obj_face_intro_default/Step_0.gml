@@ -89,7 +89,38 @@ case 1:
 	}
 break;
 case 2:
-	txt_phase=1; //no need to explain reference
+	switch txt_phase //no need to explain
+	{
+		case 0:
+			//this is the very first moment the face appears.
+			//Keep empty if you want the character to say nothing on entry
+		break;
+		case 1:
+			txt="Welcome back"; //the text to be said - the speed of the next phase is dependent on the length
+		break;
+		case 2:
+			txt="";
+			state="wait"; //use this if you want the character to blink (first 2 frames) instead of talking
+			wait_time=game_get_speed(gamespeed_fps)*1; //the amount of seconds (*1) to wait, independent from the text length
+		break;
+		case 3:
+			txt="No need to explain yourself again";
+		break;
+		case 4:
+			txt="Let's give it one more shot";
+		break;
+		case 5:
+			txt="";
+			state="wait";
+			wait_time=game_get_speed(gamespeed_fps)*1;
+		break;
+		case 6:
+			instance_create(obj_fx_fadeout);
+			alarm[0]=game_get_speed(gamespeed_fps)*2
+		break;
+		default:
+		break;
+	}
 break;
 case 3:
 	switch txt_phase //thinking of life

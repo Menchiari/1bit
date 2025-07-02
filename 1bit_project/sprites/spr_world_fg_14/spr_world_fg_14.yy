@@ -23,7 +23,7 @@
   ],
   "name":"spr_world_fg_14",
   "nineSlice":null,
-  "origin":0,
+  "origin":9,
   "parent":{
     "name":"world",
     "path":"folders/Sprites/world.yy",
@@ -78,7 +78,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":0,
-    "yorigin":0,
+    "yorigin":-100,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

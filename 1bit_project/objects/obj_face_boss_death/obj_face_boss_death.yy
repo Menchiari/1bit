@@ -1,11 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_face_intro_death",
+  "%Name":"obj_face_boss_death",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_face_intro_death",
+  "name":"obj_face_boss_death",
   "overriddenProperties":[],
   "parent":{
     "name":"faces",
@@ -33,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_faces_death_default",
-    "path":"sprites/spr_faces_death_default/spr_faces_death_default.yy",
+    "name":"spr_faces_boss_dead",
+    "path":"sprites/spr_faces_boss_dead/spr_faces_boss_dead.yy",
   },
   "spriteMaskId":null,
   "visible":true,

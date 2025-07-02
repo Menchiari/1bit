@@ -200,9 +200,14 @@ function scr_sm_death(){
 	
 	instance_destroy();
 	
-	var xp_points=instance_create(obj_xp);
+	//create XP points
+	if object_index!=obj_hero
+	{
+		var xp_points=instance_create(obj_xp);
 	
-	if instance_exists(xp_points) {
-		xp_points.xp_value=((str*weapon.atk_dmg_light*weapon.atk_dmg_strong)+(res*armor.defence*helm.defence)+hp_max)*spd;
+		if instance_exists(xp_points)
+		{
+			xp_points.xp_value=((str*weapon.atk_dmg_light*weapon.atk_dmg_strong)+(res*armor.defence*helm.defence)+hp_max)*spd;
+		}
 	}
 }

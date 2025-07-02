@@ -9,9 +9,6 @@ if instance_exists(obj_asset_bonfire)
 
 if instance_exists(obj_hero)
 {
-	obj_hero.x=x;obj_hero.y=y;
-	if instance_number(obj_hero)>1 {instance_destroy(obj_hero);}
-
 	with obj_hero
 	{
 		state=states.sit;
@@ -19,8 +16,10 @@ if instance_exists(obj_hero)
 		//trigger_spawn=false;
 		//speed=0;
 	}
+	alarm[0]=1;
 }
 else
 {
 	instance_create(obj_hero);
+	alarm[0]=1;
 }
