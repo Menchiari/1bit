@@ -43,5 +43,5 @@ function scr_sm_walk(){
 			scr_flip_check_mouse(dest_x,dest_y,1)
 			state=states.block;
 		}
-	}	
+	}
 }

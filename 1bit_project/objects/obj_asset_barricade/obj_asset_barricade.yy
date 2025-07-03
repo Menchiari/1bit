@@ -1,18 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_camera",
+  "%Name":"obj_asset_barricade",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_camera",
+  "name":"obj_asset_barricade",
   "overriddenProperties":[],
   "parent":{
-    "name":"_system",
-    "path":"folders/Objects/_system.yy",
+    "name":"assets",
+    "path":"folders/Objects/assets.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_breakable",
+    "path":"objects/obj_breakable/obj_breakable.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -26,13 +28,14 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v1","%Name":"followcam","filters":[],"listItems":[],"multiselect":false,"name":"followcam","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
-  "spriteId":null,
+  "solid":true,
+  "spriteId":{
+    "name":"spr_asset_barricade",
+    "path":"sprites/spr_asset_barricade/spr_asset_barricade.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

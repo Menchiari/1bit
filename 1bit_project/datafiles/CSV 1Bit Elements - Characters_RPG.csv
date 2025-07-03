@@ -26,7 +26,7 @@
 24,obj_enemy_guard,buff guard,1,1.25,2,1,-1,sharp sword,bronze armor,great helm,05_castle_fortress,28,1,,3.75,8.75,19.80,0~0,53~132,7.5~17.5,0~0
 25,obj_enemy_patrol,evil knight,2,1.5,1,1,-2,golden dagger,knight's armor,golden crown,05_castle_fortress,12,4,,0.75,3.75,3.78,0~0.1,20~50,1.5~7.5,0~1
 26,obj_enemy,prisoner,2,1,1,1,-1,rusty chain,torn clothes,tin hat,06_castle_dungeon,6,1,,1.35,2.75,1.80,0.1~0.2,10~24,2.7~5.5,0~0
-27,obj_enemy_guard,heavy guard,2,1,2.5,1,-1,large claymore,golden armor,golden mask,06_castle_dungeon,56,1,,4.00,11.00,23.76,0~0,127~317,8~22,0~0
+27,obj_enemy_large,heavy guard,2,1,2.5,1,-1,large claymore,golden armor,golden mask,06_castle_dungeon,56,1,,4.00,11.00,23.76,0~0,127~317,8~22,0~0
 28,obj_enemy_ghost,evil spirit,2,3,2,1.5,-3,bare hands,silver armor,ceramic mask,06_castle_dungeon,43,1,,0.60,1.50,12.36,0~0,66~165,1.2~3,0~1
 29,obj_enemy,owl clan member,2,5,5,1,-3,heavy claws,light chainmail,owl clan mask,07_forest,129,1,,10.00,20.00,26.40,0~0,141~352,20~40,0~0
 30,obj_enemy,owl clan mentor,2,3,3,1,-2,heavy claws,rusty chainmail,owl clan mask,07_forest,53,2,,6.00,12.00,12.67,0~0,68~169,12~24,0~0
@@ -48,7 +48,7 @@
 46,obj_enemy_dog,hungry wolf,1,2,2,1,-1,bare hands,naked,no headwear,10_tundra,4,30,,0.40,1.00,2.00,0.1~0.2,5~13,0.8~2,1~1
 47,obj_enemy_dog,strong wolf,5,3,3,1.5,-1,bare hands,naked,no headwear,10_tundra,28,1,,0.60,1.50,3.00,0.1~0.1,40~100,1.2~3,0~1
 48,obj_enemy,ill fugitive,1,2,2,1,1,rusty chain,torn clothes,ceramic mask,10_tundra,11,1,,2.70,5.50,3.60,0~0.1,10~24,5.4~11,0~0
-49,obj_enemy,fortress guard,1,1,1,1,1,halberd,warm pelt,roman helm,11_snow_camps,7,3,,3.00,7.00,2.54,0.1~0.1,7~17,6~14,0~0
+49,obj_enemy,fortress guard,2,3,1,1,1,halberd,warm pelt,roman helm,11_snow_camps,50,3,,9.00,21.00,2.54,0.1~0.1,14~34,18~42,0~0
 50,obj_enemy,angry scout,1,1.5,1.5,1.2,1,small bayonet,old military coat,wooden cap,11_snow_camps,12,4,,1.50,6.38,4.33,0~0.1,12~29,3~12.8,0~0
 51,obj_enemy,silent assassin,1,3,1,1.75,-2,sharp dagger,hunter's gaun,assassin's hood,11_snow_camps,64,2,,9.00,13.50,2.18,0.1~0.2,6~15,18~27,0~0
 52,obj_enemy,savage killer,1,1,1,1,1,old shimitar,leather armor,viking helm,12_mountains,12,1,,4.00,11.00,5.20,0~0.1,14~35,8~22,0~0

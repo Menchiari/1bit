@@ -12,6 +12,7 @@ camera_set_proj_mat(camera,pm);
 view_camera[0]=camera;
 
 follow=self;
+nearcam=false;
 
 xto=x;
 yto=y;

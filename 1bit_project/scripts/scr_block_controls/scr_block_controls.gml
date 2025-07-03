@@ -5,11 +5,11 @@ function scr_block_controls(){
 	{
 		if mouse_check_button_released(mb_any)
 		{	
-			dest_x=mouse_x;dest_y=mouse_y;
-		
+			dest_x=mouse_x;dest_y=mouse_y;		
 			scr_flip_check_mouse(dest_x,dest_y,1)
 			dest_x=mouse_x;
 			dest_y=mouse_y;
+
 			if point_distance(click_x,click_y,mouse_x,mouse_y)<swipe_threshold
 			{
 				if timer<roll_time
