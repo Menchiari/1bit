@@ -34,6 +34,8 @@
     {"$GMObjectProperty":"v1","%Name":"dialogue_death_var","filters":[],"listItems":[],"multiselect":false,"name":"dialogue_death_var","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"\"","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"activation_range","filters":[],"listItems":[],"multiselect":false,"name":"activation_range","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"300","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"deactivation_range","filters":[],"listItems":[],"multiselect":false,"name":"deactivation_range","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"600","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"override_ai","filters":[],"listItems":[],"multiselect":false,"name":"override_ai","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"ai_state_var","filters":[],"listItems":[],"multiselect":false,"name":"ai_state_var","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"ai_states.guard","varType":4,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

@@ -7,9 +7,13 @@ if display_mouse==true
 
 //Main UI - deactivate rooms with no UI here
 if UI==true
+&& room!=rm_faces_default
 && room!=rm_death
-&& room!=rm_boat
+&& room!=rm_faces_death
 && room!=rm_faces_boss_intro
+&& room!=rm_faces_boss_death
+&& room!=rm_boat
+&& room!=rm_faces_ai
 {
 	var border=2;
 	//draw_rectangle_color(border,border,room_width-border,room_height-border,c_white,c_white,c_white,c_white,true);

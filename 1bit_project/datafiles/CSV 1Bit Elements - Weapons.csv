@@ -28,8 +28,8 @@
 26,golden dagger,weapons.dagger,500,10,0.5,2,0.5,0.8,0,what a fancy looking dagger!,0.5~2.5,-$24,1,
 27,sharp dagger,weapons.dagger,75,1,3,4,0.5,1,0,very crafty!,3~4.5,$48,2,
 28,perfect knife,weapons.dagger,100,0.5,5,5,0,1,0,"It's sharp, light, it has a perfect grip... it's just perfect",5~5,$60,3,
-29,metal scrap,weapons.sword,10,5,1,3,1,1,0,a sharp piece of rusty scrap metal,1~4,$18,0,
-30,broken sword,weapons.sword,40,5,2,3,1,1,0,"this sword is missing its upper half, but it's still sharp",2~4,$20,2,
+29,metal scrap,weapons.sword,10,5,1,2,1,1,0,a sharp piece of rusty scrap metal,1~3,$8,0,
+30,broken sword,weapons.sword,40,5,2,3,1,1,0,"this sword is missing its upper half, but it's still sharp",2~4,$20,1,
 31,guard's sword,weapons.sword,45,6,2.25,3.5,1.5,1,0,what an odd shape for a sword...,2.25~5,$26,1,
 32,rusty machete,weapons.sword,50,2.5,2.5,4,0.5,1.05,0,a filthy looking machete,2.5~4.5,$39,1,
 33,sharp machete,weapons.sword,80,2,3,5,1.5,1.05,0,a very sharp and clean machete,3~6.5,$63,1,
@@ -62,8 +62,8 @@
 60,pistol,weapons.shotgun,150,5,5,6,1,1,1,simple pistol,5~14,$58,1,"""crafted pistol"""
 61,fluorescent arrows,weapons.shotgun,200,0.5,3,5,2.5,1.25,1,Glowing arrows come out of this metal pipe,3~15,$80,0,"""luther"""
 62,machinegun,weapons.shotgun,250,10,2,3,1,1,3,this strange tool looks very powerful,2~16,-$5,1,"""shotgun"""
-63,magic wand,weapons.hands,50,0.5,-5,5,10,0.5,0,burns your hands and feels good to grab,-5~15,$135,1,
-64,,weapons.shotgun,,,,,,,,,~0,$0,0,"""44 magnum"""
+63,magic wand,weapons.hands,50,0.5,-0.5,3,2,0.5,0,burns your hands and feels good to grab,-0.5~5,$46,1,
+64,rusty sword,weapons.sword,30,6,2.5,3,1,0.9,0,"this sword is old and ugly, but it gets the job done",2.5~4,$16,1,
 65,,weapons.shotgun,,,,,,,,,~0,$0,0,"""blaster"""
 66,,weapons.shotgun,,,,,,,,,~0,$0,0,"""coilgun"""
 67,,weapons.machinegun,,,,,,,,,~0,$0,0,"""arrow shooter"""

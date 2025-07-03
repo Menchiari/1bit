@@ -9,8 +9,8 @@
   "name":"obj_boss_roomchange",
   "overriddenProperties":[],
   "parent":{
-    "name":"Cinematics",
-    "path":"folders/Objects/Cinematics.yy",
+    "name":"Story",
+    "path":"folders/Objects/Story.yy",
   },
   "parentObjectId":null,
   "persistent":false,

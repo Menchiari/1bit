@@ -173,6 +173,7 @@ case 3:
 		case 10:
 			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
 			sprite_index=spr_faces_intro_end;
+			txt_color=c_red;
 			txt="Just leave this place and let us be"; //the text to be said - the speed of the next phase is dependent on the length
 			state="talk_intense";
 		break;
@@ -212,10 +213,10 @@ case 4:
 			txt="I suppose that's in your nature";
 		break;
 		case 5:
-			txt="go on and waste our lives then";
+			txt="go on and waste\nall of our lives then";
 		break;
 		case 6:
-			txt="I can only ask for so much I suppose";
+			txt="I can only ask\nfor so much I suppose";
 		break;
 		///////////////////////////////////////////////////////////////////
 		case 7://second to last phase, make the character wait before moving to the next room

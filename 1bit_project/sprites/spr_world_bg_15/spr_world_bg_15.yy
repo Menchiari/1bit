@@ -19,6 +19,7 @@
   "height":320,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"80b79af5-ab4d-4939-a5a2-66a08c2b4ee6","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"80b79af5-ab4d-4939-a5a2-66a08c2b4ee6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"67c718b2-3fd5-4e4b-b5b3-28c14eea0211","blendMode":0,"displayName":"default","isLocked":false,"name":"67c718b2-3fd5-4e4b-b5b3-28c14eea0211","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_world_bg_15",

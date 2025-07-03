@@ -218,6 +218,7 @@ function scr_init_character(){
 	hp_recharge=hp_recharge_default; //how much hp recharge per second
 		
 	main_color=c_white;
+	char_visible=true;
 	blood_active=true;
 	wait_spawn_time=game_get_speed(gamespeed_fps)*5; //room_speed*5;
 #endregion

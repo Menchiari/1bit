@@ -9,8 +9,8 @@
   "name":"obj_cin_boatrotate",
   "overriddenProperties":[],
   "parent":{
-    "name":"Cinematics",
-    "path":"folders/Objects/Cinematics.yy",
+    "name":"Story",
+    "path":"folders/Objects/Story.yy",
   },
   "parentObjectId":null,
   "persistent":false,

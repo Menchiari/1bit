@@ -1,0 +1,1 @@
+if global.story_progress>=2 {activate=false; instance_destroy();}

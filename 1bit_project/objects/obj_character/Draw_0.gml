@@ -1,4 +1,4 @@
-if active==true {
+if active==true && char_visible==true {
 
 //draw effects under character
 	draw_sprite_ext(sprite_back,image_index,x,y,dir*size,-1*size,char_rot,main_color,.2);//reflection

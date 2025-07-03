@@ -15,6 +15,7 @@ speech_distance=rng6;
 character_head=spr_head_infected;
 state=states.spawn;
 idle_speed=.05
+activate=true;
 
 //customize equipment
 equip_weapon(global.weapons[0]);

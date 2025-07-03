@@ -6,8 +6,8 @@
   "name":"obj_collider_boat",
   "overriddenProperties":[],
   "parent":{
-    "name":"Cinematics",
-    "path":"folders/Objects/Cinematics.yy",
+    "name":"Story",
+    "path":"folders/Objects/Story.yy",
   },
   "parentObjectId":{
     "name":"obj_collider",
