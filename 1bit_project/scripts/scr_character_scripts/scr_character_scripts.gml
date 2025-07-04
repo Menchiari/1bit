@@ -44,7 +44,7 @@ function scr_character_move(destx,desty,speed,checkradius)
 {
 	var dist = point_distance(x, y, destx, desty);
 	var collision = collision_line(x, y, destx, desty, obj_avoid, true, true);
-	var threat_near = collision_circle(x, y, run_distance_enemy, obj_enemy, true, true);
+	var threat_near = collision_circle(x, y, run_distance_enemy, obj_enemy, false, true);
 
 	// PATH MOVEMENT: Trigger pathfinding only when needed
 	if (dist > run_distance_enemy || threat_near || collision)
@@ -53,7 +53,7 @@ function scr_character_move(destx,desty,speed,checkradius)
 		if (mp_potential_path_object(walking_path, destx, desty, speed, 4, obj_avoid) 
 		&& dist > speed + checkradius)
 		{
-			path_set_precision(walking_path, 6);
+			path_set_precision(walking_path, 2);
 			path_start(walking_path, speed * 2 * walk_sp_mod, 0, 0);
 		}
 		else
