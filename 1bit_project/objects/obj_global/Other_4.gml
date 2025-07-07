@@ -8,3 +8,4 @@ if room==rm_boat
 else
 {instance_create_depth(x,y,-y,obj_fx_fadein);}
 
+init_pathfinding_grid();

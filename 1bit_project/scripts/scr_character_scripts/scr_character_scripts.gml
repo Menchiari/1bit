@@ -40,37 +40,28 @@ function scr_check_destination_edge()
 	show_debug_message(string(x)+" hero x, "+string(y)+" hero y")
 }
 
-function scr_character_move(destx,desty,speed,checkradius)
+function scr_character_move(destx,desty,_speed,checkradius)
 {
 	var dist = point_distance(x, y, destx, desty);
-	var collision = collision_line(x, y, destx, desty, obj_avoid, true, true);
-	var threat_near = collision_circle(x, y, run_distance_enemy, obj_enemy, false, true);
-
-	// PATH MOVEMENT: Trigger pathfinding only when needed
-	if (dist > run_distance_enemy || threat_near || collision)
+	if (dist > _speed + checkradius && mp_grid_path(global.pathfinding_grid, walking_path, x, y, destx, desty, true))
 	{
-		// Only recalculate path if it's really needed
-		if (mp_potential_path_object(walking_path, destx, desty, speed, 4, obj_avoid) 
-		&& dist > speed + checkradius)
-		{
-			path_set_precision(walking_path, 2);
-			path_start(walking_path, speed * 2 * walk_sp_mod, 0, 0);
-		}
-		else
-		{
-			path_end();
-			state = states.idle;
-		}
+		path_start(walking_path, _speed * 2 * walk_sp_mod, path_action_stop, 0);
 	}
 	else
 	{
-		// STEP MOVEMENT: Only if safe direct path available
-		if (mp_potential_step_object(destx, desty, speed, obj_avoid))
-		{
-			path_end();
-			state = states.idle;
-		}
+		path_end();
+		state = states.idle;
 	}
+	//}
+	//else
+	//{
+	//	// STEP MOVEMENT: Only if safe direct path available
+	//	if (mp_potential_step_object(destx, desty, _speed, obj_avoid))
+	//	{
+	//		path_end();
+	//		state = states.idle;
+	//	}
+	//}
 	////todo double check how to make path only when collision is between xy and destxy
 	////movement by path if encountering collision
 	//if point_distance(x,y,dest_x,dest_y)>run_distance_enemy || collision_circle(x,y,run_distance_enemy,obj_enemy,true,true) || collision_line(x,y,dest_x,dest_y,obj_avoid,true,true)

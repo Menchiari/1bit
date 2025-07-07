@@ -5,6 +5,7 @@ function scr_block_controls(){
 	{
 		if mouse_check_button_released(mb_any)
 		{	
+			click_x=mouse_x;click_y=mouse_y;
 			dest_x=mouse_x;dest_y=mouse_y;		
 			scr_flip_check_mouse(dest_x,dest_y,1)
 			dest_x=mouse_x;
@@ -29,6 +30,51 @@ function scr_block_controls(){
 							|| temp_enemy.ai_state=ai_states.fight
 							|| temp_enemy.ai_state=ai_states.flee
 							{state=states.run;}
+						}
+					}
+					
+					// extra check for hero character to adjust destination beyond the camera boundary if necessary
+					if (object_index == obj_hero && instance_exists(obj_camera) && obj_camera.followcam == false) {
+						// first, check to see if we should move again to cross a camera boundary
+						var _check_ahead_pixels = 32;		// pixel distance to check ahead of character
+						var _slide_direction = -1;
+						
+						for (var _check_dir = 0; _check_dir < 360; _check_dir += 90) {
+							var _x_check = dest_x + lengthdir_x(_check_ahead_pixels, _check_dir);
+							var _y_check = dest_y + lengthdir_y(_check_ahead_pixels, _check_dir);
+							
+							if (_x_check != dest_x && sign(x - dest_x) != sign(x - _x_check)) {
+								continue;
+							}
+							if (_y_check != dest_y && sign(y - dest_y) != sign(y - _y_check)) {
+								continue;
+							}
+							
+							if (!point_in_rectangle(_x_check, _y_check, obj_camera.x - global.res_x / 2, obj_camera.y - global.res_y / 2,
+									obj_camera.x + global.res_x / 2, obj_camera.y + global.res_y / 2)) {
+								_slide_direction = _check_dir;
+								break;
+							}
+						}
+						
+						if (collision_line(dest_x, dest_y, _x_check, _y_check, obj_avoid, true, true)) {
+							// encountered a collision between the original destination point and the new one, reset
+							_slide_direction = -1;
+						}
+						
+						var _move_ahead_pixels = 16;		// pixel distance to move character past the camera boundary
+						switch (_slide_direction) {
+							case (0): dest_x = obj_camera.x + global.res_x / 2 + _move_ahead_pixels; break;
+							case (180): dest_x = obj_camera.x - global.res_x / 2 - _move_ahead_pixels; break;
+							case (90): dest_y = obj_camera.y - global.res_y / 2 - _move_ahead_pixels; break;
+							case (270): dest_y = obj_camera.y + global.res_y / 2 + _move_ahead_pixels; break;
+						}
+						
+						// recalculate run / walk
+						if (point_distance(x, y, dest_x, dest_y) > run_distance) {
+							state=states.run;
+						} else {
+							state=states.walk;
 						}
 					}
 				}

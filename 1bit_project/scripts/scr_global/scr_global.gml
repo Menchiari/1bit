@@ -220,6 +220,9 @@ function init_globals(){
 	//Rate percentage of enemies dropping items
 	global.drop_rate=10;
 	
+	// motion planning grid for character pathfinding
+	global.pathfinding_grid = -1;
+	
 	scr_loadgame();
 
 #endregion

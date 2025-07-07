@@ -60,6 +60,7 @@ else
 		if point_distance(x,y,xprevious,yprevious)>global_res_x/3
 		{
 			instance_create(obj_fx_fadein_fast);
+			init_pathfinding_grid();
 		}
 	}
 }
