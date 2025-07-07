@@ -7,6 +7,9 @@ event_inherited();
 switch face_progress //the amount of times you restart the game
 {
 case 0:
+	alarm[0]=1; //if nothing happens proceed to next_room
+break;
+case 1:
 	switch txt_phase //welcome traveler
 	{
 		case 0:
@@ -54,7 +57,7 @@ case 0:
 		break;
 	}
 break;
-case 1:
+case 2:
 	switch txt_phase //no need to explain
 	{
 		case 0:
@@ -88,7 +91,10 @@ case 1:
 		break;
 	}
 break;
-case 2:
+case 3:
+	alarm[0]=1; //if nothing happens proceed to next_room
+break;
+case 4:
 	switch txt_phase //no need to explain
 	{
 		case 0:
@@ -122,7 +128,13 @@ case 2:
 		break;
 	}
 break;
-case 3:
+case 5:
+	alarm[0]=1; //if nothing happens proceed to next_room
+break;
+case 6:
+	alarm[0]=1; //if nothing happens proceed to next_room
+break;
+case 7:
 	switch txt_phase //thinking of life
 	{
 		case 0:
@@ -192,7 +204,7 @@ case 3:
 		break;
 	}
 break;
-case 4:
+case 8:
 	switch txt_phase //you never quit
 	{
 		case 0:

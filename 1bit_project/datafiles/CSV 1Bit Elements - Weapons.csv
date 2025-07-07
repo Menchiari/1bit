@@ -64,24 +64,24 @@
 62,machinegun,weapons.shotgun,250,10,2,3,1,1,3,this strange tool looks very powerful,2~16,-$5,1,"""shotgun"""
 63,magic wand,weapons.hands,50,0.5,-0.5,3,2,0.5,0,burns your hands and feels good to grab,-0.5~5,$46,1,
 64,rusty sword,weapons.sword,30,6,2.5,3,1,0.9,0,"this sword is old and ugly, but it gets the job done",2.5~4,$16,1,
-65,,weapons.shotgun,,,,,,,,,~0,$0,0,"""blaster"""
-66,,weapons.shotgun,,,,,,,,,~0,$0,0,"""coilgun"""
-67,,weapons.machinegun,,,,,,,,,~0,$0,0,"""arrow shooter"""
-68,,weapons.machinegun,,,,,,,,,~0,$0,0,"""crafted repeater"""
-69,,weapons.machinegun,,,,,,,,,~0,$0,0,"""beretta"""
-70,,weapons.machinegun,,,,,,,,,~0,$0,0,"""uzi pistol"""
-71,,weapons.machinegun,,,,,,,,,~0,$0,0,"""AK47"""
-72,,weapons.machinegun,,,,,,,,,~0,$0,0,"""M16"""
-73,,weapons.machinegun,,,,,,,,,~0,$0,0,"""gatling gun"""
-74,,weapons.lasergun,,,,,,,,,~0,$0,0,"""large railgun"""
-75,,weapons.lasergun,,,,,,,,,~0,$0,0,"""small laser gun"""
-76,,weapons.lasergun,,,,,,,,,~0,$0,0,"""hot laser gun"""
-77,,weapons.lasergun,,,,,,,,,~0,$0,0,"""kaneda's laser"""
-78,,weapons.hands,,,,,,,,,~0,$0,0,"""grenades"""
-79,,weapons.hands,,,,,,,,,~0,$0,0,"""fireworks"""
-80,,weapons.hands,,,,,,,,,~0,$0,0,"""rockets"""
-81,,weapons.hands,,,,,,,,,~0,$0,0,
-82,,weapons.hands,,,,,,,,,~0,$0,0,
+65,my katana,weapons.katana,30,2,1,2.5,0.5,1,0,it's my katana sword,1~3,$23,0,
+66,my katana,weapons.katana,30,2,2.5,3,1,1,0,it's my katana sword!,2.5~4,$36,0,
+67,,weapons.machinegun,,,,,,,,,~0,$0,0,"""blaster"""
+68,,weapons.machinegun,,,,,,,,,~0,$0,0,"""coilgun"""
+69,,weapons.machinegun,,,,,,,,,~0,$0,0,"""arrow shooter"""
+70,,weapons.machinegun,,,,,,,,,~0,$0,0,"""crafted repeater"""
+71,,weapons.machinegun,,,,,,,,,~0,$0,0,"""beretta"""
+72,,weapons.machinegun,,,,,,,,,~0,$0,0,"""uzi pistol"""
+73,,weapons.machinegun,,,,,,,,,~0,$0,0,"""AK47"""
+74,,weapons.lasergun,,,,,,,,,~0,$0,0,"""M16"""
+75,,weapons.lasergun,,,,,,,,,~0,$0,0,"""gatling gun"""
+76,,weapons.lasergun,,,,,,,,,~0,$0,0,"""large railgun"""
+77,,weapons.lasergun,,,,,,,,,~0,$0,0,"""small laser gun"""
+78,,weapons.hands,,,,,,,,,~0,$0,0,"""hot laser gun"""
+79,,weapons.hands,,,,,,,,,~0,$0,0,"""kaneda's laser"""
+80,,weapons.hands,,,,,,,,,~0,$0,0,"""grenades"""
+81,,weapons.hands,,,,,,,,,~0,$0,0,"""fireworks"""
+82,,weapons.hands,,,,,,,,,~0,$0,0,"""rockets"""
 83,,weapons.hands,,,,,,,,,~0,$0,0,
 84,,weapons.hands,,,,,,,,,~0,$0,0,
 85,,weapons.hands,,,,,,,,,~0,$0,0,
