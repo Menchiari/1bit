@@ -4,5 +4,6 @@ if place_meeting(x,y,obj_hero) && once==true
 {
 	alarm[1]=wait_time;
 	once=false;
-	instance_create(obj_fx_fadeout);
+	var fade=instance_create(obj_fx_fadeout);
+	fade.fade_speed=fade_time;//.03
 }

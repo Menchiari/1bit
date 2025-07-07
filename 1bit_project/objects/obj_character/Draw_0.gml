@@ -9,6 +9,7 @@ if active==true && char_visible==true {
 
 	//back image
 	if back==true
+	|| ladder==true
 	{
 		draw_sprite_shadow(sprite_skin,image_index,x,y,dir*size,1*size,skin_color,0,0,.5,2);
 		

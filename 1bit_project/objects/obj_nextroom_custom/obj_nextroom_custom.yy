@@ -33,6 +33,7 @@
     {"$GMObjectProperty":"v1","%Name":"coordinates","filters":[],"listItems":[],"multiselect":false,"name":"coordinates","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v1","%Name":"teleport_x","filters":[],"listItems":[],"multiselect":false,"name":"teleport_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"teleport_y","filters":[],"listItems":[],"multiselect":false,"name":"teleport_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"fade_time","filters":[],"listItems":[],"multiselect":false,"name":"fade_time","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":".03","varType":4,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

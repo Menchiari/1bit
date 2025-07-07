@@ -10,3 +10,5 @@ else
 {
 	collision_check=true;
 }
+
+ladder=false;

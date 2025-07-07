@@ -12,6 +12,7 @@ function scr_init_character(){
 	sprite_back=spr_hero_back;
 	sprite_light=spr_null;
 	sprite_shadow=spr_shadow;
+	ladder=false;
 	
 	dialogue_variation=false;
 	dialogue_positive="";

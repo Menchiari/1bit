@@ -125,7 +125,7 @@ function init_globals(){
 	global.depth_ui_front=-8000;
 	global.depth_ui=-5000;
 	global.depth_floor=0;
-	global.room_speed_default=25;
+	global.room_speed_default=24;
 	global.gamma_default=1;
 	game_set_speed(global.room_speed_default,gamespeed_fps);//room_speed=global.room_speed_default;
 	global.shader=shd_1bit_blood;
