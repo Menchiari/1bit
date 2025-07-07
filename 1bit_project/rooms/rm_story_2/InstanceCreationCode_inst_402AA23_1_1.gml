@@ -1,6 +1,6 @@
 with obj_hero
 {	
 	trigger_spawn=false;
-	state=states.spawn;
-	speech_text=choose("dad?","mom?");
+	state=states.idle;
+	speech_text="...";
 }

@@ -234,6 +234,7 @@
     {"id":{"name":"obj_npc_var","path":"objects/obj_npc_var/obj_npc_var.yy",},},
     {"id":{"name":"obj_null","path":"objects/obj_null/obj_null.yy",},},
     {"id":{"name":"obj_patrol_node","path":"objects/obj_patrol_node/obj_patrol_node.yy",},},
+    {"id":{"name":"obj_player_spawn_intro","path":"objects/obj_player_spawn_intro/obj_player_spawn_intro.yy",},},
     {"id":{"name":"obj_player_spawn","path":"objects/obj_player_spawn/obj_player_spawn.yy",},},
     {"id":{"name":"obj_reflection","path":"objects/obj_reflection/obj_reflection.yy",},},
     {"id":{"name":"obj_region_center_camp","path":"objects/obj_region_center_camp/obj_region_center_camp.yy",},},
@@ -341,6 +342,7 @@
     {"id":{"name":"rm_story_2","path":"rooms/rm_story_2/rm_story_2.yy",},},
     {"id":{"name":"rm_story_AI_2","path":"rooms/rm_story_AI_2/rm_story_AI_2.yy",},},
     {"id":{"name":"rm_story_AI","path":"rooms/rm_story_AI/rm_story_AI.yy",},},
+    {"id":{"name":"rm_story_caves","path":"rooms/rm_story_caves/rm_story_caves.yy",},},
     {"id":{"name":"rm_story_template","path":"rooms/rm_story_template/rm_story_template.yy",},},
     {"id":{"name":"rm_test_village","path":"rooms/rm_test_village/rm_test_village.yy",},},
     {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
@@ -901,6 +903,7 @@
     {"roomId":{"name":"rm_faces_ai","path":"rooms/rm_faces_ai/rm_faces_ai.yy",},},
     {"roomId":{"name":"rm_story_AI_2","path":"rooms/rm_story_AI_2/rm_story_AI_2.yy",},},
     {"roomId":{"name":"rm_story_1b","path":"rooms/rm_story_1b/rm_story_1b.yy",},},
+    {"roomId":{"name":"rm_story_caves","path":"rooms/rm_story_caves/rm_story_caves.yy",},},
   ],
   "templateType":null,
   "TextureGroups":[
