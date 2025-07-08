@@ -5,7 +5,7 @@ function scr_block_controls(){
 	{
 		if mouse_check_button_released(mb_any)
 		{	
-			click_x=mouse_x;click_y=mouse_y;
+			//click_x=mouse_x;click_y=mouse_y;
 			dest_x=mouse_x;dest_y=mouse_y;		
 			scr_flip_check_mouse(dest_x,dest_y,1)
 			dest_x=mouse_x;
