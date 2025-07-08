@@ -30,8 +30,9 @@ switch state
 		repeat(irandom_range(debris_min,debris_max))
 		{instance_create_depth(x+(random_range(-debris_max,debris_max)),y-(random_range(0,debris_max)),-y,debris_type);}
 		
+		instance_destroy();
+		
 		// re-create the pathfinding grid since this instance will no longer be in it
 		init_pathfinding_grid();
-		instance_destroy();
 	break;
 }
