@@ -17,7 +17,6 @@ if spd_lvl_gain = 0
 else
 {speech_text="slaughter me \nto be faster";}
 
-
 var pile = instance_nearest(x,y,obj_death_pile);
 
 var pile_frame = spd_lvl_gain;

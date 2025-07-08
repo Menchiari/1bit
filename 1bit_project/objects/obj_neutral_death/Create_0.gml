@@ -36,19 +36,19 @@ trigger_spawn=false;
 trigger_distance=40;
 
 speech_text="slay me to\nreawaken";
-if global.deathcount==3 {speech_text="you have\nno idea..."}
-if global.deathcount==4 {speech_text="slay me to\nfind out"}
-if global.deathcount==5 {speech_text="The perfection of the few\nis built on the\nsuffering of the many"}
-if global.deathcount==7 {speech_text="That's the only reason\nyou even exist at all"}
-if global.deathcount==8 {speech_text="thought you could\nlive forever?"}
-if global.deathcount>=9 {speech_text=string(global.deathcount-16)+" deaths left"}
-if global.deathcount==15 {speech_text="ready to die?"}
+if global.deathcount==4 {speech_text="you have\nno idea..."}
+if global.deathcount==5 {speech_text="slay me to\nfind out"}
+if global.deathcount==6 {speech_text="The perfection of the few\nis built on the\nsuffering of the many"}
+if global.deathcount==8 {speech_text="That's the only reason\nyou even exist at all"}
+if global.deathcount==9 {speech_text="thought you could\nlive forever?"}
+if global.deathcount>=10 {speech_text=string(global.deathcount-17)+" deaths left"}
+if global.deathcount==16 {speech_text="ready to die?"}
 
-if (global.deathcount==3
-|| global.deathcount==4
-|| global.deathcount==5
-|| global.deathcount==7
-|| global.deathcount==8)
+if (global.deathcount==2
+//|| global.deathcount==5
+|| global.deathcount==6
+//|| global.deathcount==8
+|| global.deathcount==9)
 && (object_index==obj_death_hp
 || object_index==obj_death_res
 || object_index==obj_death_spd

@@ -20,6 +20,15 @@ if active==true
 		draw_set_valign(fa_bottom);
 		draw_set_halign(fa_center);
 	
+		draw_text_ext_transformed_color(text_x+3,text_y-txt_height,text,separation,maxpixels,text_scale,text_scale,0,colbk,colbk,colbk,colbk,1);
+		draw_text_ext_transformed_color(text_x+3,text_y-txt_height,text,separation,maxpixels,text_scale,text_scale,0,colbk,colbk,colbk,colbk,1);
+		draw_text_ext_transformed_color(text_x-3,text_y-txt_height,text,separation,maxpixels,text_scale,text_scale,0,colbk,colbk,colbk,colbk,1);
+		draw_text_ext_transformed_color(text_x-3,text_y-txt_height,text,separation,maxpixels,text_scale,text_scale,0,colbk,colbk,colbk,colbk,1);
+		draw_text_ext_transformed_color(text_x+3,text_y+1-txt_height,text,separation,maxpixels,text_scale,text_scale,0,colbk,colbk,colbk,colbk,1);
+		draw_text_ext_transformed_color(text_x+3,text_y-1-txt_height,text,separation,maxpixels,text_scale,text_scale,0,colbk,colbk,colbk,colbk,1);
+		draw_text_ext_transformed_color(text_x-3,text_y+1-txt_height,text,separation,maxpixels,text_scale,text_scale,0,colbk,colbk,colbk,colbk,1);
+		draw_text_ext_transformed_color(text_x-3,text_y-1-txt_height,text,separation,maxpixels,text_scale,text_scale,0,colbk,colbk,colbk,colbk,1);
+
 		draw_text_ext_transformed_color(text_x+2,text_y+1-txt_height,text,separation,maxpixels,text_scale,text_scale,0,colbk,colbk,colbk,colbk,1);
 		draw_text_ext_transformed_color(text_x+2,text_y-1-txt_height,text,separation,maxpixels,text_scale,text_scale,0,colbk,colbk,colbk,colbk,1);
 		draw_text_ext_transformed_color(text_x-2,text_y+1-txt_height,text,separation,maxpixels,text_scale,text_scale,0,colbk,colbk,colbk,colbk,1);

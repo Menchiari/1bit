@@ -143,7 +143,7 @@ function scr_sm_death(){
 		}
 	}
 	
-	//Spawn death number
+	//Spawn death text
 	if irandom_range(0,100)<=dialogue_death_chance
 	{
 		dialogue_death_instance=instance_create_depth(x,y-16,-y,obj_ui_number)

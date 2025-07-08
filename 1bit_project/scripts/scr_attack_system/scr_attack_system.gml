@@ -38,13 +38,14 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 				if enemy.state!=states.hit && enemy.invincible=false && instance_exists(obj_hero)
 				{
 					var damaged=false;
-					
-					if enemy.object_index==obj_hero.object_index
-					|| object_index==obj_hero.object_index
-					{
-						var screenshake=instance_create(obj_fx_screenshake);
-						screenshake.shake=total_damage;//(str/enemy.res)*damage;
-					}
+					var screenshake=instance_create(obj_fx_screenshake);
+					screenshake.shake=total_damage*4;
+
+					//if enemy==obj_hero.id
+					//{
+					//	var screenshake=instance_create(obj_fx_screenshake);
+					//	screenshake.shake=total_damage;//(str/enemy.res)*damage;
+					//}
 	//if blocking
 					if enemy.blocking==true
 					//|| enemy.state==states.block_hit
@@ -92,13 +93,11 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 						{
 							if enemy==obj_hero.id
 							{
-								var screenshake=instance_create(obj_fx_screenshake);
-								screenshake.shake=total_damage;//(str/enemy.res)*damage;
 								var _flash=instance_create(obj_fx_flash);
 								_flash.gamma_multiplier-=screenshake.shake;
 							}
 						}
-					}					
+					}
 					
 			//helmet flies off sometimes
 					var helm_chance=irandom_range(0,100);

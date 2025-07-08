@@ -34,24 +34,21 @@ event_inherited();
 		case 4:
 			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
 			sprite_index=spr_faces_boss_deadcough;
-			txt="YOU WILL NEVER REACH THAT BOAT"; //the text to be said - the speed of the next phase is dependent on the length
+			txt="YOU WILL NEVER LEAVE THIS ISLAND"; //the text to be said - the speed of the next phase is dependent on the length
 		break;
 		case 5:
 			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
 			sprite_index=spr_faces_boss_deadcough;
 			txt="I WON'T ALLOW IT"; //the text to be said - the speed of the next phase is dependent on the length
 		break;
-		case 6://second to last phase, make the character wait before moving to the next room
-			instance_create_depth(x+92,y+224,depth-1,obj_fx_blood);
-			instance_create(obj_fx_screenshake);
-		break;
 		///////////////////////////////////////////////////////////////////
-		case 7://second to last phase, make the character wait before moving to the next room
+		case 6://second to last phase, make the character wait before moving to the next room
+			color=choose(c_white,c_black,c_red);
 			txt="";
 			state="wait";
 			wait_time=game_get_speed(gamespeed_fps)*.25;
 		break;
-		case 8://last phase, for some reason it can't be default, must be there to end the scene
+		case 7://last phase, for some reason it can't be default, must be there to end the scene
 			global.story_progress=4;
 			scr_savegame();
 			game_end();

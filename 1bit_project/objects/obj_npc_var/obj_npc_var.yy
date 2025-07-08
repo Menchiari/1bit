@@ -58,6 +58,7 @@
     {"$GMObjectProperty":"v1","%Name":"sit_idle_b_var","filters":[],"listItems":[],"multiselect":false,"name":"sit_idle_b_var","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"102//sit_idle_a_var","varType":4,},
     {"$GMObjectProperty":"v1","%Name":"dir_var","filters":[],"listItems":[],"multiselect":false,"name":"dir_var","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":4,},
     {"$GMObjectProperty":"v1","%Name":"visibility","filters":[],"listItems":[],"multiselect":false,"name":"visibility","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"dialogue_death_var","filters":[],"listItems":[],"multiselect":false,"name":"dialogue_death_var","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"\"","varType":2,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

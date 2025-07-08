@@ -16,6 +16,7 @@ if UI==true
 && room!=rm_faces_ai
 {
 	var border=2;
+	var bordercolor=c_gray;
 	//draw_rectangle_color(border,border,room_width-border,room_height-border,c_white,c_white,c_white,c_white,true);
 	var camx=camera_get_view_x(view_get_camera(view_current));
 	var camy=camera_get_view_y(view_get_camera(view_current));
@@ -26,7 +27,7 @@ if UI==true
 	{
 		camx=obj_camera.x;
 		camy=obj_camera.y;
-		draw_rectangle_color(camx-(camwidth/2)+border,camy-(camheight/2)+border,camx+(camwidth/2)-(border*2),camy+(camheight/2)-(border*2),c_white,c_white,c_white,c_white,true);
+		draw_rectangle_color(camx-(camwidth/2)+border,camy-(camheight/2)+border,camx+(camwidth/2)-(border*2),camy+(camheight/2)-(border*2),bordercolor,bordercolor,bordercolor,bordercolor,true);
 		//Hero UI
 		if instance_exists(obj_hero)
 		{
@@ -39,12 +40,12 @@ if UI==true
 			//draw_rectangle_color(camwidth/2,camheight-thickness-line_thickness-height,camwidth/2+(camwidth/2*obj_hero.hp/obj_hero.hp_max)-(border*2),camheight-height,0,0,0,0,false);
 			//draw_rectangle_color(camwidth/2-(camwidth/2*obj_hero.hp/obj_hero.hp_max)+border,camheight-thickness-line_thickness-height,camwidth/2,camheight-height,0,0,0,0,false);
 			//healthbar
-			draw_rectangle_color(camx-1,camy+(camheight/2)-thickness-height,camx+(camwidth/2*obj_hero.hp/obj_hero.hp_max)-line_thickness-(border*2),camy+(camheight/2)-line_thickness-height,c_white,c_white,c_white,c_white,false);
-			draw_rectangle_color(camx+1,camy+(camheight/2)-thickness-height,camx-(camwidth/2*obj_hero.hp/obj_hero.hp_max)+line_thickness+(border*2),camy+(camheight/2)-line_thickness-height,c_white,c_white,c_white,c_white,false);
+			draw_rectangle_color(camx-1,camy+(camheight/2)-thickness-height,camx+(camwidth/2*obj_hero.hp/obj_hero.hp_max)-line_thickness-(border*2),camy+(camheight/2)-line_thickness-height,bordercolor,bordercolor,bordercolor,bordercolor,false);
+			draw_rectangle_color(camx+1,camy+(camheight/2)-thickness-height,camx-(camwidth/2*obj_hero.hp/obj_hero.hp_max)+line_thickness+(border*2),camy+(camheight/2)-line_thickness-height,bordercolor,bordercolor,bordercolor,bordercolor,false);
 
-		//debug todo remove
-			var height=-3
-			var pos_x=5+3//somehow solved?
+		//
+			height=-3
+			var pos_x=5+3
 			var pos_a=3+2+height;
 			var pos_b=9+2+height;
 			var pos_c=15+2+height;
@@ -84,10 +85,10 @@ if UI==true
 			draw_rectangle_color(camwidth/2,camheight-thickness-line_thickness-height,camwidth/2+(camwidth/2*obj_hero.hp/obj_hero.hp_max)-(border*2),camheight-height,0,0,0,0,false);
 			draw_rectangle_color(camwidth/2-(camwidth/2*obj_hero.hp/obj_hero.hp_max)+border,camheight-thickness-line_thickness-height,camwidth/2,camheight-height,0,0,0,0,false);
 			//healthbar
-			draw_rectangle_color(camwidth/2-1,camheight-thickness-height,camwidth/2+(camwidth/2*obj_hero.hp/obj_hero.hp_max)-line_thickness-(border*2),camheight-line_thickness-height,c_white,c_white,c_white,c_white,false);
-			draw_rectangle_color(camwidth/2+1-(camwidth/2*obj_hero.hp/obj_hero.hp_max)+line_thickness+border,camheight-thickness-height,camwidth/2,camheight-line_thickness-height,c_white,c_white,c_white,c_white,false);
+			draw_rectangle_color(camwidth/2-1,camheight-thickness-height,camwidth/2+(camwidth/2*obj_hero.hp/obj_hero.hp_max)-line_thickness-(border*2),camheight-line_thickness-height,bordercolor,bordercolor,bordercolor,bordercolor,false);
+			draw_rectangle_color(camwidth/2+1-(camwidth/2*obj_hero.hp/obj_hero.hp_max)+line_thickness+border,camheight-thickness-height,camwidth/2,camheight-line_thickness-height,bordercolor,bordercolor,bordercolor,bordercolor,false);
 
-		//debug todo remove
+		//
 			var pos_x=5+3;
 			var pos_a=3+2;
 			var pos_b=9+2;

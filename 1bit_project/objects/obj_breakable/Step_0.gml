@@ -25,8 +25,8 @@ switch state
 		}
 	break;
 	case states.death:
-		var screenshake=instance_create(obj_fx_screenshake);
-		screenshake.shake=shake_power*2;
+		var screenshaker=instance_create(obj_fx_screenshake);
+		screenshaker.shake=shake_power*2;
 		repeat(irandom_range(debris_min,debris_max))
 		{instance_create_depth(x+(random_range(-debris_max,debris_max)),y-(random_range(0,debris_max)),-y,debris_type);}
 		

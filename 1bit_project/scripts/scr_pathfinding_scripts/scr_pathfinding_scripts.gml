@@ -7,7 +7,7 @@ function init_pathfinding_grid() {
 		mp_grid_destroy(global.pathfinding_grid);
 	}
 	
-	var _pixel_grid = 6;						// size of grid cells, in pxels
+	var _pixel_grid = 4;						// size of grid cells, in pxels
 	var _large_rooms = [rm_story_1, rm_world];	// list of "large" rooms to handle by only using the space visible on screen for the grid. update this list as needed
 	
 	// using a smaller grid is cheaper on the cpu of course, but can lead to bad states if not handled properly / updated when needed
