@@ -8,13 +8,13 @@ function init_pathfinding_grid() {
 	}
 	
 	var _pixel_grid = 4;						// size of grid cells, in pxels
-	var _large_rooms = [rm_story_1, rm_world];	// list of "large" rooms to handle by only using the space visible on screen for the grid. update this list as needed
+	var _room_size_threshold = 1000;			// room width over which to use chunked processing
 	
 	// using a smaller grid is cheaper on the cpu of course, but can lead to bad states if not handled properly / updated when needed
 	// therefore I restrict this behavior in the following circumstances:
 	// 1. the room we are in is defined as being large enough to require the cropping
 	// 2. we are not in follow camera mode (you could do it like that but would require the grid being rebuilt every frame)
-	if (array_contains(_large_rooms, room) && instance_exists(obj_camera) && !obj_camera.followcam) {
+	if (room_width >= _room_size_threshold && instance_exists(obj_camera) && !obj_camera.followcam) {
 		// set up the grid with only what is visible to the camera
 		var _margin = 64;		// pixel margin outside the camera boundaries to add to our grid. this is critical for locked camera transitions
 		global.pathfinding_grid = mp_grid_create(obj_camera.x - global.res_x / 2 - _margin, obj_camera.y - global.res_y / 2 - _margin,
