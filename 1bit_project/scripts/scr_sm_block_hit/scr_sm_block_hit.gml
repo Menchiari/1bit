@@ -13,6 +13,12 @@ function scr_sm_block_hit(){
 	{
 		state=states.idle;
 	}
+	
+	//counter attack
+	if mouse_check_button_pressed(mb_any)
+	{
+		state=choose(states.attack_strong,states.attack);
+	}
 
 	timer+=1;
 	scr_block_controls();

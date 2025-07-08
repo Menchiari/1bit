@@ -9,7 +9,7 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 		if radius==-1 {enemy=collision_line(x,y,xprevious,yprevious,obj_character,true,true)}
 		if enemy
 		{
-			var total_damage=(((damage+random_range(0,damage_variation))*str)/(enemy.res*enemy.armor.defence*enemy.helm.defence));
+			var total_damage=(((damage+random_range(0,damage_variation))*str)/(enemy.res*(enemy.armor.defence+enemy.helm.defence)));
 			if scr_faction_check(enemy)
 			&& instance_exists(obj_hero) //todo make it so that when hero dies others can die as well?
 			{
@@ -34,24 +34,20 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 						}
 					}
 				}
-			//Attack stuff
+			/////////////
+			//ATTACKING//
+			/////////////
 				if enemy.state!=states.hit && enemy.invincible=false && instance_exists(obj_hero)
 				{
 					var damaged=false;
 					var screenshake=instance_create(obj_fx_screenshake);
 					screenshake.shake=total_damage*4;
-
-					//if enemy==obj_hero.id
-					//{
-					//	var screenshake=instance_create(obj_fx_screenshake);
-					//	screenshake.shake=total_damage;//(str/enemy.res)*damage;
-					//}
-	//if blocking
+			//Blocking
 					if enemy.blocking==true
 					//|| enemy.state==states.block_hit
 					||(enemy.state==states.block
 					&& enemy.timer<=enemy.counter_time
-					&& ((enemy.res*(enemy.armor.defence*enemy.helm.defence)*(enemy.hp)/2>damage) && enemy!=obj_hero.id)
+					&& ((enemy.res*(enemy.armor.defence+enemy.helm.defence)*(enemy.hp)/2>damage) && enemy!=obj_hero.id)
 					////todo add no blocking on hands or no weapon////
 					//&& enemy.hp>hp/2
 					) //added block instead of counter

@@ -8,7 +8,7 @@ switch(state)
 			if instance_exists(obj_hero){obj_hero.hp=obj_hero.hp_max;}
 			scr_savegame();
 			ini_open("save.sav");
-			ini_write_real("DEBUG","PLAYERSPAWN_X_"+string(room_get_name(room)),x+(choose(10,-10)));
+			ini_write_real("DEBUG","PLAYERSPAWN_X_"+string(room_get_name(room)),x+(choose(-10,-10)));
 			ini_write_real("DEBUG","PLAYERSPAWN_Y_"+string(room_get_name(room)),y);
 			ini_close();
 			repeat(4)
@@ -27,7 +27,7 @@ switch(state)
 		{
 			if point_distance(x,y,obj_hero.x,obj_hero.y)>range_reset
 			{
-				size=.1;
+				sizex=.1;
 				state=0;
 			}
 		}
