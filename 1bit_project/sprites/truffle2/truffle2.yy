@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"faces",
-    "path":"folders/Sprites/faces.yy",
+    "name":"GreatGreed",
+    "path":"folders/Sprites/faces/GreatGreed.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

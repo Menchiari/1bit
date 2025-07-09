@@ -350,10 +350,13 @@ switch game_progress
 	}
 	break;
 	case 2: //When you find the boat
+		alarm[0]=1; //if nothing happens proceed to next_room
 	break;
 	case 3: //When you meet the boss
+		alarm[0]=1; //if nothing happens proceed to next_room
 	break;
 	case 4: //When you defeat the boss
+		alarm[0]=1; //if nothing happens proceed to next_room
 	break;
 	case 5: //when you finish the game (infinite loop)
 			switch txt_phase //Ending

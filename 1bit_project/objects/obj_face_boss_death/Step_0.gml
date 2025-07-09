@@ -50,6 +50,7 @@ event_inherited();
 		break;
 		case 7://last phase, for some reason it can't be default, must be there to end the scene
 			global.story_progress=4;
+			global.face_progress=0;
 			scr_savegame();
 			game_end();
 		break;

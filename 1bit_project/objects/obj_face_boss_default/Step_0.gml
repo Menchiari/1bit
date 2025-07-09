@@ -62,6 +62,7 @@ case 0:
 			instance_create(obj_fx_fadeout);//creates a fade out
 			alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
 			global.story_progress=3;
+			global.face_progress=0;
 			scr_savegame();
 			next_room=rm_boss;//pick the room you want
 		break;

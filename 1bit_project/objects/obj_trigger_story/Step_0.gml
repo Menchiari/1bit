@@ -5,6 +5,7 @@ if place_meeting(x,y,obj_hero)
 	if global.story_progress<story_progress
 	{
 		global.story_progress=story_progress;
+		global.face_progress=0;
 		scr_savegame();
 		instance_destroy();
 	}

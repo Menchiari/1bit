@@ -3,7 +3,7 @@
   "%Name":"spr_head_female1",
   "bboxMode":0,
   "bbox_bottom":14,
-  "bbox_left":11,
+  "bbox_left":13,
   "bbox_right":20,
   "bbox_top":9,
   "collisionKind":1,

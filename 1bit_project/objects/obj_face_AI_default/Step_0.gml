@@ -52,6 +52,8 @@ case 0:
 			instance_create(obj_fx_fadeout);//creates a fade out
 			alarm[0]=game_get_speed(gamespeed_fps)*1//time that it takes to move to the next room
 			global.story_progress=5;
+			global.face_progress=0;
+			
 			scr_savegame();
 			game_restart();
 		break;
@@ -79,7 +81,7 @@ case 99998:
 		case 3://last phase, for some reason it can't be default, must be there to end the scene
 			instance_create(obj_fx_fadeout);//creates a fade out
 			alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
-			next_room=rm_menu_character;//pick the room you want
+			next_room=rm_story_AI_2;//pick the room you want
 		break;
 		default:
 		break;
