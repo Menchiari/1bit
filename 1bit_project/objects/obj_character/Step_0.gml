@@ -15,7 +15,7 @@ if active==true
 		else if obj_hero.charisma-charisma>=1 {speech_text=dialogue_positive;}
 		else {speech_text=dialogue_neutral;}
 	}
-	instance_activate_object(self);
+	instance_activate_object(id);
 	depth=-y;
 	//scr_controls();
 	scr_state_machine();
@@ -23,7 +23,7 @@ if active==true
 }
 else
 {
-	instance_deactivate_object(self);
+	instance_deactivate_object(id);
 }
 //char_rot=round((device_get_tilt_x()*90)/10)*10;
 
