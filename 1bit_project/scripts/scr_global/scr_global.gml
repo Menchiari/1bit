@@ -185,7 +185,7 @@ function init_globals(){
 	csv_decor_import("CSV 1Bit Elements - Background Sprites.csv")
 	
 	global.player_skin=spr_hero;
-	global.player_head=choose(spr_head_female,spr_head_female1,spr_head_female2,spr_head_beard1);
+	global.player_head=choose(spr_head_female,spr_head_female1,spr_head_female2);
 	global.player_control=controls.touch;
 	global.player_weapon=global.weapons[0];
 	global.player_armor=global.armors[0];

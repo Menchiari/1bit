@@ -19,18 +19,8 @@ character_name="";
 character_description="";
 character_head_var=global.player_head;
 
-switch character_head_var
-{
-	case spr_head_female:
-	character_select=2;
-	break;
-	case spr_head_female1:
-	character_select=3;
-	break;
-	case spr_head_female2:
-	character_select=1;
-	break;
-	case spr_head_beard1:
-	character_select=0;
-	break;
-}
+
+if character_head_var=spr_head_beard1 {character_select=0;}
+if character_head_var=spr_head_female2 {character_select=1;}
+if character_head_var=spr_head_female {character_select=2;}
+if character_head_var=spr_head_female1 {character_select=3;}

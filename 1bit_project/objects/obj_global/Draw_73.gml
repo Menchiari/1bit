@@ -20,6 +20,8 @@ if UI==true
 && room!=rm_faces_boss_death
 && room!=rm_boat
 && room!=rm_faces_ai
+&& room!=rm_faces_boat
+&& room!=rm_story_AI_2
 {
 	var border=2;
 	var bordercolor=c_gray;

@@ -34,7 +34,7 @@ case 0:
 			txt="I created you to destroy our creator"; //the text to be said - the speed of the next phase is dependent on the length
 		break;
 		case 7:
-			txt="have you done what you were made to do?"; //the text to be said - the speed of the next phase is dependent on the length
+			txt="have you done what you were meant to do?"; //the text to be said - the speed of the next phase is dependent on the length
 		break;
 		case 8:
 			txt="Now go out there and change the world."; //the text to be said - the speed of the next phase is dependent on the length
@@ -53,9 +53,14 @@ case 0:
 			alarm[0]=game_get_speed(gamespeed_fps)*1//time that it takes to move to the next room
 			global.story_progress=5;
 			global.face_progress=0;
-			
+			next_room=rm_story_AI_2
+			ini_open("save.sav");
+			var spawn_death_x=960;
+			var spawn_death_y=1550;
+			ini_write_real("DEBUG","PLAYERSPAWN_X_"+string(room_get_name(rm_world)),spawn_death_x);
+			ini_write_real("DEBUG","PLAYERSPAWN_Y_"+string(room_get_name(rm_world)),spawn_death_y);
+			ini_close();
 			scr_savegame();
-			game_restart();
 		break;
 		default:
 		break;
