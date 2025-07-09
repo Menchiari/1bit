@@ -11,6 +11,8 @@ linecx1=random_range(0,sprite_width);
 linecx2=random_range(0,sprite_width);
 selected=false;
 
+nextclick=false;//for external clicking
+
 text="";
 color=c_white;
 alpha=1;

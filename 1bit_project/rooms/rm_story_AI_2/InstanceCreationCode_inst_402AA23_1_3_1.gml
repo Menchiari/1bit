@@ -2,5 +2,5 @@ with obj_hero
 {	
 	trigger_spawn=false;
 	state=states.spawn;
-	speech_text=choose("dad?","mom?");
+	speech_text="...";
 }

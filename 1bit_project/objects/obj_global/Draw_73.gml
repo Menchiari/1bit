@@ -6,6 +6,12 @@ if display_mouse==true
 }
 
 //Main UI - deactivate rooms with no UI here
+
+//hp line variables
+var thickness=4//6;
+var line_thickness=2;
+var height=6//8;
+
 if UI==true
 && room!=rm_faces_default
 && room!=rm_death
@@ -33,9 +39,6 @@ if UI==true
 		{
 			draw_set_font(fnt_dialogue);
 		//health
-			var thickness=6;
-			var line_thickness=2;
-			var height=8;
 			////border
 			//draw_rectangle_color(camwidth/2,camheight-thickness-line_thickness-height,camwidth/2+(camwidth/2*obj_hero.hp/obj_hero.hp_max)-(border*2),camheight-height,0,0,0,0,false);
 			//draw_rectangle_color(camwidth/2-(camwidth/2*obj_hero.hp/obj_hero.hp_max)+border,camheight-thickness-line_thickness-height,camwidth/2,camheight-height,0,0,0,0,false);
@@ -78,9 +81,6 @@ if UI==true
 		{
 			draw_set_font(fnt_dialogue);
 		//health
-			var thickness=6;
-			var line_thickness=2;
-			var height=8;
 			//border
 			draw_rectangle_color(camwidth/2,camheight-thickness-line_thickness-height,camwidth/2+(camwidth/2*obj_hero.hp/obj_hero.hp_max)-(border*2),camheight-height,0,0,0,0,false);
 			draw_rectangle_color(camwidth/2-(camwidth/2*obj_hero.hp/obj_hero.hp_max)+border,camheight-thickness-line_thickness-height,camwidth/2,camheight-height,0,0,0,0,false);

@@ -1,7 +1,9 @@
 if mouse_check_button(mb_any) && collision_point(mouse_x,mouse_y,self,true,false) {selected=true;}
 else {selected=false;}
 if mouse_check_button_released(mb_any)
+|| nextclick==true
 {
+	nextclick=false;
 	if point_in_rectangle(mouse_x,mouse_y,x,y,x+sprite_width/3.5,y+sprite_height)
 	{
 		wpn_button_select-=1;

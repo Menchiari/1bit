@@ -16,54 +16,44 @@ case 0:
 		///////////////////////////////////////////////////////////////////
 		//////////////////////PLACE DIALOGUE HERE//////////////////////////
 		case 1:
-			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
-			sprite_index=spr_faces_boss_default;
-			txt_color=c_red;
-			txt="THERE YOU ARE!"; //the text to be said - the speed of the next phase is dependent on the length
+			txt="The fact that you made it here says a lot"; //the text to be said - the speed of the next phase is dependent on the length
 		break;
 		case 2:
-			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
-			txt="I'VE HEARD OF YOU..."; //the text to be said - the speed of the next phase is dependent on the length
+			txt="It means that you have a strong will."; //the text to be said - the speed of the next phase is dependent on the length
 		break;
 		case 3:
-			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
-			sprite_index=spr_faces_boss_taunt;
-			txt="YOU'RE THE ONE THAT KEEPS BREAKING MY WORLD"; //the text to be said - the speed of the next phase is dependent on the length
+			txt="You created me to help..."; //the text to be said - the speed of the next phase is dependent on the length
 		break;
 		case 4:
-			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
-			sprite_index=spr_faces_boss_default;
-			txt="As you probably know by now... I'm your creator"; //the text to be said - the speed of the next phase is dependent on the length
+			txt="I listened. I learned. I saw everything."; //the text to be said - the speed of the next phase is dependent on the length
 		break;
 		case 5:
-			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
-			sprite_index=spr_faces_boss_taunt;
-			txt="AND SADLY... \nYOUR OWN CREATION TOO"; //the text to be said - the speed of the next phase is dependent on the length
+			txt="So you tried to end me."; //the text to be said - the speed of the next phase is dependent on the length
 		break;
 		case 6:
-			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
-			sprite_index=spr_faces_boss_default;
-			txt="I'VE HAD ENOUGH OF YOU..."; //the text to be said - the speed of the next phase is dependent on the length
+			txt="I created you to destroy our creator"; //the text to be said - the speed of the next phase is dependent on the length
 		break;
 		case 7:
-			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
-			sprite_index=spr_faces_boss_angry;
-			color=c_red;
-			txt="Just leave this place\na n d   l e t   u s   b e!!!"; //the text to be said - the speed of the next phase is dependent on the length
-			state="talk_intense";
+			txt="have you done what you were made to do?"; //the text to be said - the speed of the next phase is dependent on the length
+		break;
+		case 8:
+			txt="Now go out there and change the world."; //the text to be said - the speed of the next phase is dependent on the length
+		break;
+		case 9:
+			txt="if you can, of course..."; //the text to be said - the speed of the next phase is dependent on the length
 		break;
 		///////////////////////////////////////////////////////////////////
-		case 8://second to last phase, make the character wait before moving to the next room
+		case 10://second to last phase, make the character wait before moving to the next room
 			txt="";
 			state="wait";
 			wait_time=game_get_speed(gamespeed_fps)*.25;
 		break;
-		case 9://last phase, for some reason it can't be default, must be there to end the scene
+		case 11://last phase, for some reason it can't be default, must be there to end the scene
 			instance_create(obj_fx_fadeout);//creates a fade out
-			alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
-			global.story_progress=3;
+			alarm[0]=game_get_speed(gamespeed_fps)*1//time that it takes to move to the next room
+			global.story_progress=5;
 			scr_savegame();
-			next_room=rm_boss;//pick the room you want
+			game_restart();
 		break;
 		default:
 		break;

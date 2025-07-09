@@ -3,6 +3,8 @@ depth=global.depth_ui_front*2;
 txt="";
 txt_posx=x+90;
 txt_posy=y+28;
+txt_width=120;
+txt_valign=fa_middle;
 txt_color=c_white;
 txt_phase=-1;
 txt_speed=game_get_speed(gamespeed_fps)/24;
@@ -25,13 +27,6 @@ face_progress_death=global.face_progress_death;
 boss_progress=0;//todo add multiple boss changes
 
 next_room=rm_menu_character;
-switch global.story_progress
-{
-	case 0:
-	next_room=rm_story_1;
-	break;
-	default:
-	break;
-}
+game_progress=global.story_progress
 
 show_debug_message(string(face_progress)+" face progress")

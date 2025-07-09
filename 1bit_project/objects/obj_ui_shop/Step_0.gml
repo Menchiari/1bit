@@ -48,7 +48,7 @@ if active==1
 			if point_in_rectangle(mouse_x,mouse_y,x1,y0,x2,y1) {if chosen_column==1 chosen_column=3 else chosen_column=1;}
 			if point_in_rectangle(mouse_x,mouse_y,x2,y0,x3,y1) {if chosen_column==2 chosen_column=3 else chosen_column=2;}	
 			if point_in_rectangle(mouse_x,mouse_y,tx1,ty1,tx2,ty2) {chosen_column=3;}
-			if point_in_rectangle(mouse_x,mouse_y,cx1,cy1,cx2,cy2,) {stats=!stats;}
+			if point_in_rectangle(mouse_x,mouse_y,cx1,cy1,cx2,cy2) {stats=!stats;}
 			if point_in_rectangle(mouse_x,mouse_y,bx0,by0,bx1,by1) {button_pressed=1;}
 			else {button_pressed=0;}
 		}
