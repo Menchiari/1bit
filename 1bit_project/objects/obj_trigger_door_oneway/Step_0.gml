@@ -9,13 +9,14 @@ if instance_exists(obj_hero)
 		}
 		if destroy_door!=noone {instance_destroy(destroy_door);}
 		
-	if (file_exists("save.sav"))
-	{
-	    ini_open("save.sav");
-	    ini_write_real("DEBUG", "DOOR" + string(id), 1);
-	    ini_close();
-	}
-
+		if (file_exists("save.sav"))
+		{
+		    ini_open("save.sav");
+		    ini_write_real("DEBUG", "DOOR" + string(id), 1);
+		    ini_close();
+		}
+		
 		instance_destroy();
+		init_pathfinding_grid();
 	}
 }
