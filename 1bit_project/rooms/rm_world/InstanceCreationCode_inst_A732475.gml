@@ -1,0 +1,1 @@
+if global.princess==false {instance_destroy();}

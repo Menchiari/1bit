@@ -2,11 +2,15 @@
 // Inherit the parent event
 event_inherited();
 
-////////////////////////DIALOGUES////////////////////////
+var buttony=288;
+var button1x=25;
+var button2x=90;
+var buttoncx=60;
 
-//switch boss_progress //the amount of times you restart the game
-//{
-//case 0:
+////////////////////////DIALOGUES////////////////////////
+switch princess_choice
+{
+case 0:
 	switch txt_phase //thinking of life
 	{
 		case 0:
@@ -16,108 +20,185 @@ event_inherited();
 		///////////////////////////////////////////////////////////////////
 		//////////////////////PLACE DIALOGUE HERE//////////////////////////
 		case 1:
-			txt_color=c_red;
-			txt="This island is cursed, just like yourself."; //the text to be said - the speed of the next phase is dependent on the length
+			txt="You found me.";
 		break;
 		case 2:
-			txt="To lift this curse, you must leave this place."; //the text to be said - the speed of the next phase is dependent on the length
+			txt="I was waiting throughout eternity";
 		break;
 		case 3:
-			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
-			txt="Kill my creation, and my creator"; //the text to be said - the speed of the next phase is dependent on the length
+			txt="for someone who could still see";
 		break;
 		case 4:
-			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
-			txt="and I will give you my boat"; //the text to be said - the speed of the next phase is dependent on the length
+			txt="I watched your world grow, and now what's left is only this.";
 		break;
 		case 5:
-			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
-			txt="so you can get off this stinkin' island..."; //the text to be said - the speed of the next phase is dependent on the length
+			txt="tell me, what do you seek?";
+			state="question";
+			//spawn buttons with replies to nothing +=1 purpose/peace
+			var r1=instance_create_depth(button1x,buttony,button_depth,obj_face_button);
+			with r1 {txt="purpose"; nextnumber=6;}
+			var r2=instance_create_depth(button2x,buttony,button_depth,obj_face_button);
+			with r2 {txt="peace"; nextnumber=6;}
 		break;
-		///////////////////////////////////////////////////////////////////
-		case 6://second to last phase, make the character wait before moving to the next room
-			txt="";
-			state="wait";
-			wait_time=game_get_speed(gamespeed_fps)*.25;
+		case 6:
+			txt="What makes you human?";
+			state="question";
+			//spawn buttons with replies to nothing +=1 life/death
+			r1=instance_create_depth(button1x,buttony,button_depth,obj_face_button);
+			with r1 {txt="life"; nextnumber=7;}
+			r2=instance_create_depth(button2x,buttony,button_depth,obj_face_button);
+			with r2 {txt="death"; nextnumber=7;}
 		break;
-		case 7://last phase, for some reason it can't be default, must be there to end the scene
-			global.story_progress=2;
-			global.face_progress=0;
-			ini_open("save.sav");
-			var spawn_death_x=960;
-			var spawn_death_y=1550;
-			ini_write_real("DEBUG","PLAYERSPAWN_X_"+string(room_get_name(rm_world)),spawn_death_x);
-			ini_write_real("DEBUG","PLAYERSPAWN_Y_"+string(room_get_name(rm_world)),spawn_death_y);
-			ini_close();
-			scr_savegame();
-			next_room=rm_death;
+		case 7:
+			txt="Are you fulfilled?";
+			state="question";
+			//spawn buttons with replies to nothing +=1 somewhat/no
+			r1=instance_create_depth(button1x,buttony,button_depth,obj_face_button);
+			with r1 {txt="somewhat"; nextnumber=8;}
+			r2=instance_create_depth(button2x,buttony,button_depth,obj_face_button);
+			with r2 {txt="no"; nextnumber=8;}
+		break;
+		case 8:
+			txt="Now tell me why you came to my house.";
+			state="question";
+			//spawn buttons with replies to Who are you? 9 or Where am I? 11
+			r1=instance_create_depth(button1x,buttony,button_depth,obj_face_button);
+			with r1 {txt="who are you?"; nextnumber=9;}
+			r2=instance_create_depth(button2x,buttony,button_depth,obj_face_button);
+			with r2 {txt="where am I?"; nextnumber=11;}
+		break;
+		case 9:
+			txt="Do you remember your very first thought, before fear, language, and hope?";
+		break;
+		case 10:
+			txt="that was me. I've been here since then.";
+			state="question";
+			//spawn buttons with replies to nod 12 or yawn 15
+			r1=instance_create_depth(button1x,buttony,button_depth,obj_face_button);
+			with r1 {txt="nod"; nextnumber=12;}
+			r2=instance_create_depth(button2x,buttony,button_depth,obj_face_button);
+			with r2 {txt="yawn"; nextnumber=15;}
+		break;
+		case 11:
+			txt="You're inside your soul. Leave this place and you'll be lost forever.";
+			state="question";
+			//spawn buttons with replies to nod 12 or yawn 15
+			r1=instance_create_depth(button1x,buttony,button_depth,obj_face_button);
+			with r1 {txt="nod"; nextnumber=12;}
+			r2=instance_create_depth(button2x,buttony,button_depth,obj_face_button);
+			with r2 {txt="yawn"; nextnumber=15;}
+		break;
+		case 12:
+			txt="I appreciate your politeness.";
+		break;
+		case 13:
+			txt="Now please go.";
+		break;
+		case 14:
+			txt="I am tired of rejecting the truth.";
+			state="question";
+			//spawn buttons with replies to truth? 17 or leave 33
+			r1=instance_create_depth(button1x,buttony,button_depth,obj_face_button);
+			with r1 {txt="truth"; nextnumber=17;}
+			r2=instance_create_depth(button2x,buttony,button_depth,obj_face_button);
+			with r2 {txt="leave"; nextnumber=33;}
+		break;
+		case 15:
+			txt="How dare you insult me?";
+		break;
+		case 16:
+			txt="Have you lost all sense of respect?";
+			state="question";
+			//spawn buttons with replies to apologize 20 insult 21
+			r1=instance_create_depth(button1x,buttony,button_depth,obj_face_button);
+			with r1 {txt="apologize"; nextnumber=20;}
+			r2=instance_create_depth(button2x,buttony,button_depth,obj_face_button);
+			with r2 {txt="really insult"; nextnumber=21;}
+		break;
+		case 17:
+			txt="You have rejected all truths";
+		break;
+		case 18:
+			txt="You have lived a lie, full of betrayals and denial.";
+		break;
+		case 19:
+			txt="Is there anything you want from me?";
+			state="question";
+			//spawn buttons with replies to you 27 item 30
+			r1=instance_create_depth(button1x,buttony,button_depth,obj_face_button);
+			with r1 {txt="you"; nextnumber=27;}
+			r2=instance_create_depth(button2x,buttony,button_depth,obj_face_button);
+			with r2 {txt="item"; nextnumber=30;}
+		break;
+		case 20:
+			txt="Apologies accepted. Now leave, let me be.";
+			state="question";
+			//spawn buttons with leave 33
+			r1=instance_create_depth(buttoncx,buttony,button_depth,obj_face_button);
+			with r1 {txt="leave"; nextnumber=33;}
+		break;
+		case 21:
+			txt="That's it. No more niceties.";
+		break;
+		case 22:
+			txt="You're here to kill me, are you?";
+		break;
+		case 23:
+			txt="Who sent you?!";
+			state="question";
+			//spawn buttons with replies to answer her +=1
+			r1=instance_create_depth(buttoncx,buttony,button_depth,obj_face_button);
+			with r1 {txt="answer"; nextnumber=24;}
+		break;
+		case 24:
+			txt="Is that so...";
+		break;
+		case 25:
+			txt="Well then you leave me no choice.";
+		break;
+		case 26:
+			txt="Prepare to die.";
+			state="question";
+			//spawn buttons with replies to fight (go to princess room and global.princess=false)
+			r2=instance_create_depth(buttoncx,buttony,button_depth,obj_face_button);
+			with r2 {txt="fight"; nextnumber=-1;nextroom=rm_death;}//todo add princess fight
+		break;
+		case 27:
+			txt="That is very nice of you, but you can't have me.";
+		break;
+		case 28:
+			txt="I'm only a fragment of your memories.";
+		break;
+		case 29:
+			txt="Now wake up, my brave little one.";
+			state="question";
+			//spawn buttons with replies to awaken 33
+			r1=instance_create_depth(buttoncx,buttony,button_depth,obj_face_button);
+			with r1 {txt="awaken"; nextnumber=33;}
+		break;
+		case 30:
+			txt="I should've known.";
+		break;
+		case 31:
+			txt="Nobody comes here for no reason...";
+		break;
+		case 32:
+			txt="Go ahead, grab whatever you desire and leave me alone.";
+			state="question";
+			//spawn buttons with replies to raid home
+			r2=instance_create_depth(buttoncx,buttony,button_depth,obj_face_button);
+			with r2 {txt="raid home"; nextnumber=-1;nextroom=rm_death;}//todo add princess fight
+		break;
+		case 33://last phase, for some reason it can't be default, must be there to end the scene
+			global.princess=false;
+			next_room=rm_world;
 			instance_create(obj_fx_fadeout);
 			alarm[0]=game_get_speed(gamespeed_fps)*2
 		break;
 		default:
 		break;
 	}
-//break;
-
-/////////////////////////TUTORIALS//////////////////////////
-//case 99998:
-//	switch txt_phase //template
-//	{
-//		case 0:
-//		break;
-//		//////////////////////PLACE DIALOGUE HERE//////////////////////////
-//		case 1:
-//			txt="";
-//		break;
-//		///////////////////////////////////////////////////////////////////
-//		case 2://second to last phase, make the character wait before moving to the next room
-//			txt="";
-//			state="wait";
-//			wait_time=game_get_speed(gamespeed_fps)*1;
-//		break;
-//		case 3://last phase, for some reason it can't be default, must be there to end the scene
-//			instance_create(obj_fx_fadeout);//creates a fade out
-//			alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
-//			next_room=rm_menu_character;//pick the room you want
-//		break;
-//		default:
-//		break;
-//	}
-//break;
-//case 99999:
-//	switch txt_phase //Setup and tutorial/documentation
-//	{
-//		case 0:
-//			//this is the very first moment the face appears.
-//			//Keep empty if you want the character to say nothing on entry
-//		break;
-//		///////////////////////////////////////////////////////////////////
-//		//////////////////////PLACE DIALOGUE HERE//////////////////////////
-//		case 1:
-//			sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
-//			txt=""; //the text to be said - the speed of the next phase is dependent on the length
-//			txt_auto=true; //use this if you want to force auto progress of the text or if you want it to stop to idle
-//			txt_color=c_white; //the color of the text
-//			state="wait"; //use this if you want the character to blink (first 2 frames) instead of talking
-//			wait_time=game_get_speed(gamespeed_fps)*1; //the amount of seconds (*1) to wait, independent from the text length
-//		break;
-//		///////////////////////////////////////////////////////////////////
-//		case 2://second to last phase, make the character wait before moving to the next room
-//			txt="";
-//			state="wait";
-//			wait_time=game_get_speed(gamespeed_fps)*1;
-//		break;
-//		case 3://last phase, for some reason it can't be default, must be there to end the scene
-//			instance_create(obj_fx_fadeout);//creates a fade out
-//			alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
-//			next_room=rm_menu_character;//pick the room you want
-//		break;
-//		default:
-//		break;
-//	}
-//break;
-////////////////////////////////////////////////////////////
-//default:
-//	alarm[0]=1; //if nothing happens proceed to next_room
-//break;
-//}
+break;
+case 1:
+break;
+}

@@ -72,6 +72,13 @@ switch state
 			txt_progress=0;
 		}
 	break;
+	case "question":
+		if image_index>=image_number-1
+		{image_index=image_number-1;}
+		if mouse_check_button_released(mb_any)
+		{timer=0;txt_progress=string_length(txt);}
+
+	break;
 	case "wait":
 		image_speed = 0;
 		blink_hold = (blink_hold > 0) ? blink_hold - 1 : (irandom_range(0, 50) == 0 ? 5 : 0); //holds for 5 frames

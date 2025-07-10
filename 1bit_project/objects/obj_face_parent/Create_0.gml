@@ -29,4 +29,6 @@ boss_progress=0;//todo add multiple boss changes
 next_room=rm_menu_character;
 game_progress=global.story_progress
 
+question_blinking=false;
+
 show_debug_message(string(face_progress)+" face progress")

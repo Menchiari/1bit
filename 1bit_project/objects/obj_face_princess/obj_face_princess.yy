@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_faces_boat",
-    "path":"sprites/spr_faces_boat/spr_faces_boat.yy",
+    "name":"spr_faces_princess_sad",
+    "path":"sprites/spr_faces_princess_sad/spr_faces_princess_sad.yy",
   },
   "spriteMaskId":null,
   "visible":true,
