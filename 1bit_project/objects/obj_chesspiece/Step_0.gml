@@ -31,6 +31,12 @@ switch current_state
 	break;
 	case "damage":
 		instance_create(obj_fx_blood);
+		var victim=collision_circle(x,y,10,obj_character,true,true);
+		for (var i = 0; i < victim; i++)
+		{
+			var total_damage=(damage/(victim.res*(victim.armor.defence+victim.helm.defence)));
+			victim.hp-=total_damage
+		}
 		instance_destroy();
 	break;
 }
