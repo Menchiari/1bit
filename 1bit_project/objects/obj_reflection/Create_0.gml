@@ -13,3 +13,5 @@ radius=speed*2;
 damage=3;
 y_offset=70;
 faction=factions.neutral;
+tposx=x;
+tposy=y;

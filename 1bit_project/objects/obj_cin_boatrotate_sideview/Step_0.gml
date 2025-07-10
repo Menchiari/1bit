@@ -9,6 +9,7 @@ if x<-sprite_get_width(sprite_index)+room_width
 		layer_set_visible(layer_id, true);   // turns off drawing
 		//layer_set_is_updated(layer_id, true); // turns off Step events (freezes logic)
 		if instance_exists(obj_collider_boat) {instance_destroy(obj_collider_boat);}
+		init_pathfinding_grid();
 	}
 }
 else

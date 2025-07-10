@@ -20,12 +20,12 @@
 18,obj_enemy,tough bandit,1,1.75,1.2,1,0,sharp machete,torn clothes,assassin's hood,03_woods,16,1,,5.25,11.38,1.83,0.5~1.6,1~2,1.7~3.7,0~1
 19,obj_enemy,plagued peasant,1,1,1.25,0.75,-1,pebbles,torn clothes,no headwear,04_castle_ruins,2,2,,0.25,1.00,1.58,0.6~1.9,1~2,0.1~0.3,3~12
 20,obj_enemy_guard,sickly guard,1,1.5,1.5,1,-1,sharp keys,rusty chainmail,tin hat,04_castle_ruins,7,2,,0.75,2.03,4.12,0.2~0.7,1~4,0.2~0.7,2~4
-21,obj_enemy,skeleton,1,2,4,1,-2,bare hands,naked,no headwear,04_castle_ruins,6,1,,0.40,1.00,4.00,0.3~0.8,1~4,0.1~0.3,3~8
-22,obj_enemy_ghost,ghost,1,2.5,2.5,1.5,-3,bare hands,naked,no headwear,04_castle_ruins,9,1,,0.50,1.25,2.50,0.4~1.2,1~3,0.2~0.4,2~6
+21,obj_enemy_skeleton,skeleton,1,1.25,3,0.8,-3,bare hands,naked,no headwear,04_castle_ruins,4,1,,0.25,0.63,3.00,0.3~1,1~3,0.1~0.2,5~12
+22,obj_enemy_ghost,ghost,1,3,0.5,2,-3,bare hands,naked,no headwear,04_castle_ruins,9,1,,0.60,1.50,0.50,2~6,0~1,0.2~0.5,2~5
 23,obj_enemy_guard,young guard,1,1,1,1.25,0,old knife,heavy chainmail,great helm,05_castle_fortress,13,1,,2.00,3.50,7.92,0.1~0.4,3~8,0.6~1.1,1~2
 24,obj_enemy_guard,buff guard,1,1.25,2,1,-1,sharp sword,bronze armor,great helm,05_castle_fortress,28,1,,3.75,8.75,19.80,0.1~0.2,7~20,1.2~2.8,0~1
 25,obj_enemy_patrol,evil knight,1,1.5,1,1,-2,golden dagger,knight's armor,golden crown,05_castle_fortress,8,4,,0.75,3.75,3.78,0.3~0.8,1~4,0.2~1.2,1~4
-26,obj_enemy,prisoner,1,1,1,1,-1,rusty chain,torn clothes,tin hat,06_castle_dungeon,4,1,,1.35,2.75,1.80,0.6~1.7,1~2,0.4~0.9,1~2
+26,obj_enemy,mad prisoner,1,1,1,1,-1,rusty chain,torn clothes,tin hat,06_castle_dungeon,4,1,,1.35,2.75,1.80,0.6~1.7,1~2,0.4~0.9,1~2
 27,obj_enemy_large,heavy guard,1,1,2.5,1,-1,large claymore,golden armor,golden mask,06_castle_dungeon,32,1,,4.00,11.00,23.76,0~0.1,8~24,1.3~3.5,0~1
 28,obj_enemy_ghost,evil spirit,1,3,2,1.5,-3,bare hands,silver armor,ceramic mask,06_castle_dungeon,25,1,,0.60,1.50,12.36,0.1~0.2,4~12,0.2~0.5,2~5
 29,obj_enemy,owl clan member,1,5,5,1,-3,heavy claws,light chainmail,owl clan mask,07_forest,103,1,,10.00,20.00,26.40,0~0.1,9~26,3.2~6.5,0~0
@@ -39,7 +39,7 @@
 37,obj_neutral,drunk beggar,1,1,2,1,-1,silver fork,torn clothes,coonskin cap,08_evil_village,5,1,,0.75,1.25,3.33,0.3~0.9,1~3,0.2~0.4,2~4
 38,obj_enemy,evil townsfolk,1,1,1,1,1,iron staff,basic clothes,filthy hat,08_evil_village,8,1,,5.00,9.00,1.52,0.7~2,1~2,1.6~2.9,0~1
 39,obj_enemy_crazy,old madman,1,3,2,1,1,rusty chain,naked,stray hat,08_evil_village,20,1,,4.05,8.25,2.42,0.4~1.2,1~2,1.3~2.7,0~1
-40,obj_enemy_skeleton,skeleton,1,1,1,1,1,bare hands,naked,no headwear,09_witch_town,1,30,,0.20,0.50,1.00,1~3,0~1,0.1~0.2,6~16
+40,obj_enemy_skeleton,rotting skeleton,1,1,1,1,1,bare hands,naked,no headwear,09_witch_town,1,30,,0.20,0.50,1.00,1~3,0~1,0.1~0.2,6~16
 41,obj_enemy,necromancer,1,3,1,1,-1,magic wand,assassin's cloth,wizard hat,09_witch_town,9,1,,1.50,3.00,1.98,0.5~1.5,1~2,0.5~1,1~2
 42,obj_enemy,creepy old man,1,0.5,1,1,1,crafty shiv,torn clothes,worn hat,09_witch_town,1,1,,0.38,1.25,1.26,0.8~2.4,0~1,0.1~0.4,2~8
 43,obj_enemy,crippled drunk,1,1,1,1,1,broken bottle,worn jacket,filthy hat,09_witch_town,3,3,,0.75,3.00,1.67,0.6~1.8,1~2,0.2~1,1~4
@@ -73,9 +73,10 @@
 71,obj_merchant,merchant,1,1,2,1,1,electric sword,guard's uniform,helmet,20_cyber_society,30,1,,15.00,13.00,16.50,0.1~0.2,6~17,4.8~4.2,0~0
 72,obj_merchant,merchant,1,1,2,1,1,metal ring,tuxido,silver crown,20_cyber_society,3,1,,0.60,1.75,2.11,0.5~1.4,1~2,0.2~0.6,2~5
 73,obj_merchant,merchant,1,1,1,1,1,cigarette pack,elegant clothes,bionic headset,20_cyber_society,5,1,,0.50,1.25,4.16,0.2~0.7,1~4,0.2~0.4,2~6
-74,obj_mercenary_large,metal mercenary,1,2,2,1,1,electric sword,naked,bionic headset,20_cyber_society,62,1,,30.00,26.00,6.60,0.2~0.5,2~7,9.7~8.4,0~0
+74,obj_merchant_traveller,metal mercenary,1,2,2,1,1,electric sword,naked,bionic headset,20_cyber_society,62,1,,30.00,26.00,6.60,0.2~0.5,2~7,9.7~8.4,0~0
 75,obj_neutral,metal citizen,1,1,1,2,2,electric gloves,elegant clothes,bionic headset,20_cyber_society,15,1,,3.00,5.00,4.16,0.2~0.7,1~4,1~1.6,1~1
 76,obj_enemy_ghost,metal guard,1,1,1,1,1,laser katana,bionic armor,bionic headset,21_hangar,26,1,,5.00,7.50,19.80,0.1~0.2,7~20,1.6~2.4,0~1
-77,obj_enemy_large,large metal guard,1,2,1.5,1,1,iron gloves,bionic armor,god's helm,21_hangar,45,1,,4.00,12.00,29.70,0~0.1,10~30,1.3~3.9,0~1
+77,obj_enemy_guardian,large metal guard,1,2,1.5,1,1,iron gloves,bionic armor,god's helm,21_hangar,45,1,,4.00,12.00,29.70,0~0.1,10~30,1.3~3.9,0~1
 78,obj_enemy_patrol,caretaker,1,3,3,0.8,-2,rapier,elegant clothes,top hat,13_toxic_swamp,63,1,,15.00,33.00,5.41,0.2~0.6,2~5,4.8~10.6,0~0
 79,obj_enemy_zombie,undead creature,1,2,3,0.75,-2,bare hands,torn jacket,no headwear,13_toxic_swamp,5,1,,0.40,1.00,3.96,0.3~0.8,1~4,0.1~0.3,3~8
+80,obj_enemy_skeleton,tough skeleton,1,2,3,0.75,-3,bare hands,naked,guard helm,06_castle_dungeon,7,1,,0.40,1.00,5.28,0.2~0.6,2~5,0.1~0.3,3~8

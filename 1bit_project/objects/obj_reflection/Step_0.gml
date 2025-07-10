@@ -15,7 +15,14 @@ if instance_exists(obj_hero)
 	tposy=obj_hero.tposy;
 	size=obj_hero.size;
 	image_index=obj_hero.image_index;
+	
+	sprite_body=obj_hero.sprite_body;
+	sprite_back=obj_hero.sprite_back;
+	helm.sprite=obj_hero.helm.sprite;
+	sprite_skin=obj_hero.sprite_skin;
+	character_head=obj_hero.character_head;
+	color=obj_hero.color;
 }
 else {instance_destroy();}
 
-if !instance_exists(obj_door_mirror) {instance_destroy();}
+//if !instance_exists(obj_door_mirror) {instance_destroy();}

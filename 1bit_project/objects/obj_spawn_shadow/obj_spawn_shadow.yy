@@ -1,20 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_collider",
+  "%Name":"obj_spawn_shadow",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_collider",
+  "name":"obj_spawn_shadow",
   "overriddenProperties":[],
   "parent":{
     "name":"_system",
     "path":"folders/Objects/_system.yy",
   },
-  "parentObjectId":{
-    "name":"obj_avoid",
-    "path":"objects/obj_avoid/obj_avoid.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
