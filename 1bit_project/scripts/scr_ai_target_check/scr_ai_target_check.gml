@@ -13,11 +13,11 @@ function scr_ai_target_check(){
 	var temp_target=collision_rectangle(x-xcheck/2,y-ycheck,x+xcheck,y+ycheck,obj_character,false,true); //collision_line(x,y,xcheck,ycheck,obj_character,false,true);	
 	if instance_exists(temp_target)
 	{
-		speech_text="!"
 		if scr_faction_check_ai(temp_target)==true
 		//&& !collision_line(x,y,xcheck,ycheck,obj_collider,true,true)
 		&& !collision_line(x,y,temp_target.x,temp_target.y,obj_collider,true,true)
 		{
+			speech_text="!"
 			//if point_distance(x,y,temp_target.x,temp_target.y)<ai_search_range
 			//{
 				ai_target=temp_target;

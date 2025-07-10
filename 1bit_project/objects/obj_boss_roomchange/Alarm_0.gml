@@ -1,6 +1,6 @@
 /// @description
 //todo make a boss object instead
-if !instance_exists(obj_enemy)
+if !instance_exists(obj_enemy_guardian)
 {	
 	room_goto(rm_faces_boss_death);
 }

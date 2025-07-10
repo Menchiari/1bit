@@ -203,7 +203,7 @@ function scr_ai_main(){
 			#endregion
 			
 				case ai_states.null:
-					speech_text="wtf"
+					speech_text="..."
 					ai_state=ai_state_original;//speech_text="";
 				break;
 				default:
