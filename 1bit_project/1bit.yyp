@@ -194,6 +194,7 @@
     {"id":{"name":"obj_face_death","path":"objects/obj_face_death/obj_face_death.yy",},},
     {"id":{"name":"obj_face_intro_default","path":"objects/obj_face_intro_default/obj_face_intro_default.yy",},},
     {"id":{"name":"obj_face_parent","path":"objects/obj_face_parent/obj_face_parent.yy",},},
+    {"id":{"name":"obj_face_princess","path":"objects/obj_face_princess/obj_face_princess.yy",},},
     {"id":{"name":"obj_fx_blood","path":"objects/obj_fx_blood/obj_fx_blood.yy",},},
     {"id":{"name":"obj_fx_bodypart","path":"objects/obj_fx_bodypart/obj_fx_bodypart.yy",},},
     {"id":{"name":"obj_fx_debris_wood_large","path":"objects/obj_fx_debris_wood_large/obj_fx_debris_wood_large.yy",},},
@@ -339,6 +340,7 @@
     {"id":{"name":"rm_faces_boss_intro","path":"rooms/rm_faces_boss_intro/rm_faces_boss_intro.yy",},},
     {"id":{"name":"rm_faces_death","path":"rooms/rm_faces_death/rm_faces_death.yy",},},
     {"id":{"name":"rm_faces_default","path":"rooms/rm_faces_default/rm_faces_default.yy",},},
+    {"id":{"name":"rm_faces_princess","path":"rooms/rm_faces_princess/rm_faces_princess.yy",},},
     {"id":{"name":"rm_forest","path":"rooms/rm_forest/rm_forest.yy",},},
     {"id":{"name":"rm_forest2","path":"rooms/rm_forest2/rm_forest2.yy",},},
     {"id":{"name":"rm_gameover","path":"rooms/rm_gameover/rm_gameover.yy",},},
@@ -946,6 +948,7 @@
     {"roomId":{"name":"rm_dng9","path":"rooms/rm_dng9/rm_dng9.yy",},},
     {"roomId":{"name":"rm_dng1","path":"rooms/rm_dng1/rm_dng1.yy",},},
     {"roomId":{"name":"rm_faces_boat","path":"rooms/rm_faces_boat/rm_faces_boat.yy",},},
+    {"roomId":{"name":"rm_faces_princess","path":"rooms/rm_faces_princess/rm_faces_princess.yy",},},
   ],
   "templateType":null,
   "TextureGroups":[
