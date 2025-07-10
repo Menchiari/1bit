@@ -17,7 +17,7 @@ event_inherited();
 		//////////////////////PLACE DIALOGUE HERE//////////////////////////
 		case 1:
 			txt_color=c_red;
-			txt="This island is cursed.\nJust like yourself."; //the text to be said - the speed of the next phase is dependent on the length
+			txt="This island is cursed, just like yourself."; //the text to be said - the speed of the next phase is dependent on the length
 		break;
 		case 2:
 			txt="To lift this curse, you must leave this place."; //the text to be said - the speed of the next phase is dependent on the length
