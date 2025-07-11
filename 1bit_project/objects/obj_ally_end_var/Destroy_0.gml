@@ -1,5 +1,6 @@
 /// @description die
-if activate==true
+var _hero = instance_nearest(x, y, obj_hero);
+if activate==true && (instance_exists(_hero) && point_distance(x, y, _hero.x, _hero.y) < 100)
 {
 	instance_create(obj_death);
 	if instance_exists(obj_hero){obj_hero.hp=obj_hero.hp_max;}

@@ -4,7 +4,6 @@ frame=idle_a;
 selected=false;
 //global.player_control=controls.null;
 //hero=instance_create_depth(x+24,y+56,depth-10,obj_character);
-hero=obj_hero;
 weight=0;
 strength1=0;
 strength2=0;
