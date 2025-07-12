@@ -20,3 +20,5 @@ yto=y;
 cam_smooth=10;
 
 instance_create(obj_fx_vignette);
+
+alarm[0]=10;

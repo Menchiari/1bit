@@ -108,7 +108,7 @@
     {"name":"rm_","order":7,"path":"rooms/rm_/rm_.yy",},
     {"name":"rm_bal_dungeon_1","order":16,"path":"rooms/rm_bal_dungeon_1/rm_bal_dungeon_1.yy",},
     {"name":"rm_bal_dungeon_skel","order":17,"path":"rooms/rm_bal_dungeon_skel/rm_bal_dungeon_skel.yy",},
-    {"name":"rm_boat","order":5,"path":"rooms/rm_boat/rm_boat.yy",},
+    {"name":"rm_boat","order":8,"path":"rooms/rm_boat/rm_boat.yy",},
     {"name":"rm_boss","order":3,"path":"rooms/rm_boss/rm_boss.yy",},
     {"name":"rm_castle","order":18,"path":"rooms/rm_castle/rm_castle.yy",},
     {"name":"rm_chess","order":19,"path":"rooms/rm_chess/rm_chess.yy",},

@@ -64,11 +64,6 @@ if instance_exists(obj_character)
 {
     // deactivate everything
     instance_deactivate_object(obj_character);
-
-    // immediately reactivate obj_hero to keep it safe
-    if instance_exists(obj_hero)
-        instance_activate_object(obj_hero);
-
-    // activate region around the camera
-    instance_activate_region(x-(global_res_x/2),y-(global_res_y/2),x+global_res_x+global_res_x/2,y+global_res_y+global_res_y/2,true);
 }
+// activate region around the camera
+instance_activate_region(x-(global_res_x/2),y-(global_res_y/2),x+global_res_x+global_res_x/2,y+global_res_y+global_res_y/2,true);
