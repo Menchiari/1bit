@@ -80,3 +80,4 @@
 78,obj_enemy_patrol,caretaker,1,3,3,0.8,-2,rapier,elegant clothes,top hat,13_toxic_swamp,63,1,,15.00,33.00,5.41,0.2~0.6,2~5,4.8~10.6,0~0
 79,obj_enemy_zombie,undead creature,1,2,3,0.75,-2,bare hands,torn jacket,no headwear,13_toxic_swamp,5,1,,0.40,1.00,3.96,0.3~0.8,1~4,0.1~0.3,3~8
 80,obj_enemy_skeleton,tough skeleton,1,2,3,0.75,-3,bare hands,naked,guard helm,06_castle_dungeon,7,1,,0.40,1.00,5.28,0.2~0.6,2~5,0.1~0.3,3~8
+81,obj_enemy,princess,2,2,1,2,-3,golden staff,queen's dress,silver crown,00_null,73,1,,9.00,22.00,2.40,0.4~1.3,2~5,2.9~7.1,0~0

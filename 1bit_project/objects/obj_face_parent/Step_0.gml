@@ -1,4 +1,5 @@
 /// @description
+object_set_sprite(0,sprite_index);
 timer+=1;
 var length = string_width(txt);
 if (txt_progress < string_length(txt)) {txt_progress += txt_progress_spd;}//makes the text appear progressively
@@ -23,7 +24,7 @@ switch state
 				timer=0;
 			}
 		}
-		if mouse_check_button_released(mb_any)
+		if mouse_check_button_released(mb_any) && question==false
 		{
 			state="idle";
 			timer=0;
@@ -73,6 +74,7 @@ switch state
 		}
 	break;
 	case "question":
+		question=true;
 		if image_index>=image_number-1
 		{image_index=image_number-1;}
 		if mouse_check_button_released(mb_any)

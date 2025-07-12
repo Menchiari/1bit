@@ -81,6 +81,7 @@
     {"name":"obj_null","order":5,"path":"objects/obj_null/obj_null.yy",},
     {"name":"obj_patrol_node","order":9,"path":"objects/obj_patrol_node/obj_patrol_node.yy",},
     {"name":"obj_player_spawn_cave","order":11,"path":"objects/obj_player_spawn_cave/obj_player_spawn_cave.yy",},
+    {"name":"obj_princess_roomchange","order":9,"path":"objects/obj_princess_roomchange/obj_princess_roomchange.yy",},
     {"name":"obj_spawn_dungeon","order":12,"path":"objects/obj_spawn_dungeon/obj_spawn_dungeon.yy",},
     {"name":"obj_spawn_shadow","order":13,"path":"objects/obj_spawn_shadow/obj_spawn_shadow.yy",},
     {"name":"obj_trigger_boat","order":2,"path":"objects/obj_trigger_boat/obj_trigger_boat.yy",},

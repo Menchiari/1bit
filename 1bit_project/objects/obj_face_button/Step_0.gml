@@ -16,7 +16,11 @@ if mouse_check_button_released(mb_any) && collision_point(mouse_x,mouse_y,self,t
 		{
 			obj_face_parent.txt_phase=nextnumber;
 			obj_face_parent.timer=0;
-			obj_face_parent.state="talk"
+			obj_face_parent.txt_progress=0;
+			obj_face_parent.state="talk";
+			obj_face_parent.question=false;
+			obj_face_parent.image_index=0;
+			obj_face_parent.image_speed=obj_face_parent.image_speed_default;
 		}
 		show_debug_message("number "+string(nextnumber));
 	}

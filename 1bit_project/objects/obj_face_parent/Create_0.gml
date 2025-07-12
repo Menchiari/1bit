@@ -30,5 +30,6 @@ next_room=rm_menu_character;
 game_progress=global.story_progress
 
 question_blinking=false;
+question=false;
 
 show_debug_message(string(face_progress)+" face progress")

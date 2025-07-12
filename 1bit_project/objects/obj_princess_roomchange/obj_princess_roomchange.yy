@@ -1,20 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_asset_vase",
+  "%Name":"obj_princess_roomchange",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_asset_vase",
+  "name":"obj_princess_roomchange",
   "overriddenProperties":[],
   "parent":{
-    "name":"assets",
-    "path":"folders/Objects/assets.yy",
+    "name":"Story",
+    "path":"folders/Objects/Story.yy",
   },
-  "parentObjectId":{
-    "name":"obj_breakable",
-    "path":"objects/obj_breakable/obj_breakable.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,11 +29,8 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
-  "spriteId":{
-    "name":"spr_asset_vase",
-    "path":"sprites/spr_asset_vase/spr_asset_vase.yy",
-  },
+  "solid":false,
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

@@ -16,6 +16,7 @@ if UI==true
 && room!=rm_faces_default
 && room!=rm_death
 && room!=rm_faces_death
+&& room!=rm_faces_princess
 && room!=rm_faces_boss_intro
 && room!=rm_faces_boss_death
 && room!=rm_boat
