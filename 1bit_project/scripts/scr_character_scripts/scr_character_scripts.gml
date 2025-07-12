@@ -42,6 +42,7 @@ function scr_check_destination_edge()
 
 function scr_character_move(destx,desty,_speed,checkradius)
 {
+	speed = 0;	// path movement handles this
 	var dist = point_distance(x, y, destx, desty);
 	if (dist > _speed + checkradius && mp_grid_path(global.pathfinding_grid, walking_path, x, y, destx, desty, true))
 	{

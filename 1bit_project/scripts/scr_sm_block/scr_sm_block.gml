@@ -2,7 +2,7 @@ function scr_sm_block(){
 	timer+=1;
 //movement and animation
 	if abs(speed)>1 {speed-=block_sp_decrease;}
-	else{speed=0;path_end();}
+	else{speed=0; path_speed = 0;}
 	
 	if timer>atk2_time
 	{

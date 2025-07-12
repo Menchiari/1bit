@@ -267,7 +267,7 @@ function scr_init_character(){
 	collision_check_time=2;
 	collision_check_x=x;
 	collision_check_y=y;
-	player_radius=5;
+	player_radius=2;
 #endregion
 #region other
 	//XP
