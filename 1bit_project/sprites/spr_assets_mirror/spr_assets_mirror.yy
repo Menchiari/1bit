@@ -1,11 +1,11 @@
 {
   "$GMSprite":"",
   "%Name":"spr_assets_mirror",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":57,
   "bbox_left":0,
   "bbox_right":31,
-  "bbox_top":0,
+  "bbox_top":47,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
