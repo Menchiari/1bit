@@ -20,38 +20,29 @@ if mouse_check_button_released(mb_any) && collision_point(mouse_x,mouse_y,self,t
 	if ds_list_find_index(global.unlock_hlm,helmsel)=-1
 	{ds_list_add(global.unlock_hlm,helmsel);}
 	
-	if instance_exists(obj_ui_menu_button_gear)
+	with (obj_ui_menu_button_gear)
 	{
-		with obj_ui_menu_button_gear
+		switch (type)
 		{
-			switch (type)
-			{
-			case 0: //weapon
-				global.player_weapon=global.weapons[weaponsel];
-				text=global.player_weapon.name;
-			break;
-			case 1: //armor
-				global.player_armor=global.armors[armorsel];
-				text=global.player_armor.name;
-			break;
-			case 2: //helm
-				global.player_helm=global.helms[helmsel];
-				text=global.player_helm.name;
-			break;
-			default:
-			break;
-			}
+		case 0: //weapon
+			global.player_weapon=global.weapons[weaponsel];
+			text=global.player_weapon.name;
+		break;
+		case 1: //armor
+			global.player_armor=global.armors[armorsel];
+			text=global.player_armor.name;
+		break;
+		case 2: //helm
+			global.player_helm=global.helms[helmsel];
+			text=global.player_helm.name;
+		break;
+		default:
+		break;
 		}
-		alarm[10]=1;
 	}
-	if instance_exists(obj_hero)
+	
+	with (obj_hero)
 	{
-		with obj_hero
-		{
-			equip_weapon(global.weapons[weaponsel]);
-			equip_armor(global.armors[armorsel]);
-			equip_helm(global.helms[helmsel]);
-			scr_init_hero();
-		}
+		scr_init_hero();
 	}
 }

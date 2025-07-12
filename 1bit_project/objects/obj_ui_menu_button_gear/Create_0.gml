@@ -1,6 +1,11 @@
 scr_loadgame();
 scr_init_character();
 
+with (obj_hero)
+{
+	scr_init_hero();
+}
+
 x=room_width/2-sprite_width/2;
 
 lineax1=random_range(0,sprite_width);
