@@ -16,13 +16,13 @@ if mouse_check_button_released(mb_any)
 	if point_in_rectangle(mouse_x,mouse_y,x+sprite_width/3.5,y,x+sprite_width,y+sprite_height) 
 	{
 		wpn_button_select+=1;
-		if wpn_button_select = ds_list_size(global.unlock_wpn) {wpn_button_select = 0;}
+		if wpn_button_select == ds_list_size(global.unlock_wpn) {wpn_button_select = 0;}
 		
 		arm_button_select+=1;
-		if arm_button_select = ds_list_size(global.unlock_arm) {arm_button_select = 0;}
+		if arm_button_select == ds_list_size(global.unlock_arm) {arm_button_select = 0;}
 		
 		hlm_button_select+=1;
-		if hlm_button_select = ds_list_size(global.unlock_hlm) {hlm_button_select = 0;}
+		if hlm_button_select == ds_list_size(global.unlock_hlm) {hlm_button_select = 0;}
 	}
 	
 	

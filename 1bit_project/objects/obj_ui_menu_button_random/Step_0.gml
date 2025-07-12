@@ -20,21 +20,25 @@ if mouse_check_button_released(mb_any) && collision_point(mouse_x,mouse_y,self,t
 	if ds_list_find_index(global.unlock_hlm,helmsel)=-1
 	{ds_list_add(global.unlock_hlm,helmsel);}
 	
+	
 	with (obj_ui_menu_button_gear)
 	{
 		switch (type)
 		{
 		case 0: //weapon
-			global.player_weapon=global.weapons[weaponsel];
+			global.player_weapon = global.weapons[weaponsel];
 			text=global.player_weapon.name;
+			wpn_button_select = ds_list_find_index(global.unlock_wpn, global.player_weapon.index);
 		break;
 		case 1: //armor
-			global.player_armor=global.armors[armorsel];
+			global.player_armor = global.armors[armorsel];
 			text=global.player_armor.name;
+			arm_button_select = ds_list_find_index(global.unlock_arm, global.player_armor.index);
 		break;
 		case 2: //helm
-			global.player_helm=global.helms[helmsel];
+			global.player_helm = global.helms[helmsel];
 			text=global.player_helm.name;
+			hlm_button_select = ds_list_find_index(global.unlock_hlm, global.player_helm.index);
 		break;
 		default:
 		break;
