@@ -61,20 +61,20 @@ function scr_ai_main_broken(){
 				//	{if point_distance(x,y,ai_target.x,ai_target.y)>ai_search_range {dest_x=ai_guard_x;dest_y=ai_guard_y;}}
 				//	else
 				//	{if point_distance(x,y,ai_guard_x,ai_guard_y)>50 {dest_x=ai_guard_x;dest_y=ai_guard_y;} else {dest_x=x;dest_y=y;}}
-					//var dist=10;
+					var guard_dist=10;
 					var walk_chance=irandom_range(0,100);				
 					if walk_chance<2 {ai_trigger_check=!ai_trigger_check;}
 					if ai_trigger_check==true
 					{
 						state=states.walk;
 				
-						if point_distance(x,y,dest_x,dest_y)<=dist
+						if point_distance(x,y,dest_x,dest_y)<=guard_dist
 						{
 							walk_sp_mod=.3;
 							dest_x=x+random_range(run_distance_min*4,-run_distance_min*4);
 							dest_y=y+random_range(run_distance_min*4,-run_distance_min*4);
 						}
-						if point_distance(x,y,ai_guard_x,ai_guard_y)>=dist
+						if point_distance(x,y,ai_guard_x,ai_guard_y)>=guard_dist
 						{
 							walk_sp_mod=.5;
 							dest_x=ai_guard_x;
@@ -89,14 +89,28 @@ function scr_ai_main_broken(){
 			#endregion
 			#region PATROL
 				case ai_states.patrol:
+					var patrol_distance=10;
 					if speech_verbose==true speech_text="patrolling";
 					walk_sp_mod=.3;
-					if point_distance(x,y,dest_x,dest_y)>walk_sp*2 {state=states.walk;}
-					else {state=states.idle;}
+					state=states.walk;
 				
-					if point_distance(x,y,ai_guard_x,ai_guard_y)<10 {dest_x=ai_patrol_x;dest_y=ai_patrol_y;}
-					if point_distance(x,y,ai_patrol_x,ai_patrol_y)<10 {dest_x=ai_guard_x;dest_y=ai_guard_y;}
+					if point_distance(x,y,ai_guard_x,ai_guard_y)<=patrol_distance
+					{
+						var patrolvar=random_range(0,100)
+						//if patrolvar<ai_responsiveness {dest_x=ai_patrol_x;dest_y=ai_patrol_y;}
+						dest_x=ai_patrol_x;dest_y=ai_patrol_y;
+						//else state=states.idle;
+					}
+					if point_distance(x,y,ai_patrol_x,ai_patrol_y)<=patrol_distance
+					{
+						var patrolvar=random_range(0,100)
+						//if patrolvar<ai_responsiveness {dest_x=ai_guard_x;dest_y=ai_guard_y;}
+						dest_x=ai_guard_x;dest_y=ai_guard_y;
+						//else state=states.idle;
+					}
+					
 					scr_ai_target_check();
+
 				break;
 			#endregion
 			#region ALERT
@@ -227,5 +241,4 @@ function scr_ai_main_broken(){
 	else {dir=-1};
 	if dest_y < y-6 {back=true}
 	else {back=false};
-	if speed<=.5 && state=states.walk {state=states.idle;}
 }
