@@ -32,7 +32,7 @@ event_inherited();
 		break;
 		case 5:
 			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
-			txt="so you can get off this stinkin' island..."; //the text to be said - the speed of the next phase is dependent on the length
+			txt="so you can get off this dreadful island..."; //the text to be said - the speed of the next phase is dependent on the length
 		break;
 		///////////////////////////////////////////////////////////////////
 		case 6://second to last phase, make the character wait before moving to the next room
