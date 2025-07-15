@@ -855,6 +855,7 @@
     {"id":{"name":"spr_ui_items_pills","path":"sprites/spr_ui_items_pills/spr_ui_items_pills.yy",},},
     {"id":{"name":"spr_ui_items_spoon","path":"sprites/spr_ui_items_spoon/spr_ui_items_spoon.yy",},},
     {"id":{"name":"spr_ui_mainmenu","path":"sprites/spr_ui_mainmenu/spr_ui_mainmenu.yy",},},
+    {"id":{"name":"spr_ui_menu_arrow","path":"sprites/spr_ui_menu_arrow/spr_ui_menu_arrow.yy",},},
     {"id":{"name":"spr_ui_menu_button_char","path":"sprites/spr_ui_menu_button_char/spr_ui_menu_button_char.yy",},},
     {"id":{"name":"spr_ui_menu_char","path":"sprites/spr_ui_menu_char/spr_ui_menu_char.yy",},},
     {"id":{"name":"spr_ui_menu_new","path":"sprites/spr_ui_menu_new/spr_ui_menu_new.yy",},},

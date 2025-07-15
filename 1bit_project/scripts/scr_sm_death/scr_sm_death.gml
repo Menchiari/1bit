@@ -148,6 +148,7 @@ function scr_sm_death(){
 	{
 		dialogue_death_instance=instance_create_depth(x,y-16,-y,obj_ui_number)
 		if dialogue_death==""
+		&& animal==false
 		{
 			if faction=factions.enemy
 			{

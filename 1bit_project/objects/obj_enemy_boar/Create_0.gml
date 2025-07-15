@@ -13,3 +13,5 @@ speech_color=c_orange;
 sprite_skin=spr_boar;
 sprite_body=spr_boar;
 sprite_back=spr_boar;
+
+animal=true;

@@ -9,3 +9,5 @@ ai_state_original=ai_states.search;
 
 skin_color=c_red;
 speech_color=c_red;
+
+animal=true;

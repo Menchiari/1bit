@@ -14,6 +14,8 @@ function scr_init_character(){
 	sprite_shadow=spr_shadow;
 	ladder=false;
 	
+	animal=false;
+	
 	dialogue_variation=false;
 	dialogue_positive="";
 	dialogue_neutral="";

@@ -358,6 +358,7 @@
     {"name":"spr_tileset_cropped_fg","order":23,"path":"sprites/spr_tileset_cropped_fg/spr_tileset_cropped_fg.yy",},
     {"name":"spr_ui_back","order":2,"path":"sprites/spr_ui_back/spr_ui_back.yy",},
     {"name":"spr_ui_faces_button","order":25,"path":"sprites/spr_ui_faces_button/spr_ui_faces_button.yy",},
+    {"name":"spr_ui_menu_arrow","order":3,"path":"sprites/spr_ui_menu_arrow/spr_ui_menu_arrow.yy",},
     {"name":"spr_ui_menu_new","order":3,"path":"sprites/spr_ui_menu_new/spr_ui_menu_new.yy",},
     {"name":"spr_ui_random","order":1,"path":"sprites/spr_ui_random/spr_ui_random.yy",},
     {"name":"spr_world_bg_14","order":37,"path":"sprites/spr_world_bg_14/spr_world_bg_14.yy",},

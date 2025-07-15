@@ -108,3 +108,5 @@ equip_helm(global.helms[0]);
 	
 	attack_charge=12;
 	attack_charge_strong=13;
+	
+	animal=true;
