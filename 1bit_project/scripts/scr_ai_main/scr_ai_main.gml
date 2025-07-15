@@ -103,8 +103,8 @@ function scr_ai_main(){
 					if point_distance(x,y,dest_x,dest_y)>walk_sp*2 {state=states.walk;}
 					else {state=states.idle;}
 				
-					if point_distance(x,y,ai_guard_x,ai_guard_y)<10 {var patrolvar=random_range(0,100) if patrolvar<.5 {dest_x=ai_patrol_x;dest_y=ai_patrol_y;}}
-					if point_distance(x,y,ai_patrol_x,ai_patrol_y)<10 {var patrolvar=random_range(0,100) if patrolvar<.5 {dest_x=ai_guard_x;dest_y=ai_guard_y;}}
+					if point_distance(x,y,ai_guard_x,ai_guard_y)<10 {dest_x=ai_patrol_x;dest_y=ai_patrol_y;}
+					if point_distance(x,y,ai_patrol_x,ai_patrol_y)<10 {dest_x=ai_guard_x;dest_y=ai_guard_y;}
 					scr_ai_target_check();
 				break;
 			#endregion
