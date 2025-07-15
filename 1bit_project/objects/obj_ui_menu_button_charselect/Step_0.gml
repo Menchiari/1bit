@@ -26,7 +26,7 @@ switch character_select
 	break;
 	case 1:
 		character_face=citrus2;
-		character_name="Ari";
+		character_name="Ara";
 		character_description="from the west";
 		character_head_var=spr_head_female2;
 	break;

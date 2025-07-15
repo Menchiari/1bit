@@ -16,7 +16,7 @@ idle_speed=random_range(.05,.2)
 ai_type=ai_types.ai_zombie;
 ai_timer_attack1=50;
 ai_timer_attack2=50;
-ai_responsiveness=1;
+ai_responsiveness=2;
 
 //spawn event
 state=states.spawn;

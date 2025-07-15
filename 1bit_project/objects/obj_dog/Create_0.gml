@@ -18,7 +18,7 @@ skin_color=c_white;
 speech_color=c_white;
 
 ai_type=ai_types.ai_test;
-ai_responsiveness=animset_atk2_time
+ai_responsiveness=5//animset_atk2_time
 
 name="dog"
 

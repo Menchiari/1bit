@@ -43,6 +43,7 @@ function init_enums(){
 		guard,
 		patrol,
 		alert,
+		aware,
 		chase,
 		search,
 		fight,
