@@ -13,7 +13,7 @@ with obj_hero
 	if global.deathcount==9 {speech_text="this can't be happening"}
 	if global.deathcount==10 {speech_text="this won't last forever"}
 	if global.deathcount==11 {speech_text="echoes whisper it's almost over"}
-	if global.deathcount==12 {speech_text="I can feel my sould fading"}
+	if global.deathcount==12 {speech_text="I can feel my soul fading"}
 	if global.deathcount==13 {speech_text="only four attempts left"}
 	if global.deathcount==14 {speech_text="three more tries"}
 	if global.deathcount==15 {speech_text="two more deaths"}
