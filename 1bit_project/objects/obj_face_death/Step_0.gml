@@ -56,6 +56,7 @@ case 0:
 			scr_savegame();
 			file_delete("save.sav");
 			file_delete("random.seed");
+			game_restart();
 			game_end();
 		break;
 		default:
