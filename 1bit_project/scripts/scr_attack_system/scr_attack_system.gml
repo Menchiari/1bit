@@ -11,7 +11,7 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 		{
 			var total_damage=(((damage+random_range(0,damage_variation))*str)/(enemy.res*(enemy.armor.defence+enemy.helm.defence)));
 			if scr_faction_check(enemy)
-			&& instance_exists(obj_hero) //todo make it so that when hero dies others can die as well?
+			&& instance_exists(obj_hero)
 			{
 				if enemy.object_index==obj_hero.object_index
 				|| object_index==obj_hero.object_index
@@ -117,22 +117,44 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 		//debug
 			show_debug_message
 			(
-				string(object_get_name(object_index))+" has strength: "+string(str)+" and weapon power "+string(damage)+" with damage variation "+string(damage_variation)
+				string(self.name)+" has strength: "+string(str)+" and weapon power "+string(damage)+" with damage variation "+string(damage_variation)
 			)
 			show_debug_message
 			(
-				string(object_get_name(enemy.object_index))+" has resistance: "+string(enemy.res*enemy.armor.defence*enemy.helm.defence)
+				string(enemy.name)+" has resistance: "+string(enemy.res*(enemy.armor.defence+enemy.helm.defence))
 			)
 			show_debug_message
 			(
-				string(object_get_name(object_index))+" causes damage: "+string(total_damage)+" to "+string(object_get_name(enemy.object_index))
+				string(self.name)+" has charisma: "+string(charisma) + " and " + string(enemy.name)+" enemy has charisma: "+string(enemy.charisma)
 			)
 			show_debug_message
 			(
-				string(object_get_name(enemy.object_index)+" has: "+string(enemy.hp)+" health left out of "+string(enemy.hp_max)+" total")
-				+" || "+string(object_get_name(object_index)+" has: "+string(hp)+" health left out of "+string(hp_max)+" total")
+				string(self.name)+" causes damage: "+string(total_damage)+" to "+string(enemy.name)
+			)
+			show_debug_message
+			(
+				string(enemy.name+" has: "+string(enemy.hp)+" health left out of "+string(enemy.hp_max)+" total")
+				+" || "+string(self.name+" has: "+string(hp)+" health left out of "+string(hp_max)+" total")
 			)
 			show_debug_message("");
+			
+			#region FLEEING CASES
+			if instance_exists(enemy)
+			{
+			    var hp_factor		= 1-(enemy.hp/enemy.hp_max);	// more hurt = more scared
+				var hp_difference	= (self.hp/enemy.hp)-1;			// lower health = more inclined to escape
+			    var str_factor		= (self.str/enemy.str)-1;		// stronger attacker = fear
+			    var charisma_fear	= (self.charisma+abs(enemy.charisma))*-1; // low charisma causes more threat if charisma is near zero
+
+			    var flee_chance = (hp_factor+hp_difference+str_factor+charisma_fear) * 25;
+			    if random_range(0, 100) < flee_chance {enemy.ai_state = ai_states.flee;}
+				
+				show_debug_message("hp factor: "+string(hp_factor)+", hp difference: "+string(hp_difference)+", str factor: "+string(str_factor)+", charisma fear: "+string(charisma_fear))
+			    show_debug_message("flee chance of " + string(enemy.name) + ": " + string(flee_chance));
+
+			}
+			#endregion
+			
 		}
 ////////BREAKABLE IF NOT ENEMY////////
 		else

@@ -39,6 +39,7 @@ function scr_sm_walk(){
 	{
 		if mouse_pressed==true
 		{
+			path_end();
 			click_x=mouse_x;click_y=mouse_y;
 			scr_flip_check_mouse(dest_x,dest_y,1)
 			state=states.block;

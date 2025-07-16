@@ -1,6 +1,5 @@
 with obj_hero
-{	
-	trigger_spawn=false;
-	state=states.spawn;
+{
+	state=states.idle;
 	speech_text="?";
 }

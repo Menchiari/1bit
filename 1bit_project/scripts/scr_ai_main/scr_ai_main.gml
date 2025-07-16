@@ -24,17 +24,16 @@ function scr_ai_main(){
 			#region WANDER
 				case ai_states.wander:
 					if speech_verbose==true speech_text="wander";
-					//var dist=10
-					//if point_distance(x,y,dest_x,dest_y)>=dist {state=states.walk;}
-					//else {state=states.idle;}
-					state=states.walk;
 				
 					if point_distance(x,y,dest_x,dest_y)<=dist || collision_line(x,y,dest_x,dest_y,obj_collider,true,true)
 					{
+						state=states.walk
 						walk_sp_mod=.3;
 						dest_x=x+random_range(run_distance_min*4,-run_distance_min*4);
 						dest_y=y+random_range(run_distance_min*4,-run_distance_min*4);
 					}
+					else
+					{state=states.idle;}
 					scr_ai_target_check();
 				break;
 			#endregion
@@ -71,7 +70,7 @@ function scr_ai_main(){
 					//var dist=10;
 					var walk_chance=irandom_range(0,100);
 				
-					if walk_chance<2 {ai_trigger_check=!ai_trigger_check;}
+					if walk_chance<1 {ai_trigger_check=!ai_trigger_check;}
 					if ai_trigger_check==true
 					{
 						state=states.walk;
@@ -91,6 +90,7 @@ function scr_ai_main(){
 					}
 					else
 					{
+						speed=0;
 						state=states.idle;
 					}
 					scr_ai_target_check();
@@ -140,7 +140,7 @@ function scr_ai_main(){
 					{
 						if point_distance(x,y,ai_target.x,ai_target.y)<chase_distance {dest_x=ai_target.x;dest_y=ai_target.y;}
 						if point_distance(x,y,ai_target.x,ai_target.y)<attack_distance {ai_state=ai_states.fight;}
-						if point_distance(x,y,ai_target.x,ai_target.y)>chase_distance {/*ai_target_x=ai_target.x; ai_target_y=ai_target.y;*/ ai_state=ai_states.search;}
+						if point_distance(x,y,ai_target.x,ai_target.y)>chase_distance {ai_target_x=ai_target.x; ai_target_y=ai_target.y; ai_state=ai_states.search;}
 					}
 					else {ai_state=ai_state_original;}
 				break;
@@ -190,9 +190,9 @@ function scr_ai_main(){
 			#region FLEE
 				case ai_states.flee:
 					speech_text="help!";
-					var dist=20
+					var flee_distance=20
 					state=states.run;
-					if point_distance(x,y,dest_x,dest_y)<=dist || collision_line(x,y,dest_x,dest_y,obj_collider,true,true)
+					if point_distance(x,y,dest_x,dest_y)<=flee_distance || collision_line(x,y,dest_x,dest_y,obj_collider,true,true)
 					{
 						dest_x=x+random_range(run_distance_min*4,-run_distance_min*4);
 						dest_y=y+random_range(run_distance_min*4,-run_distance_min*4);
@@ -210,17 +210,20 @@ function scr_ai_main(){
 					ai_state=ai_states.idle;
 				break;
 		}
-		#region FLEEING CASES
-		if instance_exists(ai_target)
-		{
-			var flee_chance=((ai_target.hp_max/hp_max)+abs(ai_target.charisma/charisma))/80;
+		//#region FLEEING CASES
+		//if instance_exists(ai_target)
+		//{
+		//	var flee_chance=((ai_target.hp/hp)-1) + ((ai_target.charisma+abs(charisma))*-1) + ((ai_target.str/str)-1) + ((ai_target.res/res)-1) //((ai_target.str/str)+abs(ai_target.res/res)+((ai_target.hp/hp)*4)-ai_target.charisma)/80;
+		//	show_debug_message(string(flee_chance)+" flee chance of "+string(self.name))
+		//	show_debug_message(string(flee_chance)+" flee chance of "+string(ai_target.name))
 	
-			if random_range(0,100)<flee_chance && (state=states.hit || state=states.block_hit)
-			{
-				if hp<ai_target.hp/10 {ai_state=ai_states.flee;}
-			}
-		}
-		#endregion
+		//	if random_range(0,100)<flee_chance && (state=states.hit || state=states.block_hit)
+		//	{
+		//		//if hp<ai_target.hp/10 {ai_state=ai_states.flee;}
+		//		ai_state=ai_states.flee;
+		//	}
+		//}
+		//#endregion
 		#region RESET CASES
 		if instance_exists(ai_target)
 		{
