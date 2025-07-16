@@ -1,1 +1,0 @@
-if global.story_progress>=5 {instance_destroy();}
