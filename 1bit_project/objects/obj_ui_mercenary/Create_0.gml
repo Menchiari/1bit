@@ -5,4 +5,4 @@
 event_inherited();
 alarm[0]=5;
 
-mercenary=collision_circle(x,y,10,obj_character,true,true);
+mercenary=instance_nearest(x,y,obj_mercenary)//collision_circle(x,y,10,obj_character,true,true);

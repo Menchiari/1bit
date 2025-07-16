@@ -34,4 +34,4 @@ if instance_exists(mercenary)
 	slot_description[1]=mercenary.armor.description;
 	slot_description[2]=mercenary.helm.description;
 }
-else instance_destroy();
+else alarm[0]=15;//instance_destroy();

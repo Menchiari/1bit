@@ -141,15 +141,14 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 			#region FLEEING CASES
 			if instance_exists(enemy)
 			{
-			    var hp_factor		= 1-(enemy.hp/enemy.hp_max);	// more hurt = more scared
-				var hp_difference	= (self.hp/enemy.hp)-1;			// lower health = more inclined to escape
-			    var str_factor		= (self.str/enemy.str)-1;		// stronger attacker = fear
-			    var charisma_fear	= (self.charisma+abs(enemy.charisma))*-1; // low charisma causes more threat if charisma is near zero
+			    var hp_factor		= (1-(enemy.hp/enemy.hp_max))	*15;		// more hurt = more scared
+			    var str_factor		= ((self.str/enemy.res)-1)		*5;			// stronger attacker = fear
+			    var charisma_fear	= ((self.charisma+abs(enemy.charisma))*-5); // low charisma causes more threat if charisma is near zero
 
-			    var flee_chance = (hp_factor+hp_difference+str_factor+charisma_fear) * 25;
-			    if random_range(0, 100) < flee_chance {enemy.ai_state = ai_states.flee;}
+			    var flee_chance = (hp_factor+str_factor+charisma_fear)/(abs(enemy.charisma)+1);
+			    if random_range(0, 100)<flee_chance {enemy.ai_state=ai_states.flee;}
 				
-				show_debug_message("hp factor: "+string(hp_factor)+", hp difference: "+string(hp_difference)+", str factor: "+string(str_factor)+", charisma fear: "+string(charisma_fear))
+				show_debug_message("hp factor: "+string(hp_factor)+", str factor: "+string(str_factor)+", charisma fear: "+string(charisma_fear))
 			    show_debug_message("flee chance of " + string(enemy.name) + ": " + string(flee_chance));
 
 			}

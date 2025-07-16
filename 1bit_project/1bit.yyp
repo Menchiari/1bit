@@ -232,6 +232,7 @@
     {"id":{"name":"obj_mercenary_kid","path":"objects/obj_mercenary_kid/obj_mercenary_kid.yy",},},
     {"id":{"name":"obj_mercenary_large","path":"objects/obj_mercenary_large/obj_mercenary_large.yy",},},
     {"id":{"name":"obj_mercenary_traveller","path":"objects/obj_mercenary_traveller/obj_mercenary_traveller.yy",},},
+    {"id":{"name":"obj_mercenary_var","path":"objects/obj_mercenary_var/obj_mercenary_var.yy",},},
     {"id":{"name":"obj_mercenary","path":"objects/obj_mercenary/obj_mercenary.yy",},},
     {"id":{"name":"obj_merchant_traveller","path":"objects/obj_merchant_traveller/obj_merchant_traveller.yy",},},
     {"id":{"name":"obj_merchant","path":"objects/obj_merchant/obj_merchant.yy",},},

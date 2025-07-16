@@ -38,8 +38,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_levels_enemy",
-    "path":"sprites/spr_levels_enemy/spr_levels_enemy.yy",
+    "name":"spr_levels_ally",
+    "path":"sprites/spr_levels_ally/spr_levels_ally.yy",
   },
   "spriteMaskId":null,
   "visible":true,

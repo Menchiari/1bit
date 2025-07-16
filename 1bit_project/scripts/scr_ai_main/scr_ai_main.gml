@@ -41,17 +41,18 @@ function scr_ai_main(){
 				case ai_states.follow:
 					if speech_verbose==true speech_text="following"
 					walk_sp_mod=1.1;
-					if point_distance(x,y,dest_x,dest_y)>walk_sp*2 {state=states.walk;}
+					if point_distance(x,y,dest_x,dest_y)>walk_sp*2
+					{
+						if point_distance(x,y,dest_x,dest_y)>run_sp*2 {state=states.run}
+						else {state=states.walk;}
+					}
 					else {state=states.idle;}
 				
 					if instance_exists(ai_follow_target)
 					{
-						if point_distance(x,y,ai_follow_target.x,ai_follow_target.y)>ai_search_range && !collision_line(x,y,ai_follow_target.x,ai_follow_target.y,obj_collider,true,true) {dest_x=ai_follow_target.x; dest_y=ai_follow_target.y;}
+						if point_distance(x,y,ai_follow_target.x,ai_follow_target.y)>ai_search_range /*&& !collision_line(x,y,ai_follow_target.x,ai_follow_target.y,obj_collider,true,true)*/
+						{dest_x=ai_follow_target.x; dest_y=ai_follow_target.y;}
 						//else {dest_x=x;dest_y=y;}
-					}
-					else
-					{
-						state=states.idle;
 					}
 					scr_ai_target_check();
 				break;
