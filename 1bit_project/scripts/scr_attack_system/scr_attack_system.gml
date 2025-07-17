@@ -143,7 +143,7 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 			{
 			    var hp_factor		= (1-(enemy.hp/enemy.hp_max))	*15;		// more hurt = more scared
 			    var str_factor		= ((self.str/enemy.res)-1)		*5;			// stronger attacker = fear
-			    var charisma_fear	= ((self.charisma+abs(enemy.charisma))*-5); // low charisma causes more threat if charisma is near zero
+			    var charisma_fear	= ((self.charisma+abs(enemy.charisma))*-8); // low charisma causes more threat if charisma is near zero
 
 			    var flee_chance = (hp_factor+str_factor+charisma_fear)/(abs(enemy.charisma)+1);
 			    if random_range(0, 100)<flee_chance {enemy.ai_state=ai_states.flee;}

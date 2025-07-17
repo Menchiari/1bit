@@ -38,7 +38,7 @@ switch game_progress
 				case 7://last phase, for some reason it can't be default, must be there to end the scene
 					instance_create(obj_fx_fadeout);//creates a fade out
 					alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
-					next_room=rm_story_1;//pick the room you want
+					next_room=rm_menu_character;//pick the room you want
 				break;
 				default:
 				break;

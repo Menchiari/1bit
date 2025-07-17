@@ -13,14 +13,16 @@ color=c_white;
 alpha=1;
 font=fnt_dialogue;
 
-character_select=irandom_range(0,3);
+character_select=irandom_range(1,2);
 character_face=spr_null;
 character_name="";
 character_description="";
 character_head_var=global.player_head;
-
+character_body_var=global.player_skin;
 
 if character_head_var=spr_head_beard1 {character_select=0;}
 if character_head_var=spr_head_female2 {character_select=1;}
 if character_head_var=spr_head_female {character_select=2;}
 if character_head_var=spr_head_female1 {character_select=3;}
+
+scr_ui_characters();

@@ -448,6 +448,7 @@
     {"id":{"name":"scr_state_machine","path":"scripts/scr_state_machine/scr_state_machine.yy",},},
     {"id":{"name":"scr_tracker_body","path":"scripts/scr_tracker_body/scr_tracker_body.yy",},},
     {"id":{"name":"scr_tracker","path":"scripts/scr_tracker/scr_tracker.yy",},},
+    {"id":{"name":"scr_ui_characters","path":"scripts/scr_ui_characters/scr_ui_characters.yy",},},
     {"id":{"name":"scr_unlockables","path":"scripts/scr_unlockables/scr_unlockables.yy",},},
     {"id":{"name":"shd_1bit_blood_colorblind","path":"shaders/shd_1bit_blood_colorblind/shd_1bit_blood_colorblind.yy",},},
     {"id":{"name":"shd_1bit_blood","path":"shaders/shd_1bit_blood/shd_1bit_blood.yy",},},

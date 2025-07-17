@@ -10,7 +10,7 @@ function scr_ai_test(idle_actions){
 		{
 		//block (or prepare attack)
 			var chance=random_range(0,100);
-			if chance<ai_responsiveness
+			if chance<ai_responsiveness/spd
 			{
 				ai_timer_attack=random_range(ai_timer_attack1/2,ai_timer_attack2*2);
 				image_index=0;
@@ -24,7 +24,7 @@ function scr_ai_test(idle_actions){
 	if state==states.idle
 	{
 		var chance=random_range(0,100);
-		if chance<ai_responsiveness{scr_ai_actions(idle_actions);}
+		if chance<ai_responsiveness/spd{scr_ai_actions(idle_actions);}
 	}
 //Preparing to attack
 	else if state==states.block
