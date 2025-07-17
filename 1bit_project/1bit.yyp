@@ -721,6 +721,7 @@
     {"id":{"name":"spr_brk_door","path":"sprites/spr_brk_door/spr_brk_door.yy",},},
     {"id":{"name":"spr_camera_corner","path":"sprites/spr_camera_corner/spr_camera_corner.yy",},},
     {"id":{"name":"spr_camera_port","path":"sprites/spr_camera_port/spr_camera_port.yy",},},
+    {"id":{"name":"spr_character_mp_hitbox","path":"sprites/spr_character_mp_hitbox/spr_character_mp_hitbox.yy",},},
     {"id":{"name":"spr_cin_boatrotate_fg","path":"sprites/spr_cin_boatrotate_fg/spr_cin_boatrotate_fg.yy",},},
     {"id":{"name":"spr_cin_boatrotate","path":"sprites/spr_cin_boatrotate/spr_cin_boatrotate.yy",},},
     {"id":{"name":"spr_cin_boatsideview","path":"sprites/spr_cin_boatsideview/spr_cin_boatsideview.yy",},},

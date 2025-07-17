@@ -16,6 +16,10 @@ function scr_init_character(){
 	
 	animal=false;
 	
+	if (object_is_ancestor(object_index, obj_character)) {
+		mask_index = spr_character_mp_hitbox;
+	}
+	
 	dialogue_variation=false;
 	dialogue_positive="";
 	dialogue_neutral="";

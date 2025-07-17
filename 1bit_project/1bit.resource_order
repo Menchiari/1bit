@@ -298,6 +298,7 @@
     {"name":"spr_body_uniform","order":46,"path":"sprites/spr_body_uniform/spr_body_uniform.yy",},
     {"name":"spr_body_vest","order":34,"path":"sprites/spr_body_vest/spr_body_vest.yy",},
     {"name":"spr_camera_corner","order":2,"path":"sprites/spr_camera_corner/spr_camera_corner.yy",},
+    {"name":"spr_character_mp_hitbox","order":3,"path":"sprites/spr_character_mp_hitbox/spr_character_mp_hitbox.yy",},
     {"name":"spr_cin_boatrotate_fg","order":3,"path":"sprites/spr_cin_boatrotate_fg/spr_cin_boatrotate_fg.yy",},
     {"name":"spr_cin_boatrotate","order":2,"path":"sprites/spr_cin_boatrotate/spr_cin_boatrotate.yy",},
     {"name":"spr_cin_boatsideview","order":5,"path":"sprites/spr_cin_boatsideview/spr_cin_boatsideview.yy",},
