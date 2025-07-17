@@ -3,7 +3,7 @@
 function scr_collisions(){
 //collision detection
 
-	if !collision_circle(x,y,player_radius,obj_collider,true,true)
+	if (!place_meeting(x, y, obj_collider))
 	{
 		lastplacex=x;
 		lastplacey=y;
@@ -74,8 +74,8 @@ function scr_collisions(){
 	}
 
 //destination not inside walls
-	var check_radius=player_radius;
-	if collision_circle(dest_x,dest_y,check_radius,obj_collider,true,true)
+	var check_radius=2;
+	if (place_meeting(dest_x, dest_y, obj_collider))
 	{
 		//do
 		//{
@@ -88,7 +88,7 @@ function scr_collisions(){
 		//until !collision_point(dest_x,dest_y,obj_collider,true,true);
 	}
 //destination not inside avoid
-	if collision_circle(dest_x,dest_y,check_radius,obj_avoid,true,true)
+	if (place_meeting(x, y, obj_avoid))
 	{
 		//do
 		//{

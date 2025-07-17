@@ -17,7 +17,10 @@ function init_pathfinding_grid() {
 	if (room_width >= _room_size_threshold && instance_exists(obj_camera) && !obj_camera.followcam) {
 		// set up the grid with only what is visible to the camera
 		var _margin = 128//64;		// pixel margin outside the camera boundaries to add to our grid. this is critical for locked camera transitions
-		global.pathfinding_grid = mp_grid_create(obj_camera.x - global.res_x / 2 - _margin, obj_camera.y - global.res_y / 2 - _margin,
+		var _pixel_offset_h = 2;					// offset from camera top-left, horizontally
+		var _pixel_offset_v = 0;					// offset from camera top-left, vertically
+		
+		global.pathfinding_grid = mp_grid_create(obj_camera.x - global.res_x / 2 - _margin + _pixel_offset_h, obj_camera.y - global.res_y / 2 - _margin + _pixel_offset_v,
 				(global.res_x + _margin * 2) div _pixel_grid, (global.res_y + _margin * 2) div _pixel_grid, _pixel_grid, _pixel_grid);
 	}
 	else {

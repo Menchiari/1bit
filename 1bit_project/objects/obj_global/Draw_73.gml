@@ -70,6 +70,12 @@ if UI==true
 			draw_text_color_outline(camx-(camwidth/2)+pos_x,camy-(camheight/2)+pos_c,obj_hero.armor.name,c_white,1);
 			draw_text_color_outline(camx-(camwidth/2)+pos_x,camy-(camheight/2)+pos_d,obj_hero.helm.name,c_white,1);
 		}
+		
+		
+		// debug pathfinding grid
+		//draw_set_alpha(0.3);
+		//mp_grid_draw(global.pathfinding_grid);
+		//draw_set_alpha(1);
 	}
 	
 	else
