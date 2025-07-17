@@ -17,12 +17,16 @@ if mouse_check_button_released(mb_any)
 	
 	var min_sel=0;
 	var max_sel=3;
-	if global.story_progress==0 {min_sel=1; max_sel=2;}
-	else if global.story_progress>=4 {min_sel=0; max_sel=5;}
+	if global.story_progress==0 {min_sel=1; max_sel=3;}
+	else if global.story_progress==1 {min_sel=0; max_sel=3;}
+	else if global.story_progress==2 {min_sel=0; max_sel=4;}
+	else if global.story_progress>=3 {min_sel=0; max_sel=5;}
+	else if global.story_progress>=5 {min_sel=0; max_sel=6;}
 	else {min_sel=0; max_sel=3;}
-
-	min_sel=0;
-	max_sel=5;
+	
+	//debug
+	//min_sel=0;
+	//max_sel=6;
 
 	
 	if character_select<min_sel {character_select=max_sel;}

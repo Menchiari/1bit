@@ -115,7 +115,7 @@ function scr_ai_main(){
 					
 					var alert_distance=ai_search_range;
 					if point_distance(x,y,dest_x,dest_y)>20{dest_x=x;dest_y=y;}
-					if random_range(0,100)<ai_responsiveness/spd // {ai_state=ai_states.search;}
+					if random_range(0,100)<ai_responsiveness // {ai_state=ai_states.search;}
 					{
 						if instance_exists(ai_target)
 						{
@@ -127,7 +127,7 @@ function scr_ai_main(){
 							}
 						}
 					}
-					else if irandom_range(0,100)>=100-ai_responsiveness/spd {ai_state=ai_state_original;}
+					else if irandom_range(0,100)>=100-ai_responsiveness {ai_state=ai_state_original;}
 				break;
 			#endregion
 			#region CHASE
@@ -155,7 +155,7 @@ function scr_ai_main(){
 					{
 						state=states.idle;
 						var chance=random_range(0,100);
-						if chance<=ai_responsiveness/spd {ai_state=ai_state_original;}
+						if chance<=ai_responsiveness {ai_state=ai_state_original;}
 					}
 					scr_ai_target_check();
 					if instance_exists(ai_target)

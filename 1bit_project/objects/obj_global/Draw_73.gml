@@ -60,9 +60,9 @@ if UI==true
 			draw_set_halign(fa_right);
 			draw_set_valign(fa_top);
 			draw_text_color_outline(camx+(camwidth/2)-pos_x,camy-(camheight/2)+pos_a,"XP "+string(round(global_xp)),c_white,1);
-			draw_text_color_outline(camx+(camwidth/2)-pos_x,camy-(camheight/2)+pos_b,"spd "+string(obj_hero.spd),c_white,1);
-			draw_text_color_outline(camx+(camwidth/2)-pos_x,camy-(camheight/2)+pos_c,"res "+string(obj_hero.res),c_white,1);
-			draw_text_color_outline(camx+(camwidth/2)-pos_x,camy-(camheight/2)+pos_d,"str "+string(obj_hero.str),c_white,1);
+			draw_text_color_outline(camx+(camwidth/2)-pos_x,camy-(camheight/2)+pos_b,"spd "+string_format(obj_hero.spd,0,1),c_white,1);
+			draw_text_color_outline(camx+(camwidth/2)-pos_x,camy-(camheight/2)+pos_c,"res "+string_format(obj_hero.res,0,1),c_white,1);
+			draw_text_color_outline(camx+(camwidth/2)-pos_x,camy-(camheight/2)+pos_d,"str "+string_format(obj_hero.str,0,1),c_white,1);
 		//EQUIP
 			draw_set_halign(fa_left);
 			draw_text_color_outline(camx-(camwidth/2)+pos_x,camy-(camheight/2)+pos_a,"equip:",c_white,1);

@@ -11,5 +11,6 @@ draw_set_valign(fa_top);
 draw_text(x+(sprite_width/2),y+2,"strength: "+string(strength1)+"/"+string(strength2));
 draw_text(x+(sprite_width/2),y+10,"resistance: "+string(resistance));
 draw_text(x+round(sprite_width/2),y+18,"weight: +"+string(weight)+"kg");
+draw_text(x+round(sprite_width/2),y+26,"speed: "+string_format(herospeed,0,1));
 //draw text about age
 //draw stats
