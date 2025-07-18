@@ -36,6 +36,9 @@
   ],
   "ResourceOrderSettings":[
     {"name":"obj_ally_end_var","order":3,"path":"objects/obj_ally_end_var/obj_ally_end_var.yy",},
+    {"name":"obj_anim_f","order":12,"path":"objects/obj_anim_f/obj_anim_f.yy",},
+    {"name":"obj_anim_m","order":11,"path":"objects/obj_anim_m/obj_anim_m.yy",},
+    {"name":"obj_anim_parent","order":10,"path":"objects/obj_anim_parent/obj_anim_parent.yy",},
     {"name":"obj_asset_barricade","order":1,"path":"objects/obj_asset_barricade/obj_asset_barricade.yy",},
     {"name":"obj_asset_bench","order":9,"path":"objects/obj_asset_bench/obj_asset_bench.yy",},
     {"name":"obj_asset_boat","order":3,"path":"objects/obj_asset_boat/obj_asset_boat.yy",},

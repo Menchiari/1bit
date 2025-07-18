@@ -38,6 +38,7 @@ if active==true && char_visible==true {
 		//draw_sprite_ext(helm.sprite,0,x+offsetx,y+offsety,(tscalex/3)*size*dir,(tscaley/3)*size,trot*char_rot,main_color,1);
 	}
 	else
+	//main character
 	{
 		draw_sprite_shadow(sprite_skin,image_index,x,y,dir*size,1*size,skin_color,0,0,.5,1);
 		scr_tracker_body(image_index);
