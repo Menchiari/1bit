@@ -3,8 +3,8 @@
 // Inherit the parent event
 event_inherited();
 
-image_xscale=choose(1,-1);
-image_angle=random_range(-10,10);
+//image_xscale=choose(1,-1);
+//image_angle=random_range(-10,10);
 
 hp_max=.5;
 hp=hp_max;
