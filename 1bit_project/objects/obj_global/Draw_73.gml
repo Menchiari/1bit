@@ -23,6 +23,7 @@ if UI==true
 && room!=rm_faces_ai
 && room!=rm_faces_boat
 && room!=rm_story_AI_2
+&& room!=rm_glitch
 {
 	var border=2;
 	var bordercolor=c_gray;

@@ -235,6 +235,7 @@
     {"id":{"name":"obj_fx_splash","path":"objects/obj_fx_splash/obj_fx_splash.yy",},},
     {"id":{"name":"obj_fx_vignette","path":"objects/obj_fx_vignette/obj_fx_vignette.yy",},},
     {"id":{"name":"obj_gameover","path":"objects/obj_gameover/obj_gameover.yy",},},
+    {"id":{"name":"obj_glitch","path":"objects/obj_glitch/obj_glitch.yy",},},
     {"id":{"name":"obj_global","path":"objects/obj_global/obj_global.yy",},},
     {"id":{"name":"obj_hero","path":"objects/obj_hero/obj_hero.yy",},},
     {"id":{"name":"obj_hex_wall","path":"objects/obj_hex_wall/obj_hex_wall.yy",},},
@@ -377,6 +378,7 @@
     {"id":{"name":"rm_forest","path":"rooms/rm_forest/rm_forest.yy",},},
     {"id":{"name":"rm_forest2","path":"rooms/rm_forest2/rm_forest2.yy",},},
     {"id":{"name":"rm_gameover","path":"rooms/rm_gameover/rm_gameover.yy",},},
+    {"id":{"name":"rm_glitch","path":"rooms/rm_glitch/rm_glitch.yy",},},
     {"id":{"name":"rm_intro_1","path":"rooms/rm_intro_1/rm_intro_1.yy",},},
     {"id":{"name":"rm_large","path":"rooms/rm_large/rm_large.yy",},},
     {"id":{"name":"rm_map","path":"rooms/rm_map/rm_map.yy",},},
@@ -1023,6 +1025,7 @@
     {"roomId":{"name":"rm_menu_deletesave","path":"rooms/rm_menu_deletesave/rm_menu_deletesave.yy",},},
     {"roomId":{"name":"rm_story_princess_fight","path":"rooms/rm_story_princess_fight/rm_story_princess_fight.yy",},},
     {"roomId":{"name":"rm_story_princess_raid","path":"rooms/rm_story_princess_raid/rm_story_princess_raid.yy",},},
+    {"roomId":{"name":"rm_glitch","path":"rooms/rm_glitch/rm_glitch.yy",},},
   ],
   "templateType":null,
   "TextureGroups":[

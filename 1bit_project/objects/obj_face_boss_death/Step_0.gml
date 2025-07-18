@@ -52,7 +52,8 @@ event_inherited();
 			global.story_progress=4;
 			global.face_progress=0;
 			scr_savegame();
-			game_restart();
+			next_room=rm_glitch;
+			//game_restart();
 			//game_end();
 		break;
 		default:

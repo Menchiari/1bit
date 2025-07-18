@@ -3,6 +3,7 @@ surface_resize(application_surface,global.res_x,global.res_y);
 
 if room==rm_boat
 || room==rm_setup
+|| room==rm_glitch
 {instance_create_depth(x,y,-y,obj_fx_fadein_fast);}
 
 else

@@ -205,7 +205,7 @@ function init_globals(){
 	global.xp=0;
 	global.deathcount=0;
 	global.player_lives=0;
-	global.story_progress=5;
+	global.story_progress=0;
 	global.face_progress=0;
 	global.face_progress_death=0;
 	global.princess=true;

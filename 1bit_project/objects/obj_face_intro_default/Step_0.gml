@@ -401,7 +401,7 @@ switch game_progress
 				}
 			break;
 			case 1:
-				switch txt_phase //Ending
+				switch txt_phase //Still here?
 				{
 					case 0:
 					break;
@@ -438,7 +438,7 @@ switch game_progress
 				}
 			break;
 			case 2:
-				switch txt_phase //Ending
+				switch txt_phase //Goodbye
 				{
 					case 0:
 					break;
