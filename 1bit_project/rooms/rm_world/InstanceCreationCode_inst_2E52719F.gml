@@ -1,1 +1,0 @@
-trigger_text="Don't come near!"

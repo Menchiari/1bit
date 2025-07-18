@@ -565,6 +565,7 @@
     {"id":{"name":"spr_10_tundra_no_collision_c","path":"sprites/spr_10_tundra_no_collision_c/spr_10_tundra_no_collision_c.yy",},},
     {"id":{"name":"spr_10_tundra_no_collision_d","path":"sprites/spr_10_tundra_no_collision_d/spr_10_tundra_no_collision_d.yy",},},
     {"id":{"name":"spr_asset_armadio","path":"sprites/spr_asset_armadio/spr_asset_armadio.yy",},},
+    {"id":{"name":"spr_asset_barrel_color","path":"sprites/spr_asset_barrel_color/spr_asset_barrel_color.yy",},},
     {"id":{"name":"spr_asset_barrel","path":"sprites/spr_asset_barrel/spr_asset_barrel.yy",},},
     {"id":{"name":"spr_asset_barricade","path":"sprites/spr_asset_barricade/spr_asset_barricade.yy",},},
     {"id":{"name":"spr_asset_bed","path":"sprites/spr_asset_bed/spr_asset_bed.yy",},},

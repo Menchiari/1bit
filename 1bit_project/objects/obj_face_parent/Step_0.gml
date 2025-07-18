@@ -98,3 +98,4 @@ switch state
 	default: break;
 }
 
+if mouse_check_button_released(mb_any) {show_debug_message("state = "+string(state)+", text phase = "+string(txt_phase)+", face progress = "+string(face_progress)+", game progress = "+string(game_progress));}

@@ -146,19 +146,19 @@ case 2:
 			sprite_index=spr_faces_boss_taunt;
 			txt="It only works if the victims are innocent, but you..."; //the text to be said - the speed of the next phase is dependent on the length
 		break;
-		case 4:
+		case 5:
 			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
 			txt_color=c_red;
 			sprite_index=spr_faces_boss_angry;
 			txt="You just PISS ME OFF"; //the text to be said - the speed of the next phase is dependent on the length
 		break;
 		///////////////////////////////////////////////////////////////////
-		case 5://second to last phase, make the character wait before moving to the next room
+		case 6://second to last phase, make the character wait before moving to the next room
 			txt="";
 			state="wait";
 			wait_time=game_get_speed(gamespeed_fps)*.25;
 		break;
-		case 6://last phase, for some reason it can't be default, must be there to end the scene
+		case 7://last phase, for some reason it can't be default, must be there to end the scene
 			instance_create(obj_fx_fadeout);//creates a fade out
 			alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
 			scr_savegame();

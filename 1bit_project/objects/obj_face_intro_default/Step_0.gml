@@ -474,8 +474,8 @@ switch game_progress
 					break;
 				}
 			break;
-			case 3:
-				alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
+			default:
+				alarm[0]=1//time that it takes to move to the next room
 				next_room=rm_menu_character;//pick the room you want
 			break;
 		}

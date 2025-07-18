@@ -127,7 +127,7 @@ function scr_ai_main(){
 							}
 						}
 					}
-					else if irandom_range(0,100)>=100-ai_responsiveness {ai_state=ai_state_original;}
+					else if irandom_range(0,100)>=100-(ai_responsiveness/4) {ai_state=ai_state_original;}
 				break;
 			#endregion
 			#region CHASE
@@ -148,7 +148,7 @@ function scr_ai_main(){
 			#endregion
 			#region SEARCH
 				case ai_states.search:
-					if speech_verbose==true speech_text="?";
+					if speech_verbose==true speech_text="where?";
 					walk_sp_mod=1.3;
 					if point_distance(x,y,dest_x,dest_y)>walk_sp*2 {state=states.walk;}
 					else

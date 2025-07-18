@@ -199,6 +199,7 @@
     {"name":"microwave2","order":5,"path":"sprites/microwave2/microwave2.yy",},
     {"name":"red_lut","order":19,"path":"sprites/red_lut/red_lut.yy",},
     {"name":"spr_asset_armadio","order":15,"path":"sprites/spr_asset_armadio/spr_asset_armadio.yy",},
+    {"name":"spr_asset_barrel_color","order":25,"path":"sprites/spr_asset_barrel_color/spr_asset_barrel_color.yy",},
     {"name":"spr_asset_barrel","order":13,"path":"sprites/spr_asset_barrel/spr_asset_barrel.yy",},
     {"name":"spr_asset_barricade","order":23,"path":"sprites/spr_asset_barricade/spr_asset_barricade.yy",},
     {"name":"spr_asset_bed","order":10,"path":"sprites/spr_asset_bed/spr_asset_bed.yy",},

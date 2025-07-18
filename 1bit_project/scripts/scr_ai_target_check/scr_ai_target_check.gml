@@ -15,9 +15,9 @@ function scr_ai_target_check(){
 	{
 		if scr_faction_check_ai(temp_target)==true
 		//&& !collision_line(x,y,xcheck,ycheck,obj_collider,true,true)
-		&& !collision_line(x,y,temp_target.x,temp_target.y,obj_collider,true,true)
+		//&& !(collision_line(x,y-15,temp_target.x,temp_target.y-8,obj_collider,true,true)||collision_line(x,y,temp_target.x,temp_target.y,obj_collider,true,true))
 		{
-			speech_text="!"
+			if speech_verbose==true speech_text="!O!";
 			//if point_distance(x,y,temp_target.x,temp_target.y)<ai_search_range
 			//{
 				ai_target=temp_target;

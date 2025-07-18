@@ -252,7 +252,7 @@ function scr_init_character(){
 	ai_timer_attack2=50;
 	ai_responsiveness=4;
 	ai_target=obj_character;
-	ai_search_range=60//80;
+	ai_search_range=80//60//80;
 	ai_guard_x=x;
 	ai_guard_y=y;
 	ai_patrol_x=x+random_range(-150,150);
