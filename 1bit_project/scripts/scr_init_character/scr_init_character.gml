@@ -10,7 +10,7 @@ function scr_init_character(){
 	sprite_skin=spr_hero;
 	sprite_body=spr_hero;
 	sprite_back=spr_hero_back;
-	sprite_light=spr_null;
+	sprite_light=spr_fx_light;
 	sprite_shadow=spr_shadow;
 	ladder=false;
 	
