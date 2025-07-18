@@ -359,43 +359,126 @@ switch game_progress
 		alarm[0]=1; //if nothing happens proceed to next_room
 	break;
 	case 5: //when you finish the game (infinite loop)
-			switch txt_phase //Ending
-			{
-				case 0:
-				break;
-				//////////////////////PLACE DIALOGUE HERE//////////////////////////
-				case 1:
-					sprite_index=spr_faces_intro_mock;
-					txt="Congratulations!";
-				break;
-				case 2:
-					txt="You reached the end...";
-				break;
-				case 3:
-					sprite_index=spr_faces_intro_default;
-					txt="Which means I owe you the surprise.";
-				break;
-				case 4:
-					txt="It's not much, just a few extra features.";
-				break;
-				case 5:
-					sprite_index=spr_faces_intro_end;
-					txt="Enjoy them while you still can!";
-				break;
-				///////////////////////////////////////////////////////////////////
-				case 6://second to last phase, make the character wait before moving to the next room
-					txt="";
-					state="wait";
-					wait_time=game_get_speed(gamespeed_fps)*1;
-				break;
-				case 7://last phase, for some reason it can't be default, must be there to end the scene
-					instance_create(obj_fx_fadeout);//creates a fade out
-					alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
-					next_room=rm_menu_character;//pick the room you want
-				break;
-				default:
-				break;
-			}
+		switch face_progress
+		{
+			case 0:
+				switch txt_phase //Ending
+				{
+					case 0:
+					break;
+					//////////////////////PLACE DIALOGUE HERE//////////////////////////
+					case 1:
+						sprite_index=spr_faces_intro_mock;
+						txt="Congratulations!";
+					break;
+					case 2:
+						txt="You reached the end...";
+					break;
+					case 3:
+						sprite_index=spr_faces_intro_default;
+						txt="Which means I owe you the surprise.";
+					break;
+					case 4:
+						txt="It's not much, just a few extra features.";
+					break;
+					case 5:
+						sprite_index=spr_faces_intro_end;
+						txt="Enjoy them while you still can!";
+					break;
+					///////////////////////////////////////////////////////////////////
+					case 6://second to last phase, make the character wait before moving to the next room
+						txt="";
+						state="wait";
+						wait_time=game_get_speed(gamespeed_fps)*1;
+					break;
+					case 7://last phase, for some reason it can't be default, must be there to end the scene
+						instance_create(obj_fx_fadeout);//creates a fade out
+						alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
+						next_room=rm_menu_character;//pick the room you want
+					break;
+					default:
+					break;
+				}
+			break;
+			case 1:
+				switch txt_phase //Ending
+				{
+					case 0:
+					break;
+					//////////////////////PLACE DIALOGUE HERE//////////////////////////
+					case 1:
+						sprite_index=spr_faces_intro_mock;
+						txt="Still here?";
+					break;
+					case 2:
+						txt="I thought you had enough...";
+					break;
+					case 3:
+						sprite_index=spr_faces_intro_default;
+						txt="Just be sure to remember that you can reset your save.";
+					break;
+					case 4:
+						txt="If you want to start over of course.";
+					break;
+					case 5:
+						sprite_index=spr_faces_intro_end;
+						txt="Enjoy the gifts I gave you while you still can!";
+					break;
+					///////////////////////////////////////////////////////////////////
+					case 6://second to last phase, make the character wait before moving to the next room
+						txt="";
+						state="wait";
+						wait_time=game_get_speed(gamespeed_fps)*1;
+					break;
+					case 7://last phase, for some reason it can't be default, must be there to end the scene
+						instance_create(obj_fx_fadeout);//creates a fade out
+						alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
+						next_room=rm_menu_character;//pick the room you want
+					break;
+				}
+			break;
+			case 2:
+				switch txt_phase //Ending
+				{
+					case 0:
+					break;
+					//////////////////////PLACE DIALOGUE HERE//////////////////////////
+					case 1:
+						sprite_index=spr_faces_intro_mock;
+						txt="I'm saying goodbye.";
+					break;
+					case 2:
+						txt="You clearly won't listen to me...";
+					break;
+					case 3:
+						sprite_index=spr_faces_intro_default;
+						txt="I said all of what I had to say, and you did it all.";
+					break;
+					case 4:
+						txt="so all you need to do now, is to get bored and die.";
+					break;
+					case 5:
+						sprite_index=spr_faces_intro_end;
+						txt="Enjoy the rest of your life and I'll see you when it's all over.";
+					break;
+					///////////////////////////////////////////////////////////////////
+					case 6://second to last phase, make the character wait before moving to the next room
+						txt="";
+						state="wait";
+						wait_time=game_get_speed(gamespeed_fps)*1;
+					break;
+					case 7://last phase, for some reason it can't be default, must be there to end the scene
+						instance_create(obj_fx_fadeout);//creates a fade out
+						alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
+						next_room=rm_menu_character;//pick the room you want
+					break;
+				}
+			break;
+			case 3:
+				alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
+				next_room=rm_menu_character;//pick the room you want
+			break;
+		}
 	break;
 	default:
 	break;

@@ -196,13 +196,16 @@ function init_globals(){
 	global.player_str=ds_list_find_value(global.lvl_str,0);
 	global.player_res=ds_list_find_value(global.lvl_res,0);
 	global.player_spd=ds_list_find_value(global.lvl_spd,0);
+	global.player_str_mod=1;
+	global.player_res_mod=1;
+	global.player_spd_mod=1;
 	global.player_invincibility_timer=40;
 
 //progression saveable in scr_savegame and scr_loadgame
 	global.xp=0;
 	global.deathcount=0;
 	global.player_lives=0;
-	global.story_progress=0;
+	global.story_progress=5;
 	global.face_progress=0;
 	global.face_progress_death=0;
 	global.princess=true;

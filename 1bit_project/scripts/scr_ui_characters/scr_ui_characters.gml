@@ -8,6 +8,9 @@ function scr_ui_characters()
 			character_description="from the north";
 			character_head_var=spr_head_beard1;
 			character_body_var=spr_body_naked;
+			global.player_str_mod=1.25;
+			global.player_str_res=1.25;
+			global.player_str_spd=0.9;
 			//global.player_str=ds_list_find_value(global.lvl_str,0)*1.25;
 			//global.player_res=ds_list_find_value(global.lvl_res,0)*1.25;
 			//global.player_spd=ds_list_find_value(global.lvl_spd,0)*0.9;
@@ -18,6 +21,9 @@ function scr_ui_characters()
 			character_description="from the west";
 			character_head_var=spr_head_female2;
 			character_body_var=spr_body_naked;
+			global.player_str_mod=1;
+			global.player_str_res=1;
+			global.player_str_spd=1;
 			//global.player_str=ds_list_find_value(global.lvl_str,0)*1;
 			//global.player_res=ds_list_find_value(global.lvl_res,0)*1;
 			//global.player_spd=ds_list_find_value(global.lvl_spd,0)*1;
@@ -28,6 +34,9 @@ function scr_ui_characters()
 			character_description="from the east";
 			character_head_var=spr_head_female;
 			character_body_var=spr_body_naked;
+			global.player_str_mod=1.1;
+			global.player_str_res=0.8;
+			global.player_str_spd=1.1;
 			//global.player_str=ds_list_find_value(global.lvl_str,0)*1.1;
 			//global.player_res=ds_list_find_value(global.lvl_res,0)*0.8;
 			//global.player_spd=ds_list_find_value(global.lvl_spd,0)*1.1;
@@ -38,6 +47,9 @@ function scr_ui_characters()
 			character_description="from the south";
 			character_head_var=spr_head_female1;
 			character_body_var=spr_body_naked;
+			global.player_str_mod=0.9;
+			global.player_str_res=0.9;
+			global.player_str_spd=1.2;
 			//global.player_str=ds_list_find_value(global.lvl_str,0)*0.9;
 			//global.player_res=ds_list_find_value(global.lvl_res,0)*0.9;
 			//global.player_spd=ds_list_find_value(global.lvl_spd,0)*1.2;
@@ -48,6 +60,9 @@ function scr_ui_characters()
 			character_description="from above";
 			character_head_var=spr_head_skull;
 			character_body_var=spr_body_skeleton;
+			global.player_str_mod=1.5;
+			global.player_str_res=1;
+			global.player_str_spd=0.75;
 			//global.player_str=ds_list_find_value(global.lvl_str,0)*1.5;
 			//global.player_res=ds_list_find_value(global.lvl_res,0)*1;
 			//global.player_spd=ds_list_find_value(global.lvl_spd,0)*0.75;
@@ -58,6 +73,9 @@ function scr_ui_characters()
 			character_description="from below";
 			character_head_var=spr_head_infected;
 			character_body_var=spr_body_infected;
+			global.player_str_mod=1;
+			global.player_str_res=1.5;
+			global.player_str_spd=0.75;
 			//global.player_str=ds_list_find_value(global.lvl_str,0)*1;
 			//global.player_res=ds_list_find_value(global.lvl_res,0)*1.5;
 			//global.player_spd=ds_list_find_value(global.lvl_spd,0)*.75;
@@ -68,6 +86,9 @@ function scr_ui_characters()
 			character_description="from eternity";
 			character_head_var=spr_head;
 			character_body_var=spr_body_naked;
+			global.player_str_mod=1;
+			global.player_str_res=1;
+			global.player_str_spd=1;
 			//global.player_str=ds_list_find_value(global.lvl_str,0)*1.5;
 			//global.player_res=ds_list_find_value(global.lvl_res,0)*.75;
 			//global.player_spd=ds_list_find_value(global.lvl_spd,0)*1.25;
@@ -82,9 +103,9 @@ function scr_ui_characters()
 	{
 		obj_hero.character_head=character_head_var;
 		obj_hero.character_body=character_body_var;
-		//obj_hero.str=global.player_str;
-		//obj_hero.res=global.player_res;
-		//obj_hero.spd=global.player_spd;
+		obj_hero.str=global.player_str*global.player_str_mod;
+		obj_hero.res=global.player_res*global.player_res_mod;
+		obj_hero.spd=global.player_spd*global.player_spd_mod;
 	}
 	
 	//show_debug_message("XP: " + string(global.xp));

@@ -215,6 +215,9 @@ function scr_init_character(){
 	cha=1;
 	charisma=cha;
 	name="random human";
+	res_mod=1;
+	str_mod=1;
+	spd_mod=1;
 	
 	walk_sp_mod=1;
 	

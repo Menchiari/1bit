@@ -12,9 +12,9 @@ equip_armor(global.player_armor);
 equip_helm(global.player_helm);
 hp_max=global.player_hp_max;
 hp=global.player_hp_max;
-res=global.player_res;
-str=global.player_str;
-spd=global.player_spd;
+res=global.player_res*global.player_res_mod;
+str=global.player_str*global.player_str_mod;
+spd=global.player_spd*global.player_spd_mod;
 dialogue_death_chance=0;
 
 invincibility_timer=global.player_invincibility_timer;
