@@ -27,7 +27,7 @@
 25,obj_enemy_patrol,evil knight,3,2,2,1.5,-2,golden dagger,knight's armor,golden crown,05_castle_fortress,82,4,,2.00,6.00,7.40,0.1~0.2,15~44,2~6,0~1
 26,obj_enemy,mad prisoner,1,1,1,2,-1,rusty chain,torn clothes,tin hat,06_castle_dungeon,7,1,,1.00,3.00,1.70,0.3~0.9,1~3,1~3,0~1
 27,obj_enemy_large,heavy guard,2,2,2.5,0.8,-1,large claymore,golden armor,golden mask,06_castle_dungeon,81,1,,5.00,12.00,9.70,0.1~0.2,13~39,5~12,0~0
-28,obj_enemy_ghost,evil spirit,3,2,2,1.5,-3,bare hands,silver armor,ceramic mask,06_castle_dungeon,79,1,,1.00,3.00,7.50,0.1~0.2,15~45,1~3,0~1
+28,obj_enemy_ghost,evil spirit,4,2,2,1.5,-3,bare hands,torn clothes,filthy hood,06_castle_dungeon,37,1,,1.00,3.00,2.70,0.2~0.6,7~22,1~3,0~1
 29,obj_enemy,owl clan member,2,2.5,1.5,1.25,-3,heavy claws,light chainmail,owl clan mask,07_forest,69,1,,3.75,8.75,4.30,0.1~0.3,6~17,3.8~8.8,0~0
 30,obj_enemy,owl clan mentor,2,2.6,1.5,1.3,-2,heavy claws,rusty chainmail,owl clan mask,07_forest,65,2,,3.90,9.10,4.00,0.1~0.4,5~16,3.9~9.1,0~0
 31,obj_enemy_kid,creepy lady,1,3,0.5,1.5,-1,tree branch,pretty dress,wig,07_forest,44,1,,3.75,7.50,0.70,0.7~2.1,0~1,3.8~7.5,0~0

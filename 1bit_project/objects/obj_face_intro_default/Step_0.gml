@@ -481,6 +481,6 @@ switch game_progress
 		}
 	break;
 	default:
+		alarm[0]=1;
 	break;
 }
-

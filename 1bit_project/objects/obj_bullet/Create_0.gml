@@ -2,6 +2,7 @@ hp=0;
 hp_max=0;
 str=1;
 res=0;
+name="bullet"
 
 dir=0;
 spd=random_range(30,40);

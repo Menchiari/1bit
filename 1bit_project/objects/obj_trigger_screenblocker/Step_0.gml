@@ -9,7 +9,5 @@ else
 	alpha+=fadeout_speed;
 }
 
-if alpha<0 alpha=0;
-if alpha>1 alpha=1;
-
-depth=global.depth_ui+10;
+if alpha<alpha_min alpha=alpha_min;
+if alpha>alpha_max alpha=alpha_max;
