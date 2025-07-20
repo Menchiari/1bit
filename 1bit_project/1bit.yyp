@@ -439,6 +439,7 @@
     {"id":{"name":"scr_balancing_weapon","path":"scripts/scr_balancing_weapon/scr_balancing_weapon.yy",},},
     {"id":{"name":"scr_balancing","path":"scripts/scr_balancing/scr_balancing.yy",},},
     {"id":{"name":"scr_block_controls","path":"scripts/scr_block_controls/scr_block_controls.yy",},},
+    {"id":{"name":"scr_character_dialoguestep","path":"scripts/scr_character_dialoguestep/scr_character_dialoguestep.yy",},},
     {"id":{"name":"scr_character_scripts","path":"scripts/scr_character_scripts/scr_character_scripts.yy",},},
     {"id":{"name":"scr_collisions","path":"scripts/scr_collisions/scr_collisions.yy",},},
     {"id":{"name":"scr_controls","path":"scripts/scr_controls/scr_controls.yy",},},

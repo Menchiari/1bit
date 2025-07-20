@@ -30,6 +30,7 @@ function scr_init_character(){
 	death_description="";
 	speech_text=choose(dialogue_positive,dialogue_neutral,dialogue_negative)//"";
 	speech_text_enemy="...";
+	sentence=0;
 	max_sentences=1;
 	speech_text_1="";
 	speech_text_2="";

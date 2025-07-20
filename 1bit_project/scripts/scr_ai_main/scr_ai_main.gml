@@ -50,8 +50,12 @@ function scr_ai_main(){
 					{
 						if point_distance(x,y,ai_follow_target.x,ai_follow_target.y)>follow_distance//ai_search_range /*&& !collision_line(x,y,ai_follow_target.x,ai_follow_target.y,obj_collider,true,true)*/
 						{
-							dest_x=ai_follow_target.x+(15*ai_follow_target.dir);
-							dest_y=ai_follow_target.y+(5*ai_follow_target.back);
+							var _checkfrequency=5;
+							if irandom_range(0,100)<=_checkfrequency
+							{
+								dest_x=ai_follow_target.x+(choose(15,20,25,30,35,40)*choose(1,-1)*ai_follow_target.dir);
+								dest_y=ai_follow_target.y+(choose(5,10,15)*choose(1,-1)*ai_follow_target.back);
+							}
 						}
 						else {dest_x=x;dest_y=y;state=states.idle;}
 					}

@@ -37,4 +37,3 @@ trigger_distance=40;
 
 speech_text="";
 speech_distance=50;
-

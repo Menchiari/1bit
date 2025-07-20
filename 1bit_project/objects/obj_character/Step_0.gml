@@ -15,7 +15,7 @@ if active==true
 		else if obj_hero.charisma-charisma>=1 {speech_text=dialogue_positive;}
 		else {speech_text=dialogue_neutral;}
 	}
-	instance_activate_object(id);
+	//instance_activate_object(id);
 	depth=-y;
 	//scr_controls();
 	scr_state_machine();

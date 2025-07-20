@@ -46,6 +46,3 @@ speech_text_6="";
 speech_text_7="";
 speech_text_8="";
 speech_distance=60;
-
-//custom
-sentence=0;
