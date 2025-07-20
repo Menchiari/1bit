@@ -4,7 +4,6 @@
 event_inherited();
 
 hp_max=2.5;
-hp=hp_max;
 
 //power of screenshake and object shake
 shake_power=.5;

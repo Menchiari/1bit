@@ -57,13 +57,17 @@ if UI==true
 			var pos_b=9+2+height;
 			var pos_c=15+2+height;
 			var pos_d=21+2+height;
+			var _spd=obj_hero.spd*(1-((obj_hero.armor.weight+obj_hero.helm.weight+obj_hero.weapon.weight)/100));
+			var _res=obj_hero.res*(obj_hero.armor.defence+obj_hero.helm.defence);
+			var _str=obj_hero.weapon.atk_dmg_light*obj_hero.str;
+			var _str2=(obj_hero.weapon.atk_dmg_strong+obj_hero.weapon.atk_dmg_variation)*obj_hero.str;
 		//XP
 			draw_set_halign(fa_right);
 			draw_set_valign(fa_top);
 			draw_text_color_outline(camx+(camwidth/2)-pos_x,camy-(camheight/2)+pos_a,"XP "+string(round(global_xp)),c_white,1);
-			draw_text_color_outline(camx+(camwidth/2)-pos_x,camy-(camheight/2)+pos_b,"spd "+string_format(obj_hero.spd,0,1),c_white,1);
-			draw_text_color_outline(camx+(camwidth/2)-pos_x,camy-(camheight/2)+pos_c,"res "+string_format(obj_hero.res,0,1),c_white,1);
-			draw_text_color_outline(camx+(camwidth/2)-pos_x,camy-(camheight/2)+pos_d,"str "+string_format(obj_hero.str,0,1),c_white,1);
+			draw_text_color_outline(camx+(camwidth/2)-pos_x,camy-(camheight/2)+pos_b,"spd "+string_format(_spd,0,1),c_white,1);
+			draw_text_color_outline(camx+(camwidth/2)-pos_x,camy-(camheight/2)+pos_c,"res "+string_format(_res,0,1),c_white,1);
+			draw_text_color_outline(camx+(camwidth/2)-pos_x,camy-(camheight/2)+pos_d,"str "+string_format((_str+_str2)/2,0,1),c_white,1);
 		//EQUIP
 			draw_set_halign(fa_left);
 			draw_text_color_outline(camx-(camwidth/2)+pos_x,camy-(camheight/2)+pos_a,"equip:",c_white,1);

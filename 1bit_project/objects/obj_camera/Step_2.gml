@@ -66,4 +66,4 @@ if instance_exists(obj_character)
     instance_deactivate_object(obj_character);
 }
 // activate region around the camera
-instance_activate_region(x-(global_res_x/2),y-(global_res_y/2),x+global_res_x+global_res_x/2,y+global_res_y+global_res_y/2,true);
+instance_activate_region(x-global_res_x-(global_res_x/2),y-global_res_y-(global_res_y/2),x+global_res_x+(global_res_x/2),y+global_res_y+(global_res_y/2),true);

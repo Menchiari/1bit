@@ -20,6 +20,12 @@ function scr_sm_block(){
 		blocking=true;
 	}
 	
+	if instance_exists(ai_target)
+	{
+		if ai_target.x<x {dir=1;}
+		else {dir=-1}
+	}
+	
 //controls
 	scr_block_controls();
 }

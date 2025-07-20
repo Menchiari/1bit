@@ -1,5 +1,5 @@
-if hp<0 state=states.death;
-image_index=image_number-1-(hp*(image_number-1)/hp_max)
+if hp<=0 {state=states.death;}
+if random_frame==false {image_index=image_number-1-(hp*(image_number-1)/hp_max)}
 
 switch state
 {

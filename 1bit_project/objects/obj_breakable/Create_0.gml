@@ -5,6 +5,7 @@ hp_max=1;
 hp=hp_max;
 res=1;
 state=states.idle;
+random_frame=false;
 alarm[0]=1;
 
 x_orig=x;
