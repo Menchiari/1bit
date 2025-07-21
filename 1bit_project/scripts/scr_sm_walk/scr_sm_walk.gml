@@ -2,7 +2,7 @@ function scr_sm_walk(){
 	scr_animation_loop(walk_a,walk_b);
 	image_speed=random_range(.15,.4)*walk_sp;
 	scr_footsteps(walk_a,(abs(walk_a-walk_b)/2)+1,.5);
-	speed=walk_sp*spd*defence_speed*walk_sp_mod;
+	var move_speed=walk_sp*spd*defence_speed*walk_sp_mod;
 	blocking=false;
 	
 //movement
@@ -32,7 +32,7 @@ function scr_sm_walk(){
 	//{state=states.idle;}
 	#endregion
 
-	scr_character_move(dest_x,dest_y,walk_sp,1.5);
+	scr_character_move(dest_x,dest_y,move_speed,1.5);
 
 //controls
 	if control==controls.touch

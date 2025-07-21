@@ -27,7 +27,7 @@ function scr_ai_main(){
 				
 					if point_distance(x,y,dest_x,dest_y)<=dist || collision_line(x,y,dest_x,dest_y,obj_collider,true,true)
 					{
-						state=states.walk
+						state=states.walk;
 						walk_sp_mod=.3;
 						dest_x=x+random_range(run_distance_min*4,-run_distance_min*4);
 						dest_y=y+random_range(run_distance_min*4,-run_distance_min*4);
@@ -98,6 +98,8 @@ function scr_ai_main(){
 					{
 						speed=0;
 						state=states.idle;
+						dest_x = x;
+						dest_y = y;
 					}
 					scr_ai_target_check();
 				break;
@@ -107,7 +109,11 @@ function scr_ai_main(){
 					if speech_verbose==true speech_text="patrolling";
 					walk_sp_mod=.3;
 					if point_distance(x,y,dest_x,dest_y)>walk_sp*2 {state=states.walk;}
-					else {state=states.idle;}
+					else {
+						state=states.idle;
+						dest_x = x;
+						dest_y = y;
+					}
 				
 					if point_distance(x,y,ai_guard_x,ai_guard_y)<10 {dest_x=ai_patrol_x;dest_y=ai_patrol_y;}
 					if point_distance(x,y,ai_patrol_x,ai_patrol_y)<10 {dest_x=ai_guard_x;dest_y=ai_guard_y;}

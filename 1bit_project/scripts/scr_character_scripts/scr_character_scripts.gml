@@ -52,6 +52,10 @@ function scr_character_move(destx,desty,_speed,checkradius)
 	{
 		path_end();
 		state = states.idle;
+		if (ai_state != ai_states.search && ai_state != ai_states.wander) {
+			dest_x = x;
+			dest_y = y;
+		}
 	}
 	//}
 	//else
