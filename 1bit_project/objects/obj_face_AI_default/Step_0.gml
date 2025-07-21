@@ -51,8 +51,6 @@ case 0:
 			wait_time=game_get_speed(gamespeed_fps)*.25;
 		break;
 		case 11://last phase, for some reason it can't be default, must be there to end the scene
-			instance_create(obj_fx_fadeout);//creates a fade out
-			alarm[0]=game_get_speed(gamespeed_fps)*1//time that it takes to move to the next room
 			global.story_progress=5;
 			global.face_progress=0;
 			next_room=rm_story_AI_2
@@ -63,6 +61,8 @@ case 0:
 			ini_write_real("DEBUG","PLAYERSPAWN_Y_"+string(room_get_name(rm_world)),spawn_death_y);
 			ini_close();
 			scr_savegame();
+			instance_create(obj_fx_fadeout);//creates a fade out
+			alarm[0]=game_get_speed(gamespeed_fps)*1//time that it takes to move to the next room
 		break;
 		default:
 		break;

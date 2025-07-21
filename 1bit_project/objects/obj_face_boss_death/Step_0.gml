@@ -4,9 +4,9 @@ event_inherited();
 
 ////////////////////////DIALOGUES////////////////////////
 
-//switch boss_progress //the amount of times you restart the game
-//{
-//case 0:
+switch boss_progress //the amount of times you restart the game
+{
+case 0:
 	switch txt_phase //thinking of life
 	{
 		case 0:
@@ -53,13 +53,14 @@ event_inherited();
 			global.face_progress=0;
 			scr_savegame();
 			next_room=rm_glitch;
+			alarm[0]=1;
 			//game_restart();
 			//game_end();
 		break;
 		default:
 		break;
 	}
-//break;
+break;
 
 /////////////////////////TUTORIALS//////////////////////////
 //case 99998:
@@ -119,7 +120,7 @@ event_inherited();
 //	}
 //break;
 ////////////////////////////////////////////////////////////
-//default:
-//	alarm[0]=1; //if nothing happens proceed to next_room
-//break;
-//}
+default:
+	alarm[0]=1; //if nothing happens proceed to next_room
+break;
+}

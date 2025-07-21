@@ -31,3 +31,5 @@ else
 	//obj_hero.speed=0;
 	show_debug_message("Hero was created");
 }
+
+instance_destroy();
