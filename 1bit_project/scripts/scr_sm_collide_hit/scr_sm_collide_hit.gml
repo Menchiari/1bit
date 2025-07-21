@@ -4,6 +4,7 @@ function scr_sm_collide_hit(){
 	scr_animation(idle_hit_a,idle_hit_b);
 	image_speed=.75;
 	scr_footsteps(idle_hit_a,idle_hit_b,1.5);
+	scr_attack_system(idle_hit_a,12,0,armor.weight/50,0,1);
 	if image_index==idle_hit_b-1
 	{
 		state=states.idle;

@@ -1,5 +1,6 @@
 depth=-y;
 image_speed=0;
+image_index=0;
 
 hp_max=1;
 hp=hp_max;
@@ -16,7 +17,8 @@ shake_time=4;
 
 //power of screenshake and object shake
 shake_power=1;
-shake_power_multiplier=1;
+shake_power_hit=0;//power add when blocks, object shake only
+shake_power_multiplier=1;//power multiplier when blocks, object shake only
 
 //amount of pieces
 debris_min=6;

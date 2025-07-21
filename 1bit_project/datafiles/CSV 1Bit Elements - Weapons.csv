@@ -27,17 +27,17 @@
 25,small bayonet,weapons.dagger,50,2,1,1.75,1,0.9,0,"this weapon is sharp, but pretty hard to grip",1~2.75,$20,1,
 26,golden dagger,weapons.dagger,500,10,1,2,1,0.8,0,what a fancy looking dagger!,1~3,-$18,1,
 27,sharp dagger,weapons.dagger,75,1,1.25,2,1.25,1,0,very crafty!,1.25~3.25,$31,2,
-28,perfect knife,weapons.dagger,100,0.5,1.5,2.5,1.5,1,0,"It's sharp, light, it has a perfect grip... it's just perfect",1.5~4,$41,3,
+28,perfect knife,weapons.dagger,100,0.5,1.5,2.5,1.5,1,0,"It's sharp, light, it has a perfect grip... it's just perfect",1.5~4,$41,2,
 29,metal scrap,weapons.sword,10,5,1,1.5,1,1,0,a sharp piece of rusty scrap metal,1~2.5,$3,0,
 30,broken sword,weapons.sword,40,5,1.25,2,1,1,0,"this sword is missing its upper half, but it's still sharp",1.25~3,$8,1,
 31,guard's sword,weapons.sword,45,6,1.5,2.5,1,1,0,what an odd shape for a sword...,1.5~3.5,$9,1,
-32,rusty machete,weapons.sword,50,2.5,1.25,2.25,1,1.05,0,a filthy looking machete,1.25~3.25,$23,1,
-33,sharp machete,weapons.sword,80,2,1.5,2.5,1,1.05,0,a very sharp and clean machete,1.5~3.5,$29,1,
-34,sharp sword,weapons.sword,90,6,2,3,1,1,0,a nice looking sword,2~4,$15,1,
-35,large claymore,weapons.sword,100,20,2.5,4,2,0.666,0,the weight of this can smash the most powerful beast,2.5~6,-$34,3,
+32,rusty machete,weapons.sword,50,2.5,1.5,1.75,0.5,1.05,0,a filthy looking machete,1.5~2.25,$14,1,
+33,sharp machete,weapons.sword,80,2,1.5,2.25,0.5,1.05,0,a very sharp and clean machete,1.5~2.75,$21,1,
+34,sharp sword,weapons.sword,90,6,2,2.75,1,1,0,a nice looking sword,2~3.75,$13,1,
+35,large claymore,weapons.sword,100,20,2,4,2,0.666,0,the weight of this can smash the most powerful beast,2~6,-$35,3,
 36,old shimitar,weapons.sword,120,2.5,1.5,3,1,1.2,0,this curved blade should cut through flesh like butter,1.5~4,$31,1,
-37,rapier,weapons.sword,150,0.5,1,3,2,1.3,0,"long, pointy, flexible. Great for fast attacks",1~5,$50,2,
-38,shiny shimitar,weapons.sword,200,1.5,2,3.5,1.5,1.2,0,a curved blade with silver grip and golden pommel,2~5,$48,1,
+37,rapier,weapons.sword,150,0.5,1.25,2.75,1.75,1.3,0,"long, pointy, flexible. Great for fast attacks",1.25~4.5,$46,1,
+38,shiny shimitar,weapons.sword,200,1.5,1.75,3,1.75,1.2,0,a curved blade with silver grip and golden pommel,1.75~4.75,$44,0,
 39,electric sword,weapons.sword,400,1,3,4,2,1,0,"it's hard to tell what this is, but it looks very deadly",3~6,$63,2,
 40,tree branch,weapons.staff,1,5,1.25,1.5,1,0.85,0,"a simple tree branch, sturty enough to use in combat",1.25~2.5,$3,2,
 41,broom stick,weapons.staff,6,1,1,1.5,1,1.1,0,"a nice sturdy broomstick, should do the job",1~2.5,$23,0,
@@ -45,10 +45,10 @@
 43,cracked staff,weapons.staff,2,3,1,2,1.5,1,0,"an molding fighting staff, cracked in the middle",1~3.5,$23,0,
 44,farmer's rake,weapons.staff,30,3,1,2,2,1,0,"a metal fork on a wooden stick, useful tool for farmers",1~4,$28,1,
 45,metal rod,weapons.staff,20,5,1.75,2.75,1.25,0.9,0,this heavy piece of metal can be swung at high force,1.75~4,$19,1,
-46,bo staff,weapons.staff,50,2,1.5,4,0,1.25,0,the perfect balance between speed and power,1.5~4,$34,0,
-47,halberd,weapons.staff,60,10,2,3,2,0.75,0,"used by the northerns, it can chop anyone in half",2~5,$5,2,
+46,bo staff,weapons.staff,50,2,1.25,3,1,1.5,0,the perfect balance between speed and power,1.25~4,$33,0,
+47,halberd,weapons.staff,60,10,2,3,2,0.75,0,"used by the northerns, it can chop anyone in half",2~5,$5,1,
 48,light metal rod,weapons.staff,70,5,2,4,1,1.2,0,a very light and resistant piece of metal,2~5,$30,1,
-49,golden staff,weapons.staff,500,25,2.9,4.5,1.5,0.9,0,these engravings are written in a strange language,2.9~6,-$58,1,
+49,golden staff,weapons.staff,500,25,2.5,4,1.5,0.9,0,these engravings are written in a strange language,2.5~5.5,-$64,1,
 50,iron staff,weapons.staff,100,10,2.5,3.5,1,0.9,0,"very heavy, very strong, sharp on one edge",2.5~4.5,$1,1,
 51,titan staff,weapons.staff,150,2,3,4.5,0.5,1.1,0,this shiny staff is both light and powerful,3~5,$48,0,
 52,broken katana,weapons.katana,5,0.5,1,3,2,1.05,0,the bottom half of a very light thin sword,1~5,$50,0,
@@ -59,9 +59,9 @@
 57,extreme katana,weapons.katana,500,0.25,4,6,0,1.25,0,it's just way too extreme,4~6,$69,1,
 58,magic wand,weapons.shotgun,10,0.1,0.5,0.75,0.25,1,1,a curious device shaped as a short wooden rod,0.5~2,$11,1,"""volley pistol"""
 59,pebbles,weapons.hands,5,0.25,0.25,0.5,0.5,1,1,these pebbles have been sharpened by hand,0.25~2,$9,1,"""pebbles"""
-60,pistol,weapons.shotgun,150,5,2,5,2,1,1,simple pistol,2~14,$50,1,"""crafted pistol"""
-61,fluorescent arrows,weapons.shotgun,200,0.5,1,3,2,1.25,1,Glowing arrows come out of this metal pipe,1~10,$50,0,"""luther"""
-62,machinegun,weapons.shotgun,250,10,2,3,1,1,3,this strange tool looks very powerful,2~16,-$5,1,"""shotgun"""
+60,pistol,weapons.shotgun,150,5,2,5,2,1,1,simple pistol,2~14,$50,2,"""crafted pistol"""
+61,fluorescent arrows,weapons.shotgun,200,0.5,1,3,2,1.25,1,Glowing arrows come out of this metal pipe,1~10,$50,1,"""luther"""
+62,machinegun,weapons.shotgun,250,10,2,3,1,1,3,this strange tool looks very powerful,2~16,-$5,3,"""shotgun"""
 63,magic wand,weapons.hands,50,0.5,-1,3,1,0.5,0,burns your hands and feels good to grab,-1~4,$35,1,
 64,rusty sword,weapons.sword,30,6,1.25,2.25,1.75,0.9,0,"this sword is old and ugly, but it gets the job done",1.25~4,$13,2,
 65,my katana,weapons.katana,30,2,2,4,1,1,0,it's my katana sword,2~5,$45,0,

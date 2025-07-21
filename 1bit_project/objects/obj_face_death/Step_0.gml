@@ -56,8 +56,7 @@ case 0:
 			scr_savegame();
 			file_delete("save.sav");
 			file_delete("random.seed");
-			game_restart();
-			game_end();
+			room_goto(rm_glitch);
 		break;
 		default:
 		break;
@@ -103,7 +102,7 @@ case 1:
 			scr_savegame();
 			file_delete("save.sav");
 			file_delete("random.seed");
-			game_end();
+			room_goto(rm_glitch);
 		break;
 		default:
 		break;
@@ -140,7 +139,7 @@ case 2:
 			scr_savegame();
 			file_delete("save.sav");
 			file_delete("random.seed");
-			game_end();
+			room_goto(rm_glitch);
 		break;
 		default:
 		break;
@@ -187,7 +186,7 @@ case 3:
 			scr_savegame();
 			file_delete("save.sav");
 			file_delete("random.seed");
-			game_end();
+			room_goto(rm_glitch);
 		break;
 		default:
 		break;
@@ -215,7 +214,7 @@ case 5:
 			scr_savegame();
 			file_delete("save.sav");
 			file_delete("random.seed");
-			game_end();
+			room_goto(rm_glitch);
 		break;
 		default:
 		break;

@@ -17,7 +17,7 @@ function scr_sm_roll(){
 //movement
 	if speed>0 {speed-=roll_sp_decrease*(spd*defence_speed);}
 	if image_index>=jump_b-1 {state=states.idle;}
-	scr_attack_system(abs(jump_a-jump_b/2),10,0,0,1,atk_push_speed_divider);
+	//scr_attack_system(round(jump_a-jump_b/2),12,0,armor.weight/10,0,1);
 	if image_index>jump_a-1 && image_index<jump_b-3 {invincible=true;}
 	else {invincible=false;}
 	

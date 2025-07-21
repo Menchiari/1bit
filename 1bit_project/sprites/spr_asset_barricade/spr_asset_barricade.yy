@@ -32,8 +32,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"assets",
-    "path":"folders/Sprites/assets.yy",
+    "name":"breakable",
+    "path":"folders/Sprites/breakable.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
