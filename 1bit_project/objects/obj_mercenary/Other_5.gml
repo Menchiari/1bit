@@ -1,17 +1,16 @@
-/// @description save variables
 if (ai_state == ai_states.follow) {
     var data = {
 		obj: object_index,
-		character_head: character_head,
-		name: name,
-		weapon: weapon,
-		armor: armor,
-		helm: helm,
-		hp: hp,
-		str: str,
-		res: res,
-        skin_color: skin_color,
-        speech_color: speech_color
+		character_head_var: character_head_var,
+		name_var: name_var,
+		weapon_var: weapon_var,
+		armor_var: armor_var,
+		helm_var: helm_var,
+		hp_var: hp_var,
+		str_var: str_var,
+		res_var: res_var,
+        color_var: color_var,
+        speech_color_var: speech_color_var
     };
 
     array_push(global.followers, data);

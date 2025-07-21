@@ -39,7 +39,7 @@ function scr_ai_main(){
 			#endregion
 			#region FOLLOW
 				case ai_states.follow:
-					var follow_distance=40;
+					var follow_distance=30;
 					if speech_verbose==true speech_text="following"
 					walk_sp_mod=1.1;
 					if point_distance(x,y,dest_x,dest_y)>80 {state=states.run}

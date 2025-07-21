@@ -6,4 +6,6 @@ global.deathcount+=1;
 instance_create(obj_fx_screenshake);
 instance_create(obj_death);
 
+global.followers = [];
+
 object_set_persistent(object_index,false);
