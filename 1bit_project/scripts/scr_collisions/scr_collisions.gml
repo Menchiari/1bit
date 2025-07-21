@@ -35,8 +35,8 @@ function scr_collisions(){
 	//inside collision area
 	if collision_point(x,y,obj_collider,true,true)
 	{
-		x+=player_radius*10;
-		y+=player_radius*10;
+		x+=player_radius;
+		y+=player_radius;
 	}
 	
 //colliding with character
@@ -57,7 +57,7 @@ function scr_collisions(){
 		else
 		{
 			//all other animations
-			//speed=speed*.75;
+			speed=speed*.9;
 		}
 	}
 ////colliding with deathfall
@@ -88,7 +88,7 @@ function scr_collisions(){
 		//until !collision_point(dest_x,dest_y,obj_collider,true,true);
 	}
 //destination not inside avoid
-	if (place_meeting(x, y, obj_avoid))
+	if (collision_point(dest_x,dest_y,obj_avoid,true,true))
 	{
 		//do
 		//{

@@ -209,6 +209,7 @@ function init_globals(){
 	global.face_progress=0;
 	global.face_progress_death=0;
 	global.princess=true;
+	global.followers=[];
 	
 	global.unlock_wpn=ds_list_create();
 	//Staring Weapons

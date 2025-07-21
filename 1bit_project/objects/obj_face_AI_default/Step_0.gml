@@ -37,9 +37,11 @@ case 0:
 			txt="have you done what you were meant to do?"; //the text to be said - the speed of the next phase is dependent on the length
 		break;
 		case 8:
+			txt_color=c_red; //the color of the text
 			txt="Now go out there and change the world."; //the text to be said - the speed of the next phase is dependent on the length
 		break;
 		case 9:
+			txt_color=c_white; //the color of the text
 			txt="if you can, of course..."; //the text to be said - the speed of the next phase is dependent on the length
 		break;
 		///////////////////////////////////////////////////////////////////
