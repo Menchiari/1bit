@@ -13,11 +13,11 @@ function scr_sm_attack_strong(){
 			bullet.dir=point_direction(x,y,dest_x,dest_y);
 			bullet.destx=dest_x;
 			bullet.desty=dest_y;
-			if instance_exists(ai_target)
-			{
-				bullet.destx=ai_target.x;
-				bullet.desty=ai_target.y;
-			}
+			//if instance_exists(ai_target)
+			//{
+			//	bullet.destx=ai_target.x;
+			//	bullet.desty=ai_target.y;
+			//}
 			bullet.damage=weapon.atk_dmg_strong;
 			bullet.damage_variation=weapon.atk_dmg_variation;
 			bullet.faction=faction;

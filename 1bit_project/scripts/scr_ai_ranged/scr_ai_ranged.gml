@@ -1,5 +1,5 @@
 function scr_ai_ranged(idle_actions){
-	var atk_distance=200;//attack_range_strong+(atk2_sp*4);
+	var atk_distance=100;//attack_range_strong+(atk2_sp*4);
 //when close to enemy
 	if instance_exists(ai_target)
 	{

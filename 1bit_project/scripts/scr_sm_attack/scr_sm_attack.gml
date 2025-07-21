@@ -26,7 +26,6 @@ function scr_sm_attack(){
 			var screenshake=instance_create(obj_fx_screenshake);
 			screenshake.shake=weapon.atk_dmg_light;
 	}
-
 	//movement
 	if image_index==attack_a
 	{

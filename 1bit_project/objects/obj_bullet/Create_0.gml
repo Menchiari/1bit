@@ -8,7 +8,7 @@ name="bullet"
 dir=0;
 spd=random_range(30,40);
 spread=10;
-duration=random_range(6,8);
+duration=random_range(2,8);
 
 destx=x;
 desty=y;
@@ -26,6 +26,6 @@ melee_atk_buffer_index=0;
 melee_atk_buffer_br=0;
 melee_atk_buffer_index_br=0;
 
-alarm[0]=4;
+alarm[0]=1;
 
 show_debug_message("bullet shot");

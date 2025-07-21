@@ -17,3 +17,5 @@ repeat(bullets-1)
 
 destx+=random_range(-spread,spread);
 desty+=random_range(-spread,spread);
+
+show_debug_message("bullet destx="+string(destx)+" desty="+string(desty));

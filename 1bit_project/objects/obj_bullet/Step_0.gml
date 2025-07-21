@@ -8,8 +8,8 @@ if active==true
 		y=desty;
 		alarm[1]=1;
 	}
-	//motion_set(dir,spd);
-	//if dir>=360 {dir-=360}
+	motion_set(dir,spd);
+	if dir>=360 {dir-=360}
 	//var victim=collision_line(x,y,xprevious,yprevious,obj_character,true,true)
 	//if victim==true && hit==false
 	//{
