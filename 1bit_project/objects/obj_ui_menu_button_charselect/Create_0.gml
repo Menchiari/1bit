@@ -26,3 +26,5 @@ if character_head_var=spr_head_female {character_select=2;}
 if character_head_var=spr_head_female1 {character_select=3;}
 
 scr_ui_characters();
+
+show_debug_message("story progress = "+string(global.story_progress));

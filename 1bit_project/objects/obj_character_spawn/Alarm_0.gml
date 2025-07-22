@@ -10,3 +10,7 @@ if override_ai==true
 	spawned_npc.ai_state_original=ai_state_var;
 	spawned_npc.ai_state=ai_state_var;
 }
+if override_state==true
+{
+	spawned_npc.state=state_var;
+}

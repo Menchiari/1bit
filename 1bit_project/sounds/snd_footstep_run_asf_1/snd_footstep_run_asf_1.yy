@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.348265,
+  "duration":0.3432653,
   "name":"snd_footstep_run_asf_1",
   "parent":{
     "name":"Run",

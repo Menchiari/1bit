@@ -10,47 +10,24 @@ function scr_ai_target_check(){
 	var ycheck=ai_search_range;
 	if weapon.bullets>0
 	{
-		xcheck=ai_search_range*dir*2;
+		xcheck=ai_search_range*2*dir;
 		ycheck=ai_search_range*4;
 	}
 	if back==true {ycheck=-ai_search_range;}
 	
-	var temp_target=collision_rectangle(x-xcheck/2,y-ycheck,x+xcheck,y+ycheck,obj_character,false,true); //collision_line(x,y,xcheck,ycheck,obj_character,false,true);
+	var temp_target=collision_rectangle(x-xcheck*dir,y-ycheck/2,x+xcheck*dir,y+ycheck/2,obj_character,false,true); //collision_line(x,y,xcheck,ycheck,obj_character,false,true);
 	if instance_exists(temp_target)
 	{
 		if scr_faction_check_ai(temp_target)==true
-		//&& !collision_line(x,y,xcheck,ycheck,obj_collider,true,true)
-		//&& !(collision_line(x,y-15,temp_target.x,temp_target.y-8,obj_collider,true,true)||collision_line(x,y,temp_target.x,temp_target.y,obj_collider,true,true))
 		{
 			if speech_verbose==true speech_text="!O!";
-			//if point_distance(x,y,temp_target.x,temp_target.y)<ai_search_range
-			//{
+			if point_distance(x,y,temp_target.x,temp_target.y)<ai_search_range
+			{
 				ai_target=temp_target;
 				ai_target_x=temp_target.x;
 				ai_target_y=temp_target.y;
 				ai_state=ai_states.alert;
-			//}
+			}
 		}
 	}
-	//repeat(2)
-	//{
-	//	var xcheck=x+random_range(ai_search_range,-ai_search_range);
-	//	var ycheck=y+random_range(ai_search_range,-ai_search_range);
-	//	var temp_target=collision_line(x,y,xcheck,ycheck,obj_character,true,true);	
-		
-	//	if instance_exists(temp_target)
-	//	{
-	//		if scr_faction_check_ai(temp_target)==true
-	//		&& !collision_line(x,y,xcheck,ycheck,obj_collider,true,true)
-	//		{
-	//			if point_distance(x,y,temp_target.x,temp_target.y)<ai_search_range
-	//			{
-	//				ai_target=temp_target;
-	//				ai_target_x=temp_target.x;
-	//				ai_target_y=temp_target.y;
-	//				ai_state=ai_states.alert;
-	//			}
-	//		}
-	//	}
-	//}
 }

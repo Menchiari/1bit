@@ -1,4 +1,4 @@
-if (ai_state == ai_states.follow) {
+if (ai_state == ai_states.follow) && instance_exists(obj_hero) {
     var data = {
 		obj: object_index,
 		character_head_var: character_head_var,

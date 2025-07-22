@@ -125,20 +125,17 @@ function scr_ai_main(){
 					if speech_verbose==true speech_text="halt!";
 					
 					var alert_distance=ai_search_range;
-					if point_distance(x,y,dest_x,dest_y)>20{dest_x=x;dest_y=y;}
-					if random_range(0,100)<ai_responsiveness // {ai_state=ai_states.search;}
+					if point_distance(x,y,dest_x,dest_y)>20{state=states.run; dest_x=x;dest_y=y;}
+					if instance_exists(ai_target)
 					{
-						if instance_exists(ai_target)
+						if point_distance(x,y,ai_target.x,ai_target.y)<alert_distance
 						{
-							if point_distance(x,y,ai_target.x,ai_target.y)<alert_distance
-							{
-								ai_target_x=ai_target.x;
-								ai_target_y=ai_target.y;
-								ai_state=ai_states.search;
-							}
+							ai_target_x=ai_target.x;
+							ai_target_y=ai_target.y;
+							ai_state=ai_states.search;
 						}
 					}
-					//else if irandom_range(0,100)>=100-(ai_responsiveness/4) {ai_state=ai_state_original;}
+					else if irandom_range(0,100)>=100-(ai_responsiveness/4) {ai_state=ai_state_original;}
 				break;
 			#endregion
 			#region CHASE
@@ -162,23 +159,29 @@ function scr_ai_main(){
 					if speech_verbose==true speech_text="where?";
 					//walks faster to destination
 					walk_sp_mod=1.3;
-					if point_distance(x,y,dest_x,dest_y)>walk_sp*2 {state=states.walk;}
-					else
-					{
-						state=states.idle;
-						var chance=random_range(0,100);
-						if chance<=ai_responsiveness {ai_state=ai_state_original;}
-					}
+					//if it gets close to destination stays still if not it walks
+					if point_distance(x,y,dest_x,dest_y)>walk_sp*walk_sp_mod*2 {state=states.walk;}
+					else {state=states.idle;}
+					//checks target and decides what to do with responsiveness
 					scr_ai_target_check();
 					if instance_exists(ai_target)
 					{
 						var search_distance=ai_search_range*1.5;
 						dest_x=ai_target_x;
 						dest_y=ai_target_y;
-						//var chance=random_range(0,100);
-						if /*chance<=ai_responsiveness &&*/ point_distance(x,y,ai_target_x,ai_target_y)<search_distance {ai_state=ai_states.chase;}
+						var chance=random_range(0,100);
+						if chance<=ai_responsiveness*4 && point_distance(x,y,ai_target_x,ai_target_y)<search_distance {ai_state=ai_states.chase;}
 					}
-					else {ai_state=ai_state_original;}
+					else
+					{
+						var chance=random_range(0,100);
+						if chance<=ai_responsiveness/5
+						{
+							var _choose=choose(0,1,1);
+							if choose==0 {ai_state=ai_state_original;}
+							if choose==1 {dest_x=x+random_range(-50,50); dest_y=y+random_range(-50,50);}
+						}
+					}
 				break;
 			#endregion
 			#region FIGHT
@@ -205,7 +208,7 @@ function scr_ai_main(){
 			#region FLEE
 				case ai_states.flee:
 					speech_text="help!";
-					var flee_distance=20
+					var flee_distance=40
 					state=states.run;
 					if point_distance(x,y,dest_x,dest_y)<=flee_distance || collision_line(x,y,dest_x,dest_y,obj_collider,true,true)
 					{

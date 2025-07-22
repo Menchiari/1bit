@@ -59,10 +59,10 @@ if room==rm_world
 	//beginning of the game
 	if global.story_progress==5
 	{
-		//layer_destroy("onlystory1");
+		layer_destroy("onlystory1");
 		//layer_destroy("onlystory2and3");
 		//layer_destroy("onlystory3");
-		//layer_destroy("onlystory4");
+		layer_destroy("onlystory4");
 		//layer_destroy("onlystory5");
 		//layer_destroy("char_other");
 		//layer_destroy("char_spawn");

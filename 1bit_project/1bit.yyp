@@ -437,6 +437,7 @@
     {"id":{"name":"scr_ai_zombie","path":"scripts/scr_ai_zombie/scr_ai_zombie.yy",},},
     {"id":{"name":"scr_animation_loop","path":"scripts/scr_animation_loop/scr_animation_loop.yy",},},
     {"id":{"name":"scr_attack_system","path":"scripts/scr_attack_system/scr_attack_system.yy",},},
+    {"id":{"name":"scr_audio","path":"scripts/scr_audio/scr_audio.yy",},},
     {"id":{"name":"scr_balancing_armor","path":"scripts/scr_balancing_armor/scr_balancing_armor.yy",},},
     {"id":{"name":"scr_balancing_helm","path":"scripts/scr_balancing_helm/scr_balancing_helm.yy",},},
     {"id":{"name":"scr_balancing_weapon","path":"scripts/scr_balancing_weapon/scr_balancing_weapon.yy",},},

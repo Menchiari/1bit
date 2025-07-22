@@ -31,7 +31,6 @@ for (var i = 0; i < number_of_enemies; i++)
 			var spawn_y=y+random_range(radius,-radius);
 		}
 	}
-
 	var _spawnchar = instance_create_depth(spawn_x, spawn_y, -spawn_y, obj_character_spawn);
 	_spawnchar.character_type=type_of_enemies;
 	if AI_override==true {_spawnchar.ai_state=type_of_ai;}

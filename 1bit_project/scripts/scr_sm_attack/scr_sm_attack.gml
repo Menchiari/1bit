@@ -1,6 +1,7 @@
 function scr_sm_attack(){
 	scr_animation(attack_a,attack_b);
 	scr_footsteps(attack_a,attack_fr,1.5);
+	scr_audio_weapon_swing(attack_a,.8);
 	image_speed=animation_speed_default*spd*defence_speed*weapon_image_speed;
 	blocking=false;
 

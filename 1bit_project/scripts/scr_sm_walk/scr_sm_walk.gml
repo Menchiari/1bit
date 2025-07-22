@@ -1,8 +1,8 @@
 function scr_sm_walk(){
 	scr_animation_loop(walk_a,walk_b);
 	image_speed=random_range(.15,.4)*walk_sp;
-	scr_footsteps(walk_a,(abs(walk_a-walk_b)/2)+1,.5);
-	var move_speed=walk_sp*spd*defence_speed*walk_sp_mod;
+	scr_footsteps(walk_a,(abs(walk_a-walk_b)/2)+1,.75);
+	var move_speed=walk_sp+(spd*defence_speed*walk_sp_mod*.25);
 	blocking=false;
 	
 //movement

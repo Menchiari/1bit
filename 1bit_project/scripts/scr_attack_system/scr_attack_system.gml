@@ -50,7 +50,7 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 					&& ((enemy.res*(enemy.armor.defence+enemy.helm.defence)*(enemy.hp)/2>damage) && enemy!=obj_hero.id)
 					////todo add no blocking on hands or no weapon////
 					//&& enemy.hp>hp/2
-					) //added block instead of counter
+					) //added block counter
 					{
 						enemy.image_index=enemy.block_hit_a;
 						enemy.state=states.block_hit;
@@ -63,9 +63,8 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 						if instance_exists(obj_hero) {if enemy!=obj_hero.id {damage_value._color=c_red;}}
 						if instance_exists(obj_ally) {if enemy!=obj_ally.id {damage_value._color=c_red;}}
 												
-						show_debug_message(string(object_get_name(enemy.object_index))+" has blocked an attack from "+string(object_get_name(object_index)));					
-					}
-					
+						show_debug_message(string(object_get_name(enemy.object_index))+" has blocked an attack from "+string(object_get_name(object_index)));
+					}					
 	//if not blocking					
 					else
 					{

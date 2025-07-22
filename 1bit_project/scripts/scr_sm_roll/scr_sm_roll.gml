@@ -1,7 +1,7 @@
 function scr_sm_roll(){
 	scr_animation(jump_a,jump_b);
 	image_speed=.5*spd*defence_speed;
-	scr_footsteps(jump_b-5,jump_b-3,1.5);
+	scr_footsteps(jump_b-5,jump_b-3,1.25);
 	blocking=false;
 
 	
@@ -17,7 +17,9 @@ function scr_sm_roll(){
 //movement
 	if speed>0 {speed-=roll_sp_decrease*(spd*defence_speed);}
 	if image_index>=jump_b-1 {state=states.idle;}
-	//scr_attack_system(round(jump_a-jump_b/2),12,0,armor.weight/10,0,1);
+	scr_attack_system(round((jump_a+jump_b)/2),3,0,armor.weight/50,0,1);
+	scr_attack_system(round((jump_a+jump_b)/2)+1,3,0,armor.weight/50,0,1);
+	scr_attack_system(round((jump_a+jump_b)/2)-1,3,0,armor.weight/50,0,1);
 	if image_index>jump_a-1 && image_index<jump_b-3 {invincible=true;}
 	else {invincible=false;}
 	

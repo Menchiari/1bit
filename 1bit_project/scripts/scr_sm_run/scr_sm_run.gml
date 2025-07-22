@@ -2,7 +2,7 @@ function scr_sm_run(){
 	scr_animation_loop(run_a,run_b);
 	image_speed=random_range(.2,.5)*spd*defence_speed;
 	scr_footsteps(run_a,(abs(run_a-run_b)/2)+1,1);
-	var move_speed=run_sp*spd*defence_speed;
+	var move_speed=run_sp+(spd*defence_speed*walk_sp_mod*.25);
 	blocking=false;
 	
 //movement
