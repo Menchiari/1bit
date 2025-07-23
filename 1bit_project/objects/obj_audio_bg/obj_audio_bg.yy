@@ -1,7 +1,11 @@
 {
   "$GMObject":"",
   "%Name":"obj_audio_bg",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_audio_bg",
   "overriddenProperties":[],
@@ -23,11 +27,18 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"sound_var","filters":[],"listItems":[],"multiselect":false,"name":"sound_var","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"snd_null","varType":4,},
+    {"$GMObjectProperty":"v1","%Name":"volume_var","filters":[],"listItems":[],"multiselect":false,"name":"volume_var","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"random_range(.9,1.1)","varType":4,},
+    {"$GMObjectProperty":"v1","%Name":"pitch_var","filters":[],"listItems":[],"multiselect":false,"name":"pitch_var","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"random_range(.9,1.1)","varType":0,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_compass_arrow",
+    "path":"sprites/spr_compass_arrow/spr_compass_arrow.yy",
+  },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

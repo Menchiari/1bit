@@ -85,7 +85,7 @@ function scr_footsteps(left_foot,right_foot,step_power)
 		{
 			if point_distance(x,y,obj_hero.x,obj_hero.y)<100
 			{
-				audio_play_sound_at(footstep_sound,x,y,y,150,300,1,false,10,global.audio_footsteps+step_power/10,0,random_range(2,2.5));
+				audio_play_sound_at(footstep_sound,x,y,0,150,300,1,false,10,global.audio_footsteps+step_power/10,0,random_range(2,2.5));
 			}
 		}
 	}

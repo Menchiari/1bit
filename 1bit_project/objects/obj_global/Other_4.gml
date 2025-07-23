@@ -11,6 +11,8 @@ else
 
 init_pathfinding_grid();
 
+instance_create(obj_audio_control);
+
 if room==rm_world
 {
 	show_debug_message("world loaded");
