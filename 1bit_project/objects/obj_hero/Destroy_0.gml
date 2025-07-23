@@ -9,3 +9,6 @@ instance_create(obj_death);
 global.followers = [];
 
 object_set_persistent(object_index,false);
+
+scr_audio_play(snd_death1,.2);
+scr_audio_play(snd_death2,.2);

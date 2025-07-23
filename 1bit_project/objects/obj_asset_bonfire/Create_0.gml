@@ -5,3 +5,4 @@ sizey=1.5
 state=0;
 range=20;
 range_reset=500;
+scr_audio_play(snd_bonfire,global.audio_backgrounds,random_range(1,1.2),true);

@@ -2,6 +2,7 @@ if mouse_check_button(mb_any) && collision_point(mouse_x,mouse_y,self,true,false
 else {selected=false;}
 if mouse_check_button_released(mb_any)
 {
+	scr_audio_play(snd_click);
 	text=""
 	
 	if point_in_rectangle(mouse_x,mouse_y,x,y,x+sprite_width/3.5,y+sprite_height)

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_bg_ghostswhispers",
+  "audioGroupId":{
+    "name":"ag_backgrounds",
+    "path":"audiogroups/ag_backgrounds",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":23.439638,
+  "name":"snd_bg_ghostswhispers",
+  "parent":{
+    "name":"backgrounds",
+    "path":"folders/Sounds/backgrounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_bg_ghostswhispers.wav",
+  "type":0,
+  "volume":1.0,
+}

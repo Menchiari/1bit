@@ -29,4 +29,6 @@ size=1;
 rot=random_range(-30,30);
 dead_mannequin=instance_nearest(x,y,obj_dead);
 
+scr_audio_play(snd_thunder,.3);
+
 scr_savegame();

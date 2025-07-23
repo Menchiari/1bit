@@ -25,7 +25,7 @@ function scr_audio_weapon_swing(_frame,_power){
 			default:
 			break;
 		}
-		audio_play_sound_at(_sound,x,y,0,200,350,1,false,9,_power*global.audio_weapons*_mix,0,random_range(-.1,.1)+clamp(1/(weapon.weight/10),.4,1.8));
+		audio_play_sound_at(_sound,x,y,0,50,350,1,false,9,_power*global.audio_weapons*_mix,0,random_range(-.1,.1)+clamp(1/(weapon.weight/10),.4,1.8));
 	}
 }
 
@@ -71,7 +71,7 @@ function scr_audio_weapon_hit(_frame,_power){
 			default:
 			break;
 		}
-		audio_play_sound_at(_sound,x,y,0,200,350,1,false,9,_power*global.audio_weapons*_mix,0,random_range(-.1,.1)+clamp(1/(weapon.weight/10),.4,1.8));
+		audio_play_sound_at(_sound,x,y,0,50,350,1,false,9,_power*global.audio_weapons*_mix,0,random_range(-.1,.1)+clamp(1/(weapon.weight/10),.4,1.8));
 	}
 }
 
@@ -159,7 +159,7 @@ function scr_audio_armor_hit(_frame,_power){
 			
 			break;
 		}
-		audio_play_sound_at(_sound,x,y,0,200,350,1,false,2,_power*global.audio_weapons*_mix,0,random_range(-.1,.1)+clamp(1/(armor.weight/10),.6,1.4)*_pitch);
+		audio_play_sound_at(_sound,x,y,0,50,350,1,false,2,_power*global.audio_weapons*_mix,0,random_range(-.1,.1)+clamp(1/(armor.weight/10),.6,1.4)*_pitch);
 	}
 }
 
@@ -170,7 +170,7 @@ function scr_audio_critical(_frame,_power){
 		var _sound = choose(snd_wpn_critical_01, snd_wpn_critical_02, snd_wpn_critical_03, snd_wpn_critical_04, snd_wpn_critical_05, snd_wpn_critical_06, snd_wpn_critical_07);
 		var _mix=1;
 		show_debug_message("critical hit");
-		audio_play_sound_at(_sound,x,y,0,200,350,1,false,9,_power*global.audio_hits*_mix,0,random_range(.8,1.2));
+		audio_play_sound_at(_sound,x,y,0,100,350,1,false,9,_power*global.audio_hits*_mix,0,random_range(.8,1.2));
 	}
 }
 
@@ -181,7 +181,7 @@ function scr_audio_death(_frame,_power){
 		var _sound = choose(snd_wpn_kill_01, snd_wpn_kill_02, snd_wpn_kill_03, snd_wpn_kill_04, snd_wpn_kill_05, snd_wpn_kill_06, snd_wpn_kill_07, snd_wpn_kill_08);
 		var _mix=1;
 		show_debug_message(string(self.name)+" dies");
-		audio_play_sound_at(_sound,x,y,0,200,350,1,false,9,_power*global.audio_hits*_mix,0,random_range(.8,1.2));
+		audio_play_sound_at(_sound,x,y,0,100,350,1,false,9,_power*global.audio_hits*_mix,0,random_range(.8,1.2));
 	}
 }
 
@@ -192,7 +192,7 @@ function scr_audio_hurt(_frame,_power){
 		var _sound = choose(snd_wpn_hurt_01, snd_wpn_hurt_02, snd_wpn_hurt_03, snd_wpn_hurt_04, snd_wpn_hurt_05, snd_wpn_hurt_06, snd_wpn_hurt_07, snd_wpn_hurt_08, snd_wpn_hurt_09, snd_wpn_hurt_10, snd_wpn_hurt_11, snd_wpn_hurt_12, snd_wpn_hurt_13, snd_wpn_hurt_14, snd_wpn_hurt_15, snd_wpn_hurt_16, snd_wpn_hurt_17, snd_wpn_hurt_18);
 		var _mix=1;
 		show_debug_message(string(self.name)+" hurt");
-		audio_play_sound_at(_sound,x,y,0,200,350,1,false,9,_power*global.audio_voices*_mix,0,random_range(.8,1.2));
+		audio_play_sound_at(_sound,x,y,0,100,350,1,false,9,_power*global.audio_voices*_mix,0,random_range(.8,1.2));
 	}
 }
 
@@ -203,7 +203,7 @@ function scr_audio_yell(_frame,_power){
 		var _sound = choose(snd_wpn_yell_01, snd_wpn_yell_02, snd_wpn_yell_03, snd_wpn_yell_04, snd_wpn_yell_05, snd_wpn_yell_06, snd_wpn_yell_07, snd_wpn_yell_08, snd_wpn_yell_09, snd_wpn_yell_10);
 		var _mix=1;
 		show_debug_message(string(self.name)+" screams");
-		audio_play_sound_at(_sound,x,y,0,200,350,1,false,9,_power*global.audio_voices*_mix,0,random_range(.8,1.2));
+		audio_play_sound_at(_sound,x,y,0,100,350,1,false,9,_power*global.audio_voices*_mix,0,random_range(.8,1.2));
 	}
 }
 
@@ -214,6 +214,11 @@ function scr_audio_roll(_frame,_power){
 	if round(image_index)==_frame && !audio_is_playing(_sound)
 	{
 		show_debug_message(string(self.name)+" screams");
-		audio_play_sound_at(_sound,x,y,0,200,350,1,false,9,_power*global.audio_footsteps*_mix,0,random_range(-.1,.1)+clamp(1/(weapon.weight/10),.4,1.8));
+		audio_play_sound_at(_sound,x,y,0,50,300,1,false,9,_power*global.audio_footsteps*_mix,0,random_range(-.1,.1)+clamp(1/(weapon.weight/10),.4,1.8));
 	}
+}
+
+// ANY SOUND
+function scr_audio_play(_sound=snd_null,_volume=0.2,_pitch=1,_loop=false,_radius=60,_range=250){
+	audio_play_sound_at(_sound,x,y,0,_radius,_range,1,_loop,10,_volume,0,_pitch);
 }
