@@ -32,12 +32,6 @@ function scr_collisions(){
 		}
 	}
 	
-	//inside collision area
-	if collision_point(x,y,obj_collider,true,true)
-	{
-		x+=player_radius;
-		y+=player_radius;
-	}
 	
 //colliding with character
 	var char_collision=collision_circle(x,y,player_radius,obj_character,true,true);
