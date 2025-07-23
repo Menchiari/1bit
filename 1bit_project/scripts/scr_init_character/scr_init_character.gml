@@ -237,7 +237,7 @@ function scr_init_character(){
 	faction=factions.neutral;
 	drop_rate=global.drop_rate;
 	weapon = new weapon_struct("init",0,0,0,0,0,0,0,0,"init",0);
-	armor = new armor_struct("init",0,0,0,0,0,"init",0);
+	armor = new armor_struct("init",0,0,0,0,0,"init",0,0);
 	helm =  new helm_struct("init",0,0,0,0,0,"init",0);
 	atk_spd = 1;
 	equip_weapon(choose(global.weapons[22],global.weapons[32],global.weapons[15],global.weapons[44]));

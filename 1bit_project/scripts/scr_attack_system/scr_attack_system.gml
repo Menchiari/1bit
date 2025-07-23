@@ -152,11 +152,15 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 
 			}
 			#endregion
-			
+			scr_audio_weapon_hit(image_index,clamp(.5+(total_damage/10),.5,1.5))
+			show_debug_message("audio hit at damage "+string(clamp(.5+(total_damage/10),.5,1.5)));
 		}
 ////////BREAKABLE IF NOT ENEMY////////
 		else
 		{
+			scr_audio_weapon_hit(image_index,clamp(.5+(str/10),.5,1.5));
+			show_debug_message("audio hit at damage "+string(clamp(.5+(str/10),.5,1.5)));
+
 		//reactivate all character instances after the check
 	        for (var i=0; i<array_length_1d(melee_atk_buffer); i++)
 	        {

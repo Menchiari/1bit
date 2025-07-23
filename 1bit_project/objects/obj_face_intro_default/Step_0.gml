@@ -13,29 +13,33 @@ switch game_progress
 				break;
 				//////////////////////PLACE DIALOGUE HERE//////////////////////////
 				case 1:
-					txt="Who are you?";
+					txt="You shouldn't be here.";
 				break;
 				case 2:
-					txt="You shouldn't be here...";
+					txt="The world is collapsing";
 				break;
 				case 3:
-					txt="Ah, I see... It's probably a mistake.";
+					txt="And there is nothing you can do.";
 				break;
 				case 4:
 					sprite_index=spr_faces_intro_mock;
-					txt="In that case, take a look at your past.";
+					txt="You think you can go through this?";
 				break;
 				case 5:
 					sprite_index=spr_faces_intro_default;
-					txt="Do you even remember where you came from?";
+					txt="Then you should start from the beginning";
+				break;
+				case 6:
+					sprite_index=spr_faces_intro_default;
+					txt="From your very first memory...";
 				break;
 				///////////////////////////////////////////////////////////////////
-				case 6://second to last phase, make the character wait before moving to the next room
+				case 7://second to last phase, make the character wait before moving to the next room
 					txt="";
 					state="wait";
 					wait_time=game_get_speed(gamespeed_fps)*1;
 				break;
-				case 7://last phase, for some reason it can't be default, must be there to end the scene
+				case 8://last phase, for some reason it can't be default, must be there to end the scene
 					instance_create(obj_fx_fadeout);//creates a fade out
 					alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
 					next_room=rm_menu_character;//pick the room you want

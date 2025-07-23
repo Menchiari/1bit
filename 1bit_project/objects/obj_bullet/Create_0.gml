@@ -1,3 +1,5 @@
+scr_init_character();
+
 hp=0;
 hp_max=0;
 str=1;

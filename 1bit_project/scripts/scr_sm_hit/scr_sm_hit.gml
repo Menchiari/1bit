@@ -1,5 +1,5 @@
 function scr_sm_hit(){
-	
+
 	if object_index==obj_hero && image_index==idle_hit_a+1
 	{
 		instance_create_depth(x,y,-y,obj_fx_screenshake);
@@ -15,6 +15,7 @@ function scr_sm_hit(){
 		scr_animation(idle_hit_a,idle_hit_b);
 		image_speed=.25;
 		scr_footsteps(idle_hit_a,idle_hit_b,1.5);
+		scr_audio_hurt(idle_hit_a,1);
 	
 		if speed>1 {speed-=block_sp_decrease;}
 		if speed<1 {speed+=block_sp_decrease;}
@@ -27,6 +28,7 @@ function scr_sm_hit(){
 	}
 	else
 	{
+		scr_audio_death(idle_hit_a,1);
 		state=states.death;
 	}
 }

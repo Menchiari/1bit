@@ -105,6 +105,18 @@ function init_enums(){
 		shotgun,
 		null
 	}
+	enum armors_material
+	{
+		flesh,
+		cloth,
+		leather,
+		cape,
+		ceramic,
+		chainmail,
+		metal_thin,
+		metal_thick,
+		wood
+	}
 	enum terrains
 	{
 		wood,
@@ -231,5 +243,14 @@ function init_globals(){
 	
 	scr_loadgame();
 
+#endregion
+#region mixing
+	global.audio_footsteps=0.05;
+	global.audio_weapons=0.1;
+	global.audio_hits=0.1;
+	global.audio_voices=0.1;
+	
+	global.audio_backgrounds=0.1;	
+	global.audio_backgrounds_loud=0.2;
 #endregion
 }
