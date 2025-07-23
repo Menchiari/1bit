@@ -93,6 +93,11 @@ function scr_collisions(){
 		//}
 		//until !collision_point(dest_x,dest_y,obj_collider,true,true);
 	}
+	
+	if ((xprevious != x || yprevious!= y) && can_character_navigate()) {
+		last_gridfree_x = x;
+		last_gridfree_y = y;
+	}
 }
 
 

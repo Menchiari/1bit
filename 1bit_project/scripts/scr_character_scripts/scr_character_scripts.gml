@@ -40,9 +40,31 @@ function scr_check_destination_edge()
 	show_debug_message(string(x)+" hero x, "+string(y)+" hero y")
 }
 
+function can_character_navigate() {
+	var _test_path = path_add();
+	var _result = true;
+	if (!mp_grid_path(global.pathfinding_grid, _test_path, x, y, x, y, true)) {
+		// cannot navigate to our own position on the mp_grid, this means we are overlapping the grid
+		_result = false;
+	}
+	
+	path_delete(_test_path);
+	return _result;
+}
+
 function scr_character_move(destx,desty,_speed,checkradius)
 {
 	speed = 0;	// path movement handles this
+	if (!can_character_navigate()) {
+		// cannot navigate to our own position on the mp_grid, this means we are overlapping the grid
+		// jump to the last nearby position
+		if (point_distance(x, y, last_gridfree_x, last_gridfree_y) < 8) {
+			x = last_gridfree_x;
+			y = last_gridfree_y;
+		}
+	}
+	
+	
 	var dist = point_distance(x, y, destx, desty);
 	if (dist > _speed + checkradius && mp_grid_path(global.pathfinding_grid, walking_path, x, y, destx, desty, true))
 	{

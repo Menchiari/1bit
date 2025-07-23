@@ -141,6 +141,8 @@ function scr_init_character(){
 #region movement and combat variables
 	lastplacex=x;
 	lastplacey=y;
+	last_gridfree_x=x;
+	last_gridfree_y=y;
 	dest_x=x;
 	dest_y=y;
 	click_x=x;
