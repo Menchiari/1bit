@@ -2,6 +2,7 @@ function scr_sm_roll(){
 	scr_animation(jump_a,jump_b);
 	image_speed=.5*spd*defence_speed;
 	scr_footsteps(jump_b-5,jump_b-3,1.25);
+	scr_audio_roll(jump_b-3,1)
 	blocking=false;
 
 	

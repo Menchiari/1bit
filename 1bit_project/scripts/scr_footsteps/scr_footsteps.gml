@@ -2,7 +2,7 @@ function scr_footsteps(left_foot,right_foot,step_power)
 {
 //declare variables
 	footprint=true;
-	footstep_sound=choose(snd_footstep_walk_asf_1,snd_footstep_walk_asf_2,snd_footstep_walk_asf_3,snd_footstep_walk_asf_4,snd_footstep_walk_asf_5,snd_footstep_walk_asf_6,snd_footstep_walk_asf_7,snd_footstep_walk_asf_8,snd_footstep_walk_asf_9,snd_footstep_walk_asf_10,snd_footstep_walk_asf_11,snd_footstep_walk_asf_12,snd_footstep_walk_asf_13,snd_footstep_walk_asf_14,snd_footstep_walk_asf_15,snd_footstep_walk_asf_16,snd_footstep_walk_asf_17,snd_footstep_walk_asf_18,snd_footstep_walk_asf_19,snd_footstep_walk_asf_20);
+	var footstep_sound=choose(snd_footstep_walk_asf_1,snd_footstep_walk_asf_2,snd_footstep_walk_asf_3,snd_footstep_walk_asf_4,snd_footstep_walk_asf_5,snd_footstep_walk_asf_6,snd_footstep_walk_asf_7,snd_footstep_walk_asf_8,snd_footstep_walk_asf_9,snd_footstep_walk_asf_10,snd_footstep_walk_asf_11,snd_footstep_walk_asf_12,snd_footstep_walk_asf_13,snd_footstep_walk_asf_14,snd_footstep_walk_asf_15,snd_footstep_walk_asf_16,snd_footstep_walk_asf_17,snd_footstep_walk_asf_18,snd_footstep_walk_asf_19,snd_footstep_walk_asf_20);
 	if step_power>=1 footstep_sound=choose(snd_footstep_run_asf_1,snd_footstep_run_asf_2,snd_footstep_run_asf_3,snd_footstep_run_asf_4,snd_footstep_run_asf_5,snd_footstep_run_asf_6,snd_footstep_run_asf_7,snd_footstep_run_asf_8,snd_footstep_run_asf_9,snd_footstep_run_asf_10,snd_footstep_run_asf_11,snd_footstep_run_asf_12,snd_footstep_run_asf_13,snd_footstep_run_asf_14,snd_footstep_run_asf_15,snd_footstep_run_asf_16,snd_footstep_run_asf_17,snd_footstep_run_asf_18,snd_footstep_run_asf_19,snd_footstep_run_asf_20);
 	if step_power>=1.25 {step_power=1.25; footstep_sound=choose(snd_fall_asf_1,snd_fall_asf_2,snd_fall_asf_3,snd_fall_asf_4,snd_fall_asf_5,snd_fall_asf_6,snd_fall_asf_7);}
 	splash_size=step_power;
@@ -85,7 +85,7 @@ function scr_footsteps(left_foot,right_foot,step_power)
 		{
 			if point_distance(x,y,obj_hero.x,obj_hero.y)<100
 			{
-				audio_play_sound_at(footstep_sound,x,y,y,50,150,1,false,10,global.audio_footsteps+step_power/100,0,random_range(2,2.5));
+				audio_play_sound_at(footstep_sound,x,y,y,150,300,1,false,10,global.audio_footsteps+step_power/10,0,random_range(2,2.5));
 			}
 		}
 	}

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.005,
+  "duration":1.0,
   "name":"snd_fall_asf_1",
   "parent":{
     "name":"Asphalt",

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_wpn_yell_09",
+  "audioGroupId":{
+    "name":"ag_weapons",
+    "path":"audiogroups/ag_weapons",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":3.0145352,
+  "name":"snd_wpn_yell_09",
+  "parent":{
+    "name":"yell",
+    "path":"folders/Sounds/weapons/yell.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_wpn_yell_09.wav",
+  "type":0,
+  "volume":1.0,
+}

@@ -15,7 +15,9 @@ function scr_sm_hit(){
 		scr_animation(idle_hit_a,idle_hit_b);
 		image_speed=.25;
 		scr_footsteps(idle_hit_a,idle_hit_b,1.5);
-		scr_audio_hurt(idle_hit_a,1);
+		scr_audio_hurt(idle_hit_a+1,1);
+		scr_audio_armor_hit(idle_hit_a,.2);
+		scr_audio_critical(attack_fr,clamp(.5+(str/10),.5,1.5));
 	
 		if speed>1 {speed-=block_sp_decrease;}
 		if speed<1 {speed+=block_sp_decrease;}
@@ -28,7 +30,6 @@ function scr_sm_hit(){
 	}
 	else
 	{
-		scr_audio_death(idle_hit_a,1);
 		state=states.death;
 	}
 }

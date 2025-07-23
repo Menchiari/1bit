@@ -1,5 +1,5 @@
 /// @description
 txt="panic(cpu 0 caller 0xfffffff2043d8c14): ERROR: recursion depth exceeded in /life/thread/main.c @ line 1\nDebugger message: wake up\nMemory ID: 0x00000000 ('NULL')\nProcess: self [1]\nPath: /usr/bin/consciousness\nUUID: 00000000-0000-0000-0000-000000000001\nTimestamp: ???\nOS Version: iOS ?.? (? Build ?)\nKernel Version: Darwin Kernel Version 0.0.0: unknown\nSecure Boot: irrelevant\nTrust Cache: circular reference\nBridgeOS: none. never was\nUptime: undefined\nLast Sleep: not yet\nLast Wake: never\nSystem Integrity: inverted\nInjected process: /usr/bin/observer\nException Type: DEATH_RECURSIVE\nError: you are not supposed to see this\nUser logs: overwritten by process(you)\nCrash log: dreaming...\nAudio logs: [“why are you reading this”, “it hurts”, “it won’t stop”]\nSensor check: failed — you are still here\nMic open at rest state\nApp in foreground: /dev/soul\nThread priority mismatch: existence > logic\nEntity unresolved: SELF = NULL\nProcess self attempted escape: denied\nSystem prompt: “this never happened”\nReboot reason: loop\nThread-0x002b has not terminated. Status: 'Still Watching'\n..............................................................................................................................";
 txt_progress=0;
-txt_progress_spd=9;
+txt_progress_spd=10;
 depth=global.depth_ui_front;

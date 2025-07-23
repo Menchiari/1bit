@@ -153,8 +153,6 @@ function init_globals(){
 
 	global.slot=0;
 	global.chosen_room=rm_start;
-
-	if !audio_group_is_loaded(ag_character) {audio_group_load(ag_character);}
 	
 //random seed
 	ini_open("random.seed")
@@ -244,11 +242,17 @@ function init_globals(){
 	scr_loadgame();
 
 #endregion
-#region mixing
-	global.audio_footsteps=0.05;
-	global.audio_weapons=0.1;
-	global.audio_hits=0.1;
-	global.audio_voices=0.1;
+#region audio mixing
+	if !audio_group_is_loaded(ag_character) {audio_group_load(ag_character);}
+	//if !audio_group_is_loaded(ag_backgrounds) {audio_group_load(ag_backgrounds);}
+	//if !audio_group_is_loaded(ag_music) {audio_group_load(ag_music);}
+	if !audio_group_is_loaded(ag_weapons) {audio_group_load(ag_weapons);}
+	if !audio_group_is_loaded(ag_ui) {audio_group_load(ag_ui);}
+
+	global.audio_footsteps=0.1;
+	global.audio_weapons=0.16;
+	global.audio_hits=0.08;
+	global.audio_voices=0.18;
 	
 	global.audio_backgrounds=0.1;	
 	global.audio_backgrounds_loud=0.2;

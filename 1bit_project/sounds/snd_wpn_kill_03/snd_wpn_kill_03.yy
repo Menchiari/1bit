@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_wpn_kill_03",
+  "audioGroupId":{
+    "name":"ag_weapons",
+    "path":"audiogroups/ag_weapons",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.2234694,
+  "name":"snd_wpn_kill_03",
+  "parent":{
+    "name":"kill",
+    "path":"folders/Sounds/weapons/kill.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_wpn_kill_03.wav",
+  "type":0,
+  "volume":1.0,
+}

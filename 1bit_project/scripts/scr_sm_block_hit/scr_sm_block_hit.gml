@@ -4,7 +4,7 @@ function scr_sm_block_hit(){
 	scr_animation(block_hit_a,block_hit_b);
 	image_speed=.2;
 	scr_footsteps(block_hit_a,block_hit_b,1.5);
-	scr_audio_weapon_block(block_hit_a,1);
+	scr_audio_armor_hit(block_hit_a,1);
 	
 	if speed>1 {speed-=block_sp_decrease;}
 	if speed<-1 {speed+=block_sp_decrease;}

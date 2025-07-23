@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_wpn_arm_chainmail_3",
+  "audioGroupId":{
+    "name":"ag_weapons",
+    "path":"audiogroups/ag_weapons",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.6345805,
+  "name":"snd_wpn_arm_chainmail_3",
+  "parent":{
+    "name":"chainmail",
+    "path":"folders/Sounds/armor/chainmail.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_wpn_arm_chainmail_3.wav",
+  "type":0,
+  "volume":1.0,
+}

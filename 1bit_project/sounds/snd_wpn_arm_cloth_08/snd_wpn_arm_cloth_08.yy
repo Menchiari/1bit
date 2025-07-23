@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_wpn_arm_cloth_08",
+  "audioGroupId":{
+    "name":"ag_weapons",
+    "path":"audiogroups/ag_weapons",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.22235827,
+  "name":"snd_wpn_arm_cloth_08",
+  "parent":{
+    "name":"cloth",
+    "path":"folders/Sounds/armor/cloth.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_wpn_arm_cloth_08.wav",
+  "type":0,
+  "volume":1.0,
+}

@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_sm_death(){
+	scr_audio_death(image_index,1);
 	speed=0;
 	path_end();
 	
@@ -147,6 +148,7 @@ function scr_sm_death(){
 	if irandom_range(0,100)<=dialogue_death_chance
 	{
 		dialogue_death_instance=instance_create_depth(x,y-16,-y,obj_ui_number)
+		scr_audio_yell(image_index,1);
 		if dialogue_death==""
 		&& animal==false
 		{
