@@ -39,7 +39,7 @@ function scr_ai_main(){
 			#endregion
 			#region FOLLOW
 				case ai_states.follow:
-					var follow_distance=30;
+					var follow_distance=25;
 					if speech_verbose==true speech_text="following"
 					walk_sp_mod=1.1;
 					if point_distance(x,y,dest_x,dest_y)>80 {state=states.run}
@@ -50,7 +50,7 @@ function scr_ai_main(){
 					{
 						if point_distance(x,y,ai_follow_target.x,ai_follow_target.y)>follow_distance//ai_search_range /*&& !collision_line(x,y,ai_follow_target.x,ai_follow_target.y,obj_collider,true,true)*/
 						{
-							var _checkfrequency=5;
+							var _checkfrequency=10;
 							if irandom_range(0,100)<=_checkfrequency
 							{
 								dest_x=ai_follow_target.x+(choose(15,20,25,30,35,40)*choose(1,-1)*ai_follow_target.dir);
@@ -167,7 +167,7 @@ function scr_ai_main(){
 					{
 						state=states.idle;
 						var chance=random_range(0,100);
-						if chance<=ai_responsiveness {ai_state=ai_state_original;}
+						if chance<=ai_responsiveness*2 {ai_state=ai_state_original;}
 					}
 					scr_ai_target_check();
 					if instance_exists(ai_target)

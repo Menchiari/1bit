@@ -17,6 +17,9 @@ nearcam=false;
 xto=x;
 yto=y;
 
+last_cam_x=-1;
+last_cam_y=-1;
+
 cam_smooth=10;
 
 instance_create(obj_fx_vignette);

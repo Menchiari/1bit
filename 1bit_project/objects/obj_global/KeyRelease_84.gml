@@ -1,3 +1,4 @@
+/// @description CHANGE TIME SPEED
 //if keyboard_check(vk_alt) && debug=true
 if debug==true
 {

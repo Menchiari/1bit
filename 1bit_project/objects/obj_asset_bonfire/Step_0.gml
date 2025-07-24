@@ -11,7 +11,7 @@ switch(state)
 			ini_write_real("DEBUG","PLAYERSPAWN_X_"+string(room_get_name(room)),x+(choose(-10,-10)));
 			ini_write_real("DEBUG","PLAYERSPAWN_Y_"+string(room_get_name(room)),y);
 			ini_close();
-			scr_audio_play(snd_bonfire_lit,0.3,random_range(.9,1.1));
+			scr_audio_play(snd_bonfire_lit,0.5,random_range(.9,1.1));
 			repeat(4)
 			{
 				var wave=instance_create(obj_fx_dustwave);

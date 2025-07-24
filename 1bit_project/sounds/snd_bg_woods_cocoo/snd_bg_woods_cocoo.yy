@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_bg_woods_cocoo",
+  "audioGroupId":{
+    "name":"ag_backgrounds",
+    "path":"audiogroups/ag_backgrounds",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":32.09442,
+  "name":"snd_bg_woods_cocoo",
+  "parent":{
+    "name":"backgrounds",
+    "path":"folders/Sounds/backgrounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_bg_woods_cocoo.wav",
+  "type":0,
+  "volume":1.0,
+}

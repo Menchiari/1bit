@@ -1,11 +1,11 @@
 99,name,weapon_animset,price,weight,atk_dmg_light,atk_dmg_strong,atk_dmg_variation,atk_spd,bullets,description eng,strength,avg price,count,incomplete
-0,bare hands,weapons.null,0,0,0.5,1,0.5,1.1,0,no weapon,0.5~1.5,,11,
+0,bare hands,weapons.null,0,0,0.5,1,0.5,1.1,0,no weapon,0.5~1.5,,10,
 1,cigarette pack,weapons.hands,100,0.1,0.25,0.75,0.5,1.2,0,An old pack of cigarettes reeks of moist tobacco and oil,0.25~1.25,$13,3,
 2,leather strips,weapons.hands,5,0,0.5,1.25,0,1.1,0,sturdy leather strips can be wrapped around knuckles,0.5~1.25,$14,2,
 3,metal ring,weapons.hands,15,0,0.75,1.25,0.5,1,0,an old metal ring with sharp and pointy edges,0.75~1.75,$19,1,
 4,leather gloves,weapons.hands,20,0.1,0.75,1.25,0,1,0,an elegant type of leather gloves,0.75~1.25,$14,1,
-5,sharp keys,weapons.hands,20,0,0.5,1,1,1,0,these keys can be deadly if held tight in one's fist,0.5~2,$21,1,
-6,rusty chain,weapons.hands,8,0.25,1,2,1,0.7,0,a thick chain can be wrapped around one's hands,1~3,$31,3,
+5,sharp keys,weapons.dagger,20,0,0.5,1,1,1,0,these keys can be deadly if held tight in one's fist,0.5~2,$21,1,
+6,rusty chain,weapons.dagger,8,0.25,1,2,1,0.7,0,a thick chain can be wrapped around one's hands,1~3,$31,3,
 7,iron gloves,weapons.hands,25,5,1.5,2,1,0.8,0,a pair of heavy and uncomfortable iron gloves,1.5~3,$9,1,
 8,nail gloves,weapons.hands,50,2,0.5,1,2.5,1,0,these gloves have nails coming out of them,0.5~3.5,$26,1,
 9,brass knucles,weapons.hands,80,0,1.25,2,1,1,0,fancy brass knucles for deadly punches,1.25~3,$33,1,
@@ -23,13 +23,13 @@
 21,broken bottle,weapons.dagger,0,0.3,0.75,1.25,2,1.25,0,the broken side of the bottle is very sharp,0.75~3.25,$33,1,"""flintlock gun"""
 22,crafty shiv,weapons.dagger,10,0.25,0.5,1.5,1.5,1,0,a handmade knife made with bandages and glass,0.5~3,$30,1,
 23,rusty dagger,weapons.dagger,25,1,1,1.5,1.25,1,0,this dagger stains your hands with rust,1~2.75,$25,2,
-24,old knife,weapons.dagger,40,1,1,2,1.25,1,0,a smelly old knife with carvings on the side,1~3.25,$30,1,
+24,old knife,weapons.dagger,40,1,1,2,1.25,1,0,a smelly old knife with carvings on the side,1~3.25,$30,0,
 25,small bayonet,weapons.dagger,50,2,1,1.75,1,0.9,0,"this weapon is sharp, but pretty hard to grip",1~2.75,$20,1,
 26,golden dagger,weapons.dagger,500,10,1,2,1,0.8,0,what a fancy looking dagger!,1~3,-$18,1,
 27,sharp dagger,weapons.dagger,75,1,1.25,2,1.25,1,0,very crafty!,1.25~3.25,$31,2,
 28,perfect knife,weapons.dagger,100,0.5,1.5,2.5,1.5,1,0,"It's sharp, light, it has a perfect grip... it's just perfect",1.5~4,$41,2,
 29,metal scrap,weapons.sword,10,5,1,1.5,1,1,0,a sharp piece of rusty scrap metal,1~2.5,$3,0,
-30,broken sword,weapons.sword,40,5,1.25,2,1,1,0,"this sword is missing its upper half, but it's still sharp",1.25~3,$8,1,
+30,broken sword,weapons.sword,40,5,1.25,2,1,1,0,"this sword is missing its upper half, but it's still sharp",1.25~3,$8,2,
 31,guard's sword,weapons.sword,45,6,1.5,2.5,1,1,0,what an odd shape for a sword...,1.5~3.5,$9,1,
 32,rusty machete,weapons.sword,50,2.5,1.5,1.75,0.5,1.05,0,a filthy looking machete,1.5~2.25,$14,1,
 33,sharp machete,weapons.sword,80,2,1.5,2.25,0.5,1.05,0,a very sharp and clean machete,1.5~2.75,$21,1,
@@ -63,10 +63,10 @@
 61,fluorescent arrows,weapons.shotgun,200,0.5,1,3,2,1.25,1,Glowing arrows come out of this metal pipe,1~10,$50,1,"""luther"""
 62,machinegun,weapons.shotgun,250,10,2,3,1,1,3,this strange tool looks very powerful,2~16,-$5,3,"""shotgun"""
 63,magic wand,weapons.hands,50,0.5,-1,3,1,0.5,0,burns your hands and feels good to grab,-1~4,$35,1,
-64,rusty sword,weapons.sword,30,6,1.25,2.25,1.75,0.9,0,"this sword is old and ugly, but it gets the job done",1.25~4,$13,2,
+64,rusty sword,weapons.sword,30,6,1.25,2.25,1.75,0.9,0,"this sword is old and ugly, but it gets the job done",1.25~4,$13,3,
 65,my katana,weapons.katana,30,2,2,4,1,1,0,it's my katana sword,2~5,$45,0,
 66,my katana,weapons.katana,30,2,2,4,1,1.2,0,it's my katana sword!,2~5,$45,0,
-67,sharp tooth,weapons.hands,5,0.1,0.6,1.1,0.75,1.2,0,a bloody sharp tooth,0.6~1.85,$20,5,"""blaster"""
+67,sharp tooth,weapons.null,5,0.1,0.6,1.1,0.75,1.2,0,a bloody sharp tooth,0.6~1.85,$20,5,"""blaster"""
 68,,weapons.machinegun,,,,,,,,,~0,$0,0,"""coilgun"""
 69,,weapons.machinegun,,,,,,,,,~0,$0,0,"""arrow shooter"""
 70,,weapons.machinegun,,,,,,,,,~0,$0,0,"""crafted repeater"""

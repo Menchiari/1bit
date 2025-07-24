@@ -60,10 +60,19 @@ else
 /////////////////////////////////OPTIMIZATION/////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 // optimization
-if instance_exists(obj_character)
-{
-    // deactivate everything
-    instance_deactivate_object(obj_character);
-}
 // activate region around the camera
-instance_activate_region(x-global_res_x-(global_res_x/2),y-global_res_y-(global_res_y/2),x+global_res_x+(global_res_x/2),y+global_res_y+(global_res_y/2),true);
+var _vx = camera_get_view_x(view_camera[0]);
+var _vy = camera_get_view_y(view_camera[0]);
+
+if (_vx != last_cam_x || _vy != last_cam_y)
+{
+	if instance_exists(obj_character)
+	{
+	    // deactivate everything
+	    instance_deactivate_object(obj_character);
+	}
+	var _range_multiplier=2;
+	var _vw = camera_get_view_width(view_camera[0]);
+	var _vh = camera_get_view_height(view_camera[0]);
+	instance_activate_region(_vx - (_range_multiplier*global_res_x/2), _vy - (_range_multiplier*global_res_y/2), _vw + (_range_multiplier*global_res_x), _vh + (_range_multiplier*global_res_y), false);
+}

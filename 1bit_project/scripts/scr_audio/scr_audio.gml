@@ -3,7 +3,7 @@ function scr_audio_weapon_swing(_frame,_power){
 	if image_index==_frame
 	{
 		var _sound=snd_null;
-		var _mix=1;
+		var _mix=.75;
 		show_debug_message(string(weapon.weapon_animset)+" swing");
 		_sound = choose(snd_wpn_woosh_01, snd_wpn_woosh_02, snd_wpn_woosh_03, snd_wpn_woosh_04, snd_wpn_woosh_05, snd_wpn_woosh_06, snd_wpn_woosh_07, snd_wpn_woosh_08, snd_wpn_woosh_09);
 		switch weapon.weapon_animset
@@ -25,6 +25,7 @@ function scr_audio_weapon_swing(_frame,_power){
 			default:
 			break;
 		}
+		if object_index==obj_dog || object_index==obj_enemy_dog || object_index==obj_enemy_boar {_sound=snd_null;}
 		audio_play_sound_at(_sound,x,y,0,50,350,1,false,9,_power*global.audio_weapons*_mix,0,random_range(-.1,.1)+clamp(1/(weapon.weight/10),.4,1.8));
 	}
 }
@@ -66,6 +67,18 @@ function scr_audio_weapon_hit(_frame,_power){
 			case weapons_animset.null:
 			_sound = choose(snd_wpn_punch_01, snd_wpn_punch_02, snd_wpn_punch_03, snd_wpn_punch_04, snd_wpn_punch_05, snd_wpn_punch_06, snd_wpn_punch_07, snd_wpn_punch_08);
 			_mix=2;
+			if object_index==obj_dog || object_index==obj_enemy_dog{
+			_sound = choose(snd_wpn_dog_01, snd_wpn_dog_02, snd_wpn_dog_03, snd_wpn_dog_04, snd_wpn_dog_05, snd_wpn_dog_06, snd_wpn_dog_07, snd_wpn_dog_08, snd_wpn_dog_09, snd_wpn_dog_10);
+			_mix=1.3;
+			}
+			if object_index==obj_enemy_boar {
+			_sound = choose(snd_wpn_boar_1, snd_wpn_boar_2, snd_wpn_boar_3, snd_wpn_boar_4, snd_wpn_boar_5, snd_wpn_boar_6);
+			_mix=1.8;
+			}
+			if object_index==obj_enemy_zombie {
+			_sound = choose(snd_wpn_zombie_01, snd_wpn_zombie_02, snd_wpn_zombie_03, snd_wpn_zombie_04, snd_wpn_zombie_05, snd_wpn_zombie_06, snd_wpn_zombie_07, snd_wpn_zombie_08, snd_wpn_zombie_09, snd_wpn_zombie_10);
+			_mix=1.5;
+			}
 
 			break;
 			default:
@@ -103,7 +116,7 @@ function scr_audio_weapon_equip(_frame,_power){
 			default:
 			break;
 		}
-		audio_play_sound_at(_sound,x,y,0,200,350,1,false,9,_power*global.audio_hits*_mix,0,random_range(.8,1.2));
+		audio_play_sound_at(_sound,x,y,0,200,350,1,false,9,_power*global.audio_ui*_mix,0,random_range(.8,1.2));
 	}
 }
 
@@ -155,7 +168,7 @@ function scr_audio_armor_hit(_frame,_power){
 
 			break;
 			default:
-			_sound = snd_error;
+			_sound = snd_null;
 			
 			break;
 		}
@@ -191,6 +204,19 @@ function scr_audio_hurt(_frame,_power){
 	{
 		var _sound = choose(snd_wpn_hurt_01, snd_wpn_hurt_02, snd_wpn_hurt_03, snd_wpn_hurt_04, snd_wpn_hurt_05, snd_wpn_hurt_06, snd_wpn_hurt_07, snd_wpn_hurt_08, snd_wpn_hurt_09, snd_wpn_hurt_10, snd_wpn_hurt_11, snd_wpn_hurt_12, snd_wpn_hurt_13, snd_wpn_hurt_14, snd_wpn_hurt_15, snd_wpn_hurt_16, snd_wpn_hurt_17, snd_wpn_hurt_18);
 		var _mix=1;
+		if object_index==obj_dog {
+		_sound=snd_wpn_dog_hurt_1;
+		_mix=1.8;
+		}
+		if object_index==obj_enemy_boar {
+		_sound = choose(snd_wpn_boar_hurt_1, snd_wpn_boar_hurt_2, snd_wpn_boar_hurt_3, snd_wpn_boar_hurt_4, snd_wpn_boar_hurt_5, snd_wpn_boar_hurt_6, snd_wpn_boar_hurt_7);
+		_mix=1.7;
+		}
+		if object_index==obj_enemy_zombie{
+		_sound = choose(snd_wpn_zombie_01, snd_wpn_zombie_02, snd_wpn_zombie_03, snd_wpn_zombie_04, snd_wpn_zombie_05, snd_wpn_zombie_06, snd_wpn_zombie_07, snd_wpn_zombie_08, snd_wpn_zombie_09, snd_wpn_zombie_10);
+		_mix=1.5;
+		}
+
 		show_debug_message(string(self.name)+" hurt");
 		audio_play_sound_at(_sound,x,y,0,100,350,1,false,9,_power*global.audio_voices*_mix,0,random_range(.8,1.2));
 	}
@@ -220,5 +246,5 @@ function scr_audio_roll(_frame,_power){
 
 // ANY SOUND
 function scr_audio_play(_sound=snd_null,_volume=0.2,_pitch=1,_loop=false,_radius=60,_range=250){
-	audio_play_sound_at(_sound,x,y,0,_radius,_range,1,_loop,10,_volume,0,_pitch);
+	return audio_play_sound_at(_sound,x,y,0,_radius,_range,1,_loop,10,_volume,0,_pitch);
 }

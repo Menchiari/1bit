@@ -249,15 +249,21 @@ function init_globals(){
 	if !audio_group_is_loaded(ag_assets) {audio_group_load(ag_assets);}
 	if !audio_group_is_loaded(ag_weapons) {audio_group_load(ag_weapons);}
 	if !audio_group_is_loaded(ag_ui) {audio_group_load(ag_ui);}
+	
+	global.audio=2;
 
-	global.audio_footsteps=0.06;
-	global.audio_weapons=0.2;
-	global.audio_hits=0.1;
-	global.audio_voices=0.1;
+	global.audio_footsteps=		global.audio*0.06;
+	global.audio_weapons=		global.audio*0.23;
+	global.audio_hits=			global.audio*0.15;
+	global.audio_voices=		global.audio*0.12;
+	global.audio_death=			global.audio*0.1;
+	global.audio_deathxp=		global.audio*0.3;
+	global.audio_ui=			global.audio*0.5;
 	
-	global.audio_backgrounds=0.2;
+	global.audio_backgrounds=	global.audio*1;
+	global.audio_bonfire=		global.audio*.3;
 	
-	audio_falloff_set_model(audio_falloff_linear_distance);
+	audio_falloff_set_model(audio_falloff_linear_distance_clamped);
 	
 #endregion
 }

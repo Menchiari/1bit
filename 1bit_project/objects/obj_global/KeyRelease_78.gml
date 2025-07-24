@@ -1,3 +1,4 @@
+/// @description Next room?
 if keyboard_check(vk_alt) && debug=true
 {
 	if room==room_last room_goto(0);

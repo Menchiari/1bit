@@ -9,6 +9,8 @@ if mouse_check_button_released(mb_any)
 	nextclick=false;
 	if point_in_rectangle(mouse_x,mouse_y,x,y,x+sprite_width/3.5,y+sprite_height)
 	{
+		scr_audio_play(snd_click,global.audio_ui*.5,1);
+
 		wpn_button_select-=1;
 		if wpn_button_select==-1 {wpn_button_select=ds_list_size(global.unlock_wpn)-1;} //{wpn_button_select=global.unlock_wpn-1;}
 		arm_button_select-=1;
@@ -18,6 +20,8 @@ if mouse_check_button_released(mb_any)
 	}
 	if point_in_rectangle(mouse_x,mouse_y,x+sprite_width/3.5,y,x+sprite_width,y+sprite_height) 
 	{
+		scr_audio_play(snd_click,global.audio_ui*.5,1.1);
+		
 		wpn_button_select+=1;
 		if wpn_button_select == ds_list_size(global.unlock_wpn) {wpn_button_select = 0;}
 		

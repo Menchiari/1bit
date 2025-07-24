@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_wpn_zombie_10",
+  "audioGroupId":{
+    "name":"ag_weapons",
+    "path":"audiogroups/ag_weapons",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.0121542,
+  "name":"snd_wpn_zombie_10",
+  "parent":{
+    "name":"zombie",
+    "path":"folders/Sounds/weapons/zombie.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_wpn_zombie_10.wav",
+  "type":0,
+  "volume":1.0,
+}

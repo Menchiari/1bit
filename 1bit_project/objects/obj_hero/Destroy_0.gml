@@ -10,5 +10,5 @@ global.followers = [];
 
 object_set_persistent(object_index,false);
 
-scr_audio_play(snd_death1,.2);
-scr_audio_play(snd_death2,.2);
+scr_audio_play(snd_death1,1*global.audio_death);
+scr_audio_play(snd_death2,1.3*global.audio_death);
