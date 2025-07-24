@@ -6,7 +6,10 @@
   ],
   "managed":true,
   "name":"obj_audio_faces",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_audio_bg","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"propertyId":{"name":"radius_var","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"500",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_audio_bg","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"propertyId":{"name":"range_var","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"800",},
+  ],
   "parent":{
     "name":"Audio",
     "path":"folders/Objects/Audio.yy",

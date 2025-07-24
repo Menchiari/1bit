@@ -16,6 +16,7 @@
     {"name":"i_boatcollider","path":"rooms/rm_boat/rm_boat.yy",},
     {"name":"inst_7EBFF69E","path":"rooms/rm_boat/rm_boat.yy",},
     {"name":"inst_40033DC6","path":"rooms/rm_boat/rm_boat.yy",},
+    {"name":"inst_5876229B","path":"rooms/rm_boat/rm_boat.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -37,6 +38,12 @@
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_96C86C1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_96C86C1","objectId":{"name":"obj_player_spawn","path":"objects/obj_player_spawn/obj_player_spawn.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":95.0,"y":311.0,},
         {"$GMRInstance":"v2","%Name":"inst_4D3C305F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4D3C305F","objectId":{"name":"obj_asset_boat","path":"objects/obj_asset_boat/obj_asset_boat.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.8125,"scaleY":0.75,"x":90.0,"y":257.0,},
+        {"$GMRInstance":"v2","%Name":"inst_5876229B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5876229B","objectId":{"name":"obj_audio_bg","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_audio_bg","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"propertyId":{"name":"sound_var","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"snd_bg_beach_final",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_audio_bg","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"propertyId":{"name":"volume_var","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":".25",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_audio_bg","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"propertyId":{"name":"radius_var","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"200",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_audio_bg","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"propertyId":{"name":"range_var","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"500",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":96.0,"y":224.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":true,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":1000,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"spr_env_boat","path":"sprites/spr_env_boat/spr_env_boat.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":true,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],

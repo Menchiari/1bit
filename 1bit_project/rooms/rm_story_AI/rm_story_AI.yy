@@ -20,6 +20,7 @@
     {"name":"inst_32E9CDBB","path":"rooms/rm_story_AI/rm_story_AI.yy",},
     {"name":"inst_71DE1002","path":"rooms/rm_story_AI/rm_story_AI.yy",},
     {"name":"inst_771F26C3","path":"rooms/rm_story_AI/rm_story_AI.yy",},
+    {"name":"inst_21BFCCA1","path":"rooms/rm_story_AI/rm_story_AI.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -94,6 +95,12 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ui_herotext","path":"objects/obj_ui_herotext/obj_ui_herotext.yy",},"propertyId":{"name":"dialogue","path":"objects/obj_ui_herotext/obj_ui_herotext.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"what is\\nthis place?",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ui_herotext","path":"objects/obj_ui_herotext/obj_ui_herotext.yy",},"propertyId":{"name":"time_in_sec","path":"objects/obj_ui_herotext/obj_ui_herotext.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":265.0,"y":514.0,},
+        {"$GMRInstance":"v2","%Name":"inst_21BFCCA1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_21BFCCA1","objectId":{"name":"obj_audio_bg","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_audio_bg","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"propertyId":{"name":"sound_var","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"snd_music_drone_deep",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_audio_bg","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"propertyId":{"name":"volume_var","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_audio_bg","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"propertyId":{"name":"radius_var","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"100",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_audio_bg","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"propertyId":{"name":"range_var","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"720",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":272.0,"y":120.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":true,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_1","depth":2800,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":100,"SerialiseWidth":67,"TileCompressedData":[
           -2712,-2147483648,-4,3214,-63,-2147483648,-4,3214,-63,-2147483648,-4,3214,-63,-2147483648,-4,3214,-63,

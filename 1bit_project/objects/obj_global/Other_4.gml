@@ -12,7 +12,7 @@ else
 
 init_pathfinding_grid();
 
-instance_create(obj_audio_control);
+if !instance_exists(obj_audio_control) {instance_create(obj_audio_control);}
 
 if room==rm_world
 {

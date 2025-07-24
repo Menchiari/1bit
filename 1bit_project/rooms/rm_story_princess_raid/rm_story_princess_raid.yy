@@ -33,6 +33,7 @@
     {"name":"inst_199956F1","path":"rooms/rm_story_princess_raid/rm_story_princess_raid.yy",},
     {"name":"inst_229A540","path":"rooms/rm_story_princess_raid/rm_story_princess_raid.yy",},
     {"name":"inst_392A7B53","path":"rooms/rm_story_princess_raid/rm_story_princess_raid.yy",},
+    {"name":"inst_3D7603DE","path":"rooms/rm_story_princess_raid/rm_story_princess_raid.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -152,6 +153,11 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ui_shop_rpg","path":"objects/obj_ui_shop_rpg/obj_ui_shop_rpg.yy",},"propertyId":{"name":"selected_helm","path":"objects/obj_ui_shop_rpg/obj_ui_shop_rpg.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_ui_shop_rpg","path":"objects/obj_ui_shop_rpg/obj_ui_shop_rpg.yy",},"propertyId":{"name":"radiusvar","path":"objects/obj_ui_shop_rpg/obj_ui_shop_rpg.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"30",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":328.0,"y":168.0,},
+        {"$GMRInstance":"v2","%Name":"inst_3D7603DE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3D7603DE","objectId":{"name":"obj_audio_bg","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_audio_bg","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"propertyId":{"name":"sound_var","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"snd_bonfire",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_audio_bg","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"propertyId":{"name":"radius_var","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"150",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_audio_bg","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"propertyId":{"name":"range_var","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"500",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":272.0,"y":104.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":true,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_1","depth":2800,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":80,"SerialiseWidth":67,"TileCompressedData":[
           -1379,-2147483648,1,1414,-188,-2147483648,1,0,-12,-2147483648,1,4148,-321,-2147483648,1,0,-12,-2147483648,

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_bg_wind_interior_calm",
+  "audioGroupId":{
+    "name":"ag_backgrounds",
+    "path":"audiogroups/ag_backgrounds",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":64.79102,
+  "name":"snd_bg_wind_interior_calm",
+  "parent":{
+    "name":"backgrounds",
+    "path":"folders/Sounds/backgrounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_bg_wind_interior_calm.wav",
+  "type":0,
+  "volume":1.0,
+}
