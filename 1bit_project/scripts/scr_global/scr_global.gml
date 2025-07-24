@@ -245,7 +245,7 @@ function init_globals(){
 #region audio mixing
 	if !audio_group_is_loaded(ag_character) {audio_group_load(ag_character);}
 	if !audio_group_is_loaded(ag_backgrounds) {audio_group_load(ag_backgrounds);}
-	//if !audio_group_is_loaded(ag_music) {audio_group_load(ag_music);}
+	if !audio_group_is_loaded(ag_music) {audio_group_load(ag_music);}
 	if !audio_group_is_loaded(ag_assets) {audio_group_load(ag_assets);}
 	if !audio_group_is_loaded(ag_weapons) {audio_group_load(ag_weapons);}
 	if !audio_group_is_loaded(ag_ui) {audio_group_load(ag_ui);}
@@ -259,10 +259,12 @@ function init_globals(){
 	global.audio_death=			global.audio*0.1;
 	global.audio_deathxp=		global.audio*0.3;
 	global.audio_ui=			global.audio*0.5;
-	
-	global.audio_backgrounds=	global.audio*1;
 	global.audio_bonfire=		global.audio*.3;
 	
+	global.audio_backgrounds=	global.audio*1;
+
+	global.audio_faces=			global.audio*1;
+		
 	audio_falloff_set_model(audio_falloff_linear_distance_clamped);
 	
 #endregion

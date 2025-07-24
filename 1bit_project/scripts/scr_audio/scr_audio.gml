@@ -73,7 +73,7 @@ function scr_audio_weapon_hit(_frame,_power){
 			}
 			if object_index==obj_enemy_boar {
 			_sound = choose(snd_wpn_boar_1, snd_wpn_boar_2, snd_wpn_boar_3, snd_wpn_boar_4, snd_wpn_boar_5, snd_wpn_boar_6);
-			_mix=1.8;
+			_mix=1.6;
 			}
 			if object_index==obj_enemy_zombie {
 			_sound = choose(snd_wpn_zombie_01, snd_wpn_zombie_02, snd_wpn_zombie_03, snd_wpn_zombie_04, snd_wpn_zombie_05, snd_wpn_zombie_06, snd_wpn_zombie_07, snd_wpn_zombie_08, snd_wpn_zombie_09, snd_wpn_zombie_10);

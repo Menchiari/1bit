@@ -1,4 +1,4 @@
-/// @description PUNISH ENEMIES BY DESTROYING THEM
+/// @description PUNISH WITH AKIRA
 if instance_exists(obj_hero)
 {
 	var enemy=collision_circle(obj_hero.x,obj_hero.y,500,obj_enemy,1,1)
