@@ -94,10 +94,17 @@ function scr_collisions(){
 		//until !collision_point(dest_x,dest_y,obj_collider,true,true);
 	}
 	
-	if ((xprevious != x || yprevious!= y) && can_character_navigate()) {
+	if ((x_laststep != x || y_laststep!= y) && can_character_navigate()) {
 		last_gridfree_x = x;
 		last_gridfree_y = y;
 	}
+	
+	if (abs(speed) < 0.001) {
+		speed = 0;
+	}
+	
+	x_laststep = x;
+	y_laststep = y;
 }
 
 
