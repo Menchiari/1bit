@@ -57,7 +57,7 @@ function scr_ui_characters()
 		case 4:
 			character_face=spr_avatar_skull;
 			character_name="boo";
-			character_description="from above";
+			character_description="from below";
 			character_head_var=spr_head_skull;
 			character_body_var=spr_body_skeleton;
 			global.player_str_mod=1.2;
@@ -70,7 +70,7 @@ function scr_ui_characters()
 		case 5:
 			character_face=spr_avatar_zombie;
 			character_name="rot";
-			character_description="from below";
+			character_description="from above";
 			character_head_var=spr_head_infected;
 			character_body_var=spr_body_infected;
 			global.player_str_mod=1;
