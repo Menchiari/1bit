@@ -277,6 +277,7 @@
     {"id":{"name":"obj_fx_splash","path":"objects/obj_fx_splash/obj_fx_splash.yy",},},
     {"id":{"name":"obj_fx_vignette","path":"objects/obj_fx_vignette/obj_fx_vignette.yy",},},
     {"id":{"name":"obj_gameover","path":"objects/obj_gameover/obj_gameover.yy",},},
+    {"id":{"name":"obj_glitch_doomtext","path":"objects/obj_glitch_doomtext/obj_glitch_doomtext.yy",},},
     {"id":{"name":"obj_glitch","path":"objects/obj_glitch/obj_glitch.yy",},},
     {"id":{"name":"obj_global","path":"objects/obj_global/obj_global.yy",},},
     {"id":{"name":"obj_hero","path":"objects/obj_hero/obj_hero.yy",},},
@@ -408,6 +409,7 @@
     {"id":{"name":"rm_dng7","path":"rooms/rm_dng7/rm_dng7.yy",},},
     {"id":{"name":"rm_dng8","path":"rooms/rm_dng8/rm_dng8.yy",},},
     {"id":{"name":"rm_dng9","path":"rooms/rm_dng9/rm_dng9.yy",},},
+    {"id":{"name":"rm_doomtext","path":"rooms/rm_doomtext/rm_doomtext.yy",},},
     {"id":{"name":"rm_dungeon_fall","path":"rooms/rm_dungeon_fall/rm_dungeon_fall.yy",},},
     {"id":{"name":"rm_dungeon_skeletons","path":"rooms/rm_dungeon_skeletons/rm_dungeon_skeletons.yy",},},
     {"id":{"name":"rm_dungeon","path":"rooms/rm_dungeon/rm_dungeon.yy",},},
@@ -1343,6 +1345,7 @@
     {"roomId":{"name":"rm_story_princess_raid","path":"rooms/rm_story_princess_raid/rm_story_princess_raid.yy",},},
     {"roomId":{"name":"rm_glitch","path":"rooms/rm_glitch/rm_glitch.yy",},},
     {"roomId":{"name":"rm_story_office","path":"rooms/rm_story_office/rm_story_office.yy",},},
+    {"roomId":{"name":"rm_doomtext","path":"rooms/rm_doomtext/rm_doomtext.yy",},},
   ],
   "templateType":null,
   "TextureGroups":[

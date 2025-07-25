@@ -3,7 +3,7 @@ var spawned_npc=spawn_npc_test(x,y,character_type,global.NPCs);
 spawned_npc.drop_rate=drop_rate_override //spawned_npc.drop_rate*drop_rate_multiplier;
 spawned_npc.hp_max=spawned_npc.hp_max*alive
 spawned_npc.dialogue_death=dialogue_death_var;
-if dialogue_death_var!="" {dialogue_death_chance=100;}
+if dialogue_death_var!="" {spawned_npc.dialogue_death_chance=100;}
 
 if override_ai==true
 {

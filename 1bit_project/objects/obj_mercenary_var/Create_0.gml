@@ -14,6 +14,7 @@ hp_max=hp_var;
 hp=hp_max;
 str=str_var;
 res=res_var;
+spd=spd_var;
 //AI
 if override_ai==true
 {

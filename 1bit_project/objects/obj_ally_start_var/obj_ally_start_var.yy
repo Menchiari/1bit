@@ -44,8 +44,11 @@
     {"$GMObjectProperty":"v1","%Name":"var_idle_speed","filters":[],"listItems":[],"multiselect":false,"name":"var_idle_speed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.01","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"var_character_head","filters":[],"listItems":[
         "spr_head",
+        "spr_head_female",
         "spr_head_female1",
+        "spr_head_female2",
         "spr_head_beard",
+        "spr_head_beard1",
         "spr_head_infected",
         "spr_head_skull",
         "spr_head",

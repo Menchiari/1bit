@@ -3,3 +3,4 @@ txt="panic(cpu 0 caller 0xfffffff2043d8c14): ERROR: recursion depth exceeded in 
 txt_progress=0;
 txt_progress_spd=10;
 depth=global.depth_ui_front;
+once=true;
