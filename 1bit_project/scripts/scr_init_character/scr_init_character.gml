@@ -143,6 +143,8 @@ function scr_init_character(){
 	lastplacey=y;
 	last_gridfree_x=x;
 	last_gridfree_y=y;
+	x_laststep=x;
+	y_laststep=y;
 	dest_x=x;
 	dest_y=y;
 	click_x=x;
