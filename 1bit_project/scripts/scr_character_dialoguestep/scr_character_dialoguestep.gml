@@ -6,7 +6,7 @@ function scr_character_dialoguestep(){
 	{
 		if mouse_check_button_released(mb_any)
 		{
-			if collision_circle(mouse_x,mouse_y,10,self,true,false) && speech_visible==true
+			if collision_circle(mouse_x,mouse_y,15,self,true,false) && speech_visible==true
 			{
 				if sentence <= max_sentences-1 {sentence+=1;}
 				else {sentence=0}
