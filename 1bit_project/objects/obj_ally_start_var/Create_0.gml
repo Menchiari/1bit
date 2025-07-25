@@ -18,5 +18,6 @@ idle_speed=var_idle_speed;
 
 speech_text_enemy=sp_enemy;
 speech_without_enemies=enemiesspeech;
+max_sentences=max_sentences_var
 
 if flipped {dir=-dir;}

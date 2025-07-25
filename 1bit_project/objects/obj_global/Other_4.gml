@@ -21,54 +21,55 @@ if room==rm_world
 	if global.story_progress==1
 	{
 		//layer_destroy("onlystory1");
-		layer_destroy("onlystory2and3");
-		layer_destroy("onlystory3");
-		layer_destroy("onlystory4");
-		layer_destroy("onlystory5");
+		layer_destroy_instances("onlystory2and3");
+		layer_destroy_instances("onlystory3");
+		layer_destroy_instances("onlystory4");
+		layer_destroy_instances("onlystory5");
 	}
 	
 	//after you saw the boat
 	if global.story_progress==2
 	{
-		layer_destroy("onlystory1");
-		//layer_destroy("onlystory2and3");
-		layer_destroy("onlystory3");
-		layer_destroy("onlystory4");
-		layer_destroy("onlystory5");
+		layer_destroy_instances("onlystory1");
+		//layer_destroy_instances("onlystory2and3");
+		layer_destroy_instances("onlystory3");
+		layer_destroy_instances("onlystory4");
+		layer_destroy_instances("onlystory5");
 	}
 	
 	//when you saw the boss
 	if global.story_progress==3
 	{
-		layer_destroy("onlystory1");
-		//layer_destroy("onlystory2and3");
-		//layer_destroy("onlystory3");
-		layer_destroy("onlystory4");
-		layer_destroy("onlystory5");
+		layer_destroy_instances("onlystory1");
+		//layer_destroy_instances("onlystory2and3");
+		//layer_destroy_instances("onlystory3");
+		layer_destroy_instances("onlystory4");
+		layer_destroy_instances("onlystory5");
 	}
 	
 	//beginning of the game
 	if global.story_progress==4
 	{
-		layer_destroy("onlystory1");
-		layer_destroy("onlystory2and3");
-		layer_destroy("onlystory3");
-		//layer_destroy("onlystory4");
-		layer_destroy("onlystory5");
-		layer_destroy("char_other");
-		layer_destroy("char_spawn");
+		layer_destroy_instances("onlystory1");
+		layer_destroy_instances("onlystory2and3");
+		layer_destroy_instances("onlystory3");
+		//layer_destroy_instances("onlystory4");
+		layer_destroy_instances("onlystory5");
+		layer_destroy_instances("char_other");
+		layer_destroy_instances("char_spawn");
 	}
 	
 	//beginning of the game
 	if global.story_progress==5
 	{
-		layer_destroy("onlystory1");
-		//layer_destroy("onlystory2and3");
-		//layer_destroy("onlystory3");
-		layer_destroy("onlystory4");
-		//layer_destroy("onlystory5");
-		//layer_destroy("char_other");
-		//layer_destroy("char_spawn");
+		layer_destroy_instances("onlystory1");
+		//layer_destroy_instances("onlystory2and3");
+		//layer_destroy_instances("onlystory3");
+		layer_destroy_instances("onlystory4");
+		//layer_destroy_instances("onlystory5");
+		
+		//layer_destroy_instances("char_other");
+		//layer_destroy_instances("char_spawn");
 	}
 	
 	////beginning of the game

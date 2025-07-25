@@ -1,1 +1,1 @@
-if global.story_progress!=3 instance_destroy();
+if global.boss_boat==false instance_destroy();

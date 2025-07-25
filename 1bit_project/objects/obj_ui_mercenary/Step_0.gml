@@ -1,9 +1,9 @@
-depth=-y-1000;
+depth=-y-3000;
 
 if instance_exists(mercenary)
 {
 	x=mercenary.x;
-	y=mercenary.y;
+	y=mercenary.y-6;
 	x0=x-xoff+21;
 	x1=x-xoff+50;
 	x2=x-xoff+78;

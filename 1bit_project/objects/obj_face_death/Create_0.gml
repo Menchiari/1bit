@@ -3,5 +3,4 @@
 // Inherit the parent event
 event_inherited();
 
-txt_speed=.8//game_get_speed(gamespeed_fps)/20;
-color=c_white;
+txt_progress_spd=0.6;

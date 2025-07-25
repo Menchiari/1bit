@@ -218,6 +218,8 @@ function init_globals(){
 	global.story_progress=0;
 	global.face_progress=0;
 	global.face_progress_death=0;
+	global.boss_progress=0;
+	global.boss_boat=false;
 	global.princess=true;
 	global.followers=[];
 	

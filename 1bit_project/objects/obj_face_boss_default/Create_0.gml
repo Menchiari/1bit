@@ -4,3 +4,4 @@
 event_inherited();
 
 txt_speed=game_get_speed(gamespeed_fps)/18;
+boss_progress=global.boss_progress;

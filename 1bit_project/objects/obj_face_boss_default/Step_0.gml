@@ -62,6 +62,7 @@ case 0:
 			instance_create(obj_fx_fadeout);//creates a fade out
 			alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
 			global.story_progress=3;
+			global.boss_progress+=1;
 			//global.face_progress=0;
 			scr_savegame();
 			next_room=rm_boss;//pick the room you want
@@ -107,6 +108,7 @@ case 1:
 		break;
 		case 6://last phase, for some reason it can't be default, must be there to end the scene
 			instance_create(obj_fx_fadeout);//creates a fade out
+			global.boss_progress+=1;
 			alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
 			scr_savegame();
 			next_room=rm_boss;//pick the room you want
@@ -160,6 +162,7 @@ case 2:
 		break;
 		case 7://last phase, for some reason it can't be default, must be there to end the scene
 			instance_create(obj_fx_fadeout);//creates a fade out
+			global.boss_progress+=1;
 			alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
 			scr_savegame();
 			next_room=rm_boss;//pick the room you want
@@ -226,6 +229,8 @@ case 3:
 		break;
 		case 9://last phase, for some reason it can't be default, must be there to end the scene
 			instance_create(obj_fx_fadeout);//creates a fade out
+			global.boss_progress+=1;
+			global.boss_boat=true;
 			alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
 			scr_savegame();
 			next_room=rm_boss;//pick the room you want
@@ -272,6 +277,7 @@ case 4:
 		break;
 		case 6://last phase, for some reason it can't be default, must be there to end the scene
 			instance_create(obj_fx_fadeout);//creates a fade out
+			global.boss_progress+=1;
 			alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
 			scr_savegame();
 			next_room=rm_boss;//pick the room you want
@@ -318,6 +324,7 @@ case 5:
 		break;
 		case 6://last phase, for some reason it can't be default, must be there to end the scene
 			instance_create(obj_fx_fadeout);//creates a fade out
+			global.boss_progress+=1;
 			alarm[0]=game_get_speed(gamespeed_fps)*2//time that it takes to move to the next room
 			scr_savegame();
 			next_room=rm_boss;//pick the room you want
