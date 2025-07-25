@@ -7,7 +7,7 @@ event_inherited();
 //image_xscale=choose(1,-1);
 //image_angle=random_range(-5,5);
 
-hp_max=1;
+hp_max=.75;
 hp=hp_max;
 
 //power of screenshake and object shake

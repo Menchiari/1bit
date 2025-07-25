@@ -216,9 +216,13 @@ function scr_audio_hurt(_frame,_power){
 		_sound = choose(snd_wpn_zombie_01, snd_wpn_zombie_02, snd_wpn_zombie_03, snd_wpn_zombie_04, snd_wpn_zombie_05, snd_wpn_zombie_06, snd_wpn_zombie_07, snd_wpn_zombie_08, snd_wpn_zombie_09, snd_wpn_zombie_10);
 		_mix=1.5;
 		}
+		
+		var _sound2 = choose(snd_wpn_hit_1,snd_wpn_hit_2,snd_wpn_hit_3,snd_wpn_hit_4,snd_wpn_hit_5);
+		var _mix2 = 1;
 
 		show_debug_message(string(self.name)+" hurt");
 		audio_play_sound_at(_sound,x,y,0,30,350,1,false,9,_power*global.audio_voices*_mix,0,random_range(.8,1.2));
+		audio_play_sound_at(_sound2,x,y,0,30,200,1,false,9,_power*global.audio_hits*_mix2,0,1.5-(res/10));
 	}
 }
 

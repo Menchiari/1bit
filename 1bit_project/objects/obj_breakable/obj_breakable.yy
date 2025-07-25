@@ -31,7 +31,16 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"material","filters":[],"listItems":[
+        "\"generic\"",
+        "\"ceramic\"",
+        "\"stone\"",
+        "\"wood\"",
+        "\"bush\"",
+        "\"random\"",
+      ],"multiselect":false,"name":"material","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"generic\"","varType":6,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":true,

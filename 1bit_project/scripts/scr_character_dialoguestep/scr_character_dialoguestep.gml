@@ -1,12 +1,14 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_character_dialoguestep(){
-	if collision_circle(x,y,speech_distance_enemy,obj_enemy,false,true) && speech_without_enemies==true {speech_text=speech_text_enemy}
+	var _range=16;
+	var _yoffset=-8;
+	if collision_circle(x,y+_yoffset,speech_distance_enemy,obj_enemy,false,true) && speech_without_enemies==true {speech_text=speech_text_enemy}
 	else
 	{
 		if mouse_check_button_released(mb_any)
 		{
-			if collision_circle(mouse_x,mouse_y,15,self,true,false) && speech_visible==true
+			if collision_circle(mouse_x,mouse_y,_range,self,true,false) && speech_visible==true
 			{
 				if sentence <= max_sentences-1 {sentence+=1;}
 				else {sentence=0}

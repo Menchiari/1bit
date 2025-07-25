@@ -262,6 +262,7 @@ function init_globals(){
 	global.audio_deathxp=		global.audio*0.32;
 	global.audio_ui=			global.audio*0.4;
 	global.audio_bonfire=		global.audio*0.25;
+	global.audio_breakable=		global.audio*0.2;
 	
 	global.audio_backgrounds=	global.audio*1.1;
 

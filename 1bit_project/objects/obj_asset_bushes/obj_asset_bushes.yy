@@ -6,7 +6,9 @@
   ],
   "managed":true,
   "name":"obj_asset_bushes",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_breakable","path":"objects/obj_breakable/obj_breakable.yy",},"propertyId":{"name":"material","path":"objects/obj_breakable/obj_breakable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"bush\"",},
+  ],
   "parent":{
     "name":"assets",
     "path":"folders/Objects/assets.yy",

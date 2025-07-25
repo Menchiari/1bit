@@ -27,3 +27,11 @@ debris_max=10;
 invincible=false;
 
 debris_type=obj_fx_debris;
+
+global_mix=global.audio_breakable;
+
+//material="generic";
+if material=="random"
+{
+	material=choose("generic","ceramic","stone","wood")
+}

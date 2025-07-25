@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_breakable_ceramic_2",
+  "audioGroupId":{
+    "name":"ag_weapons",
+    "path":"audiogroups/ag_weapons",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.5043538,
+  "name":"snd_breakable_ceramic_2",
+  "parent":{
+    "name":"ceramic",
+    "path":"folders/Sounds/breakable/ceramic.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_breakable_ceramic_2.wav",
+  "type":0,
+  "volume":1.0,
+}

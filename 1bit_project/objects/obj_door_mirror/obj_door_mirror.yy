@@ -7,7 +7,9 @@
   ],
   "managed":true,
   "name":"obj_door_mirror",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_breakable","path":"objects/obj_breakable/obj_breakable.yy",},"propertyId":{"name":"material","path":"objects/obj_breakable/obj_breakable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"ceramic\"",},
+  ],
   "parent":{
     "name":"breakable",
     "path":"folders/Objects/breakable.yy",
