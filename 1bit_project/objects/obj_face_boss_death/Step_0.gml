@@ -52,7 +52,6 @@ case 0:
 			global.story_progress=4;
 			global.face_progress=0;
 			scr_savegame();
-			next_room=rm_doomtext;
 			alarm[0]=1;
 			//game_restart();
 			//game_end();
