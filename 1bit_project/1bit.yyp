@@ -494,6 +494,7 @@
     {"id":{"name":"scr_character_dialoguestep","path":"scripts/scr_character_dialoguestep/scr_character_dialoguestep.yy",},},
     {"id":{"name":"scr_character_scripts","path":"scripts/scr_character_scripts/scr_character_scripts.yy",},},
     {"id":{"name":"scr_collisions","path":"scripts/scr_collisions/scr_collisions.yy",},},
+    {"id":{"name":"scr_controls_main","path":"scripts/scr_controls_main/scr_controls_main.yy",},},
     {"id":{"name":"scr_controls","path":"scripts/scr_controls/scr_controls.yy",},},
     {"id":{"name":"scr_faction_check","path":"scripts/scr_faction_check/scr_faction_check.yy",},},
     {"id":{"name":"scr_footsteps","path":"scripts/scr_footsteps/scr_footsteps.yy",},},
