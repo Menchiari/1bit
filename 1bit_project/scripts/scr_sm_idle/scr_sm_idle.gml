@@ -30,6 +30,10 @@ function scr_sm_idle(){
 			state=states.sit;
 			idle_timer=idle_timer_setup;
 		}
+		
+		//Gamepad test
+		scr_gamepad_move(20);
+
 	}
 	
 	if control==controls.ai

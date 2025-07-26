@@ -24,5 +24,13 @@ function scr_sm_spawn(){
 		{
 			trigger_spawn=true;
 		}
+		
+		//Gamepad Test
+		if (abs(gamepad_axis_value(0, gp_axislh)) > 0.1)
+		|| (abs(gamepad_axis_value(0, gp_axislv)) > 0.1)
+		|| (abs(gamepad_button_check(0,gp_face1)) > 0.1)
+		{
+			trigger_spawn=true;
+		}
 	}
 }

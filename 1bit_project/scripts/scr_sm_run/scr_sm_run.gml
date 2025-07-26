@@ -44,5 +44,8 @@ function scr_sm_run(){
 			scr_flip_check_mouse(dest_x,dest_y,1)
 			state=states.block;
 		}
+		
+		//Gamepad test
+		scr_gamepad_move(move_speed);
 	}	
 }

@@ -3,6 +3,21 @@
 function scr_controls_main(){
 }
 
+function scr_gamepad_move(_speed){
+	if (abs(gamepad_axis_value(0, gp_axislh)) > 0.1)
+	|| (abs(gamepad_axis_value(0, gp_axislv)) > 0.1)
+	{
+		dest_x=x+(gamepad_axis_value(0,gp_axislh)*_speed*16)
+		dest_y=y+(gamepad_axis_value(0,gp_axislv)*_speed*8)
+		if gamepad_button_check(0,gp_shoulderrb)
+		|| (abs(gamepad_axis_value(0, gp_axislh)) > 0.5)
+		|| (abs(gamepad_axis_value(0, gp_axislv)) > 0.5)
+		{state=states.run;}
+		else {state=states.walk;}
+	}
+}
+
+
 function scr_refresh_cursor(){
 	global.cursor_x=mouse_x;
 	global.cursor_y=mouse_y;
