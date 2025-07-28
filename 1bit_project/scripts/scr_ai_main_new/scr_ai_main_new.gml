@@ -18,61 +18,61 @@ function scr_ai_main_new(){
 		{
 			#region IDLE
 				case ai_states.idle:
-					if speech_verbose==true speech_text=string(name);
+					if speech_verbose==true {speech_text=string(name);}
 					scr_ai_target_check();
 				break;
 			#endregion
 			#region WANDER
 				case ai_states.wander:
-					if speech_verbose==true speech_text="wander";
+					if speech_verbose==true {speech_text="wander";}
 					scr_ai_target_check();
 				break;
 			#endregion
 			#region FOLLOW
 				case ai_states.follow:
-					if speech_verbose==true speech_text="following"
+					if speech_verbose==true {speech_text="following"}
 					scr_ai_target_check();
 				break;
 			#endregion
 			#region GUARD
 				case ai_states.guard:
-					if speech_verbose==true speech_text="guarding";
+					if speech_verbose==true {speech_text="guarding";}
 					scr_ai_target_check();
 				break;
 			#endregion
 			#region PATROL
 				case ai_states.patrol:
-					if speech_verbose==true speech_text="patrolling";
+					if speech_verbose==true {speech_text="patrolling";}
 					scr_ai_target_check();
 				break;
 			#endregion
 			#region ALERT
 				case ai_states.alert:
-					if speech_verbose==true speech_text="alert!";
+					if speech_verbose==true {speech_text="alert!";}
 					var randomness=random_range(0,100);
 					if randomness<ai_responsiveness {}
 				break;
 			#endregion
 			#region AWARE
 				case ai_states.aware:
-					if speech_verbose==true speech_text="alert!";
+					if speech_verbose==true {speech_text="alert!";}
 					var randomness=random_range(0,100);
 					if randomness<ai_responsiveness {}
 				break;
 			#endregion
 			#region CHASE
 				case ai_states.chase:
-					if speech_verbose==true speech_text="come here!";
+					if speech_verbose==true {speech_text="come here!";}
 				break;
 			#endregion
 			#region SEARCH
 				case ai_states.search:
-					if speech_verbose==true speech_text="where?";
+					if speech_verbose==true {speech_text="where?";}
 				break;
 			#endregion
 			#region FIGHT
 				case ai_states.fight:
-					if speech_verbose==true speech_text="fighting!";
+					if speech_verbose==true {speech_text="fighting!";}
 				break;
 			#endregion
 			#region FLEE

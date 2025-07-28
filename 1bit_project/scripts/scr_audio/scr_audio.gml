@@ -19,6 +19,7 @@ function scr_audio_weapon_swing(_frame,_power){
 			case weapons_animset.katana:
 			break;
 			case weapons_animset.shotgun:
+			_sound = snd_null;
 			break;
 			case weapons_animset.null:
 			break;
@@ -46,6 +47,7 @@ function scr_audio_weapon_hit(_frame,_power){
 			break;
 			case weapons_animset.dagger:
 			_sound = choose(snd_wpn_knife_01, snd_wpn_knife_02, snd_wpn_knife_03, snd_wpn_knife_04, snd_wpn_knife_05, snd_wpn_knife_06, snd_wpn_knife_07, snd_wpn_knife_08, snd_wpn_knife_09, snd_wpn_knife_10);
+			_mix=1.4;
 
 			break;
 			case weapons_animset.stick:
@@ -62,11 +64,12 @@ function scr_audio_weapon_hit(_frame,_power){
 			break;
 			case weapons_animset.shotgun:
 			_sound = choose(snd_wpn_shotgun_01, snd_wpn_shotgun_02, snd_wpn_shotgun_03, snd_wpn_shotgun_04, snd_wpn_shotgun_05, snd_wpn_shotgun_06, snd_wpn_shotgun_07);
+			_mix=2;
 
 			break;
 			case weapons_animset.null:
 			_sound = choose(snd_wpn_punch_01, snd_wpn_punch_02, snd_wpn_punch_03, snd_wpn_punch_04, snd_wpn_punch_05, snd_wpn_punch_06, snd_wpn_punch_07, snd_wpn_punch_08);
-			_mix=2;
+			_mix=1.5;
 			if object_index==obj_dog || object_index==obj_enemy_dog{
 			_sound = choose(snd_wpn_dog_01, snd_wpn_dog_02, snd_wpn_dog_03, snd_wpn_dog_04, snd_wpn_dog_05, snd_wpn_dog_06, snd_wpn_dog_07, snd_wpn_dog_08, snd_wpn_dog_09, snd_wpn_dog_10);
 			_mix=1.3;

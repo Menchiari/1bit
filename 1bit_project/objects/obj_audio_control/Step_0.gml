@@ -1,11 +1,11 @@
 /// @description
 if instance_exists(obj_hero)
-&& instance_exists(obj_camera)
 {
 	audio_listener_position(obj_hero.x,obj_hero.y,0);
 	audio_listener_orientation(0, 0, -1, 0, 1, 0); // forward facing into screen
 }
-else
+
+if !instance_exists(obj_camera)
 {
 	var cam = view_camera[0];
 	var cam_x = camera_get_view_x(cam);

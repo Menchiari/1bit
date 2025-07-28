@@ -1,4 +1,5 @@
 function scr_ai_test(idle_actions){
+	//0=Walk; 1=Run; 2=Walk to Char; 3=Run to Char; 4=Block;
 	var atk_distance=attack_range_strong+(atk2_sp*4);
 //when close to enemy
 	if instance_exists(ai_target)

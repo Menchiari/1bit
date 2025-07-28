@@ -15,7 +15,7 @@ function scr_ai_main(){
 		{
 			#region IDLE
 				case ai_states.idle:
-					if speech_verbose==true speech_text=string(name);
+					if speech_verbose==true {speech_text=string(name);}
 					walk_sp_mod=1;
 					state=states.idle;				
 					scr_ai_target_check();
@@ -23,7 +23,7 @@ function scr_ai_main(){
 			#endregion
 			#region WANDER
 				case ai_states.wander:
-					if speech_verbose==true speech_text="wander";
+					if speech_verbose==true {speech_text="wander";}
 				
 					if point_distance(x,y,dest_x,dest_y)<=dist || collision_line(x,y,dest_x,dest_y,obj_collider,true,true)
 					{
@@ -40,7 +40,7 @@ function scr_ai_main(){
 			#region FOLLOW
 				case ai_states.follow:
 					var follow_distance=25;
-					if speech_verbose==true speech_text="following"
+					if speech_verbose==true {speech_text="following";}
 					walk_sp_mod=1.1;
 					if point_distance(x,y,dest_x,dest_y)>80 {state=states.run}
 					else if point_distance(x,y,dest_x,dest_y)>50 {state=states.walk;}
@@ -64,7 +64,7 @@ function scr_ai_main(){
 			#endregion
 			#region GUARD
 				case ai_states.guard:
-					if speech_verbose==true speech_text="guarding";
+					if speech_verbose==true {speech_text="guarding";}
 				//	if point_distance(x,y,dest_x,dest_y)>walk_sp*2 {state=states.walk;}
 				//	else {state=states.idle;}
 				
@@ -106,7 +106,7 @@ function scr_ai_main(){
 			#endregion
 			#region PATROL
 				case ai_states.patrol:
-					if speech_verbose==true speech_text="patrolling";
+					if speech_verbose==true {speech_text="patrolling";}
 					walk_sp_mod=.3;
 					if point_distance(x,y,dest_x,dest_y)>walk_sp*2 {state=states.walk;}
 					else {
@@ -122,7 +122,7 @@ function scr_ai_main(){
 			#endregion
 			#region ALERT
 				case ai_states.alert:
-					if speech_verbose==true speech_text="halt!";
+					if speech_verbose==true {speech_text="halt!";}
 					
 					var alert_distance=ai_search_range;
 					if point_distance(x,y,dest_x,dest_y)>20{dest_x=x;dest_y=y;}
@@ -134,16 +134,16 @@ function scr_ai_main(){
 							{
 								ai_target_x=ai_target.x;
 								ai_target_y=ai_target.y;
-								ai_state=ai_states.search;
 							}
 						}
+						ai_state=ai_states.search;
 					}
 					//else if irandom_range(0,100)>=100-(ai_responsiveness/4) {ai_state=ai_state_original;}
 				break;
 			#endregion
 			#region CHASE
 				case ai_states.chase:
-					if speech_verbose==true speech_text="come here!";
+					if speech_verbose==true {speech_text="come here!";}
 					state=states.run;
 					var chase_distance=ai_search_range*2;
 					var attack_distance=ai_search_range/2;
@@ -159,7 +159,7 @@ function scr_ai_main(){
 			#endregion
 			#region SEARCH
 				case ai_states.search:
-					if speech_verbose==true speech_text="where?";
+					if speech_verbose==true {speech_text="where?";}
 					//walks faster to destination
 					walk_sp_mod=1.3;
 					if point_distance(x,y,dest_x,dest_y)>walk_sp*2 {state=states.walk;}
@@ -183,12 +183,12 @@ function scr_ai_main(){
 			#endregion
 			#region FIGHT
 				case ai_states.fight:
-					if speech_verbose==true speech_text="DIE!!!";
+					if speech_verbose==true {speech_text="DIE!!!";}
 					if instance_exists(ai_target)
 					{
 						var _searchdistance=ai_search_range/2;
 						if weapon.bullets>0 {_searchdistance=120;}
-						if speech_verbose==true speech_text="fighting "+string(ai_target.name);
+						if speech_verbose==true {speech_text="fighting "+string(ai_target.name);}
 						if point_distance(x,y,ai_target.x,ai_target.y)<_searchdistance
 						&& !collision_line(x,y,ai_target.x,ai_target.y,obj_collider,true,true)
 						{
