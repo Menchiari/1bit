@@ -1,10 +1,12 @@
 //surface_resize(application_surface,room_width,room_height);
+scr_loadgame();
 surface_resize(application_surface,global.res_x,global.res_y);
 audio_master_gain(1);
 
 if room==rm_boat
 || room==rm_setup
 || room==rm_glitch
+|| room==rm_cinematic_intro
 {instance_create_depth(x,y,-y,obj_fx_fadein_fast);}
 
 else

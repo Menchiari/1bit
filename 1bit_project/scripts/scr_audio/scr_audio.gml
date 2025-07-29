@@ -209,15 +209,15 @@ function scr_audio_hurt(_frame,_power){
 		var _mix=1;
 		if object_index==obj_dog {
 		_sound=snd_wpn_dog_hurt_1;
-		_mix=1.8;
+		_mix=1.9;
 		}
 		if object_index==obj_enemy_boar {
 		_sound = choose(snd_wpn_boar_hurt_1, snd_wpn_boar_hurt_2, snd_wpn_boar_hurt_3, snd_wpn_boar_hurt_4, snd_wpn_boar_hurt_5, snd_wpn_boar_hurt_6, snd_wpn_boar_hurt_7);
-		_mix=1.7;
+		_mix=1.6;
 		}
 		if object_index==obj_enemy_zombie{
 		_sound = choose(snd_wpn_zombie_01, snd_wpn_zombie_02, snd_wpn_zombie_03, snd_wpn_zombie_04, snd_wpn_zombie_05, snd_wpn_zombie_06, snd_wpn_zombie_07, snd_wpn_zombie_08, snd_wpn_zombie_09, snd_wpn_zombie_10);
-		_mix=1.5;
+		_mix=1.1;
 		}
 		
 		var _sound2 = choose(snd_wpn_hit_1,snd_wpn_hit_2,snd_wpn_hit_3,snd_wpn_hit_4,snd_wpn_hit_5);

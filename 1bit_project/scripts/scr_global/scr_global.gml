@@ -221,6 +221,7 @@ function init_globals(){
 	global.boss_progress=0;
 	global.boss_boat=false;
 	global.princess=true;
+	global.introcinematic=false;
 	global.followers=[];
 	
 	global.unlock_wpn=ds_list_create();

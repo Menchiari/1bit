@@ -83,8 +83,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"tg_story_fg",
+    "path":"texturegroups/tg_story_fg",
   },
   "type":0,
   "VTile":false,

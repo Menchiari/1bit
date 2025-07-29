@@ -53,7 +53,7 @@ case 0:
 		///////////////////////////////////////////////////////////////////
 		case 10://last phase, for some reason it can't be default, must be there to end the scene
 			global.face_progress_death+=1;
-			scr_savegame();
+			//scr_savegame();
 			file_delete("save.sav");
 			file_delete("random.seed");
 			room_goto(rm_glitch);

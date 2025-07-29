@@ -1,5 +1,5 @@
 /// @description restart
-if global.deathcount==1 {room_goto(rm_world);}
+if global.deathcount==1 {room_goto(rm_cinematic_intro);}
 else
 {
 	if room!=rm_death {room_goto(rm_death);}
