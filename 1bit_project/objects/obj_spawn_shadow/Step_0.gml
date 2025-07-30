@@ -3,7 +3,6 @@ if once==true && instance_exists(obj_hero)
 {
 	once=false;
 	var _spawnchar = instance_create_depth(x,y,-y,obj_enemy);
-	_spawnchar.ai_state=ai_states.guard;
 	
 	//customize character
 	_spawnchar.character_head=obj_hero.character_head
@@ -19,7 +18,7 @@ if once==true && instance_exists(obj_hero)
 	//customize ai
 	_spawnchar.control=controls.ai;
 	_spawnchar.faction=factions.enemy;
-	_spawnchar.ai_type=ai_types.ai_aggressive;
+	_spawnchar.ai_type=ai_types.ai_basic;
 	_spawnchar.ai_state=ai_states.guard;
 	_spawnchar.ai_state_original=_spawnchar.ai_state;
 

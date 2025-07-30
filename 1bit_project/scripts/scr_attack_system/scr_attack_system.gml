@@ -76,6 +76,12 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 
 						damaged=true;
 						
+						///////////////////////////////AI REACTION///////////////////////////////////////
+						enemy.ai_target=self.id;
+						enemy.ai_state=ai_states.fight;
+						if enemy!=obj_hero.id {enemy.control=controls.ai;}
+						/////////////////////////////////////////////////////////////////////////////////
+						
 						if room!=rm_death
 						{
 							var damage_value=instance_create_depth(enemy.x,enemy.y,enemy.depth,obj_ui_number);

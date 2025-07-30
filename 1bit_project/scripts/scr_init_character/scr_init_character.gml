@@ -42,7 +42,7 @@ function scr_init_character(){
 	speech_text_8="";
 	speech_without_enemies=true;
 	speech_visible=false;
-	speech_verbose=false;//extended speech especially in AI states /////////////////////////////////////////HERE!!!//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+	speech_verbose=true;//extended speech especially in AI states /////////////////////////////////////////HERE!!!//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 	speech_distance=50;
 	speech_distance_enemy=100;
 	speech_color=c_white;
@@ -272,6 +272,7 @@ function scr_init_character(){
 	ai_target_y=y;
 	ai_follow_target=obj_hero;
 	ai_trigger_check=false;
+	ai_nopanic=false;
 #endregion
 #region collisions
 	path=path_add();

@@ -13,6 +13,7 @@ character_body=spr_hero_monster;
 
 ai_state_original=ai_states.guard;
 control=controls.ai;
+ai_nopanic=true;
 
 //spawn event
 state=states.spawn;

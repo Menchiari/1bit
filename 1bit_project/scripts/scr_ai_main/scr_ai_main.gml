@@ -17,38 +17,44 @@ function scr_ai_main(){
 				case ai_states.idle:
 					if speech_verbose==true {speech_text=string(name);}
 					walk_sp_mod=1;
-					state=states.idle;				
+					state=states.idle;		
 					scr_ai_target_check();
 				break;
 			#endregion
 			#region WANDER
 				case ai_states.wander:
 					if speech_verbose==true {speech_text="wander";}
-				
-					if point_distance(x,y,dest_x,dest_y)<=dist || collision_line(x,y,dest_x,dest_y,obj_collider,true,true)
+
+					if point_distance(x,y,dest_x,dest_y)<dist
+					|| collision_line(x,y,dest_x,dest_y,obj_collider,true,true)
 					{
 						state=states.walk;
 						walk_sp_mod=.3;
-						dest_x=x+(random_range(run_distance_min,run_distance_min*4)*choose(1,-1));
-						dest_y=y+(random_range(run_distance_min,run_distance_min*4)*choose(1,-1));
+						dest_x=x+(random_range(-run_distance*4,run_distance_min*4));
+						dest_y=y+(random_range(-run_distance*4,run_distance_min*4));
 					}
 					else
-					{state=states.idle;}
+					{
+						state=states.idle;
+					}
+					
 					scr_ai_target_check();
+					
 				break;
 			#endregion
 			#region FOLLOW
 				case ai_states.follow:
 					var follow_distance=25;
+					
 					if speech_verbose==true {speech_text="following";}
 					walk_sp_mod=1.1;
 					if point_distance(x,y,dest_x,dest_y)>80 {state=states.run}
 					else if point_distance(x,y,dest_x,dest_y)>50 {state=states.walk;}
 					else {state=states.idle;}
-				
+
 					if instance_exists(ai_follow_target)
 					{
-						if point_distance(x,y,ai_follow_target.x,ai_follow_target.y)>follow_distance//ai_search_range /*&& !collision_line(x,y,ai_follow_target.x,ai_follow_target.y,obj_collider,true,true)*/
+						if point_distance(x,y,ai_follow_target.x,ai_follow_target.y)>follow_distance
 						{
 							var _checkfrequency=10;
 							if irandom_range(0,100)<=_checkfrequency
@@ -59,33 +65,27 @@ function scr_ai_main(){
 						}
 						else {dest_x=x;dest_y=y;state=states.idle;}
 					}
+					
 					scr_ai_target_check();
+					
 				break;
 			#endregion
 			#region GUARD
 				case ai_states.guard:
 					if speech_verbose==true {speech_text="guarding";}
-				//	if point_distance(x,y,dest_x,dest_y)>walk_sp*2 {state=states.walk;}
-				//	else {state=states.idle;}
-				
-				//	scr_ai_target_check();
-				//	if instance_exists(ai_target)
-				//	{if point_distance(x,y,ai_target.x,ai_target.y)>ai_search_range {dest_x=ai_guard_x;dest_y=ai_guard_y;}}
-				//	else
-				//	{if point_distance(x,y,ai_guard_x,ai_guard_y)>50 {dest_x=ai_guard_x;dest_y=ai_guard_y;} else {dest_x=x;dest_y=y;}}
-					//var dist=10;
-					var walk_chance=irandom_range(0,100);
-				
-					if walk_chance<1 {ai_trigger_check=!ai_trigger_check;}
+					var walk_chance=random_range(0,100);
+					if walk_chance<2 {ai_trigger_check=!ai_trigger_check;}
 					if ai_trigger_check==true
 					{
 						state=states.walk;
 				
-						if point_distance(x,y,dest_x,dest_y)<=dist
+						if point_distance(x,y,dest_x,dest_y)<dist
+						|| collision_line(x,y,dest_x,dest_y,obj_collider,true,true)
 						{
+							ai_trigger_check=false;
 							walk_sp_mod=.3;
-							dest_x=x+(random_range(run_distance_min,run_distance_min*4)*choose(1,-1));
-							dest_y=y+(random_range(run_distance_min,run_distance_min*4)*choose(1,-1));
+							dest_x=x+(random_range(-run_distance_min,run_distance_min));
+							dest_y=y+(random_range(-run_distance_min,run_distance_min));
 						}
 						if point_distance(x,y,ai_guard_x,ai_guard_y)>=dist
 						{
@@ -98,25 +98,36 @@ function scr_ai_main(){
 					{
 						speed=0;
 						state=states.idle;
-						dest_x = x;
-						dest_y = y;
+						//dest_x = x;
+						//dest_y = y;
 					}
+					
 					scr_ai_target_check();
 				break;
 			#endregion
 			#region PATROL
 				case ai_states.patrol:
 					if speech_verbose==true {speech_text="patrolling";}
+					var walk_chance_patrol=random_range(0,100);
 					walk_sp_mod=.3;
-					if point_distance(x,y,dest_x,dest_y)>dist {state=states.walk;}
-					else {
-						state=states.idle;
-						dest_x = x;
-						dest_y = y;
+					
+					if point_distance(x,y,dest_x,dest_y)>=dist
+					{
+						state=states.walk;
 					}
-				
-					if point_distance(x,y,ai_guard_x,ai_guard_y)<dist {dest_x=ai_patrol_x;dest_y=ai_patrol_y;}
-					if point_distance(x,y,ai_patrol_x,ai_patrol_y)<dist {dest_x=ai_guard_x;dest_y=ai_guard_y;}
+					else
+					{
+						state=states.idle;
+						//dest_x = x;
+						//dest_y = y;
+					}
+					
+					if walk_chance_patrol<1
+					{
+						if point_distance(x,y,ai_guard_x,ai_guard_y)<dist {dest_x=ai_patrol_x;dest_y=ai_patrol_y;}
+						if point_distance(x,y,ai_patrol_x,ai_patrol_y)<dist {dest_x=ai_guard_x;dest_y=ai_guard_y;}
+					}
+					
 					scr_ai_target_check();
 				break;
 			#endregion
@@ -126,7 +137,7 @@ function scr_ai_main(){
 					
 					var alert_distance=ai_search_range;
 					if point_distance(x,y,dest_x,dest_y)>20{dest_x=x;dest_y=y;}
-					if random_range(0,100)<ai_responsiveness // {ai_state=ai_states.search;}
+					if random_range(0,100)<ai_responsiveness
 					{
 						if instance_exists(ai_target)
 						{
@@ -173,8 +184,8 @@ function scr_ai_main(){
 					if instance_exists(ai_target)
 					{
 						var search_distance=ai_search_range*1.5;
-						dest_x=ai_target_x;
-						dest_y=ai_target_y;
+						dest_x=ai_target_x+random_range(-ai_search_range/2,ai_search_range/2);
+						dest_y=ai_target_y+random_range(-ai_search_range/2,ai_search_range/2);
 						//var chance=random_range(0,100);
 						if /*chance<=ai_responsiveness &&*/ point_distance(x,y,ai_target_x,ai_target_y)<search_distance {ai_state=ai_states.chase;}
 					}
@@ -209,11 +220,11 @@ function scr_ai_main(){
 					state=states.run;
 					if point_distance(x,y,dest_x,dest_y)<=flee_distance || collision_line(x,y,dest_x,dest_y,obj_collider,true,true)
 					{
-						dest_x=x+(random_range(run_distance_min,run_distance_min*4)*choose(1,-1));
-						dest_y=y+(random_range(run_distance_min,run_distance_min*4)*choose(1,-1));
+						dest_x=x+(random_range(-run_distance_min,run_distance_min));
+						dest_y=y+(random_range(-run_distance_min,run_distance_min));
 					}
 					var chance=random_range(0,100);
-					if chance<.5+(abs(charisma)/10) ai_state=ai_state_original;
+					if chance<.5+(abs(charisma)/10) || ai_nopanic==true {ai_state=ai_state_original;}
 				break;
 			#endregion
 			
@@ -225,7 +236,7 @@ function scr_ai_main(){
 					ai_state=ai_states.idle;
 				break;
 		}
-		//#region FLEEING CASES
+		#region FLEEING CASES - deprecated added in attack instead
 		//if instance_exists(ai_target)
 		//{
 		//	var flee_chance=((ai_target.hp/hp)-1) + ((ai_target.charisma+abs(charisma))*-1) + ((ai_target.str/str)-1) + ((ai_target.res/res)-1) //((ai_target.str/str)+abs(ai_target.res/res)+((ai_target.hp/hp)*4)-ai_target.charisma)/80;
@@ -238,7 +249,7 @@ function scr_ai_main(){
 		//		ai_state=ai_states.flee;
 		//	}
 		//}
-		//#endregion
+		#endregion
 		#region RESET CASES
 		if instance_exists(ai_target)
 		{
@@ -250,8 +261,8 @@ function scr_ai_main(){
 		}
 		#endregion
 	}
-	if dest_x < x {dir=1}
+	if x_laststep > x {dir=1}
 	else {dir=-1};
-	if dest_y < y-6 {back=true}
+	if y_laststep > y {back=true}
 	else {back=false};
 }

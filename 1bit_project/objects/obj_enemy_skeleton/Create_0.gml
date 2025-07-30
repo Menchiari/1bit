@@ -18,6 +18,7 @@ ai_type=ai_types.ai_zombie;
 ai_timer_attack1=20;
 ai_timer_attack2=50;
 ai_responsiveness=2;
+ai_nopanic=true;
 
 //spawn event
 state=states.spawn;
