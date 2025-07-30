@@ -173,12 +173,11 @@ function scr_ai_main(){
 					if speech_verbose==true {speech_text="where?";}
 					//walks faster to destination
 					walk_sp_mod=1.3;
-					if point_distance(x,y,dest_x,dest_y)>walk_sp*2 {state=states.walk;}
-					else
-					{
+					if point_distance(x,y,dest_x,dest_y)>=dist {state=states.walk;}
+					else {
 						state=states.idle;
 						var chance=random_range(0,100);
-						if chance<=ai_responsiveness*2 {ai_state=ai_state_original;}
+						if chance<=.25 {ai_state=ai_state_original;}
 					}
 					scr_ai_target_check();
 					if instance_exists(ai_target)
