@@ -1,4 +1,4 @@
 /// @description
-if image_index>=image_number-1
+if image_index>=lastframe
 || global.introcinematic==false
 {room_goto(nextroom);}

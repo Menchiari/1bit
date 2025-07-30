@@ -24,6 +24,7 @@ if UI==true
 && room!=rm_faces_boat
 && room!=rm_story_AI_2
 && room!=rm_glitch
+&& room!=rm_cinematic_intro
 {
 	var border=2;
 	var bordercolor=c_gray;

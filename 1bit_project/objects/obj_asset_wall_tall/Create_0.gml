@@ -13,7 +13,7 @@ hp=hp_max;
 shake_power=0;
 
 //amount of pieces
-debris_min=15;
+debris_min=25;
 debris_max=50;
 
-debris_type=obj_fx_debris_wood_large;
+debris_type=obj_fx_debris_stone_large;

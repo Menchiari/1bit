@@ -5,7 +5,7 @@
   "bbox_bottom":91,
   "bbox_left":0,
   "bbox_right":30,
-  "bbox_top":0,
+  "bbox_top":1,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -45,8 +45,6 @@
     {"$GMSpriteFrame":"","%Name":"67097a6e-1301-48c4-a75a-5f78302434f0","name":"67097a6e-1301-48c4-a75a-5f78302434f0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"bd431ac5-c019-410a-bb12-2c01da317607","name":"bd431ac5-c019-410a-bb12-2c01da317607","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"bb98f381-29f5-41ca-a8e5-31acf6b3541c","name":"bb98f381-29f5-41ca-a8e5-31acf6b3541c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f1197348-4590-4a4f-b008-f4b0e549bc37","name":"f1197348-4590-4a4f-b008-f4b0e549bc37","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"366f6214-8f89-402f-a348-e6ec83267912","name":"366f6214-8f89-402f-a348-e6ec83267912","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"74d638e4-433c-48af-a8cf-8dbb80385b0b","name":"74d638e4-433c-48af-a8cf-8dbb80385b0b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
@@ -84,7 +82,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":36.0,
+    "length":34.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -205,14 +203,8 @@
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bb98f381-29f5-41ca-a8e5-31acf6b3541c","path":"sprites/spr_story_hero_falling/spr_story_hero_falling.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"d624d140-accf-4927-880a-277e2cbb0d8f","IsCreationKey":false,"Key":32.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f1197348-4590-4a4f-b008-f4b0e549bc37","path":"sprites/spr_story_hero_falling/spr_story_hero_falling.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e4dc195f-6012-4fcd-bc4a-f1849c53781b","IsCreationKey":false,"Key":33.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"366f6214-8f89-402f-a348-e6ec83267912","path":"sprites/spr_story_hero_falling/spr_story_hero_falling.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"4e7bfac9-9d78-4f08-94bd-b84eaa1a20c0","IsCreationKey":false,"Key":34.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"74d638e4-433c-48af-a8cf-8dbb80385b0b","path":"sprites/spr_story_hero_falling/spr_story_hero_falling.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"effcfd6e-134f-408b-9772-77993ea1fb6c","IsCreationKey":false,"Key":35.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"effcfd6e-134f-408b-9772-77993ea1fb6c","IsCreationKey":false,"Key":33.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
