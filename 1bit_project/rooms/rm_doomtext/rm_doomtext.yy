@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"rm_doomtext",
-  "creationCodeFile":"",
+  "creationCodeFile":"rooms/rm_doomtext/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,

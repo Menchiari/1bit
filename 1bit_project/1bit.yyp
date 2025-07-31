@@ -458,6 +458,7 @@
     {"id":{"name":"rm_start_double","path":"rooms/rm_start_double/rm_start_double.yy",},},
     {"id":{"name":"rm_start_original","path":"rooms/rm_start_original/rm_start_original.yy",},},
     {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
+    {"id":{"name":"rm_story_1_stairs","path":"rooms/rm_story_1_stairs/rm_story_1_stairs.yy",},},
     {"id":{"name":"rm_story_1","path":"rooms/rm_story_1/rm_story_1.yy",},},
     {"id":{"name":"rm_story_1b","path":"rooms/rm_story_1b/rm_story_1b.yy",},},
     {"id":{"name":"rm_story_2","path":"rooms/rm_story_2/rm_story_2.yy",},},
@@ -1420,6 +1421,7 @@
     {"roomId":{"name":"rm_story_office","path":"rooms/rm_story_office/rm_story_office.yy",},},
     {"roomId":{"name":"rm_doomtext","path":"rooms/rm_doomtext/rm_doomtext.yy",},},
     {"roomId":{"name":"rm_cinematic_intro","path":"rooms/rm_cinematic_intro/rm_cinematic_intro.yy",},},
+    {"roomId":{"name":"rm_story_1_stairs","path":"rooms/rm_story_1_stairs/rm_story_1_stairs.yy",},},
   ],
   "templateType":null,
   "TextureGroups":[

@@ -8,13 +8,13 @@ if mouse_check_button_released(mb_any)
 	{
 		//next
 		character_select-=1
-		scr_audio_play(snd_click,global.audio_ui*1,.9);
+		scr_audio_play(snd_click,global.audio_ui*.66,.9);
 	}
 	if point_in_rectangle(mouse_x,mouse_y,x+sprite_width/3.5,y,x+sprite_width,y+sprite_height) 
 	{
 		//previous
 		character_select+=1
-		scr_audio_play(snd_click,global.audio_ui*1,1);
+		scr_audio_play(snd_click,global.audio_ui*.66,1);
 	}
 	
 	var min_sel=0;

@@ -243,6 +243,7 @@
     {"name":"rm_reflection","order":24,"path":"rooms/rm_reflection/rm_reflection.yy",},
     {"name":"rm_start_Child_0","order":1,"path":"rooms/rm_start_Child_0/rm_start_Child_0.yy",},
     {"name":"rm_start","order":11,"path":"rooms/rm_start/rm_start.yy",},
+    {"name":"rm_story_1_stairs","order":15,"path":"rooms/rm_story_1_stairs/rm_story_1_stairs.yy",},
     {"name":"rm_story_1b","order":6,"path":"rooms/rm_story_1b/rm_story_1b.yy",},
     {"name":"rm_story_2","order":2,"path":"rooms/rm_story_2/rm_story_2.yy",},
     {"name":"rm_story_AI_2","order":5,"path":"rooms/rm_story_AI_2/rm_story_AI_2.yy",},

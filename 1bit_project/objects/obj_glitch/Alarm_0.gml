@@ -1,2 +1,3 @@
 /// @description What happens when text ends
-game_restart();
+//game_restart();
+room_goto(rm_world);

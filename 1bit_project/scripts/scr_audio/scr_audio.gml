@@ -19,7 +19,8 @@ function scr_audio_weapon_swing(_frame,_power){
 			case weapons_animset.katana:
 			break;
 			case weapons_animset.shotgun:
-			_sound = snd_null;
+			_sound = choose(snd_wpn_shotgun_01, snd_wpn_shotgun_02, snd_wpn_shotgun_03, snd_wpn_shotgun_04, snd_wpn_shotgun_05, snd_wpn_shotgun_06, snd_wpn_shotgun_07);//snd_null;
+			_mix= 2;
 			break;
 			case weapons_animset.null:
 			break;
@@ -63,7 +64,7 @@ function scr_audio_weapon_hit(_frame,_power){
 
 			break;
 			case weapons_animset.shotgun:
-			_sound = choose(snd_wpn_shotgun_01, snd_wpn_shotgun_02, snd_wpn_shotgun_03, snd_wpn_shotgun_04, snd_wpn_shotgun_05, snd_wpn_shotgun_06, snd_wpn_shotgun_07);
+			_sound = snd_null;//choose(snd_wpn_shotgun_01, snd_wpn_shotgun_02, snd_wpn_shotgun_03, snd_wpn_shotgun_04, snd_wpn_shotgun_05, snd_wpn_shotgun_06, snd_wpn_shotgun_07);
 			_mix=2;
 
 			break;

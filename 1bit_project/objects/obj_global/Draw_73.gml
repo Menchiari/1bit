@@ -22,6 +22,7 @@ if UI==true
 && room!=rm_boat
 && room!=rm_faces_ai
 && room!=rm_faces_boat
+&& room!=rm_story_AI
 && room!=rm_story_AI_2
 && room!=rm_glitch
 && room!=rm_cinematic_intro

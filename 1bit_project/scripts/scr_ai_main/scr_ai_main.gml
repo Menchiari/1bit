@@ -260,8 +260,8 @@ function scr_ai_main(){
 		}
 		#endregion
 	}
-	if x_laststep > x {dir=1}
-	else {dir=-1};
-	if y_laststep > y {back=true}
-	else {back=false};
+	if x_laststep <= x-.3 {dir=-1}
+	else if x_laststep >= x+.3 {dir=1};
+	if y_laststep <= y-.3 {back=false}
+	else if y_laststep >= y+1 {back=true};
 }

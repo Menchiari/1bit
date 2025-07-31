@@ -3,6 +3,11 @@
 function scr_block_controls(){
 	if control==controls.touch
 	{
+		if mouse_x < click_x {dir=1}
+		else {dir=-1};
+		if mouse_y < click_y {back=true}
+		else {back=false};
+			
 		if mouse_check_button_released(mb_any)
 		{	
 			//click_x=mouse_x;click_y=mouse_y;
