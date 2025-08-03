@@ -4,7 +4,7 @@ event_inherited();
 
 ////////////////////////DIALOGUES////////////////////////
 
-switch boss_progress //the amount of times you restart the game
+switch face_progress //the amount of times you restart the game
 {
 case 0:
 	switch txt_phase //thinking of life
@@ -53,7 +53,6 @@ case 0:
 		case 11://last phase, for some reason it can't be default, must be there to end the scene
 			global.story_progress=5;
 			global.face_progress=0;
-			next_room=rm_story_AI_2
 			ini_open("save.sav");
 			var spawn_death_x=960;
 			var spawn_death_y=1550;
