@@ -1,4 +1,4 @@
-depth=global.depth_ui;
+depth=global.depth_ui_front;
 x0=x-xoff+21;
 x1=x-xoff+50;
 x2=x-xoff+78;

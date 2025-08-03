@@ -23,8 +23,8 @@ equip_armor(global.armors[2]);
 equip_helm(global.helms[9]);
 
 //spawn event
-trigger_spawn_idle_a=95;//idle_floater
-trigger_spawn_idle_b=102;//idle_floater
+trigger_spawn_idle_a=idle_a_var;//idle_floater
+trigger_spawn_idle_b=idle_b_var;//idle_floater
 trigger_spawn_a=sit_getup_a;
 trigger_spawn_b=sit_getup_b;
 trigger_spawn=false;

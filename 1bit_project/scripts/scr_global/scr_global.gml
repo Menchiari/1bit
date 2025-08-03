@@ -255,7 +255,7 @@ function init_globals(){
 	
 	global.audio=2.5;
 
-	global.audio_footsteps=		global.audio*0.05;
+	global.audio_footsteps=		global.audio*0.035;
 	global.audio_weapons=		global.audio*0.25;
 	global.audio_hits=			global.audio*0.17;
 	global.audio_voices=		global.audio*0.15;

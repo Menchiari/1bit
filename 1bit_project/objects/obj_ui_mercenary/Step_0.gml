@@ -1,4 +1,4 @@
-depth=-y-3000;
+depth=global.depth_ui_front;
 
 if instance_exists(mercenary)
 {

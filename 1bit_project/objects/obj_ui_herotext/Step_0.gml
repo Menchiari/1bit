@@ -9,6 +9,7 @@ if instance_exists(target)
 		{
 			once=false;
 			alarm[0]=game_get_speed(gamespeed_fps)*time_in_sec;
+			audio_play_sound(sound_var,1,0,sound_vol,0,1)
 		}
 		if fade=true
 		{

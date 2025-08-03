@@ -14,6 +14,9 @@ if start_anim==true
 			color=global.blood_color;
 			alpha=.4;
 		}
+		audio_play_sound(snd_wpn_hurt_02,1,0,.3,0,1);
+		audio_play_sound(snd_fall_asf_1,1,0,.25,0,1);
+		audio_play_sound(snd_breakable_stone_1,1,0,.2,0,2);
 	}
 	if image_index>=end_frame
 	{start_anim=false; alarm[1]=1;}

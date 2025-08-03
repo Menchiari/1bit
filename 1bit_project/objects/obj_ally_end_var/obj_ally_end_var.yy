@@ -42,6 +42,8 @@
     {"$GMObjectProperty":"v1","%Name":"rng6","filters":[],"listItems":[],"multiselect":false,"name":"rng6","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"60","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"spawn_death_x","filters":[],"listItems":[],"multiselect":false,"name":"spawn_death_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"960","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"spawn_death_y","filters":[],"listItems":[],"multiselect":false,"name":"spawn_death_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1550","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"idle_a_var","filters":[],"listItems":[],"multiselect":false,"name":"idle_a_var","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"95","varType":4,},
+    {"$GMObjectProperty":"v1","%Name":"idle_b_var","filters":[],"listItems":[],"multiselect":false,"name":"idle_b_var","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"102","varType":4,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
