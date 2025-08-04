@@ -61,18 +61,23 @@ else
 //////////////////////////////////////////////////////////////////////////////
 // optimization
 // activate region around the camera
-var _vx = camera_get_view_x(view_camera[0]);
-var _vy = camera_get_view_y(view_camera[0]);
+//var _vx = camera_get_view_x(view_camera[0]);
+//var _vy = camera_get_view_y(view_camera[0]);
 
-if (_vx != last_cam_x || _vy != last_cam_y)
+if (x != last_cam_x || y != last_cam_y)
 {
-	if instance_exists(obj_character)
-	{
+	last_cam_x=x;
+	last_cam_y=y;
+	
+	if instance_exists(obj_character) {
 	    // deactivate everything
 	    instance_deactivate_object(obj_character);
 	}
-	var _range_multiplier=2;
-	var _vw = camera_get_view_width(view_camera[0]);
-	var _vh = camera_get_view_height(view_camera[0]);
-	instance_activate_region(_vx - (_range_multiplier*global_res_x/2), _vy - (_range_multiplier*global_res_y/2), _vw + (_range_multiplier*global_res_x), _vh + (_range_multiplier*global_res_y), false);
+	var _range_multiplier=1.25;
+	instance_activate_region(x-(global_res_x*_range_multiplier),y-(global_res_y*_range_multiplier),global_res_x*2*_range_multiplier,global_res_y*2*_range_multiplier,true);
+	show_debug_message("Camera activating x: "+string(x-(global_res_x*_range_multiplier))+" y: "+string(y-(global_res_y*_range_multiplier))+" width: "+string(global_res_x*2*_range_multiplier)+"height: "+string(global_res_y*2*_range_multiplier));
+	//var _vw = camera_get_view_width(view_camera[0]);
+	//var _vh = camera_get_view_height(view_camera[0]);
+	//instance_activate_region(_vx - (_range_multiplier*global_res_x/2), _vy - (_range_multiplier*global_res_y/2), _vw + (_range_multiplier*global_res_x), _vh + (_range_multiplier*global_res_y), false);
+	//show_debug_message("Camera activating x: "+string(_vx - (_range_multiplier*global_res_x/2))+" y: "+string( _vy - (_range_multiplier*global_res_y/2))+" width: "+string( _vw + (_range_multiplier*global_res_x))+"height: "+string( _vh + (_range_multiplier*global_res_y)))
 }

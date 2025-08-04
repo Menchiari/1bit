@@ -31,6 +31,7 @@ char_rot=global.orientation+(random_range(-30,30));
 size=1;
 
 death_choice=choose(1,2,3);
+if room=rm_story_caves {death_choice=choose(1,3);}//avoids player split in half during intro
 //death_power=0;
 
 alarm[0]=1;
