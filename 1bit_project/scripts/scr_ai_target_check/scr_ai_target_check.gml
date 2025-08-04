@@ -45,7 +45,7 @@ function scr_ai_target_check(){
 	var temp_target=collision_rectangle(x-xcheck*dir,y-ycheck/2,x+xcheck*dir,y+ycheck/2,obj_character,false,true);
 	if instance_exists(temp_target)
 	{
-		if scr_faction_check_ai(temp_target) && temp_target.hp>=0
+		if scr_faction_check_ai(temp_target) && temp_target.hp>=0 && temp_target.state!=states.spawn
 		{
 			if speech_verbose==true {speech_text="!O!";}
 			if point_distance(x,y,temp_target.x,temp_target.y)<ai_search_range {

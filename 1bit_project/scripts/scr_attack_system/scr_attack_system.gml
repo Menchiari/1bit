@@ -165,6 +165,11 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 ////////BREAKABLE IF NOT ENEMY////////
 		else
 		{
+			//hit wall
+			if collision_circle(x,y,radius*.75,obj_collider,true,true)
+			{
+				scr_audio_weapon_hit(image_index,.25)
+			}
 
 		//reactivate all character instances after the check
 	        for (var i=0; i<array_length_1d(melee_atk_buffer); i++)

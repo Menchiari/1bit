@@ -37,7 +37,9 @@ if instance_exists(char)
 	
 	x=char.x;
 	y=char.y;
-	if char.state=states.death {instance_destroy();}
+	if char.state=states.death
+	|| char.state=states.hit
+	{instance_destroy();}
 
 }
 //if the character is not assigned
