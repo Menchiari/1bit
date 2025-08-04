@@ -15,7 +15,7 @@ function draw_sprite_shadow(sprite,_image_index,_x,_y,xscale,yscale,color,xoffse
 	draw_sprite_ext(sprite,_image_index,_x+xoffset,_y+yoffset,xscale,yscale,char_rot,c_black,shadow_alpha);
 	if shadow_border!=0
 	{
-		var shadow_fade=8;
+		var shadow_fade=6//8;
 		draw_sprite_ext(sprite,_image_index,_x+(xoffset + shadow_border/2),_y+(yoffset + shadow_border/2),xscale,yscale,char_rot,c_black,shadow_alpha/shadow_fade);
 		draw_sprite_ext(sprite,_image_index,_x+(xoffset + shadow_border/2),_y+(yoffset - shadow_border/2),xscale,yscale,char_rot,c_black,shadow_alpha/shadow_fade);
 		draw_sprite_ext(sprite,_image_index,_x+(xoffset - shadow_border/2),_y+(yoffset + shadow_border/2),xscale,yscale,char_rot,c_black,shadow_alpha/shadow_fade);

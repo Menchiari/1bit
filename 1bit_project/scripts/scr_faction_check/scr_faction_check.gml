@@ -17,6 +17,10 @@ function scr_faction_check(target){
 		return false;
 		break;
 		
+		case factions.zombie:
+		return true;
+		break;
+		
 		case factions.everyone:
 		return true;
 		break;
@@ -33,6 +37,11 @@ function scr_faction_check_ai(target){
 		
 		case factions.enemy:
 		if target.faction==factions.enemy {return false;}
+		else {return true;}
+		break;
+		
+		case factions.zombie:
+		if target.faction==factions.zombie {return false;}
 		else {return true;}
 		break;
 		

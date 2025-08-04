@@ -166,9 +166,9 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 		else
 		{
 			//hit wall
-			if collision_circle(x,y,radius*.75,obj_collider,true,true)
+			if collision_circle(x,y,radius*.5,obj_collider,true,true)
 			{
-				scr_audio_weapon_hit(image_index,.25)
+				scr_audio_weapon_hit(image_index,.15)
 			}
 
 		//reactivate all character instances after the check

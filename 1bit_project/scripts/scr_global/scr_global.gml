@@ -55,6 +55,7 @@ function init_enums(){
 		ally,
 		enemy,
 		neutral,
+		zombie,
 		everyone
 	}
 	enum armors

@@ -20,6 +20,8 @@ ai_timer_attack2=50;
 ai_responsiveness=2;
 ai_nopanic=true;
 
+faction=factions.zombie;
+
 //spawn event
 state=states.spawn;
 trigger_spawn_idle_a=wakeup_ground_a;
