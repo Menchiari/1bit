@@ -5,8 +5,8 @@ if active==true
 	var drawgui_divider=1;
 	var separation=round(5.5*drawgui_divider); //sitance between text lines
 	var maxpixels=150*drawgui_divider; //how long the text line in pixels
-	var text_x=x*drawgui_divider//camera_get_view_width(view_current);//x;
-	var text_y=y*drawgui_divider///camera_get_view_height(view_current);;//y;
+	var text_x=round(x*drawgui_divider)//camera_get_view_width(view_current);//x;
+	var text_y=round(y*drawgui_divider)///camera_get_view_height(view_current);;//y;
 	var txt_height=22*drawgui_divider;
 	
 	var text=speech_text;
@@ -52,7 +52,7 @@ if active==true
 		//draw_text_ext_transformed_color(text_x-1,text_y+1-txt_height,text,separation,maxpixels,text_scale,text_scale,0,colbk,colbk,colbk,colbk,1);
 		//draw_text_ext_transformed_color(text_x-1,text_y-1-txt_height,text,separation,maxpixels,text_scale,text_scale,0,colbk,colbk,colbk,colbk,1);
 
-		draw_text_ext_transformed_color(round(text_x),text_y-txt_height,text,separation,maxpixels,text_scale,text_scale,0,colft,colft,colft,colft,1);
+		draw_text_ext_transformed_color(text_x,text_y-txt_height,text,separation,maxpixels,text_scale,text_scale,0,colft,colft,colft,colft,1);
 	}
 	
 	//text="ai="+string(ai_state);

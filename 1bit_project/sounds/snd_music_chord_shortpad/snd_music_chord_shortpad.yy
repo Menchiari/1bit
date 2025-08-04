@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_music_chord_shortpad",
+  "audioGroupId":{
+    "name":"ag_music",
+    "path":"audiogroups/ag_music",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":13.714286,
+  "name":"snd_music_chord_shortpad",
+  "parent":{
+    "name":"music",
+    "path":"folders/Sounds/music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_music_chord_shortpad.wav",
+  "type":0,
+  "volume":1.0,
+}

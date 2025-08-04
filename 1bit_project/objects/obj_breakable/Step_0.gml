@@ -40,6 +40,10 @@ switch state
 			_sound = choose(snd_breakable_bushes_hit_1, snd_breakable_bushes_hit_2, snd_breakable_bushes_hit_3, snd_breakable_bushes_hit_4, snd_breakable_bushes_hit_5, snd_breakable_bushes_hit_6);
 			_mix=_submix*1;
 			break;
+			case "null":
+			_sound = snd_null;
+			_mix=_submix*1;
+			break;
 			default:
 			_sound=snd_error;
 			_mix=_submix*2;

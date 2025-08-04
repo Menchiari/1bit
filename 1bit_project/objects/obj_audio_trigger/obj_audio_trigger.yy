@@ -29,8 +29,8 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"sound_to_play","filters":[],"listItems":[],"multiselect":false,"name":"sound_to_play","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"snd_null","varType":4,},
-    {"$GMObjectProperty":"v1","%Name":"volume_var","filters":[],"listItems":[],"multiselect":false,"name":"volume_var","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"global.audio_music","varType":4,},
-    {"$GMObjectProperty":"v1","%Name":"seconds_to_activate","filters":[],"listItems":[],"multiselect":false,"name":"seconds_to_activate","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":".5","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"volume_var","filters":[],"listItems":[],"multiselect":false,"name":"volume_var","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.8","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"seconds_to_activate","filters":[],"listItems":[],"multiselect":false,"name":"seconds_to_activate","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.2","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"loops","filters":[],"listItems":[],"multiselect":false,"name":"loops","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
   ],
   "resourceType":"GMObject",

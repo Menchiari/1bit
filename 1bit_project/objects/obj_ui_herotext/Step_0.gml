@@ -3,8 +3,8 @@ if instance_exists(target)
 	if point_distance(x,y,target.x,target.y)<trigger_distance
 	{
 		text=dialogue;
-		x=target.x;
-		y=target.y;
+		x=round(target.x);
+		y=round(target.y);
 		if once==true
 		{
 			once=false;
