@@ -41,10 +41,18 @@ if active==1
 				}
 				else
 				{
+					var speed_type="ERR";
+					if weapon.weapon_animset==weapons_animset.null {speed_type="fast"}
+					if weapon.weapon_animset==weapons_animset.hands {speed_type="fast"}
+					if weapon.weapon_animset==weapons_animset.dagger {speed_type="fast"}
+					if weapon.weapon_animset==weapons_animset.katana {speed_type="avg"}
+					if weapon.weapon_animset==weapons_animset.sword {speed_type="avg"}
+					if weapon.weapon_animset==weapons_animset.stick {speed_type="slow"}
+					if weapon.weapon_animset==weapons_animset.shotgun {speed_type="rng"}
 					draw_set_halign(fa_left);
 					draw_text_ext(x-xoff+23,y-yoff+54,
 					"strength: "+string(weapon.atk_dmg_light)+"~"+string(weapon.atk_dmg_strong+weapon.atk_dmg_variation)
-					+"\n"+"speed: "+string(weapon.atk_spd*100)+"%"
+					+"\n"+"speed: "+speed_type+"+"+string(weapon.atk_spd*100)+"%"
 					+"\n"+"weight: "+string(weapon.weight)+"Kg"
 					+"\n"+wpn_type,6,87);
 				}

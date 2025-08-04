@@ -21,17 +21,17 @@
 19,guard helm,35,1.60,2.5,-1,spr_helm_guard,these types of helms are mainly used by the ancient guards,1.6,4
 20,bronze helm,40,1.50,3,-1,spr_helm,a heavy and ugly headwear made out of thick bronze,1.75,1
 21,roman helm,45,1.40,2.5,1,spr_helm_roman,these helms were used by the romans in the ancient times,1.75,1
-22,viking helm,50,1.70,4,0,spr_helm_viking,these helms were used by the vikings in the ancient times,2.25,1
+22,viking helm,50,1.60,4,0,spr_helm_viking,these helms were used by the vikings in the ancient times,2.25,1
 23,great helm,80,2.00,6,1,spr_helm_roman,"a thicker version of the roman helm, sturdier but much heavier",3,2
-24,knight's helm,60,2.20,5,3,spr_helm_knight,this should be worn only be the sacred knights,2,1
+24,knight's helm,60,2.10,5,3,spr_helm_knight,this should be worn only be the sacred knights,2,1
 25,golden mask,100,2.20,5,1,spr_helm_mask,a valuable mask made entirely out of gold,2,1
 26,golden crown,150,1.00,2,5,spr_helm_crown,"the golden crown of queens, forged by a chosen god",0.9,1
 27,silver crown,120,1.00,1,5,spr_helm_crown,"the silver crown of kings, forged by a chosen spirit",0.8,2
-28,demon's helm,100,2.00,5,-3,spr_helm_demon,"a helm forged in the depths of evil, risen from the abyss",2.5,1
-29,titan helm,90,2.50,1,2,spr_helm,the most perfect helm you could wish for,2.5,1
-30,helmet,50,2.50,1.5,-1,spr_helm_plastic,this helmet is smooth and it has a filtered glass visor,2.5,4
-31,bionic headset,150,2.00,0.5,-1,spr_helm_bionic,some say those who tried to defy the gods decided to use this,3,4
-32,god's helm,1000,3.00,1,5,spr_helm_god,one of the ancient helms of gods,3,1
+28,demon's helm,100,1.80,5,-3,spr_helm_demon,"a helm forged in the depths of evil, risen from the abyss",2.5,1
+29,titan helm,90,2.10,1,2,spr_helm,the most perfect helm you could wish for,2.5,1
+30,helmet,50,2.00,1.5,-1,spr_helm_plastic,this helmet is smooth and it has a filtered glass visor,2.5,4
+31,bionic headset,150,2.30,0.5,-1,spr_helm_bionic,some say those who tried to defy the gods decided to use this,3,4
+32,god's helm,1000,2.50,1,5,spr_helm_god,one of the ancient helms of gods,3,1
 33,owl clan mask,100,1.00,1,-2,spr_helm_mask,the ancient mask of an evil owl clan member,2,2
 34,filthy hood,5,0.50,1,-1,spr_helm_hood,a smelly old hood coverd in dirt and dead leaves,1.5,4
 35,worn hat,5,0.25,0.25,0,spr_helm_fedora,this very old hat has been worn for several decades,1,2
