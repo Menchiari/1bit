@@ -67,7 +67,7 @@
 65,my katana,weapons.katana,30,2,2,4,1,1,0,it's my katana sword,2~5,$45,0,
 66,my katana,weapons.katana,30,2,2,4,1,1.2,0,it's my katana sword!,2~5,$45,0,
 67,sharp tooth,weapons.dagger,5,0.1,0.6,1.1,0.75,1.2,0,a bloody sharp tooth,0.6~1.85,$20,5,"""blaster"""
-68,,weapons.machinegun,,,,,,,,,~0,$0,0,"""coilgun"""
+68,magic wand,weapons.dagger,10,0.1,-1.5,-1,4,2,0,a magic wand? I've heard of this device,-1.5~3,$26,1,"""coilgun"""
 69,,weapons.machinegun,,,,,,,,,~0,$0,0,"""arrow shooter"""
 70,,weapons.machinegun,,,,,,,,,~0,$0,0,"""crafted repeater"""
 71,,weapons.machinegun,,,,,,,,,~0,$0,0,"""beretta"""

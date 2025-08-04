@@ -3,7 +3,7 @@
 1,obj_character,dummy,1,1,1,1,0,bare hands,naked,no headwear,00_null,3,1,,0.50,1.50,1.00,1.3~3,0~1,0.2~0.6,5~15
 2,obj_neutral,default,1,1,1,1,1,bare hands,naked,no headwear,00_null,3,1,,0.50,1.50,1.00,1.3~3,0~1,0.2~0.6,5~15
 3,obj_enemy_sleeping,custodian,1,0.5,1,1,0,sharp keys,basic clothes,copper helm,00_null,4,3,,0.25,1.00,2.20,0.6~1.4,1~2,0.1~0.4,8~31
-4,obj_enemy_patrol,knight,2,1.5,1,1,0,rusty sword,knight's armor,rusty helm,00_null,22,3,,1.88,4.13,4.30,0.3~0.7,3~7,0.7~1.6,2~4
+4,obj_enemy_patrol,knight,2,1.25,1.25,1,0,rusty sword,knight's armor,rusty helm,00_null,23,3,,1.56,3.44,5.10,0.2~0.6,3~8,0.6~1.3,2~5
 5,obj_neutral,slave,0.2,1,1,1,0,sharp stick,torn clothes,no headwear,00_null,2,1,,0.50,2.50,1.10,1.1~2.7,0~0,0.2~1,3~15
 6,obj_enemy_guard,sentinel,1,0.5,1,1,0,broken sword,guard's uniform,guard helm,00_null,8,2,,0.63,1.50,4.10,0.3~0.7,1~3,0.2~0.6,5~12
 7,obj_enemy,footman,1,0.75,1,1.25,0,rusty dagger,light chainmail,guard helm,00_null,8,1,,0.75,2.06,3.80,0.3~0.8,1~3,0.3~0.8,4~10
