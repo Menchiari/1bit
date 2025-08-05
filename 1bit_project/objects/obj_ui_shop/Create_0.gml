@@ -63,5 +63,6 @@ cy2=y-yoff+68;
 
 stats=false;
 shop=false;
+selecting=false;
 
 if collision_point(x,y,obj_neutral_death,true,true) {instance_destroy();}

@@ -24,7 +24,7 @@ color=c_white;
 blink_hold=0;
 face_progress=global.face_progress;
 face_progress_death=global.face_progress_death;
-boss_progress=global.boss_progress;//todo add multiple boss changes
+boss_progress=global.boss_progress;
 
 next_room=rm_menu_character;
 game_progress=global.story_progress

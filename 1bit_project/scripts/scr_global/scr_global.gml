@@ -116,7 +116,8 @@ function init_enums(){
 		chainmail,
 		metal_thin,
 		metal_thick,
-		wood
+		wood,
+		null
 	}
 	enum terrains
 	{

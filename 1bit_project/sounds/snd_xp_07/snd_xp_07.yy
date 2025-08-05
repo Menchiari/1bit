@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":0.31378683,
   "name":"snd_xp_07",
   "parent":{
     "name":"equip",

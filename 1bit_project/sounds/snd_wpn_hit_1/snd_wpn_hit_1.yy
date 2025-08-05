@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":1.4569161,
   "name":"snd_wpn_hit_1",
   "parent":{
     "name":"hit",

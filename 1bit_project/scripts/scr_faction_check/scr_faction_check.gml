@@ -30,19 +30,24 @@ function scr_faction_check_ai(target){
 	switch faction
 	{
 		case factions.ally:
-		if target.faction==factions.ally{return false;}
-		else if target.faction==factions.neutral{return false;}
-		else{return true;}
+		//if target.faction==factions.ally{return false;}
+		//else if target.faction==factions.neutral{return false;}
+		//else{return true;}
+		if target.faction!=factions.ally
+		&& target.faction!=factions.neutral
+		{return true;}
 		break;
 		
 		case factions.enemy:
-		if target.faction==factions.enemy {return false;}
-		else {return true;}
+		//if target.faction==factions.enemy {return false;}
+		//else {return true;}
+		if target.faction!=factions.enemy {return true;}
 		break;
 		
 		case factions.zombie:
-		if target.faction==factions.zombie {return false;}
-		else {return true;}
+		//if target.faction==factions.zombie {return false;}
+		//else {return true;}
+		if target.faction!=factions.zombie {return true;}
 		break;
 		
 		case factions.neutral:

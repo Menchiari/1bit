@@ -20,6 +20,9 @@ cy1=y-yoff+42;
 cx2=x-xoff+109;
 cy2=y-yoff+68;
 
+if mouse_check_button(mb_any) && point_in_rectangle(mouse_x,mouse_y,bx0,by0,bx1,by1) {selecting=true;}
+else {selecting=false;}
+
 if instance_exists(obj_hero)
 {
 	if point_distance(obj_hero.x,obj_hero.y,xoriginal,yoriginal)<active_range
@@ -54,6 +57,8 @@ if active==1
 		}
 		if mouse_check_button_released(mb_any)
 		{
+			audio_play_sound(snd_click,10,false,global.audio_ui*.1);
+			
 			if instance_exists(obj_hero)
 			{
 				//make hero still
@@ -79,6 +84,15 @@ if active==1
 							{equip_weapon(shop_weapon);}
 							slot_name[0]=weapon.name;
 							slot_description[0]=weapon.description;
+							//AUDIO
+							var _pitch=clamp(2-(shop_weapon.weight/10),.75,2);
+							var _vol_wpn=global.audio_ui*.25;
+							if shop_weapon.weapon_animset==weapons_animset.dagger {audio_play_sound(snd_equip_knife,10,false,_vol_wpn,0,_pitch);}
+							if shop_weapon.weapon_animset==weapons_animset.sword {audio_play_sound(snd_equip_sword,10,false,_vol_wpn,0,_pitch);}
+							if shop_weapon.weapon_animset==weapons_animset.katana {audio_play_sound(snd_equip_sword,10,false,_vol_wpn,0,_pitch);}
+							if shop_weapon.weapon_animset==weapons_animset.stick {audio_play_sound(snd_equip_stick,10,false,_vol_wpn,0,_pitch);}
+							if shop_weapon.weapon_animset==weapons_animset.shotgun {audio_play_sound(snd_equip_shotgun,10,false,_vol_wpn,0,_pitch);}
+							show_debug_message("audio weapon sound");
 						break;
 						case 1:
 							var shop_armor=armor;
@@ -91,6 +105,19 @@ if active==1
 							{equip_armor(shop_armor);}
 							slot_name[1]=armor.name;
 							slot_description[1]=armor.description;
+							//AUDIO
+							var _pitch_arm=clamp(1.5-(shop_armor.weight/50),.75,1.5);
+							var _vol_arm=global.audio_ui*.6;
+
+							if shop_armor.material==armors_material.cloth {audio_play_sound(snd_equip_cloth,2,false,_vol_arm,0,_pitch_arm);}
+							if shop_armor.material==armors_material.leather {audio_play_sound(snd_equip_vest,2,false,_vol_arm,0,_pitch_arm);}
+							if shop_armor.material==armors_material.cape {audio_play_sound(snd_equip_cape,2,false,_vol_arm,0,_pitch_arm);}
+							if shop_armor.material==armors_material.ceramic {audio_play_sound(snd_equip_vest,2,false,_vol_arm,0,_pitch_arm);}
+							if shop_armor.material==armors_material.chainmail {audio_play_sound(snd_equip_chainmail,2,false,_vol_arm,0,_pitch_arm);show_debug_message("CHAINMAIL!!!")}
+							if shop_armor.material==armors_material.metal_thin {audio_play_sound(snd_equip_armor,2,false,_vol_arm,0,_pitch_arm);}
+							if shop_armor.material==armors_material.metal_thick {audio_play_sound(snd_equip_armor,2,false,_vol_arm,0,_pitch_arm);}
+							if shop_armor.material==armors_material.wood {audio_play_sound(snd_equip_vest,2,false,_vol_arm,0,_pitch_arm);}
+							show_debug_message("audio armor sound for "+string(shop_armor.material)+string(armors_material.cape));
 						break;
 						case 2:
 							var shop_helm=helm;
@@ -103,6 +130,11 @@ if active==1
 							{equip_helm(shop_helm)}
 							slot_name[2]=helm.name;
 							slot_description[2]=helm.description;
+							//AUDIO
+							var _pitch_hlm=clamp(1+(shop_helm.weight/10),1,1.5);
+							var _vol_hlm=global.audio_ui*.5;
+							audio_play_sound(snd_equip_hlm,10,false,_vol_hlm,0,_pitch_hlm);
+							show_debug_message("audio helm sound");
 						break;
 						default:
 						break;
@@ -112,6 +144,7 @@ if active==1
 					shop_active=0;
 					button_pressed=0;
 					scr_savegame();
+					scr_loadgame();//will this set the defaults to what hero has? todo check
 				}
 			}
 			else

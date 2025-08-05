@@ -121,6 +121,25 @@ function armor_sprite_switch(_csv_string) {
 	{return undefined}
 }
 
+function armor_material_switch(_csv_string) {
+		var this_material = armors_material.null
+		
+		switch(_csv_string){
+			case "flesh": this_material = armors_material.flesh break;
+			case "cloth": this_material = armors_material.cloth break;
+			case "leather": this_material = armors_material.leather break;
+			case "cape": this_material = armors_material.cape break;
+			case "ceramic": this_material = armors_material.ceramic break;
+			case "chainmail": this_material = armors_material.chainmail break;
+			case "metal_thin": this_material = armors_material.metal_thin break;
+			case "metal_thick": this_material = armors_material.metal_thick break;
+			case "wood": this_material = armors_material.wood break;
+			default: this_material = armors_material.null; break;
+		}
+	
+		return this_material;
+}
+
 
 function csv_armor_import(csv_File,Array_Var){
 	//import a given cvs (csv_File) into a given grid (arg2)
@@ -143,7 +162,7 @@ function csv_armor_import(csv_File,Array_Var){
 		real(file_grid[# 5,j]),
 		armor_sprite_switch(file_grid[# 6,j]),
 		file_grid[# 7,j],
-		file_grid[# 8,j],
+		armor_material_switch(file_grid[# 8,j]), //file_grid[# 8,j],
 		real(file_grid[# 0,j]))
 		array_set(Array_Var, real(file_grid[# 0,j]), this_armor);
 		ds_list_set(global.armor_index, real(file_grid[# 0,j]), file_grid[# 1,j]);

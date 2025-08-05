@@ -27,6 +27,9 @@ if instance_exists(mercenary)
 }
 //else {instance_destroy();}
 
+if mouse_check_button(mb_any) && point_in_rectangle(mouse_x,mouse_y,bx0,by0,bx1,by1) {selecting=true;}
+else {selecting=false;}
+
 if instance_exists(obj_hero)
 {
 	if point_distance(obj_hero.x,obj_hero.y,x,y)<active_range {active=1;}
@@ -51,6 +54,8 @@ if active==1
 		}
 		if mouse_check_button_released(mb_any)
 		{
+			audio_play_sound(snd_click,10,false,global.audio_ui*.1);
+
 			if instance_exists(obj_hero)
 			{
 				//make hero still
@@ -60,6 +65,7 @@ if active==1
 				
 				if button_pressed==1
 				{
+					audio_play_sound(snd_vox_hired,10,false,global.audio_ui*.3,0,random_range(1,2));
 					mercenary.ai_state_original=ai_states.follow;
 					mercenary.ai_state=ai_states.follow;
 					mercenary.state=states.idle;

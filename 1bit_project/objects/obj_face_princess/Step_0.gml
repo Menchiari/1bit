@@ -175,7 +175,7 @@ case 0:
 			state="question";
 			//spawn buttons with replies to fight (go to princess room and global.princess=false)
 			r2=instance_create_depth(buttoncx,buttony,button_depth,obj_face_button);
-			with r2 {txt="fight"; nextnumber=-1;nextroom=rm_story_princess_fight;}//todo add princess fight
+			with r2 {txt="fight"; nextnumber=-1;nextroom=rm_story_princess_fight;}//add princess fight
 		break;
 		case 27:
 			sprite_index=spr_faces_princess_politesmile;
@@ -205,7 +205,7 @@ case 0:
 			state="question";
 			//spawn buttons with replies to raid home
 			r2=instance_create_depth(buttoncx,buttony,button_depth,obj_face_button);
-			with r2 {txt="raid home"; nextnumber=-1;nextroom=rm_story_princess_raid;}//todo add princess fight
+			with r2 {txt="raid home"; nextnumber=-1;nextroom=rm_story_princess_raid;}//princess raid
 		break;
 		case 33://last phase, for some reason it can't be default, must be there to end the scene
 			global.princess=false;

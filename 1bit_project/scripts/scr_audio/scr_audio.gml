@@ -20,7 +20,7 @@ function scr_audio_weapon_swing(_frame,_power){
 			break;
 			case weapons_animset.shotgun:
 			_sound = choose(snd_wpn_shotgun_01, snd_wpn_shotgun_02, snd_wpn_shotgun_03, snd_wpn_shotgun_04, snd_wpn_shotgun_05, snd_wpn_shotgun_06, snd_wpn_shotgun_07);//snd_null;
-			_mix= 2;
+			_mix= 1.25;
 			break;
 			case weapons_animset.null:
 			break;
@@ -129,7 +129,7 @@ function scr_audio_armor_hit(_frame,_power){
 	if image_index==_frame
 	{
 		var _sound=snd_error;
-		var _mix=1;
+		var _mix=2;
 		var _pitch=1;
 		show_debug_message("armor "+string(self.armor.material)+" hit");
 		switch armor.material
@@ -137,38 +137,47 @@ function scr_audio_armor_hit(_frame,_power){
 			case armors_material.flesh:
 			_sound = choose(snd_wpn_arm_flesh_1, snd_wpn_arm_flesh_2, snd_wpn_arm_flesh_3, snd_wpn_arm_flesh_4, snd_wpn_arm_flesh_5, snd_wpn_arm_flesh_6, snd_wpn_arm_flesh_7, snd_wpn_arm_flesh_8);
 			_pitch = 0.5;
+			show_debug_message("flesh hit")
 
 			break;
 			case armors_material.cloth:
 			_sound = choose(snd_wpn_arm_cloth_01, snd_wpn_arm_cloth_02, snd_wpn_arm_cloth_03, snd_wpn_arm_cloth_04, snd_wpn_arm_cloth_05, snd_wpn_arm_cloth_06, snd_wpn_arm_cloth_07, snd_wpn_arm_cloth_08, snd_wpn_arm_cloth_09, snd_wpn_arm_cloth_10);
+			show_debug_message("cloth hit")
 
 			break;
 			case armors_material.leather:
 			_sound = choose(snd_wpn_arm_leather_01, snd_wpn_arm_leather_02, snd_wpn_arm_leather_03, snd_wpn_arm_leather_04, snd_wpn_arm_leather_05, snd_wpn_arm_leather_06, snd_wpn_arm_leather_07, snd_wpn_arm_leather_08, snd_wpn_arm_leather_09, snd_wpn_arm_leather_10, snd_wpn_arm_leather_11, snd_wpn_arm_leather_12, snd_wpn_arm_leather_13, snd_wpn_arm_leather_14, snd_wpn_arm_leather_15, snd_wpn_arm_leather_16, snd_wpn_arm_leather_17, snd_wpn_arm_leather_18);
+			show_debug_message("leather hit")
 
 			break;
 			case armors_material.cape:
 			_sound = choose(snd_wpn_arm_cloth_01, snd_wpn_arm_cloth_02, snd_wpn_arm_cloth_03, snd_wpn_arm_cloth_04, snd_wpn_arm_cloth_05, snd_wpn_arm_cloth_06, snd_wpn_arm_cloth_07, snd_wpn_arm_cloth_08, snd_wpn_arm_cloth_09, snd_wpn_arm_cloth_10);
+			show_debug_message("cape hit")
 
 			break;
 			case armors_material.ceramic:
 			_sound = choose(snd_wpn_arm_ceramic_01, snd_wpn_arm_ceramic_02, snd_wpn_arm_ceramic_03, snd_wpn_arm_ceramic_04, snd_wpn_arm_ceramic_05, snd_wpn_arm_ceramic_06, snd_wpn_arm_ceramic_07, snd_wpn_arm_ceramic_08, snd_wpn_arm_ceramic_09, snd_wpn_arm_ceramic_10, snd_wpn_arm_ceramic_11, snd_wpn_arm_ceramic_12);
+			show_debug_message("ceramic hit")
 
 			break;
 			case armors_material.chainmail:
 			_sound = choose(snd_wpn_arm_chainmail_1, snd_wpn_arm_chainmail_2, snd_wpn_arm_chainmail_3, snd_wpn_arm_chainmail_4, snd_wpn_arm_chainmail_5, snd_wpn_arm_chainmail_6, snd_wpn_arm_chainmail_7);
+			show_debug_message("chainmail hit")
 
 			break;
 			case armors_material.metal_thin:
 			_sound = choose(snd_wpn_arm_metal_thin_01, snd_wpn_arm_metal_thin_02, snd_wpn_arm_metal_thin_03, snd_wpn_arm_metal_thin_04, snd_wpn_arm_metal_thin_05, snd_wpn_arm_metal_thin_06, snd_wpn_arm_metal_thin_07, snd_wpn_arm_metal_thin_08, snd_wpn_arm_metal_thin_09, snd_wpn_arm_metal_thin_10, snd_wpn_arm_metal_thin_11, snd_wpn_arm_metal_thin_12);
+			show_debug_message("metal thin hit")
 
 			break;
 			case armors_material.metal_thick:
 			_sound = choose(snd_wpn_arm_metal_thick_1, snd_wpn_arm_metal_thick_2, snd_wpn_arm_metal_thick_3, snd_wpn_arm_metal_thick_4, snd_wpn_arm_metal_thick_5, snd_wpn_arm_metal_thick_6, snd_wpn_arm_metal_thick_7, snd_wpn_arm_metal_thick_8);
+			show_debug_message("metal thick hit")
 
 			break;
 			case armors_material.wood:
 			_sound = choose(snd_wpn_arm_wood_01, snd_wpn_arm_wood_02, snd_wpn_arm_wood_03, snd_wpn_arm_wood_04, snd_wpn_arm_wood_05, snd_wpn_arm_wood_06, snd_wpn_arm_wood_07, snd_wpn_arm_wood_08, snd_wpn_arm_wood_09, snd_wpn_arm_wood_10, snd_wpn_arm_wood_11, snd_wpn_arm_wood_12);
+			show_debug_message("wood hit")
 
 			break;
 			default:
@@ -256,3 +265,4 @@ function scr_audio_roll(_frame,_power){
 function scr_audio_play(_sound=snd_null,_volume=0.2,_pitch=1,_loop=false,_radius=60,_range=250){
 	return audio_play_sound_at(_sound,x,y,0,_radius,_range,1,_loop,10,_volume,0,_pitch);
 }
+

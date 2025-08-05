@@ -113,6 +113,8 @@ if active==1
 		}
 		
 		draw_set_color(image_blend);
+		
+		if selecting==true {draw_rectangle_color(bx0,by0,bx1,by1,c_white,c_white,c_white,c_white,false);}
 	}
 	else
 	{
