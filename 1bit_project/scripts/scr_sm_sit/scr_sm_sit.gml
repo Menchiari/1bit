@@ -19,17 +19,10 @@ function scr_sm_sit(){
 			image_index=trigger_spawn_idle_a;
 			state=states.spawn;
 		}
-		
-		//Gamepad Test
-		if (abs(gamepad_axis_value(0, gp_axislh)) > 0.1)
-		|| (abs(gamepad_axis_value(0, gp_axislv)) > 0.1)
-		|| (abs(gamepad_button_check(0,gp_face1)) > 0.1)
-		{
-			image_speed=idle_speed;
-			image_index=trigger_spawn_idle_a;
-			state=states.spawn;
-		}
-
+	}
+	if instance_exists(obj_asset_bonfire)
+	{
+		if point_distance(x,y,obj_asset_bonfire.x,obj_asset_bonfire.y)<80 {hp=hp_max;}
 	}
 }
 function scr_sm_sit_idle(){

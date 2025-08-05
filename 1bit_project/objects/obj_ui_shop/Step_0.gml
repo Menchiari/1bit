@@ -57,7 +57,7 @@ if active==1
 		}
 		if mouse_check_button_released(mb_any)
 		{
-			audio_play_sound(snd_click,10,false,global.audio_ui*.1);
+			audio_play_sound(snd_click,10,false,global.audio_ui*.07);
 			
 			if instance_exists(obj_hero)
 			{
@@ -107,7 +107,7 @@ if active==1
 							slot_description[1]=armor.description;
 							//AUDIO
 							var _pitch_arm=clamp(1.5-(shop_armor.weight/50),.75,1.5);
-							var _vol_arm=global.audio_ui*.6;
+							var _vol_arm=global.audio_ui*.4;
 
 							if shop_armor.material==armors_material.cloth {audio_play_sound(snd_equip_cloth,2,false,_vol_arm,0,_pitch_arm);}
 							if shop_armor.material==armors_material.leather {audio_play_sound(snd_equip_vest,2,false,_vol_arm,0,_pitch_arm);}
@@ -140,8 +140,8 @@ if active==1
 						break;
 					}
 					
-					active=0;
-					shop_active=0;
+					//active=0;
+					//shop_active=0;
 					button_pressed=0;
 					scr_savegame();
 					scr_loadgame();//will this set the defaults to what hero has? todo check

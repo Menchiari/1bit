@@ -38,7 +38,7 @@ function scr_ai_test(idle_actions){
 			if timer>atk2_time{state=states.attack_strong;}
 			if timer<=atk1_time{state=states.roll;}
 	//move towards target
-			if instance_exists(ai_target) && scr_faction_check_ai(ai_target) {dest_x=ai_target.x;dest_y=ai_target.y;}
+			if instance_exists(ai_target) && scr_faction_check_ai(ai_target) {dest_x=ai_target.x+random_range(animset_attack_range,-animset_attack_range);dest_y=ai_target.y+random_range(animset_attack_range,-animset_attack_range);}
 			else{state=states.idle;ai_state=ai_state_original;}
 		}
 	}

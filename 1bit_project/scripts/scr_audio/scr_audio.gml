@@ -129,7 +129,7 @@ function scr_audio_armor_hit(_frame,_power){
 	if image_index==_frame
 	{
 		var _sound=snd_error;
-		var _mix=2;
+		var _mix=1;
 		var _pitch=1;
 		show_debug_message("armor "+string(self.armor.material)+" hit");
 		switch armor.material

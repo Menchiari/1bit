@@ -1,3 +1,4 @@
 /// @description What happens when text ends
 //game_restart();
-room_goto(rm_world);
+if global.player_lives<=0 {game_restart();}
+else {room_goto(rm_world);}
