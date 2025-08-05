@@ -81,7 +81,10 @@ if active==1
 							
 							equip_weapon(obj_hero.weapon);
 							with (obj_hero)
-							{equip_weapon(shop_weapon);}
+							{
+								equip_weapon(shop_weapon);
+								global.player_weapon = global.weapons[weapon.index];
+							}
 							slot_name[0]=weapon.name;
 							slot_description[0]=weapon.description;
 							//AUDIO
@@ -102,7 +105,10 @@ if active==1
 							
 							equip_armor(obj_hero.armor);
 							with (obj_hero)
-							{equip_armor(shop_armor);}
+							{
+								equip_armor(shop_armor);
+								global.player_armor  = global.armors[armor.index];
+							}
 							slot_name[1]=armor.name;
 							slot_description[1]=armor.description;
 							//AUDIO
@@ -127,7 +133,10 @@ if active==1
 							
 							equip_helm(obj_hero.helm);
 							with (obj_hero)
-							{equip_helm(shop_helm)}
+							{
+								equip_helm(shop_helm);
+								global.player_helm   = global.helms[helm.index];
+							}
 							slot_name[2]=helm.name;
 							slot_description[2]=helm.description;
 							//AUDIO
@@ -143,8 +152,8 @@ if active==1
 					//active=0;
 					//shop_active=0;
 					button_pressed=0;
+					
 					scr_savegame();
-					scr_loadgame();//will this set the defaults to what hero has? todo check
 				}
 			}
 			else

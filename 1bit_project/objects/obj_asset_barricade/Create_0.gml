@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 
-hp_max=2.5;
+hp_max=2;
 
 //power of screenshake and object shake
 shake_power=.5;
