@@ -40,11 +40,12 @@ function scr_check_destination_edge()
 	show_debug_message(string(x)+" hero x, "+string(y)+" hero y")
 }
 
-function can_character_navigate() {
+// test whether the character can pathfind to a given location
+// by default, use our own x and y position to check if we are overlapping the mp_grid
+function can_character_navigate(_x_target = x, _y_target = y) {
 	var _test_path = path_add();
 	var _result = true;
-	if (!mp_grid_path(global.pathfinding_grid, _test_path, x, y, x, y, true)) {
-		// cannot navigate to our own position on the mp_grid, this means we are overlapping the grid
+	if (!mp_grid_path(global.pathfinding_grid, _test_path, x, y, _x_target, _y_target, true)) {
 		_result = false;
 	}
 	
