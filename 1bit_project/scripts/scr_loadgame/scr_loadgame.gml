@@ -7,6 +7,7 @@ if file_exists("save.sav")
 	
 		global.xp=ini_read_real("savegame"+string(global.slot),"xp",global.xp);
 		global.player_lives=ini_read_real("savegame"+string(global.slot),"lives",global.player_lives);
+		global.player_head=ini_read_real("savegame"+string(global.slot),"player_head",global.player_head);
 		global.deathcount=ini_read_real("savegame"+string(global.slot),"deathcount",global.deathcount);
 		global.face_progress=ini_read_real("savegame"+string(global.slot),"faceprogress",global.face_progress);
 		global.story_progress=ini_read_real("savegame"+string(global.slot),"storyprogress",global.story_progress);

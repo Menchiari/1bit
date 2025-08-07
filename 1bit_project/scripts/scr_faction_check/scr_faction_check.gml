@@ -25,6 +25,7 @@ function scr_faction_check(target){
 		return true;
 		break;
 	}
+	if ai_state=ai_states.flee {return true;}
 }
 function scr_faction_check_ai(target){
 	switch faction
@@ -41,7 +42,9 @@ function scr_faction_check_ai(target){
 		case factions.enemy:
 		//if target.faction==factions.enemy {return false;}
 		//else {return true;}
-		if target.faction!=factions.enemy {return true;}
+		if target.faction!=factions.enemy
+		&& target.faction!=factions.neutral
+		{return true;}
 		break;
 		
 		case factions.zombie:

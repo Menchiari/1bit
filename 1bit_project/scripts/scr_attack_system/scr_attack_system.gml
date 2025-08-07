@@ -84,9 +84,126 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 						
 						if room!=rm_death
 						{
+							//Damage number
 							var damage_value=instance_create_depth(enemy.x,enemy.y,enemy.depth,obj_ui_number);
 							damage_value.number=total_damage;
 							if instance_exists(obj_hero) {if enemy==obj_hero.id {damage_value._color=c_red;}}
+							//Random exclamation
+							var damage_exclamation_chance=random_range(0,100);
+							if damage_exclamation_chance<=7 && enemy.hp>0 && enemy.animal==false
+							{
+								var damage_exclamation=instance_create_depth(enemy.x,enemy.y-15,enemy.depth,obj_ui_number);
+								damage_exclamation.number=-1;
+								damage_exclamation.text = choose(
+									// 50% exclamations and pain reactions
+									"Agh!",
+									"Ow!",
+									"Ah!",
+									"Oof!",
+									"Ugh!",
+									"Gah!",
+									"Ngh!",
+									"Shit!",
+									"Fuck!",
+									"Damn!",
+									"My leg!",
+									"My arm!",
+									"My ribs!",
+									"My side!",
+									"My back!",
+									"My hand!",
+									"My knee!",
+									"My chest!",
+									"My neck!",
+									"Ah fuck!",
+									"God!",
+									"Hurts!",
+									"That hurt!",
+									"It burns!",
+									"It stings!",
+									"Too hard!",
+									"Too fast!",
+									"Unngh!",
+									"Broke it!",
+									"Fucking—",
+									"Damn it!",
+									"Shit fuck!",
+									"Low hit!",
+									"Hard strike!",
+									"Sharp!",
+									"Blunt!",
+									"Mid hit!",
+									"Still up!",
+									"Right there!",
+									"I felt that!",
+									"Deep cut!",
+									"Oww!",
+									"My foot!",
+									"Cracked me!",
+									"Right hit!",
+									"Clean hit!",
+									"Fuckin hell!",
+									"Not again!",
+									"Hit again!",
+									"Sharp edge!",
+									"Hit hard!",
+
+									// 50% brutal, short damage descriptions
+									"broken rib",
+									"cracked tooth",
+									"cut finger",
+									"slashed ear",
+									"busted lip",
+									"bruised eye",
+									"torn muscle",
+									"fractured wrist",
+									"bloody nose",
+									"numb hand",
+									"burned palm",
+									"twisted ankle",
+									"split knuckle",
+									"cut cheek",
+									"gashed thigh",
+									"deep bruise",
+									"stabbed calf",
+									"ripped skin",
+									"blackened eye",
+									"split brow",
+									"fractured toe",
+									"bleeding side",
+									"sprained wrist",
+									"swollen hand",
+									"punched throat",
+									"slashed back",
+									"grazed neck",
+									"stabbed shoulder",
+									"ripped tendon",
+									"stab wound",
+									"bitten ear",
+									"torn ear",
+									"blood in mouth",
+									"broken fingers",
+									"gushing forearm",
+									"severed nail",
+									"cut shoulder",
+									"open wound",
+									"gouged hand",
+									"pierced bicep",
+									"nicked ribs",
+									"jaw fracture",
+									"split lip",
+									"stabbed side",
+									"torn knee",
+									"gashed palm",
+									"swollen eye",
+									"stabbed hip",
+									"nicked thigh"
+								);
+								damage_exclamation._color=enemy.speech_color;
+								damage_exclamation.spdy=1;
+								damage_exclamation.spdx=random_range(-.25,.25);
+								damage_exclamation.duration=game_get_speed(gamespeed_fps)*1.5;
+							}
 						}
 
 				//flash

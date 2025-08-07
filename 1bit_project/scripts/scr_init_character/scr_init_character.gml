@@ -25,7 +25,7 @@ function scr_init_character(){
 	dialogue_neutral="";
 	dialogue_negative="";
 	dialogue_death="";
-	dialogue_death_chance=15;
+	dialogue_death_chance=18//15;
 	dialogue_death_duration=random_range(3,5); //in seconds the dialogue that spawns
 	death_description="";
 	speech_text=choose(dialogue_positive,dialogue_neutral,dialogue_negative)//"";

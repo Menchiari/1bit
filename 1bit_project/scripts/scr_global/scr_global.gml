@@ -258,7 +258,7 @@ function init_globals(){
 	global.audio=2.5;
 
 	global.audio_footsteps=		global.audio*0.035;
-	global.audio_weapons=		global.audio*0.25;
+	global.audio_weapons=		global.audio*.21//0.25;
 	global.audio_hits=			global.audio*0.17;
 	global.audio_voices=		global.audio*0.15;
 	global.audio_death=			global.audio*0.15;
@@ -267,7 +267,7 @@ function init_globals(){
 	global.audio_bonfire=		global.audio*0.25;
 	global.audio_breakable=		global.audio*0.2;
 	
-	global.audio_backgrounds=	global.audio*1.1;
+	global.audio_backgrounds=	global.audio*1.3//1.1;
 
 	global.audio_faces=			global.audio*1;
 	global.audio_music=			global.audio*.8;

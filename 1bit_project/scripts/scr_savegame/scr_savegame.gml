@@ -5,6 +5,7 @@ ini_open("save.sav")
 
 	ini_write_real("savegame"+string(global.slot),"xp",global.xp);
 	ini_write_real("savegame"+string(global.slot),"lives",global.player_lives);
+	ini_write_real("savegame"+string(global.slot),"player_head",global.player_head);
 	ini_write_real("savegame"+string(global.slot),"deathcount",global.deathcount);
 	ini_write_real("savegame"+string(global.slot),"faceprogress",global.face_progress);
 	ini_write_real("savegame"+string(global.slot),"storyprogress",global.story_progress);
