@@ -62,7 +62,7 @@ if active==1
 			if instance_exists(obj_hero)
 			{
 				//make hero still
-				if point_in_rectangle(mouse_x,mouse_y,x-xoff+19,y-yoff+13,x-xoff+110,y-yoff+85)
+				if point_in_rectangle(mouse_x,mouse_y,x-xoff+19,y-yoff+13,x-xoff+110,by1)//y-yoff+85)
 				|| point_in_circle(mouse_x,mouse_y,x,y,radius)
 				{obj_hero.state=states.idle; obj_hero.dest_x=obj_hero.x;obj_hero.dest_y=obj_hero.y;}
 				else {active=0; shop_active=0;}
@@ -146,6 +146,8 @@ if active==1
 							show_debug_message("audio helm sound");
 						break;
 						default:
+							active=0;
+							shop_active=0;
 						break;
 					}
 					

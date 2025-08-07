@@ -27,6 +27,7 @@ ini_close();
 ini_open("save_death.sav")
 	{
 		ini_write_real("savegame"+string(global.slot),"faceprogressdeath",global.face_progress_death);
+		ini_write_real("savegame"+string(global.slot),"allheads",global.allheads);
 	}
 ini_close();
 }

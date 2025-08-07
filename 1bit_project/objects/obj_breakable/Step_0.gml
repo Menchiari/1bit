@@ -90,6 +90,10 @@ switch state
 			_sound = choose(snd_breakable_bushes_1, snd_breakable_bushes_2, snd_breakable_bushes_3, snd_breakable_bushes_4, snd_breakable_bushes_5, snd_breakable_bushes_6, snd_breakable_bushes_7, snd_breakable_bushes_8, snd_breakable_bushes_9);
 			_mix=_submix*1;
 			break;
+			case "flesh":
+			_sound = choose(snd_wpn_hit_1,snd_wpn_hit_2,snd_wpn_hit_3,snd_wpn_hit_4,snd_wpn_hit_5);
+			_mix=_submix*1;
+			break;
 			default:
 			_sound=snd_error;
 			_mix=_submix*2;

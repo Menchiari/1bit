@@ -44,6 +44,7 @@ if file_exists("save_death.sav")
 	{
 	ini_open("save_death.sav")
 		global.face_progress_death=ini_read_real("savegame"+string(global.slot),"faceprogressdeath",global.face_progress_death);
+		global.allheads=ini_read_real("savegame"+string(global.slot),"allheads",global.allheads);
 	ini_close();
 	}
 }

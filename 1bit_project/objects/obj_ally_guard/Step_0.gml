@@ -8,7 +8,8 @@ else
 {
 	if mouse_check_button_released(mb_any)
 	{
-		if collision_circle(mouse_x,mouse_y,10,self,true,false) && speech_visible==true
+		if point_in_circle(mouse_x,mouse_y,x,y-16,20)//collision_circle(mouse_x,mouse_y,10,self,true,false)
+		&& speech_visible==true
 		{
 			sentence+=1;
 		}

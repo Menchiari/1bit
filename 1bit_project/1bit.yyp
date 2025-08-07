@@ -179,6 +179,7 @@
     {"id":{"name":"obj_asset_chair","path":"objects/obj_asset_chair/obj_asset_chair.yy",},},
     {"id":{"name":"obj_asset_chest","path":"objects/obj_asset_chest/obj_asset_chest.yy",},},
     {"id":{"name":"obj_asset_crate","path":"objects/obj_asset_crate/obj_asset_crate.yy",},},
+    {"id":{"name":"obj_asset_deadbody","path":"objects/obj_asset_deadbody/obj_asset_deadbody.yy",},},
     {"id":{"name":"obj_asset_decor","path":"objects/obj_asset_decor/obj_asset_decor.yy",},},
     {"id":{"name":"obj_asset_farm","path":"objects/obj_asset_farm/obj_asset_farm.yy",},},
     {"id":{"name":"obj_asset_mirror","path":"objects/obj_asset_mirror/obj_asset_mirror.yy",},},

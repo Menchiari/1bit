@@ -72,6 +72,7 @@ if room==rm_world
 		
 		//layer_destroy_instances("char_other");
 		//layer_destroy_instances("char_spawn");
+		global.allheads=true;
 	}
 	
 	////beginning of the game

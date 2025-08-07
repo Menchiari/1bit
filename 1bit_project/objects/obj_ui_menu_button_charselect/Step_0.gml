@@ -27,6 +27,8 @@ if mouse_check_button_released(mb_any)
 	else if global.story_progress==5 {min_sel=0; max_sel=6;}
 	else {min_sel=0; max_sel=6;}
 	
+	if global.allheads==true {min_sel=0; max_sel=6;}
+	
 	//debug
 	//min_sel=0;
 	//max_sel=6;

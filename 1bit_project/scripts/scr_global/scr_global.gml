@@ -225,6 +225,7 @@ function init_globals(){
 	global.princess=true;
 	global.introcinematic=false;
 	global.followers=[];
+	global.allheads=false;
 	
 	global.unlock_wpn=ds_list_create();
 	//Staring Weapons

@@ -192,7 +192,7 @@ case 3:
 		break;
 	}
 break;
-case 5:
+case 4:
 	switch txt_phase //death is only the beginning
 	{
 		case 0:

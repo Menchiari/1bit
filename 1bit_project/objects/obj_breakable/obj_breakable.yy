@@ -39,6 +39,7 @@
         "\"wood\"",
         "\"bush\"",
         "\"random\"",
+        "\"flesh\"",
         "\"null\"",
       ],"multiselect":false,"name":"material","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"generic\"","varType":6,},
   ],

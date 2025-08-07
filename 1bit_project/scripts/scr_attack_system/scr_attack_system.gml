@@ -60,8 +60,9 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 						
 						var damage_value=instance_create_depth(enemy.x,enemy.y,enemy.depth,obj_ui_number);
 						damage_value.text="BLOCKED";
-						if instance_exists(obj_hero) {if enemy!=obj_hero.id {damage_value._color=c_red;}}
-						if instance_exists(obj_ally) {if enemy!=obj_ally.id {damage_value._color=c_red;}}
+						damage_value._color=enemy.speech_color;
+						//if instance_exists(obj_hero) {if enemy!=obj_hero.id {damage_value._color=c_red;}}
+						//if instance_exists(obj_ally) {if enemy!=obj_ally.id {damage_value._color=c_red;}}
 												
 						show_debug_message(string(object_get_name(enemy.object_index))+" has blocked an attack from "+string(object_get_name(object_index)));
 					}					
@@ -125,27 +126,26 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 									"Too fast!",
 									"Unngh!",
 									"Broke it!",
-									"Fucking—",
+									"Fuckk-",
 									"Damn it!",
-									"Shit fuck!",
 									"Low hit!",
 									"Hard strike!",
 									"Sharp!",
 									"Blunt!",
-									"Mid hit!",
+									"Mid hit",
 									"Still up!",
 									"Right there!",
 									"I felt that!",
-									"Deep cut!",
+									"Deep cut",
 									"Oww!",
 									"My foot!",
 									"Cracked me!",
 									"Right hit!",
 									"Clean hit!",
-									"Fuckin hell!",
+									"hell!",
 									"Not again!",
 									"Hit again!",
-									"Sharp edge!",
+									"ah!",
 									"Hit hard!",
 
 									// 50% brutal, short damage descriptions
