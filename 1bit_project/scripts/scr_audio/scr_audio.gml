@@ -20,7 +20,7 @@ function scr_audio_weapon_swing(_frame,_power){
 			break;
 			case weapons_animset.shotgun:
 			_sound = choose(snd_wpn_shotgun_01, snd_wpn_shotgun_02, snd_wpn_shotgun_03, snd_wpn_shotgun_04, snd_wpn_shotgun_05, snd_wpn_shotgun_06, snd_wpn_shotgun_07);//snd_null;
-			_mix= 1.25;
+			_mix= .9;
 			break;
 			case weapons_animset.null:
 			break;

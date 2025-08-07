@@ -1,1 +1,3 @@
-if global.story_progress<2 instance_destroy();
+if global.story_progress<2
+|| global.story_progress>=5
+instance_destroy();
