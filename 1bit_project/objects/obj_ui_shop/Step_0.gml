@@ -42,7 +42,11 @@ if collision_circle(xoriginal,yoriginal,reactive_range,obj_enemy,false,true) {ac
 
 if active==1
 {
-	if mouse_check_button_released(mb_any) && point_in_circle(mouse_x,mouse_y,x,y,radius) {shop_active=1;}
+	if mouse_check_button_released(mb_any)
+	&& point_in_circle(mouse_x,mouse_y,x,y,radius)
+	&& shop_active!=1
+	{shop_active=1;}
+	
 	if shop_active==1
 	{	
 		if mouse_check_button_released(mb_any)
@@ -65,7 +69,7 @@ if active==1
 				if point_in_rectangle(mouse_x,mouse_y,x-xoff+19,y-yoff+13,x-xoff+110,by1)//y-yoff+85)
 				|| point_in_circle(mouse_x,mouse_y,x,y,radius)
 				{obj_hero.state=states.idle; obj_hero.dest_x=obj_hero.x;obj_hero.dest_y=obj_hero.y;}
-				else {active=0; shop_active=0;}
+				else {active=0; shop_active=0;obj_hero.state=states.idle; obj_hero.dest_x=obj_hero.x;obj_hero.dest_y=obj_hero.y;}
 				
 				if button_pressed==1
 				{
@@ -169,6 +173,10 @@ if active==1
 			x=obj_camera.x;
 			y=obj_camera.y+sprite_height/2;
 		}
+		
+		//Avoids it remaining active when pressed where the arrow usually is at x,y
+		if mouse_check_button_released(mb_any) && point_in_circle(mouse_x,mouse_y,x,y,radius) {shop_active=0;}
+
 	}
 	else
 	{

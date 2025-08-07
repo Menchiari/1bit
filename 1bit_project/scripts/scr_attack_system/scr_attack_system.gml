@@ -87,7 +87,7 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 						{
 							//Damage number
 							var damage_value=instance_create_depth(enemy.x,enemy.y,enemy.depth,obj_ui_number);
-							damage_value.number=total_damage;
+							damage_value.number=total_damage/10;
 							if instance_exists(obj_hero) {if enemy==obj_hero.id {damage_value._color=c_red;}}
 							//Random exclamation
 							var damage_exclamation_chance=random_range(0,100);

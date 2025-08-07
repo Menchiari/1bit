@@ -8,8 +8,8 @@ if display_mouse==true
 //Main UI - deactivate rooms with no UI here
 
 //hp line variables
-var thickness=4//6;
-var line_thickness=2;
+var thickness=5//6;
+var line_thickness=4;
 var height=6//8;
 
 if UI==true
@@ -51,7 +51,30 @@ if UI==true
 			//healthbar
 			draw_rectangle_color(camx-1,camy+(camheight/2)-thickness-height,camx+(camwidth/2*obj_hero.hp/obj_hero.hp_max)-line_thickness-(border*2),camy+(camheight/2)-line_thickness-height,bordercolor,bordercolor,bordercolor,bordercolor,false);
 			draw_rectangle_color(camx+1,camy+(camheight/2)-thickness-height,camx-(camwidth/2*obj_hero.hp/obj_hero.hp_max)+line_thickness+(border*2),camy+(camheight/2)-line_thickness-height,bordercolor,bordercolor,bordercolor,bordercolor,false);
+			
+		var hp_text_x = camwidth/2-1;
+		var hp_text_y = camy+(camheight/2)-(height*2);
+		var hp_text = string(round(obj_hero.hp*10))//string(round(100*(obj_hero.hp/obj_hero.hp_max)))
+		var hp_text_color = c_ltgray;
+			
+			if obj_hero.hp/obj_hero.hp_max < .25 hp_text_color = c_red;
 
+			draw_set_halign(fa_center);
+			draw_set_valign(fa_middle);
+			draw_text_ext_color(camx,hp_text_y+1,hp_text,6,100,0,0,0,0,1);
+			draw_text_ext_color(camx,hp_text_y-1,hp_text,6,100,0,0,0,0,1);
+			draw_text_ext_color(camx-1,hp_text_y+1,hp_text,6,100,0,0,0,0,1);
+			draw_text_ext_color(camx-1,hp_text_y-1,hp_text,6,100,0,0,0,0,1);
+			draw_text_ext_color(camx-1,hp_text_y,hp_text,6,100,0,0,0,0,1);
+			draw_text_ext_color(camx+1,hp_text_y+1,hp_text,6,100,0,0,0,0,1);
+			draw_text_ext_color(camx+1,hp_text_y-1,hp_text,6,100,0,0,0,0,1);
+			draw_text_ext_color(camx+1,hp_text_y,hp_text,6,100,0,0,0,0,1);
+			draw_text_ext_color(camx-2,hp_text_y+1,hp_text,6,100,0,0,0,0,.8);
+			draw_text_ext_color(camx-2,hp_text_y-1,hp_text,6,100,0,0,0,0,.8);
+			draw_text_ext_color(camx+2,hp_text_y+1,hp_text,6,100,0,0,0,0,.8);
+			draw_text_ext_color(camx+2,hp_text_y-1,hp_text,6,100,0,0,0,0,.8);
+			
+			draw_text_ext_color(camx,hp_text_y,hp_text,6,100,hp_text_color,hp_text_color,hp_text_color,hp_text_color,.68);
 		//
 			height=-3
 			var pos_x=5+3
