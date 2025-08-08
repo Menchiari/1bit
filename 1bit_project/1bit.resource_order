@@ -268,6 +268,7 @@
     {"name":"scr_pathfinding_scripts","order":1,"path":"scripts/scr_pathfinding_scripts/scr_pathfinding_scripts.yy",},
     {"name":"scr_sm_sit","order":1,"path":"scripts/scr_sm_sit/scr_sm_sit.yy",},
     {"name":"scr_ui_characters","order":2,"path":"scripts/scr_ui_characters/scr_ui_characters.yy",},
+    {"name":"to_roman","order":2,"path":"scripts/to_roman/to_roman.yy",},
     {"name":"snd_bg_beach_final","order":1,"path":"sounds/snd_bg_beach_final/snd_bg_beach_final.yy",},
     {"name":"snd_bg_cave_beats","order":19,"path":"sounds/snd_bg_cave_beats/snd_bg_cave_beats.yy",},
     {"name":"snd_bg_dungeon","order":2,"path":"sounds/snd_bg_dungeon/snd_bg_dungeon.yy",},

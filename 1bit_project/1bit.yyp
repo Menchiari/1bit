@@ -536,6 +536,7 @@
     {"id":{"name":"scr_tracker","path":"scripts/scr_tracker/scr_tracker.yy",},},
     {"id":{"name":"scr_ui_characters","path":"scripts/scr_ui_characters/scr_ui_characters.yy",},},
     {"id":{"name":"scr_unlockables","path":"scripts/scr_unlockables/scr_unlockables.yy",},},
+    {"id":{"name":"to_roman","path":"scripts/to_roman/to_roman.yy",},},
     {"id":{"name":"shd_1bit_blood_colorblind","path":"shaders/shd_1bit_blood_colorblind/shd_1bit_blood_colorblind.yy",},},
     {"id":{"name":"shd_1bit_blood","path":"shaders/shd_1bit_blood/shd_1bit_blood.yy",},},
     {"id":{"name":"shd_1bit_custom","path":"shaders/shd_1bit_custom/shd_1bit_custom.yy",},},

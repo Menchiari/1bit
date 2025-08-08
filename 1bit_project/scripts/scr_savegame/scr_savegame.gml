@@ -3,9 +3,22 @@ ini_open("save.sav")
 	ini_write_real("savegame"+string(global.slot),"roomlist",global.room_list);
 	ini_write_real("savegame"+string(global.slot),"room",global.chosen_room);
 
-	ini_write_real("savegame"+string(global.slot),"xp",global.xp);
 	ini_write_real("savegame"+string(global.slot),"lives",global.player_lives);
 	ini_write_real("savegame"+string(global.slot),"player_head",global.player_head);
+	
+	//LEVEL UP AND XP//
+	ini_write_real("savegame"+string(global.slot),"xp",global.xp);
+	ini_write_real("savegame"+string(global.slot),"player_lvl_hp",global.lvl_hp);
+	ini_write_real("savegame"+string(global.slot),"player_lvl_str",global.lvl_str);
+	ini_write_real("savegame"+string(global.slot),"player_lvl_res",global.lvl_res);
+	ini_write_real("savegame"+string(global.slot),"player_lvl_spd",global.lvl_spd);
+	
+	ini_write_real("savegame"+string(global.slot),"player_hp",global.player_hp_max);
+	ini_write_real("savegame"+string(global.slot),"player_str",global.player_str);
+	ini_write_real("savegame"+string(global.slot),"player_res",global.player_res);
+	ini_write_real("savegame"+string(global.slot),"player_spd",global.player_spd);
+	///////////////////
+	
 	ini_write_real("savegame"+string(global.slot),"deathcount",global.deathcount);
 	ini_write_real("savegame"+string(global.slot),"faceprogress",global.face_progress);
 	ini_write_real("savegame"+string(global.slot),"storyprogress",global.story_progress);

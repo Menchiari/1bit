@@ -24,7 +24,7 @@ if instance_exists(obj_hero)
 		    snd_xp_11
 			);
 			scr_audio_play(_sound,0.55*global.audio_ui,random_range(1,1.2));
-
+			scr_savegame();
 			instance_destroy();
 		}
 	}

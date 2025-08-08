@@ -11,7 +11,7 @@ if active==true
 	{
 		case 0://idle
 			if image_index>idle_b+1 {image_index=idle_a;}
-			image_speed=random_range(.1,.5);
+			image_speed=random_range(.05,.5);
 			if instance_exists(obj_character)
 			{
 				var _threat=instance_nearest(x,y,obj_character);

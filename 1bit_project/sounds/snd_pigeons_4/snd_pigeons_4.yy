@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":1.8565079,
   "name":"snd_pigeons_4",
   "parent":{
     "name":"vox",

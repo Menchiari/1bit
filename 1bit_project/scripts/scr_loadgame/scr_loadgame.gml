@@ -5,9 +5,22 @@ if file_exists("save.sav")
 		global.room_list=ini_read_real("savegame"+string(global.slot),"roomlist",global.room_list);
 		global.chosen_room=ini_read_real("savegame"+string(global.slot),"room",global.chosen_room);
 	
-		global.xp=ini_read_real("savegame"+string(global.slot),"xp",global.xp);
 		global.player_lives=ini_read_real("savegame"+string(global.slot),"lives",global.player_lives);
 		global.player_head=ini_read_real("savegame"+string(global.slot),"player_head",global.player_head);
+		
+		//LEVEL UP AND XP//
+		global.xp=ini_read_real("savegame"+string(global.slot),"xp",global.xp);
+		global.lvl_hp=ini_read_real("savegame"+string(global.slot),"player_lvl_hp",global.lvl_hp);
+		global.lvl_str=ini_read_real("savegame"+string(global.slot),"player_lvl_str",global.lvl_str);
+		global.lvl_res=ini_read_real("savegame"+string(global.slot),"player_lvl_res",global.lvl_res);
+		global.lvl_spd=ini_read_real("savegame"+string(global.slot),"player_lvl_spd",global.lvl_spd);
+
+		global.player_hp_max=ini_read_real("savegame"+string(global.slot),"player_hp",global.player_hp_max);
+		global.player_str=ini_read_real("savegame"+string(global.slot),"player_str",global.player_str);
+		global.player_res=ini_read_real("savegame"+string(global.slot),"player_res",global.player_res);
+		global.player_spd=ini_read_real("savegame"+string(global.slot),"player_spd",global.player_spd);
+		///////////////////
+		
 		global.deathcount=ini_read_real("savegame"+string(global.slot),"deathcount",global.deathcount);
 		global.face_progress=ini_read_real("savegame"+string(global.slot),"faceprogress",global.face_progress);
 		global.story_progress=ini_read_real("savegame"+string(global.slot),"storyprogress",global.story_progress);

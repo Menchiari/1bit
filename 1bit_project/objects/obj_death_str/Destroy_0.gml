@@ -7,3 +7,8 @@ if activate==true
 	if instance_exists(obj_global) {obj_global.global_xp=global.xp;}
 	scr_savegame();
 }
+else
+{
+	var pile = instance_nearest(x,y,obj_death_pile);
+	//if instance_exists(pile) instance_destroy(pile);
+}

@@ -22,7 +22,11 @@ var pile = instance_nearest(x,y,obj_death_pile);
 
 var pile_frame = res_lvl_gain;
 
-if pile_frame >= pile.image_number
-{pile_frame = 20;}
-pile.type = 2;
-pile.image_index = pile_frame;
+if instance_exists(pile)
+{
+	if pile_frame >= pile.image_number
+	{pile_frame = 20;}
+	pile.type = 2;
+	pile.image_index = pile_frame;
+	pile.level = res_lvl;
+}

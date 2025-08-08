@@ -233,6 +233,9 @@ function get_lvl_gain(_stat_list, _player_stat) {
 	var lvl_gain = 0;
 	// ds_list_find_value(global.lvl_xp, jjj)
 	do{
+		if current_lvl >= ds_list_size(global.lvl_xp) {
+			break; // Prevent out-of-bounds access
+		}
 		xp -= ds_list_find_value(global.lvl_xp,current_lvl);
 		lvl_gain += 1;
 		current_lvl +=1;

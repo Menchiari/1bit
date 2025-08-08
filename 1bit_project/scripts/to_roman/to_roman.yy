@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"to_roman",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"to_roman",
+  "parent":{
+    "name":"tools",
+    "path":"folders/Scripts/tools.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
