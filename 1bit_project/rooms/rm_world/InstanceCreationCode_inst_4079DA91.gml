@@ -1,1 +1,1 @@
-if global.story_progress>=4 instance_destroy();
+//if global.story_progress>=4 instance_destroy();

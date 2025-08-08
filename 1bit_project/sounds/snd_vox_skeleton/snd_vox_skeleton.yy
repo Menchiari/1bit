@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_vox_skeleton",
+  "audioGroupId":{
+    "name":"ag_character",
+    "path":"audiogroups/ag_character",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.34201813,
+  "name":"snd_vox_skeleton",
+  "parent":{
+    "name":"vox",
+    "path":"folders/Sounds/vox.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_vox_skeleton.wav",
+  "type":0,
+  "volume":1.0,
+}

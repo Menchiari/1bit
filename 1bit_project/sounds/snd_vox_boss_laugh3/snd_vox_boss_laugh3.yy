@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":1.2221769,
   "name":"snd_vox_boss_laugh3",
   "parent":{
     "name":"vox",

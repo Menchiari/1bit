@@ -256,7 +256,7 @@ function init_globals(){
 	if !audio_group_is_loaded(ag_weapons) {audio_group_load(ag_weapons);}
 	if !audio_group_is_loaded(ag_ui) {audio_group_load(ag_ui);}
 	
-	global.audio=2.5;
+	global.audio=2;
 
 	global.audio_footsteps=		global.audio*0.035;
 	global.audio_weapons=		global.audio*.21//0.25;

@@ -25,6 +25,7 @@ if UI==true
 && room!=rm_story_AI
 && room!=rm_story_AI_2
 && room!=rm_glitch
+&& room!=rm_doomtext
 && room!=rm_cinematic_intro
 {
 	var border=2;
@@ -54,7 +55,7 @@ if UI==true
 			
 		var hp_text_x = camwidth/2-1;
 		var hp_text_y = camy+(camheight/2)-(height*2);
-		var hp_text = string(round(obj_hero.hp*10))//string(round(100*(obj_hero.hp/obj_hero.hp_max)))
+		var hp_text = string(round(obj_hero.hp*10))+"/"+string(round(obj_hero.hp_max*10))//string(round(100*(obj_hero.hp/obj_hero.hp_max)))
 		var hp_text_color = c_ltgray;
 			
 			if obj_hero.hp/obj_hero.hp_max < .25 hp_text_color = c_red;

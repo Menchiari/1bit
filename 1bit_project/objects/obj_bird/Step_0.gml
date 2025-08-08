@@ -56,7 +56,8 @@ if active==true
 		case 2://fly
 			x+=fly_speed_x;
 			y+=fly_speed_y;
-			if image_index>=image_index-1 {image_index=fly_a;}
+			image_speed=flying_speed_anim;
+			if image_index>=fly_b-1 {image_index=fly_a;}
 			if point_distance(x,y,x_origin,y_origin)>700 {instance_destroy();}
 			state=2;
 		break;

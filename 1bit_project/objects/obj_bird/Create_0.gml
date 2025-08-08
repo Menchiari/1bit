@@ -5,6 +5,7 @@ takeoff_a=2;
 takeoff_b=5;
 fly_a=6;
 fly_b=12;
+flying_speed_anim=random_range(1,2);
 
 fly_speed_x=random_range(-2.5,2.5);
 fly_speed_y=random_range(-1.5,-4);

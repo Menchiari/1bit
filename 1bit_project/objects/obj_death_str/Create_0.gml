@@ -27,4 +27,9 @@ if instance_exists(pile)
 	pile.type = 1;
 	pile.image_index = pile_frame;
 	pile.level = str_lvl+str_lvl_gain;
+	if str_lvl_gain==0
+	{
+		pile.level=str_lvl;
+		pile._xp_color=c_red;
+	}
 }

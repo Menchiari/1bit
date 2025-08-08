@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_dirt_03",
+  "audioGroupId":{
+    "name":"ag_character",
+    "path":"audiogroups/ag_character",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.9852154,
+  "name":"snd_dirt_03",
+  "parent":{
+    "name":"dirt",
+    "path":"folders/Sounds/breakable/dirt.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_dirt_03.wav",
+  "type":0,
+  "volume":1.0,
+}
