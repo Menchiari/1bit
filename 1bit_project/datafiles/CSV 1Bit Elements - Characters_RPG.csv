@@ -76,7 +76,7 @@
 74,obj_merchant_traveller,metal mercenary,1,2,2,1,0,electric sword,naked,bionic headset,20_cyber_society,44,1,,6.00,12.00,4.30,0.3~0.7,1~3,2.4~4.7,1~1
 75,obj_neutral,metal citizen,1,1,1,1,1,electric gloves,elegant clothes,bionic headset,20_cyber_society,13,1,,2.00,5.00,3.60,0.3~0.8,1~3,0.8~2,2~4
 76,obj_enemy_ghost,metal guard,2,1,1,1.5,1,laser katana,bionic armor,bionic headset,21_hangar,39,1,,3.00,5.50,6.30,0.2~0.5,4~10,1.2~2.2,1~3
-77,obj_enemy_guardian,our creation,5,2,2,1,-10,iron gloves,bionic armor,god's helm,21_hangar,319,1,,3.00,6.00,10.50,0.1~0.3,18~42,1.2~2.4,1~3
+77,obj_enemy_creator,our creation,5,2,2,1,-10,iron gloves,bionic armor,god's helm,21_hangar,319,1,,3.00,6.00,10.50,0.1~0.3,18~42,1.2~2.4,1~3
 78,obj_enemy_patrol,caretaker,1,3,2,0.8,-2,rapier,elegant clothes,top hat,13_toxic_swamp,75,1,,3.75,13.50,2.85,0.4~1.1,1~2,1.5~5.3,1~2
 79,obj_enemy_zombie,undead creature,2,2,2,0.75,-2,bare hands,torn jacket,no headwear,13_toxic_swamp,17,1,,1.00,3.00,2.40,0.5~1.3,2~4,0.4~1.2,3~8
 80,obj_enemy_skeleton,tough skeleton,3,2,2,0.75,-3,bare hands,naked,guard helm,06_castle_dungeon,34,1,,1.00,3.00,3.60,0.3~0.8,4~9,0.4~1.2,3~8

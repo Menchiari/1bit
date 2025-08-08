@@ -27,5 +27,5 @@ if instance_exists(pile)
 	{pile_frame = 20;}
 	pile.type = 3;
 	pile.image_index = pile_frame;
-	pile.level = spd_lvl;
+	pile.level = spd_lvl+spd_lvl_gain;
 }

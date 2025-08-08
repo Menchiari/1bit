@@ -134,6 +134,7 @@
     {"name":"obj_elements_tree_palms","order":4,"path":"objects/obj_elements_tree_palms/obj_elements_tree_palms.yy",},
     {"name":"obj_elements_tree_ruins","order":1,"path":"objects/obj_elements_tree_ruins/obj_elements_tree_ruins.yy",},
     {"name":"obj_elements_tree_winter","order":5,"path":"objects/obj_elements_tree_winter/obj_elements_tree_winter.yy",},
+    {"name":"obj_enemy_creator","order":1,"path":"objects/obj_enemy_creator/obj_enemy_creator.yy",},
     {"name":"obj_face_AI_default","order":5,"path":"objects/obj_face_AI_default/obj_face_AI_default.yy",},
     {"name":"obj_face_boat","order":6,"path":"objects/obj_face_boat/obj_face_boat.yy",},
     {"name":"obj_face_boss_death","order":4,"path":"objects/obj_face_boss_death/obj_face_boss_death.yy",},

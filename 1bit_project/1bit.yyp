@@ -250,6 +250,7 @@
     {"id":{"name":"obj_enemy_boar","path":"objects/obj_enemy_boar/obj_enemy_boar.yy",},},
     {"id":{"name":"obj_enemy_chessking","path":"objects/obj_enemy_chessking/obj_enemy_chessking.yy",},},
     {"id":{"name":"obj_enemy_crazy","path":"objects/obj_enemy_crazy/obj_enemy_crazy.yy",},},
+    {"id":{"name":"obj_enemy_creator","path":"objects/obj_enemy_creator/obj_enemy_creator.yy",},},
     {"id":{"name":"obj_enemy_dog","path":"objects/obj_enemy_dog/obj_enemy_dog.yy",},},
     {"id":{"name":"obj_enemy_ghost","path":"objects/obj_enemy_ghost/obj_enemy_ghost.yy",},},
     {"id":{"name":"obj_enemy_ghoul","path":"objects/obj_enemy_ghoul/obj_enemy_ghoul.yy",},},

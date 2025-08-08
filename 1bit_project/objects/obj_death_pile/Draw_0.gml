@@ -1,6 +1,6 @@
 /// @description
 draw_sprite(sprite_index,image_index,x,y);
-if level>0
+if level>0 && image_index>0
 {
 	var _xp_color=c_ltgray;
 	draw_set_halign(fa_center);
