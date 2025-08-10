@@ -86,6 +86,12 @@ function scr_ai_main(){
 							walk_sp_mod=.3;
 							dest_x=x+(random_range(-run_distance_min,run_distance_min));
 							dest_y=y+(random_range(-run_distance_min,run_distance_min));
+							if (!can_character_navigate(dest_x, dest_y)) {
+								// picked a location we cannot reach, reset destination so we try again next step
+								dest_x = x;
+								dest_y = y;
+								state=states.idle;
+							}
 						}
 						if point_distance(x,y,ai_guard_x,ai_guard_y)>=dist
 						{
@@ -173,8 +179,9 @@ function scr_ai_main(){
 					if speech_verbose==true {speech_text="where?";}
 					//walks faster to destination
 					walk_sp_mod=1.3;
-					if point_distance(x,y,dest_x,dest_y)>=dist {state=states.walk;}
-					else {
+					if (point_distance(x, y, dest_x, dest_y) >= dist && can_character_navigate(dest_x, dest_y)) {
+						state=states.walk;
+					} else {
 						state=states.idle;
 						var chance=random_range(0,100);
 						if chance<=.25 {ai_state=ai_state_original;}
@@ -187,6 +194,13 @@ function scr_ai_main(){
 						dest_y=ai_target_y+random_range(-ai_search_range/2,ai_search_range/2);
 						//var chance=random_range(0,100);
 						if /*chance<=ai_responsiveness &&*/ point_distance(x,y,ai_target_x,ai_target_y)<search_distance {ai_state=ai_states.chase;}
+						
+						if (!can_character_navigate(dest_x, dest_y)) {
+							// picked a location we cannot reach, reset destination so we try again next step
+							dest_x = x;
+							dest_y = y;
+							state=states.idle;
+						}
 					}
 					else {ai_state=ai_state_original;}
 				break;
