@@ -1,5 +1,21 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
+// check if current destination coords can be reached via navigation, and resets the destination coords if it cannot
+// return true if the destination was reset, or false otherwise
+function pathfinding_check_and_reset_target() {
+	if (!can_character_navigate(dest_x, dest_y)) {
+		// picked a location we cannot reach, reset destination so we try again next step
+		dest_x = x;
+		dest_y = y;
+		state=states.idle;
+		
+		return true;
+	}
+	
+	return false;
+}
+
 function scr_ai_main(){
 	if speech_verbose==true 
 	{	
@@ -32,6 +48,7 @@ function scr_ai_main(){
 						walk_sp_mod=.3;
 						dest_x=x+(random_range(-run_distance*4,run_distance_min*4));
 						dest_y=y+(random_range(-run_distance*4,run_distance_min*4));
+						pathfinding_check_and_reset_target();
 					}
 					else
 					{
@@ -54,13 +71,14 @@ function scr_ai_main(){
 
 					if instance_exists(ai_follow_target)
 					{
-						if point_distance(x,y,ai_follow_target.x,ai_follow_target.y)>follow_distance
+						if point_distance(x,y,ai_follow_target.last_gridfree_x,ai_follow_target.last_gridfree_y)>follow_distance
 						{
 							var _checkfrequency=10;
 							if irandom_range(0,100)<=_checkfrequency
 							{
-								dest_x=ai_follow_target.x+(choose(15,20,25,30,35,40)*choose(1,-1)*ai_follow_target.dir);
-								dest_y=ai_follow_target.y+(choose(5,10,15)*choose(1,-1)*ai_follow_target.back);
+								dest_x=ai_follow_target.last_gridfree_x+(choose(15,20,25,30,35,40)*choose(1,-1)*ai_follow_target.dir);
+								dest_y=ai_follow_target.last_gridfree_y+(choose(5,10,15)*choose(1,-1)*ai_follow_target.back);
+								pathfinding_check_and_reset_target();
 							}
 						}
 						else {dest_x=x;dest_y=y;state=states.idle;}
@@ -86,12 +104,7 @@ function scr_ai_main(){
 							walk_sp_mod=.3;
 							dest_x=x+(random_range(-run_distance_min,run_distance_min));
 							dest_y=y+(random_range(-run_distance_min,run_distance_min));
-							if (!can_character_navigate(dest_x, dest_y)) {
-								// picked a location we cannot reach, reset destination so we try again next step
-								dest_x = x;
-								dest_y = y;
-								state=states.idle;
-							}
+							pathfinding_check_and_reset_target();
 						}
 						if point_distance(x,y,ai_guard_x,ai_guard_y)>=dist
 						{
@@ -147,10 +160,10 @@ function scr_ai_main(){
 					{
 						if instance_exists(ai_target)
 						{
-							if point_distance(x,y,ai_target.x,ai_target.y)<alert_distance
+							if point_distance(x,y,ai_target.last_gridfree_x,ai_target.last_gridfree_y)<alert_distance
 							{
-								ai_target_x=ai_target.x;
-								ai_target_y=ai_target.y;
+								ai_target_x=ai_target.last_gridfree_x;
+								ai_target_y=ai_target.last_gridfree_y;
 							}
 						}
 						ai_state=ai_states.search;
@@ -167,9 +180,15 @@ function scr_ai_main(){
 				
 					if instance_exists(ai_target)
 					{
-						if point_distance(x,y,ai_target.x,ai_target.y)<chase_distance {dest_x=ai_target.x;dest_y=ai_target.y;}
-						if point_distance(x,y,ai_target.x,ai_target.y)<attack_distance {ai_state=ai_states.fight;}
-						if point_distance(x,y,ai_target.x,ai_target.y)>chase_distance {ai_target_x=ai_target.x; ai_target_y=ai_target.y; ai_state=ai_states.search;}
+						if (point_distance(x,y,ai_target.last_gridfree_x,ai_target.last_gridfree_y)<chase_distance) {
+							dest_x=ai_target.last_gridfree_x;dest_y=ai_target.last_gridfree_y;
+						}
+						if (point_distance(x,y,ai_target.last_gridfree_x,ai_target.last_gridfree_y)<attack_distance) {
+							ai_state=ai_states.fight;
+						}
+						if (point_distance(x,y,ai_target.last_gridfree_x,ai_target.last_gridfree_y)>chase_distance) {
+							ai_target_x=ai_target.last_gridfree_x; ai_target_y=ai_target.last_gridfree_y; ai_state=ai_states.search;
+						}
 					}
 					else {ai_state=ai_state_original;}
 				break;
@@ -195,12 +214,7 @@ function scr_ai_main(){
 						//var chance=random_range(0,100);
 						if /*chance<=ai_responsiveness &&*/ point_distance(x,y,ai_target_x,ai_target_y)<search_distance {ai_state=ai_states.chase;}
 						
-						if (!can_character_navigate(dest_x, dest_y)) {
-							// picked a location we cannot reach, reset destination so we try again next step
-							dest_x = x;
-							dest_y = y;
-							state=states.idle;
-						}
+						pathfinding_check_and_reset_target();
 					}
 					else {ai_state=ai_state_original;}
 				break;
@@ -213,8 +227,8 @@ function scr_ai_main(){
 						var _searchdistance=ai_search_range/2;
 						if weapon.bullets>0 {_searchdistance=120;}
 						if speech_verbose==true {speech_text="fighting "+string(ai_target.name);}
-						if point_distance(x,y,ai_target.x,ai_target.y)<_searchdistance
-						&& !collision_line(x,y,ai_target.x,ai_target.y,obj_collider,true,true)
+						if point_distance(x,y,ai_target.last_gridfree_x,ai_target.last_gridfree_y)<_searchdistance
+						&& !collision_line(x,y,ai_target.last_gridfree_x,ai_target.last_gridfree_y,obj_collider,true,true)
 						{
 							scr_ai_fight();
 						}
@@ -235,6 +249,7 @@ function scr_ai_main(){
 					{
 						dest_x=x+(random_range(-run_distance_min,run_distance_min));
 						dest_y=y+(random_range(-run_distance_min,run_distance_min));
+						pathfinding_check_and_reset_target();
 					}
 					var chance=random_range(0,100);
 					if chance<.5+(abs(charisma)/10) || ai_nopanic==true {ai_state=ai_state_original;}
@@ -266,7 +281,7 @@ function scr_ai_main(){
 		#region RESET CASES
 		if instance_exists(ai_target)
 		{
-			if collision_line(x,y,ai_target.x,ai_target.y,obj_collider,true,true)
+			if collision_line(x,y,ai_target.last_gridfree_x,ai_target.last_gridfree_y,obj_collider,true,true)
 			{
 				var reset_chance=0;
 				if irandom_range(1,100)<reset_chance {ai_state=ai_state_original;}
