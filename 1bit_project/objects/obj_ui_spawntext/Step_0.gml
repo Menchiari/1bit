@@ -9,4 +9,4 @@ if fade=true
 	if alpha<=0 instance_destroy();
 }
 
-depth=-y-3000;
+depth=text_depth;//-y-3000;

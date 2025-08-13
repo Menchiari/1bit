@@ -9,4 +9,4 @@ alpha=1;
 fadespeed=0;
 
 alarm[0]=1;
-depth=-y-3000;
+text_depth=global.depth_ui_text//-y-3000;

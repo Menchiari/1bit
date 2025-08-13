@@ -1,6 +1,6 @@
 function scr_sm_spawn(){
-	x=round(x);
-	y=round(y);
+	//x=round(x);
+	//y=round(y);
 	if trigger_spawn==false
 	{
 		//wait for trigger

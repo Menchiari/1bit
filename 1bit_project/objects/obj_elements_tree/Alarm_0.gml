@@ -1,6 +1,6 @@
 depth=-y;
-x=round(x);
-y=round(y);
+//x=round(x);
+//y=round(y);
 if instance_exists(obj_map)
 {
 	var distance=obj_map.radius*8;

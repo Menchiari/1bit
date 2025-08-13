@@ -52,7 +52,7 @@ function scr_state_machine(){
 	if instance_exists(obj_hero)
 	//&& (state==states.spawn || state==states.idle || state==states.block)
 	{
-		if point_distance(x,y,obj_hero.x,obj_hero.y)<speech_distance {speech_visible=true;}
-		if point_distance(x,y,obj_hero.x,obj_hero.y)>speech_distance*1.5 {speech_visible=false;}
+		if point_distance(x,y,obj_hero.x,obj_hero.y)<speech_distance && obj_hero.state!=states.spawn {speech_visible=true;}
+		if point_distance(x,y,obj_hero.x,obj_hero.y)>speech_distance*1.5 || obj_hero.state==states.spawn {speech_visible=false;}
 	}
 }

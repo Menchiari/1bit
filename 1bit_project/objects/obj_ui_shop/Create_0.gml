@@ -66,3 +66,5 @@ shop=false;
 selecting=false;
 
 if collision_point(x,y,obj_neutral_death,true,true) {instance_destroy();}
+
+ui_depth=global.depth_ui_shop;

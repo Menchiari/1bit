@@ -9,3 +9,5 @@ alpha=1;
 fade=false;
 active=false;
 once=true;
+
+text_depth=global.depth_ui_text;

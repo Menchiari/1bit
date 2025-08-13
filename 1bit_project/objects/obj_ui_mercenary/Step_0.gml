@@ -1,30 +1,25 @@
-depth=global.depth_ui_front;
+depth=ui_depth;//global.depth_ui_front;
 
-if instance_exists(mercenary)
-{
-	x=mercenary.x;
-	y=mercenary.y-6;
-	x0=x-xoff+21;
-	x1=x-xoff+50;
-	x2=x-xoff+78;
-	x3=x-xoff+107;
-	y0=y-yoff+24;
-	y1=y-yoff+42;
-	bx0=x-xoff+22;
-	bx1=x-xoff+106;
-	by0=y-yoff+69;
-	by1=y-yoff+85;
+x0=x-xoff+21;
+x1=x-xoff+50;
+x2=x-xoff+78;
+x3=x-xoff+107;
+y0=y-yoff+24;
+y1=y-yoff+42;
+bx0=x-xoff+22;
+bx1=x-xoff+106;
+by0=y-yoff+69;
+by1=y-yoff+85;
 	
-	tx1=x-xoff+20;
-	ty1=y-yoff+13;
-	tx2=x-xoff+109;
-	ty2=y-yoff+24;
+tx1=x-xoff+20;
+ty1=y-yoff+13;
+tx2=x-xoff+109;
+ty2=y-yoff+24;
 
-	cx1=x-xoff+20;
-	cy1=y-yoff+42;
-	cx2=x-xoff+109;
-	cy2=y-yoff+68;
-}
+cx1=x-xoff+20;
+cy1=y-yoff+42;
+cx2=x-xoff+109;
+cy2=y-yoff+68;
 //else {instance_destroy();}
 
 if mouse_check_button(mb_any) && point_in_rectangle(mouse_x,mouse_y,bx0,by0,bx1,by1) {selecting=true;}
@@ -32,7 +27,18 @@ else {selecting=false;}
 
 if instance_exists(obj_hero)
 {
-	if point_distance(obj_hero.x,obj_hero.y,x,y)<active_range {active=1;}
+	//if point_distance(obj_hero.x,obj_hero.y,x,y)<active_range {active=1;}
+	//else {active=0;}
+	if point_distance(obj_hero.x,obj_hero.y,xoriginal,yoriginal)<active_range
+	{
+		var othershop=collision_circle(x,y,active_range,obj_ui_shop,true,true)
+		if othershop==true
+		{
+			if point_distance(xoriginal,yoriginal,obj_hero.x,obj_hero.y)<point_distance(othershop.x,othershop.y,obj_hero.x,obj_hero.y) {active=1;}
+			else {active=0;}
+		}
+		else {active=1;}
+	}
 	else {active=0;}
 }
 if collision_circle(x,y,reactive_range,obj_enemy,false,true) {active=0; shop_active=0;}
@@ -80,5 +86,24 @@ if active==1
 				instance_destroy();
 			}
 		}
+		if instance_exists(obj_camera)
+		{
+			x=obj_camera.x;
+			y=obj_camera.y+sprite_height/2;
+		}
+		else
+		{
+			var cam = view_camera[0]; // main view
+			x = camera_get_view_x(cam) + camera_get_view_width(cam) / 2;
+			y = camera_get_view_y(cam) + camera_get_view_height(cam) - sprite_height / 2;
+		}
+		//Avoids it remaining active when pressed where the arrow usually is at x,y
+		if mouse_check_button_released(mb_any) && point_in_circle(mouse_x,mouse_y,x,y,radius) {shop_active=0;}
+
+	}
+	else
+	{
+		x=xoriginal;
+		y=yoriginal;
 	}
 }

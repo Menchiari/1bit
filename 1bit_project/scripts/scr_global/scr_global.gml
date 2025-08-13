@@ -138,6 +138,8 @@ function init_globals(){
 	global.control_type=controls.gamepad;//probably unused? todo check and fix
 
 	global.depth_ui_front=-8000;
+	global.depth_ui_shop=-7000;
+	global.depth_ui_text=-6000;
 	global.depth_ui=-5000;
 	global.depth_floor=0;
 	global.room_speed_default=24;

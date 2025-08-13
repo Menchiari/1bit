@@ -1,4 +1,4 @@
-depth=global.depth_ui_front;
+depth=ui_depth;//global.depth_ui_front;
 x0=x-xoff+21;
 x1=x-xoff+50;
 x2=x-xoff+78;
@@ -173,7 +173,12 @@ if active==1
 			x=obj_camera.x;
 			y=obj_camera.y+sprite_height/2;
 		}
-		
+		else
+		{
+			var cam = view_camera[0]; // main view
+			x = camera_get_view_x(cam) + camera_get_view_width(cam) / 2;
+			y = camera_get_view_y(cam) + camera_get_view_height(cam) - sprite_height / 2;
+		}
 		//Avoids it remaining active when pressed where the arrow usually is at x,y
 		if mouse_check_button_released(mb_any) && point_in_circle(mouse_x,mouse_y,x,y,radius) {shop_active=0;}
 
