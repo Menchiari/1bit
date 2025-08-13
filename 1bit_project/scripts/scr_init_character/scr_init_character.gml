@@ -13,6 +13,7 @@ function scr_init_character(){
 	sprite_light=spr_fx_light;
 	sprite_shadow=spr_shadow;
 	ladder=false;
+	mercenary_voice_pitch=1;
 	
 	animal=false;
 	

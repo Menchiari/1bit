@@ -29,3 +29,5 @@ sit_idle_b=sit_idle_b_var;
 
 skin_color=color_var;
 speech_color=speech_color_var;
+
+mercenary_voice_pitch=voice_pitch;

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":0.35267574,
   "name":"snd_vox_hired",
   "parent":{
     "name":"vox",

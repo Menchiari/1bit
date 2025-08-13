@@ -72,7 +72,7 @@ if active==1
 				
 				if button_pressed==1
 				{
-					audio_play_sound(snd_vox_hired,10,false,global.audio_ui*.3,0,random_range(1,2));
+					audio_play_sound(snd_vox_hired,10,false,global.audio_ui*.3,0,voice_pitch_hired);
 					mercenary.ai_state_original=ai_states.follow;
 					mercenary.ai_state=ai_states.follow;
 					mercenary.state=states.idle;
@@ -103,6 +103,11 @@ if active==1
 	}
 	else
 	{
+		if instance_exists(mercenary)
+		{
+			xoriginal=mercenary.x;
+			yoriginal=mercenary.y-7;
+		}
 		x=xoriginal;
 		y=yoriginal;
 	}

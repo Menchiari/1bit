@@ -1,16 +1,16 @@
 {
   "$GMSound":"",
-  "%Name":"snd_bonfire_lit",
+  "%Name":"snd_cinematic_intro_music",
   "audioGroupId":{
-    "name":"ag_assets",
-    "path":"audiogroups/ag_assets",
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.9356916,
-  "name":"snd_bonfire_lit",
+  "duration":33.15333,
+  "name":"snd_cinematic_intro_music",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_bonfire_lit.wav",
+  "soundFile":"snd_cinematic_intro_music.wav",
   "type":0,
   "volume":1.0,
 }
