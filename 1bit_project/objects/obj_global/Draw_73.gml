@@ -13,20 +13,6 @@ var line_thickness=4;
 var height=6//8;
 
 if UI==true
-&& room!=rm_faces_default
-&& room!=rm_death
-&& room!=rm_faces_death
-&& room!=rm_faces_princess
-&& room!=rm_faces_boss_intro
-&& room!=rm_faces_boss_death
-&& room!=rm_boat
-&& room!=rm_faces_ai
-&& room!=rm_faces_boat
-&& room!=rm_story_AI
-&& room!=rm_story_AI_2
-&& room!=rm_glitch
-&& room!=rm_doomtext
-&& room!=rm_cinematic_intro
 {
 	var border=2;
 	var bordercolor=c_gray;

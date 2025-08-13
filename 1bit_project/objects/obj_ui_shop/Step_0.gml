@@ -181,7 +181,9 @@ if active==1
 		}
 		//Avoids it remaining active when pressed where the arrow usually is at x,y
 		if mouse_check_button_released(mb_any) && point_in_circle(mouse_x,mouse_y,x,y,radius) {shop_active=0;}
-
+		
+		//Avoids other text being active
+		with obj_character {speech_visible=false;}
 	}
 	else
 	{
