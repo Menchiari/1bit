@@ -15,6 +15,10 @@ switch global.story_progress
 	case 0:
 	start_room=rm_story_1;
 	break;
+	case 4:
+	start_room=rm_world;
+	alarm[5]=1;
+	break;
 	default:
 	start_room=rm_world;
 	break;

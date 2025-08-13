@@ -1,38 +1,19 @@
 with obj_hero
-{	
-	trigger_spawn=false;
-	state=states.spawn;
-	speech_text=choose(
-		//"...",
-		//"my head...",
-		//"what now?",
-		//"ugh...",
-		//"damn this",
-		//"not again",
-		//"why me",
-		//"that's it",
-		//"?",
-		//"in pain",
-		//"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
-		"",
+{
+	trigger_spawn = false;
+	state = states.spawn;
+	speech_text = choose(
 		"",
 		""
 	);
+
 	var _sentence_chance = irandom_range(0,100);
-	if _sentence_chance > 40
+	if _sentence_chance > 75
 	{
+		// ===== STORY PROGRESS: FIRST WAKE / CELL (NO LOOP AWARENESS) =====
 		if global.story_progress == 1
 		{
+			// spr_head_beard1 — Grumpy male (first wake)
 			if character_head == spr_head_beard1
 			{
 				speech_text = choose(
@@ -41,22 +22,37 @@ with obj_hero
 					"what now?",
 					"ugh...",
 					"damn this",
-					"not again",
 					"why me",
 					"that's it",
 					"?",
 					"in pain",
-					"ugh...",
 					"where\nam I",
 					"my back...",
-					"not\nagain...",
 					"what\nis this?",
 					"what the\nhell...",
 					"this ain't\nright...",
 					"my bones\nache...",
-					"damn\nnonsense"
+					"damn\nnonsense",
+					"tch...",
+					"cheap shot...",
+					"arms feel\nlike lead...",
+					"still here...",
+					"who moved\nme?",
+					"place looks\nworse...",
+					"same stink...",
+					"damn floor...",
+					"my neck's\nkilling me...",
+					"should've\nstayed down...",
+					"cold ground...",
+					"get up...\nidiot...",
+					"hate this\nplace...",
+					"alright...\nI'm up...",
+					"damn wind...",
+					"can't catch\na break..."
 				);
 			}
+
+			// spr_head_female2 — Tough, violent, ambitious (first wake)
 			if character_head == spr_head_female2
 			{
 				speech_text = choose(
@@ -69,9 +65,34 @@ with obj_hero
 					"this feels\nwrong...",
 					"legs still\nworking...",
 					"head's\ndizzy...",
-					"someone's\ngonna pay."
+					"someone's\ngonna pay.",
+					"come on.",
+					"get up.\nkeep moving.",
+					"still\nbreathing.",
+					"stand.\nnow.",
+					"cold floor.\nno problem.",
+					"my turn.",
+					"break\nthem.",
+					"move or\ndie.",
+					"not tired\nyet.",
+					"payback\ntime.",
+					"up and\nready.",
+					"who's next?",
+					"keep coming.",
+					"too easy.",
+					"show me\nmore.",
+					"don't waste\nmy time.",
+					"get ready.",
+					"one more\nstep.",
+					"still\nhere.",
+					"not done\nyet.",
+					"hit me\nharder.",
+					"their loss.",
+					""
 				);
 			}
+
+			// spr_head_female — Stoic, responsible (first wake)
 			if character_head == spr_head_female
 			{
 				speech_text = choose(
@@ -82,9 +103,28 @@ with obj_hero
 					"I don't\nremember...",
 					"what is\nthis place?",
 					"stay\ncalm...",
-					"I need\nto move"
+					"I need\nto move",
+					"stand.\nno hesitation.",
+					"keep the\nrhythm.",
+					"step by\nstep.",
+					"focus.\nbalance.",
+					"stand.\nmove.",
+					"no fear.\nno noise.",
+					"eyes\nforward.",
+					"hope is\naction.",
+					"steady\nnow.",
+					"keep the\npace.",
+					"mind stays\nclear.",
+					"every breath\ncounts.",
+					"move with\npurpose.",
+					"trust the\nsteps.",
+					"choose your\nstance.",
+					"watch the\ncorners.",
+					""
 				);
 			}
+
+			// spr_head_female1 — Shy, quick, cautious (first wake)
 			if character_head == spr_head_female1
 			{
 				speech_text = choose(
@@ -97,13 +137,32 @@ with obj_hero
 					"it's so\nquiet...",
 					"am I\nalone?",
 					"ugh...",
-					"just\nwoke up..."
+					"just\nwoke up...",
+					"still\nhere.",
+					"stay\nlow.",
+					"one\nstep.",
+					"am I\nsafe?",
+					"please...\nno.",
+					"so\ntired.",
+					"don't look\nback.",
+					"hide\nfirst.",
+					"keep\nmoving.",
+					"small\nsteps.",
+					"stay out\nof sight.",
+					"move\nslow.",
+					"eyes\nopen.",
+					"careful\nnow.",
+					"find a\ncorner.",
+					"just a\nbit more.",
+					""
 				);
 			}
 		}
 
+		// ===== STORY PROGRESS: LOOP-AWARE REAWAKEN (HARDER EDGES) =====
 		if global.story_progress >= 2
 		{
+			// spr_head_beard1 — Grumpy male (loop-aware)
 			if character_head == spr_head_beard1
 			{
 				speech_text = choose(
@@ -123,99 +182,172 @@ with obj_hero
 					"cold ground...\nagain...",
 					"I need to\nmove...",
 					"fuck...",
-					"not again...",
-					"ugh...",
-					"everything\nhurts..."
+					"tch...",
+					"damn floor...",
+					"my neck's\nkilling me...",
+					"should've\nstayed down...",
+					"same shit...",
+					"place looks\nworse...",
+					"still here...",
+					"who moved\nme?",
+					"arms feel\nlike lead...",
+					"cheap shot...",
+					"they're all\ngonna pay...",
+					"can't catch\na break...",
+					"where's\nmy weapon...",
+					"get up...\nidiot...",
+					"not over...",
+					"this dump\nagain...",
+					"should've\nseen it coming...",
+					"damn wind...",
+					"they'll wish\nI stayed down...",
+					"hate this\nplace...",
+					"my head's\nspinning...",
+					"alright...\nI'm up...",
+					""
 				);
 			}
+
+			// spr_head_female2 — Tough, violent, ambitious (loop-aware)
 			if character_head == spr_head_female2
 			{
 				speech_text = choose(
 					"...",
 					"tch.",
-					"not again...",
-					"they\nleft me...",
-					"woke up\nbreathing...",
-					"get up,\nkeep moving",
-					"not enough to\nkill me...",
-					"cold again,\nwhatever...",
-					"someone's\ngoing down...",
+					"on my\nfeet.",
+					"they'll regret\nthis.",
+					"still\nbreathing.",
+					"get up.\nkeep moving.",
+					"not enough to\nstop me.",
+					"cold floor.\nno problem.",
+					"someone's going\ndown.",
 					"round\ntwo.",
-					"still not\nenough...",
-					"stand up.\nnow.",
-					"fuck...",
-					"my chest...",
-					"legs still\nwork...",
-					"who's next...",
-					"I don't\ndie easy...",
-					"one more\nstep...",
-					"the ground\nagain...",
-					"they\ncan't stop me."
+					"come on.",
+					"stand.\nnow.",
+					"damn.",
+					"chest is\nfine.",
+					"legs work.\nthat's enough.",
+					"who's next?",
+					"I don't stay\ndown.",
+					"one more\nstep.",
+					"hit me\nharder.",
+					"try\nagain.",
+					"they can't\nstop me.",
+					"still\nhere.",
+					"not done\nyet.",
+					"my turn.",
+					"break\nthem.",
+					"get out\nof my way.",
+					"up and\nready.",
+					"keep coming.",
+					"not tired\nyet.",
+					"payback\ntime.",
+					"come find\nme.",
+					"move or\ndie.",
+					"their loss.",
+					"never\nslower.",
+					"too easy.",
+					"show me\nmore.",
+					"don't waste\nmy time.",
+					"get ready.",
+					""
 				);
 			}
+
+			// spr_head_female — Stoic, responsible (loop-aware)
 			if character_head == spr_head_female
 			{
 				speech_text = choose(
 					"...",
-					"still\nbreathing.",
-					"same\npath.",
-					"they\ncouldn’t stop me.",
-					"this\nis mine.",
-					"stand.\ndon’t hesitate.",
-					"keep\nthe rhythm.",
-					"dark\nis not death.",
-					"the\nvoid is silent.",
-					"pain\nis a signal.",
-					"step\nby step.",
-					"no time\nfor doubt.",
-					"again?\nthen again.",
-					"it’s never\nfinal.",
+					"breathing\nsteady.",
+					"stay the\ncourse.",
+					"they couldn't\nstop me.",
+					"this is\nmine.",
+					"stand.\nno hesitation.",
+					"keep the\nrhythm.",
+					"dark is not\ndeath.",
+					"silence is\nstrength.",
+					"pain means\nalive.",
+					"step by\nstep.",
+					"no room for\ndoubt.",
+					"again?\nfine.",
+					"never\nfinal.",
 					"focus.\nbalance.",
-					"one foot.\nthen the other.",
-					"stand.\nthen move.",
+					"one foot,\nthen the other.",
+					"stand.\nmove.",
 					"no fear.\nno noise.",
-					"another\nchance.",
-					"failure\nis a teacher.",
-					"breath\nis control.",
-					"moment\nby moment.",
+					"second\nchance.",
+					"failure\nteaches.",
+					"control the\nbreath.",
+					"moment to\nmoment.",
 					"begin\nagain.",
-					"freedom\nis earned.",
+					"freedom is\nearned.",
 					"eyes\nforward.",
-					"no one\nowes me.",
-					"hope\nis action.",
-					"walk.\ndon’t wait.",
-					"break\nthe cycle."
+					"owe\nnothing.",
+					"hope is\naction.",
+					"walk.\ndon't wait.",
+					"break the\ncycle.",
+					"steady\nnow.",
+					"balance first,\nthen strike.",
+					"trust the\nsteps.",
+					"keep the\npace.",
+					"mind stays\nclear.",
+					"stand for\nsomething.",
+					"every breath\ncounts.",
+					"calm\nfirst.",
+					"move with\npurpose.",
+					""
 				);
-
 			}
+
+			// spr_head_female1 — Shy, quick, cautious (loop-aware)
 			if character_head == spr_head_female1
 			{
 				speech_text = choose(
 					"...",
-					"h-huh...?",
-					"I'm...\nalive?",
-					"again...?",
-					"still\nhere...",
-					"my arm...\nhurts...",
-					"I can't\nfeel my legs...",
-					"quiet...\nagain...",
-					"where's\neveryone...?",
-					"what\ndid I do...?",
-					"cold...\nagain...",
-					"can't cry,\nnot now...",
-					"it's\nstarting again...",
-					"I remember...\na little...",
-					"stay\nlow...",
-					"one\nstep...",
+					"h-huh?",
+					"I'm\nalive?",
+					"again?",
+					"still\nhere.",
+					"my arm\nhurts.",
+					"I can't feel\nmy legs.",
+					"quiet\nagain.",
+					"where is\neveryone?",
+					"what did\nI do?",
+					"cold\nagain.",
+					"don't\ncry.",
+					"it's starting\nagain.",
+					"I remember\na little.",
+					"stay\nlow.",
+					"one\nstep.",
 					"am I\nsafe?",
-					"please...\nnot again...",
-					"so\ntired...",
-					"try\nagain..."
+					"please...\nno.",
+					"so\ntired.",
+					"try\nagain.",
+					"don't look\nback.",
+					"hide\nfirst.",
+					"keep\nmoving.",
+					"small\nsteps.",
+					"stay out\nof sight.",
+					"they'll\nfind me.",
+					"stay\nquiet.",
+					"not\nready.",
+					"still\nbreathing.",
+					"move\nslow.",
+					"eyes\nopen.",
+					"not this\nplace.",
+					"careful\nnow.",
+					"can't stop\nshaking.",
+					"find a\ncorner.",
+					"don't make\na sound.",
+					"just a\nbit more.",
+					""
 				);
 			}
 		}
 	}
 
+	// spr_head_skull — Playful, macabre
 	if character_head == spr_head_skull
 	{
 		speech_text = choose(
@@ -238,16 +370,27 @@ with obj_hero
 			"what\nrattled me?",
 			"cracked.\nbut functional.",
 			"my jaw's\nunhinged.",
-			"humor\nrebooted.",
-			"this\nagain, bonehead",
-			"shhh...\ndon't wake the spine",
+			"this again,\nbonehead",
+			"shhh...\ndon't wake\nthe spine",
 			"nnggghhhak!",
 			"where's\nmy meat?",
-			"bones never\nlie",
+			"bones\nnever\nlie",
 			"hah...\nforgot again",
+			"rib count\nstable.",
+			"pelvis in\nposition.",
+			"skull's\ngrinning.",
+			"spine feels\nloose.",
+			"bone dust\nagain.",
+			"marrow\nempty.",
+			"lost my\nteeth",
+			"shoulder\nrattle good.",
+			"humor\nintact.",
+			"grave was\nwarmer.",
 			""
 		);
 	}
+
+	// spr_head_infected — Corrupted, struggling
 	if character_head == spr_head_infected
 	{
 		speech_text = choose(
@@ -275,9 +418,21 @@ with obj_hero
 			"can't...\nmove...",
 			"voice\nnot mine...",
 			"rrrghk...",
+			"dripping\ninside...",
+			"blood\nhot...",
+			"teeth\nitch...",
+			"skin too\ntight...",
+			"lungs\nburn...",
+			"nails\nwrong...",
+			"vision\nwhite...",
+			"mouth\nbitter...",
+			"can't\nsee...",
+			"hot\nshadows...",
 			""
 		);
 	}
+
+	// spr_head — Monk/ascetic, calm (fits both first and looped)
 	if character_head == spr_head
 	{
 		speech_text = choose(
@@ -304,6 +459,12 @@ with obj_hero
 			"silent\ntide...",
 			"step lightly\non the void.",
 			"observe.\naccept.",
+			"stone\nremembers.",
+			"rivers\nreturn.",
+			"circle\nremains.",
+			"wind carries\nnames.",
+			"truth has\nno edge.",
+			"movement\nwithout trace.",
 			""
 		);
 	}

@@ -317,6 +317,7 @@
     {"id":{"name":"obj_neutral_death","path":"objects/obj_neutral_death/obj_neutral_death.yy",},},
     {"id":{"name":"obj_neutral_townsfolk","path":"objects/obj_neutral_townsfolk/obj_neutral_townsfolk.yy",},},
     {"id":{"name":"obj_neutral","path":"objects/obj_neutral/obj_neutral.yy",},},
+    {"id":{"name":"obj_nextroom_custom_noenemies","path":"objects/obj_nextroom_custom_noenemies/obj_nextroom_custom_noenemies.yy",},},
     {"id":{"name":"obj_nextroom_custom","path":"objects/obj_nextroom_custom/obj_nextroom_custom.yy",},},
     {"id":{"name":"obj_nextroom_dungeon","path":"objects/obj_nextroom_dungeon/obj_nextroom_dungeon.yy",},},
     {"id":{"name":"obj_nextroom_generated","path":"objects/obj_nextroom_generated/obj_nextroom_generated.yy",},},

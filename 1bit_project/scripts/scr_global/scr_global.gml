@@ -248,6 +248,7 @@ function init_globals(){
 	global.pathfinding_grid = -1;
 	
 	scr_loadgame();
+	csv_level_import("CSV 1Bit Elements - Level Chart.csv"); // restore ds_lists
 
 #endregion
 #region audio mixing

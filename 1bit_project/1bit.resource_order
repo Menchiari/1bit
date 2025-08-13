@@ -185,6 +185,7 @@
     {"name":"obj_merchant","order":20,"path":"objects/obj_merchant/obj_merchant.yy",},
     {"name":"obj_neutral_townsfolk","order":28,"path":"objects/obj_neutral_townsfolk/obj_neutral_townsfolk.yy",},
     {"name":"obj_neutral","order":19,"path":"objects/obj_neutral/obj_neutral.yy",},
+    {"name":"obj_nextroom_custom_noenemies","order":10,"path":"objects/obj_nextroom_custom_noenemies/obj_nextroom_custom_noenemies.yy",},
     {"name":"obj_nextroom_custom","order":1,"path":"objects/obj_nextroom_custom/obj_nextroom_custom.yy",},
     {"name":"obj_nextroom_dungeon","order":7,"path":"objects/obj_nextroom_dungeon/obj_nextroom_dungeon.yy",},
     {"name":"obj_noenemies","order":6,"path":"objects/obj_noenemies/obj_noenemies.yy",},

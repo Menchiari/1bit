@@ -19,6 +19,7 @@
     {"name":"inst_1EF32C7A","path":"rooms/rm_dng3/rm_dng3.yy",},
     {"name":"inst_2E7E1161","path":"rooms/rm_dng3/rm_dng3.yy",},
     {"name":"inst_6FD631CB","path":"rooms/rm_dng3/rm_dng3.yy",},
+    {"name":"inst_49502677","path":"rooms/rm_dng3/rm_dng3.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -53,6 +54,10 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_spawn_dungeon","path":"objects/obj_spawn_dungeon/obj_spawn_dungeon.yy",},"propertyId":{"name":"type_of_enemies","path":"objects/obj_spawn_dungeon/obj_spawn_dungeon.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"20",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_spawn_dungeon","path":"objects/obj_spawn_dungeon/obj_spawn_dungeon.yy",},"propertyId":{"name":"number_of_enemies","path":"objects/obj_spawn_dungeon/obj_spawn_dungeon.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":127.0,"y":106.0,},
+        {"$GMRInstance":"v2","%Name":"inst_49502677","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_49502677","objectId":{"name":"obj_audio_bg","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_audio_bg","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"propertyId":{"name":"sound_var","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"choose(snd_bg_cave_beats,snd_bg_dungeon,snd_bg_dungeonair,snd_bg_forest,snd_bg_ghosts,snd_bg_ghostsandmonsters,snd_bg_grasslands,snd_bg_nightpeace,snd_bg_river,snd_bg_skeletons,snd_bg_wind_interior_calm,snd_bg_wind_open,snd_bg_wind_steady,snd_bg_wind_strong,snd_bg_woods_calm,snd_bg_woods_cocoo,snd_bg_woods_quiet)",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_audio_bg","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"propertyId":{"name":"volume_var","path":"objects/obj_audio_bg/obj_audio_bg.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"random_range(.15,.25)",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":96.0,"y":160.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":1000,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"spr_bg_castle","path":"sprites/spr_bg_castle/spr_bg_castle.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":true,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
