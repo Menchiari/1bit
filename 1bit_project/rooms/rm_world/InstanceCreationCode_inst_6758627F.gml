@@ -8,7 +8,7 @@ with obj_hero
 	);
 
 	var _sentence_chance = irandom_range(0,100);
-	if _sentence_chance > 75
+	if _sentence_chance > 25
 	{
 		// ===== STORY PROGRESS: FIRST WAKE / CELL (NO LOOP AWARENESS) =====
 		if global.story_progress == 1
