@@ -16,4 +16,9 @@ if instance_exists(obj_hero)
 			y=255;
 		}
 	}
+	
+	if instance_exists(obj_fx_footprint_default)
+	{
+		with obj_fx_footprint_default {instance_destroy();}
+	}
 }

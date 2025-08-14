@@ -331,6 +331,7 @@
     {"id":{"name":"obj_patrol_node","path":"objects/obj_patrol_node/obj_patrol_node.yy",},},
     {"id":{"name":"obj_player_spawn_cave","path":"objects/obj_player_spawn_cave/obj_player_spawn_cave.yy",},},
     {"id":{"name":"obj_player_spawn","path":"objects/obj_player_spawn/obj_player_spawn.yy",},},
+    {"id":{"name":"obj_poem","path":"objects/obj_poem/obj_poem.yy",},},
     {"id":{"name":"obj_princess_roomchange","path":"objects/obj_princess_roomchange/obj_princess_roomchange.yy",},},
     {"id":{"name":"obj_reflection","path":"objects/obj_reflection/obj_reflection.yy",},},
     {"id":{"name":"obj_region_center_camp","path":"objects/obj_region_center_camp/obj_region_center_camp.yy",},},

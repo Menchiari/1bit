@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":42.66669,
+  "duration":65.3844,
   "name":"snd_music_beach",
   "parent":{
     "name":"music",
