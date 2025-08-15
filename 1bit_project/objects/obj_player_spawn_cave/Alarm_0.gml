@@ -1,4 +1,4 @@
-/// @description teleport hero
+/// @description start animation
 if instance_exists(obj_hero)
 {
 	start_anim=true;

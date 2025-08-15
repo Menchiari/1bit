@@ -1,6 +1,9 @@
 /// @description delayed step event
 alarm[0]=10;
-if place_meeting(x,y,obj_hero) && once==true && !collision_circle(x,y,150,obj_enemy,false,true)
+if place_meeting(x,y,obj_hero)
+&& once==true
+&& !collision_circle(x,y,150,obj_enemy,false,true)
+&& collision_circle(x,y,150,obj_npc_var,false,true)
 {
 	alarm[1]=wait_time;
 	once=false;

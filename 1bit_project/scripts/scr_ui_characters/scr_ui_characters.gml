@@ -10,7 +10,7 @@ function scr_ui_characters()
 			character_body_var=spr_body_naked;
 			global.player_str_mod=1.1;
 			global.player_res_mod=1.1;
-			global.player_spd_mod=.84;
+			global.player_spd_mod=.85;
 			//global.player_str=ds_list_find_value(global.lvl_str,0)*1.25;
 			//global.player_res=ds_list_find_value(global.lvl_res,0)*1.25;
 			//global.player_spd=ds_list_find_value(global.lvl_spd,0)*0.9;
@@ -22,8 +22,8 @@ function scr_ui_characters()
 			character_head_var=spr_head_female2;
 			character_body_var=spr_body_naked;
 			global.player_str_mod=1;
-			global.player_res_mod=1;
-			global.player_spd_mod=.9;
+			global.player_res_mod=1.1;
+			global.player_spd_mod=.94;
 			//global.player_str=ds_list_find_value(global.lvl_str,0)*1;
 			//global.player_res=ds_list_find_value(global.lvl_res,0)*1;
 			//global.player_spd=ds_list_find_value(global.lvl_spd,0)*1;
@@ -34,9 +34,9 @@ function scr_ui_characters()
 			character_description="from the east";
 			character_head_var=spr_head_female;
 			character_body_var=spr_body_naked;
-			global.player_str_mod=1.1;
-			global.player_res_mod=0.9;
-			global.player_spd_mod=.9;
+			global.player_str_mod=1;
+			global.player_res_mod=1;
+			global.player_spd_mod=1;
 			//global.player_str=ds_list_find_value(global.lvl_str,0)*1.1;
 			//global.player_res=ds_list_find_value(global.lvl_res,0)*0.8;
 			//global.player_spd=ds_list_find_value(global.lvl_spd,0)*1.1;
@@ -49,7 +49,7 @@ function scr_ui_characters()
 			character_body_var=spr_body_naked;
 			global.player_str_mod=1;
 			global.player_res_mod=0.9;
-			global.player_spd_mod=1;
+			global.player_spd_mod=1.06;
 			//global.player_str=ds_list_find_value(global.lvl_str,0)*0.9;
 			//global.player_res=ds_list_find_value(global.lvl_res,0)*0.9;
 			//global.player_spd=ds_list_find_value(global.lvl_spd,0)*1.2;
@@ -62,7 +62,7 @@ function scr_ui_characters()
 			character_body_var=spr_body_skeleton;
 			global.player_str_mod=1.2;
 			global.player_res_mod=1;
-			global.player_spd_mod=0.75;
+			global.player_spd_mod=0.8;
 			//global.player_str=ds_list_find_value(global.lvl_str,0)*1.5;
 			//global.player_res=ds_list_find_value(global.lvl_res,0)*1;
 			//global.player_spd=ds_list_find_value(global.lvl_spd,0)*0.75;
@@ -75,7 +75,7 @@ function scr_ui_characters()
 			character_body_var=spr_body_infected;
 			global.player_str_mod=1;
 			global.player_res_mod=1.2;
-			global.player_spd_mod=0.75;
+			global.player_spd_mod=0.8;
 			//global.player_str=ds_list_find_value(global.lvl_str,0)*1;
 			//global.player_res=ds_list_find_value(global.lvl_res,0)*1.5;
 			//global.player_spd=ds_list_find_value(global.lvl_spd,0)*.75;

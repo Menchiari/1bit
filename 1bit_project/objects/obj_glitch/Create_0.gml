@@ -4,3 +4,5 @@ txt_progress=0;
 txt_progress_spd=15;
 depth=global.depth_ui_front;
 once=true;
+
+if instance_exists(obj_hero) {with obj_hero {speech_text="";}}

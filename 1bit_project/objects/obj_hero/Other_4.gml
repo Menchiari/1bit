@@ -41,3 +41,12 @@ if (array_length(global.followers) >= 0)
     // Reset the list to prevent duplication
     global.followers = [];
 }
+
+if speech_text=""
+&& room!=rm_menu_character
+&& room!=rm_menu_deletesave
+&& room!=rm_story_AI_2
+&& room!=rm_story_AI
+{
+	scr_hero_dialogue();
+}

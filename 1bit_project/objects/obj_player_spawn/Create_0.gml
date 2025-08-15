@@ -19,6 +19,7 @@ if instance_exists(obj_hero)
 {
 	obj_hero.x=x;
 	obj_hero.y=y;
+	obj_hero.dir=-1;
 	//obj_hero.speed=0;
 	show_debug_message("Hero was moved through obj_player_spawn in x:"+string(x)+", y:"+string(y));
 }

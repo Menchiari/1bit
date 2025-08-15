@@ -19,3 +19,5 @@ txt=".\n.\n.\n.\n.\n"
 	+"\n you ungrateful bastard."
 txt_progress_spd=2;
 txt_progress=0;
+
+if instance_exists(obj_hero) {with obj_hero {speech_text="";}}

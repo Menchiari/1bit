@@ -159,12 +159,12 @@ function init_globals(){
 	global.chosen_room=rm_start;
 	
 //random seed
-	ini_open("random.seed")
-	default_seed=current_second+current_hour+current_day+current_year;
-	global.current_seed=ini_read_real("RANDOM","SEED",default_seed);
-	ini_write_real("RANDOM","SEED",global.current_seed);
-	ini_close();
-	random_set_seed(global.current_seed);
+	//ini_open("random.seed")
+	//default_seed=current_second+current_hour+current_day+current_year;
+	//global.current_seed=ini_read_real("RANDOM","SEED",default_seed);
+	//ini_write_real("RANDOM","SEED",global.current_seed);
+	//ini_close();
+	scr_randomize();
 	
 //rooms
 	global.allrooms=false;
