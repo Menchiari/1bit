@@ -47,7 +47,8 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 					//|| enemy.state==states.block_hit
 					||(enemy.state==states.block
 					&& enemy.timer<=enemy.counter_time
-					&& ((enemy.res*(enemy.armor.defence+enemy.helm.defence)*(enemy.hp)/2>damage) && enemy!=obj_hero.id)
+					&& ((enemy.res*(enemy.armor.defence+enemy.helm.defence)*(enemy.hp)/2>damage)
+					&& enemy!=obj_hero.id)
 					////todo add no blocking on hands or no weapon////
 					//&& enemy.hp>hp/2
 					) //added block counter

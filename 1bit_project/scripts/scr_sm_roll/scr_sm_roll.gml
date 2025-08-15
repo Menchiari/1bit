@@ -18,10 +18,12 @@ function scr_sm_roll(){
 //movement
 	if speed>0 {speed-=roll_sp_decrease*(spd*defence_speed);}
 	if image_index>=jump_b-1 {state=states.idle;}
+	if armor.weight>5{
 	scr_attack_system(round((jump_a+jump_b)/2),3,0,armor.weight/50,0,1);
 	scr_attack_system(round((jump_a+jump_b)/2)+1,3,0,armor.weight/50,0,1);
 	scr_attack_system(round((jump_a+jump_b)/2)-1,3,0,armor.weight/50,0,1);
-	if image_index>jump_a-1 && image_index<jump_b-3 {invincible=true;}
+	}
+	if image_index>jump_a-1 && image_index<jump_b-2 {invincible=true;}
 	else {invincible=false;}
 	
 //controls

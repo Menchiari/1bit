@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":42.683834,
+  "duration":41.626575,
   "name":"snd_bg_dungeon",
   "parent":{
     "name":"backgrounds",

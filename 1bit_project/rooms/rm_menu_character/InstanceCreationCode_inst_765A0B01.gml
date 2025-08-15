@@ -1,0 +1,1 @@
+if global.story_progress==0 instance_destroy();

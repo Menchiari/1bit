@@ -1,8 +1,10 @@
 if mouse_check_button_released(mb_any) //show click effect on ground
 {
-	if instance_exists(obj_hero)
-	{
-		instance_create_depth(mouse_x,mouse_y,-y,obj_click);
+	if instance_exists(obj_hero) {
+		with obj_hero {
+			if can_character_navigate(dest_x,dest_y) {instance_create_depth(mouse_x,mouse_y,-y,obj_click);}
+			//else {scr_audio_play(snd_error);}
+		}
 	}
 }
 

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":13.765646,
   "name":"snd_bg_wind_strong",
   "parent":{
     "name":"backgrounds",

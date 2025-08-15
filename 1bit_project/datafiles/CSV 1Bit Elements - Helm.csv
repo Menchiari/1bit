@@ -3,27 +3,27 @@
 1,stray hat,2,0.25,0.25,1,spr_helm_strayhat,an old stray hat,1.1,2
 2,filthy hat,8,0.25,0.5,-1,spr_helm_filthyhat,this old hat smells like cheese,1.1,2
 3,hat,5,0.25,0.25,1,spr_helm_hat,a nice comfortable hat,1.25,2
-4,clumsy beenie,3,0.20,0.1,0,spr_helm_cap,this beenie is tight and hard to wear,1.2,1
+4,clumsy beanie,3,0.20,0.1,0,spr_helm_cap,this beenie is tight and hard to wear,1.2,0
 5,wig,20,0.10,0.1,1,spr_helm_wig,pretty!,1,1
 6,top hat,50,0.25,0.2,3,spr_helm_tophat,a very elegant choice,1.3,2
-7,coonskin cap,20,0.30,0.1,1,spr_helm_cookskincap,a hat made out of a racoon. Warm and cozy,1.2,1
+7,coonskin cap,20,0.30,0.1,1,spr_helm_cookskincap,a hat made out of a raccoon. Warm and cozy,1.2,1
 8,bandana,5,0.20,0.05,-2,spr_helm_bandana,perfect to wear during sunny days,1,1
 9,assassin's hood,10,0.50,0.5,-3,spr_helm_hood_assassin,a very menacing hood usually worn by assassins,1.1,4
-10,warm hood,15,0.40,1,0,spr_helm_hood,"a soft and warm hood, easily attacheable to one's armor",1.25,1
+10,warm hood,15,0.40,1,0,spr_helm_hood,"a soft and warm hood, easily attachable to one's armor",1.25,1
 11,tin hat,20,0.60,1,0,spr_helm_tinhat,a very simple looking tin hat,1.3,1
 12,wizard hat,20,0.50,0.5,2,spr_helm_wizardhat,usually worn by those who seek knowledge and inspiration,1.2,1
 13,copper helm,25,1.00,2,0,spr_helm,a pretty thick copper helm,1.4,2
-14,bucket,5,0.80,1.5,-1,spr_helm_bucket,a wet filthy bucked used as a helm,1.5,1
+14,bucket,5,0.80,1.5,-1,spr_helm_bucket,a wet filthy bucket used as a helm,1.5,1
 15,ceramic mask,10,1.50,0.5,-1,spr_helm_mask,an interesting mask representing the ancient gods,1.3,1
 16,rusty helm,15,1.10,3.5,-1,spr_helm_rusty,"a rusty old helm. heavy, thick, and quite uncomfortable",1.8,2
 17,wooden cap,20,1.00,1,0,spr_helm_woodencap,a hand crafted helm made out of wood,1.25,1
-18,leather fedora,30,0.75,0.5,3,spr_helm_fedora,this hat should belong in a museum!,1.2,0
+18,leather fedora,30,0.75,0.5,3,spr_helm_fedora,this hat belongs in a museum!,1.2,0
 19,guard helm,35,1.60,2.5,-1,spr_helm_guard,these types of helms are mainly used by the ancient guards,1.6,4
 20,bronze helm,40,1.50,3,-1,spr_helm,a heavy and ugly headwear made out of thick bronze,1.75,1
 21,roman helm,45,1.40,2.5,1,spr_helm_roman,these helms were used by the romans in the ancient times,1.75,1
 22,viking helm,50,1.60,4,0,spr_helm_viking,these helms were used by the vikings in the ancient times,2.25,1
 23,great helm,80,2.00,6,1,spr_helm_roman,"a thicker version of the roman helm, sturdier but much heavier",3,2
-24,knight's helm,60,2.10,5,3,spr_helm_knight,this should be worn only be the sacred knights,2,1
+24,knight's helm,60,2.10,5,3,spr_helm_knight,this should be worn only by the sacred knights,2,1
 25,golden mask,100,2.20,5,1,spr_helm_mask,a valuable mask made entirely out of gold,2,1
 26,golden crown,150,1.00,2,5,spr_helm_crown,"the golden crown of queens, forged by a chosen god",0.9,1
 27,silver crown,120,1.00,1,5,spr_helm_crown,"the silver crown of kings, forged by a chosen spirit",0.8,2
@@ -33,7 +33,7 @@
 31,bionic headset,150,2.30,0.5,-1,spr_helm_bionic,some say those who tried to defy the gods decided to use this,3,4
 32,god's helm,1000,2.50,1,5,spr_helm_god,one of the ancient helms of gods,3,1
 33,owl clan mask,100,1.00,1,-2,spr_helm_mask,the ancient mask of an evil owl clan member,2,2
-34,filthy hood,5,0.50,1,-1,spr_helm_hood,a smelly old hood coverd in dirt and dead leaves,1.5,4
+34,filthy hood,5,0.50,1,-1,spr_helm_hood,a smelly old hood covered in dirt and dead leaves,1.5,4
 35,worn hat,5,0.25,0.25,0,spr_helm_fedora,this very old hat has been worn for several decades,1,2
 36,headband,5,0.20,0.05,0,spr_helm_headband,a piece of cloth wrapped around the skull's head,1,0
 36,nice cap,5,0.25,0.05,0,spr_helm_cap2,a cool looking cap,1,0

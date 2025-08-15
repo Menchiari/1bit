@@ -1,9 +1,9 @@
 // Character scripts
 function scr_flip_check_mouse(destx,desty,dir_scale)
 {
-	if destx < x {dir=1*dir_scale};
+	if destx < x {dir=1*dir_scale}
 	else {dir=-1*dir_scale};
-	if desty < y-6 {back=true};
+	if desty < y-6 {back=true}
 	else {back=false};
 }
 
