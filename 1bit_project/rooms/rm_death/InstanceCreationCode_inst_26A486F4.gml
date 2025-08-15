@@ -11,7 +11,6 @@ with obj_hero
 	);
 	
 	//if global.deathcount==1 {room_goto(rm_gameover);}
-	if global.deathcount==1 {speech_text="what is this?"}
 	if global.deathcount==2 {speech_text="who are you?"}
 	if global.deathcount==3 {speech_text="you again?"}
 	if global.deathcount==4 {speech_text="where am I?"}

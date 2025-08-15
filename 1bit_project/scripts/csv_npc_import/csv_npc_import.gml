@@ -163,7 +163,7 @@ function spawn_npc_test(_x, _y, _rnd_npc,_npc_list) {
 	var _npc = _npc_list[_rnd_npc]
 	
 	var npc_obj = _npc.obj_name;
-	if npc_obj = -1 {npc_obj = this_npc; show_debug_message("Error Spawning " + string(_npc.name)+", object does not exist. Base enemy spawned instead.");}
+	if (npc_obj == -1) {npc_obj = this_npc; show_debug_message("Error Spawning " + string(_npc.name)+", object does not exist. Base enemy spawned instead.");}
 	
 	var this_npc = instance_create_depth(_x,_y,-y,npc_obj);
 	
@@ -228,9 +228,15 @@ function get_lvl(_stat_list, _player_stat) {
 
 function get_lvl_gain(_stat_list, _player_stat) {
 
-	var xp = global.xp;
+	if (!variable_global_exists("xp")) global.xp = 0;
+	if (!ds_exists(global.lvl_xp, ds_type_list)) csv_level_import("CSV 1Bit Elements - Level Chart.csv");
+
+	var xp = max(0, real(global.xp));
+
+	//var xp = global.xp;
 	var current_lvl = get_lvl(_stat_list, _player_stat);
 	var lvl_gain = 0;
+	
 	// ds_list_find_value(global.lvl_xp, jjj)
 	do{
 		if current_lvl >= ds_list_size(global.lvl_xp) {
@@ -250,7 +256,7 @@ function get_lvl_gain(_stat_list, _player_stat) {
 function get_xp_cost(_current_lvl, _lvl_gain) {
 	var xp_cost = 0;
 	
-	if _lvl_gain = 0
+	if _lvl_gain == 0
 	{return xp_cost;}
 	else
 	{
@@ -308,11 +314,11 @@ function pick_decor(_theme)
 	var rnd;
 	do
 	{
-		rnd =  irandom_range(0, array_length(global.decor_map)-1);
+		rnd = irandom_range(0, array_length(global.decor_map)-1);
 		//show_debug_message(string(global.decor_map[rnd][1]))
 		//show_debug_message(string(_theme))
 	}
-	until (global.decor_map[rnd][1] = _theme.name)
+	until (global.decor_map[rnd][1] == _theme.name)
 	
 	return rnd;
 	

@@ -10,5 +10,5 @@ draw_rectangle_color(x+cam_width/2,y-cam_height/2,x+cam_width/2+bordx,y+bordy+ca
 }
 if no_ui==true
 {
-	sprite_index=spr_null;
+	sprite_index=spr_camera_port_invisible;
 }

@@ -28,6 +28,7 @@ if room==rm_menu
 || room==rm_glitch
 || room==rm_doomtext
 || room==rm_cinematic_intro
+|| room==rm_cinematic_cave
 {
 	UI=false;
 	if instance_exists(obj_camera_pos) {with obj_camera_pos {no_ui=true;}}

@@ -3,26 +3,21 @@
 event_inherited();
 
 // Ensure level lists exist
-if (!ds_exists(global.lvl_hp, ds_type_list)) {
+if (!ds_exists(global.lvl_hp, ds_type_list) || !ds_exists(global.lvl_xp, ds_type_list)) {
     csv_level_import("CSV 1Bit Elements - Level Chart.csv");
 }
 
-
 main_color=c_red;
 equip_helm(global.helms[26]);//red crown
-
-
 
 hp_lvl =		get_lvl(global.lvl_hp, global.player_hp_max);
 hp_lvl_gain =	get_lvl_gain(global.lvl_hp, global.player_hp_max);
 xp_cost =		get_xp_cost(hp_lvl,hp_lvl_gain);
 
-// after you compute str_lvl, str_lvl_gain, xp_cost
-hp_target_value = ds_list_find_value(global.lvl_hp, hp_lvl + hp_lvl_gain);
-// (optional) cap for safety
-if (hp_lvl + hp_lvl_gain >= ds_list_size(global.lvl_hp)) {
-    hp_target_value = ds_list_find_value(global.lvl_hp, ds_list_size(global.lvl_hp) - 1);
-}
+// Clamp index before reading value
+var _n   = ds_list_size(global.lvl_hp);
+var _idx = clamp(hp_lvl + hp_lvl_gain, 0, _n - 1);
+hp_target_value = ds_list_find_value(global.lvl_hp, _idx);
 
 
 if hp_lvl_gain == 0
