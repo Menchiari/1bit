@@ -12,13 +12,13 @@ sec_to_steps = function(seconds) {
 };
 
 letter_gap_steps   = sec_to_steps(0.10);
-letter_fade_steps  = sec_to_steps(0.30);
+letter_fade_steps  = sec_to_steps(0.20);
 line_pause_steps   = sec_to_steps(2.50);
 line_fadeout_steps = sec_to_steps(2.50);
 
 // ---------- Poem ----------
 poem_lines = [
-    "As seasons turned, all roads led back to buried roots",
+    "As seasons turned,\nall roads led back\nto buried roots...",
 	""
 ];
 
@@ -37,3 +37,5 @@ t_reveal = 0;
 t_pause  = 0;
 t_fade   = 0;
 line_alpha_mul = 1;
+
+show_debug_message("cave text started")

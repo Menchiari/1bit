@@ -13,7 +13,8 @@ if (image_index == 1 || image_index == 65 || image_index == 116 || image_index =
     }
 }
 
-if image_index==310
+if image_index>=310
 {
-	instance_create_depth(x,y,depth-1000,obj_text_cave);
+	image_speed=0.5;
+	if !instance_exists(obj_text_cave) {instance_create_depth(x,y,depth-1000,obj_text_cave);}
 }
