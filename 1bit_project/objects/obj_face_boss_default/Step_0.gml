@@ -49,7 +49,7 @@ case 0:
 			//sprite_index=spr_faces_intro_default; // pick a sprite to change the loop
 			sprite_index=spr_faces_boss_angry;
 			color=c_red;
-			txt="Just leave this place\na n d   l e t   u s   b e!!!"; //the text to be said - the speed of the next phase is dependent on the length
+			txt="JUST LEAVE THIS PLACE\nAND LET US BE!!!"; //the text to be said - the speed of the next phase is dependent on the length
 			state="talk_intense";
 		break;
 		///////////////////////////////////////////////////////////////////

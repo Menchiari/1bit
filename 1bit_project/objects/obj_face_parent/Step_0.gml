@@ -4,82 +4,107 @@ timer+=1;
 var length = string_width(txt);
 if (txt_progress < string_length(txt)) {txt_progress += txt_progress_spd;}//makes the text appear progressively
 
+// one-time inits (safe if re-run)
+if (!variable_instance_exists(id, "idle_grace")) idle_grace = 0;
+if (!variable_instance_exists(id, "idle_grace_frames")) idle_grace_frames = max(1, round(game_get_speed(gamespeed_fps) * 0.10)); // ~100ms
+if (!variable_instance_exists(id, "prev_state")) prev_state = state;
+
+// auto-sync the question flag with the actual state (kills sticky question forever)
+question = (state == "question");
+
 /////////////////////////STATES//////////////////////////
-switch state
+switch (state)
 {
-	case "talk":
-		image_speed=image_speed_default;
-		if timer>=length*txt_speed
-		{
-			if txt_auto==true
-			{
-				image_index=0;
-				txt_phase+=1;
-				timer=0;
-				txt_progress=0;
-			}
-			else
-			{
-				state="idle";
-				timer=0;
-			}
-		}
-		if mouse_check_button_released(mb_any) && question==false
-		{
-			state="idle";
-			timer=0;
-			txt_progress=string_length(txt);
-		}
-	break;
-	case "talk_intense":
-		image_speed=image_speed_default;
-		idle_time=game_get_speed(gamespeed_fps)*1;
-		if image_index>=image_number-1 {image_index=image_number-1;}
-		if timer>=length*txt_speed
-		{
-			if txt_auto==true
-			{
-				image_index=0;
-				txt_phase+=1;
-				timer=0;
-				txt_progress=0;
-			}
-			else
-			{
-				image_index=0;
-				state="idle";
-				timer=0;
-			}
-		}
-		if mouse_check_button_released(mb_any)
-		{
-			state="idle";
-			timer=0;
-			txt_progress=string_length(txt);
-		}
-	break;
+    case "talk":
+        image_speed = image_speed_default;
+
+        if (timer >= length * txt_speed)
+        {
+            if (txt_auto) {
+                image_index = 0;      // neutralize on line end
+                blink_hold  = 0;
+                txt_phase  += 1;
+                timer       = 0;
+                txt_progress = 0;
+            } else {
+                image_index = 0;
+                blink_hold  = 0;
+                state       = "idle";
+                timer       = 0;
+                idle_grace  = idle_grace_frames; // prevent instant skip in idle
+            }
+        }
+
+        if (mouse_check_button_released(mb_any) && !question)
+        {
+            image_index  = 0;
+            blink_hold   = 0;
+            state        = "idle";
+            timer        = 0;
+            idle_grace   = idle_grace_frames;
+            txt_progress = string_length(txt);
+        }
+    break;
+
+    case "talk_intense":
+        image_speed = image_speed_default; // same speed as talk
+
+        // Hold last frame once reached (no loop), but DO NOT change sprite or frame count
+        if (image_number > 0 && image_index >= image_number - 1) {
+            image_index  = image_number - 1;
+            image_speed  = 0; // freeze on the last subimage until the line ends
+        }
+
+        if (timer >= length * txt_speed)
+        {
+            if (txt_auto) {
+                // advance to next line, reset face so idle isn't confusing if next state is idle
+                image_index  = 0;
+                blink_hold   = 0;
+                txt_phase   += 1;
+                timer        = 0;
+                txt_progress = 0;
+            } else {
+                image_index  = 0;  // neutralize mouth before idle
+                blink_hold   = 0;
+                state        = "idle";
+                timer        = 0;
+                idle_grace   = idle_grace_frames;
+            }
+        }
+
+        // NO SKIP in talk_intense (intentionally ignore mouse here)
+    break;
 	case "idle":
-		image_speed = 0;
-		idle_time=idle_time_default;
-		blink_hold = (blink_hold > 0) ? blink_hold - 1 : (irandom_range(0, 30) == 0 ? 5 : 0); //holds for 5 frames
-		image_index = (blink_hold > 0);
-		
-		if mouse_check_button_released(mb_any)
-		|| timer>=idle_time
-		{
-			txt_phase+=1;
-			state="talk";
-			timer=0;
-			txt_progress=0;
-		}
+	    image_speed = 0;
+	    idle_time   = idle_time_default;
+	    blink_hold  = (blink_hold > 0) ? blink_hold - 1 : (irandom_range(0, 30) == 0 ? 5 : 0);
+	    image_index = (blink_hold > 0);
+
+	    if (idle_grace > 0) {
+	        idle_grace -= 1; // eat the trailing click
+	    } else if (mouse_check_button_released(mb_any) || timer >= idle_time) {
+	        txt_phase   += 1;
+	        state        = "talk";
+	        timer        = 0;
+	        txt_progress = 0;
+	    }
 	break;
 	case "question":
-		question=true;
-		if image_index>=image_number-1
-		{image_index=image_number-1;}
-		if mouse_check_button_released(mb_any)
-		{timer=0;txt_progress=string_length(txt);}
+	    // Animate like talk (same speed), then HOLD on last frame.
+	    image_speed = image_speed_default;
 
+	    // Once we reach the last subimage, freeze there (no looping, no blink override)
+	    if (image_number > 0 && image_index >= image_number - 1) {
+	        image_index = image_number - 1;
+	        image_speed = 0;
+	    }
+
+	    // Click only REVEALS the text; advancing is handled by buttons elsewhere.
+	    if (mouse_check_button_released(mb_any) && txt_progress < string_length(txt)) {
+	        txt_progress = string_length(txt);
+	        timer = 0;
+	    }
 	break;
 	case "wait":
 		image_speed = 0;
@@ -99,3 +124,11 @@ switch state
 }
 
 if mouse_check_button_released(mb_any) {show_debug_message("state = "+string(state)+", text phase = "+string(txt_phase)+", face progress = "+string(face_progress)+", game progress = "+string(game_progress));}
+
+// If we just LEFT the question state, neutralize and add a tiny grace
+if (prev_state == "question" && state != "question") {
+    image_index = 0;
+    blink_hold  = 0;
+    idle_grace  = idle_grace_frames; // avoids accidental double-advance on the trailing click
+}
+prev_state = state;

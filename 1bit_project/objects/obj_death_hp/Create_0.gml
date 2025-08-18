@@ -23,7 +23,7 @@ hp_target_value = ds_list_find_value(global.lvl_hp, _idx);
 if hp_lvl_gain == 0
 {speech_text="I have nothing \nto offer.."; activate=false; instance_destroy();}
 else
-{speech_text="drain my life\nto gain health";}
+{speech_text="drain my life\nto gain health ";}
 
 var pile = instance_nearest(x,y,obj_death_pile);
 

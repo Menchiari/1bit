@@ -10,8 +10,8 @@
   "name":"obj_cinematic_cave",
   "overriddenProperties":[],
   "parent":{
-    "name":"_system",
-    "path":"folders/Objects/_system.yy",
+    "name":"Story",
+    "path":"folders/Objects/Story.yy",
   },
   "parentObjectId":null,
   "persistent":false,

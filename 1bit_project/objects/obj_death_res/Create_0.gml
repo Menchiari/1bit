@@ -23,7 +23,7 @@ res_target_value = ds_list_find_value(global.lvl_res, _idx);
 if res_lvl_gain == 0
 {speech_text="I have nothing \nto offer.."; activate=false; instance_destroy();}
 else
-{speech_text="kill me to\nresist pain";}
+{speech_text="kill me to\nresist pain ";}
 
 var pile = instance_nearest(x,y,obj_death_pile);
 var pile_frame = res_lvl_gain;

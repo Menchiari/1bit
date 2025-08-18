@@ -13,3 +13,12 @@ if (image_index == 1 || image_index == 65 || image_index == 116 || image_index =
         audio_sound_set_track_position(snd_cinematic_intro_music, target_pos);
     }
 }
+
+if image_index>211
+&& global.player_head!=spr_head_female
+&& global.player_head!=spr_head_female1
+&& global.player_head!=spr_head_female2
+&& global.player_head!=spr_head_female1_old
+{
+	room_goto(nextroom);
+}

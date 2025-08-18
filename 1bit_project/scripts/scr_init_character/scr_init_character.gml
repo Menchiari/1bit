@@ -49,6 +49,8 @@ function scr_init_character(){
 	speech_color=c_white;
 	speech_color_bk=c_black;
 	
+	attack_color=false;
+	
 #endregion
 #region animation frames
 	idle_a=0;

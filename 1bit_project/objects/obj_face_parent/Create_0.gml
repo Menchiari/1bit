@@ -34,3 +34,9 @@ question=false;
 
 show_debug_message(string(face_progress)+" face progress");
 alarm[5]=3;
+
+//talk_intense edit
+if (!variable_instance_exists(id, "idle_grace")) idle_grace = 0;
+if (!variable_instance_exists(id, "idle_grace_frames")) {
+    idle_grace_frames = max(1, round(game_get_speed(gamespeed_fps) * 0.10)); // ~100ms
+}
