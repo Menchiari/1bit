@@ -1,6 +1,8 @@
 if mouse_check_button_released(mb_any) //show click effect on ground
 {
-	if instance_exists(obj_hero) {
+	if instance_exists(obj_hero)
+	&& room!=rm_menu_main
+	{
 		with obj_hero {
 			if can_character_navigate(mouse_x,mouse_y) {instance_create_depth(mouse_x,mouse_y,-y,obj_click);}
 			else
@@ -34,6 +36,7 @@ if room==rm_menu
 || room==rm_doomtext
 || room==rm_cinematic_intro
 || room==rm_cinematic_cave
+|| room==rm_menu_main
 {
 	UI=false;
 	if instance_exists(obj_camera_pos) {with obj_camera_pos {no_ui=true;}}

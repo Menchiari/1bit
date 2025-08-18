@@ -1,0 +1,43 @@
+/// obj_mainmenu : Step
+var down_now =
+      mouse_check_button(mb_left)
+   || device_mouse_check_button(0, mb_left)
+   || keyboard_check(vk_anykey);
+
+var pressed_now =
+      mouse_check_button_pressed(mb_left)
+   || device_mouse_check_button_pressed(0, mb_left)
+   || keyboard_check_pressed(vk_anykey);
+
+var released_now =
+      mouse_check_button_released(mb_left)
+   || device_mouse_check_button_released(0, mb_left)
+   || keyboard_check_released(vk_anykey);
+
+switch (state) {
+    case STATE_FADEIN:
+        alpha_text = clamp(alpha_text + fade_speed, 0, 1);
+        if (alpha_text >= 1) state = STATE_WAIT;
+    break;
+
+    case STATE_WAIT:
+        // While held: darken and invert (handled in Draw); on release: revert and start fadeout
+        bg_dim_goal = down_now ? dim_on_press : 0;
+        if (tap_anywhere && released_now) {
+            // revert background immediately after release
+            bg_dim_goal = 0;
+            state = STATE_FADEOUT;
+        }
+    break;
+
+    case STATE_FADEOUT:
+        // fade both text and outline (outline uses same alpha via 'a')
+        alpha_text = clamp(alpha_text - fade_speed, 0, 1);
+        // keep background light during fadeout (no dim)
+        bg_dim_goal = 0;
+        if (alpha_text <= 0) room_goto(rm_faces_default);
+    break;
+}
+
+// smooth background dim
+bg_dim = lerp(bg_dim, bg_dim_goal, 0.25);
