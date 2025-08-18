@@ -1,5 +1,7 @@
 /// obj_mainmenu : Create
 text_string   = "BEGIN JOURNEY";
+if global.story_progress>0
+{text_string   = "CONTINUE JOURNEY";}
 menu_font     = fnt_dialogue;
 fade_speed    = 0.02;
 text_y_ratio  = 0.71;

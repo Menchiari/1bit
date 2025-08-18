@@ -6,7 +6,7 @@ draw_line_color(x+linecx1,y,x+linecx2,y+sprite_height,c_black,c_black);
 draw_set_font(font);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_text_color(x+sprite_width/2,y+(sprite_height/2)-1,text,color,color,color,color,alpha);
+draw_text_color(x+sprite_width/2,y+(sprite_height/2)-1,text,char_txt_color,char_txt_color,char_txt_color,char_txt_color,alpha);
 
 draw_text(x+70,y+(sprite_height/2),character_name+":\n"+character_description);
 

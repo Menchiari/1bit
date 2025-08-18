@@ -1,3 +1,5 @@
+draw_set_color(c_white);
+
 draw_sprite(sprite_index,image_index,x,y);
 draw_line_color(x+lineax1,y,x+lineax2,y+sprite_height,c_black,c_black);
 draw_line_color(x+linebx1,y,x+linebx2,y+sprite_height,c_black,c_black);

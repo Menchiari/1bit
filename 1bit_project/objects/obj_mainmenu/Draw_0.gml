@@ -35,3 +35,9 @@ var col_outline = invert ? col_outline_pressed: col_outline_idle;
 // 6) Draw text with thick gradient outline; both fade via alpha_text
 draw_set_font(menu_font);
 draw_text_with_outline(tx, ty, text_string, col_fill, col_outline, alpha_text);
+
+
+// --- HARD RESET RENDER STATE AFTER WE DRAW ---
+draw_set_color(c_white);
+draw_set_alpha(1);
+gpu_set_blendmode(bm_normal); // if you never changed it, still safe to reset

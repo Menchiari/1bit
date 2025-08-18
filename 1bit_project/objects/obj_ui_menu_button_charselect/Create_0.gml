@@ -9,7 +9,7 @@ linecx2=random_range(0,sprite_width);
 selected=false;
 
 text="";
-color=c_white;
+char_txt_color=c_white;
 alpha=1;
 font=fnt_dialogue;
 
