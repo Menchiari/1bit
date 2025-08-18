@@ -18,14 +18,14 @@ line_fadeout_steps = sec_to_steps(2.50);
 
 // ---------- Poem ----------
 poem_lines = [
-    "To conceive our greatest creation",
+    "To conceive our greatest creation ",
     "Was our one sided intention.",
-    "Ever eager - our hunger unending",
+    "Ever eager - our hunger unending ",
     "Brought us to the near closing.",
     "The few left did nothing but mend",
     "The mistakes of the forgotten.",
-    "Off we sail, follow the horizon",
-    "To yet another inception."
+    "Off we sail, follow the horizon ",
+    "To yet another inception. "
 ];
 
 // ---------- Playback state ----------

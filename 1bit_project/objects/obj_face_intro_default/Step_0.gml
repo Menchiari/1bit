@@ -373,7 +373,7 @@ switch game_progress
 					//////////////////////PLACE DIALOGUE HERE//////////////////////////
 					case 1:
 						sprite_index=spr_faces_intro_mock;
-						txt="Congratulations!";
+						txt="CONGRATULATIONS!";
 					break;
 					case 2:
 						txt="You reached the end...";

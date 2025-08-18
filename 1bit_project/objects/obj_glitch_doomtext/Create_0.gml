@@ -4,10 +4,10 @@
 event_inherited();
 
 txt=".\n.\n.\n.\n.\n"
-	+"only as life fades the memories of the most beautiful forgotten moments flourish and appear right in front of your eyes."
+	+"only as life fades do the echoes of the most beautiful forgotten moments flourish and appear right in front of your eyes."
 	+".\n "
 	+".\n "
-	+"\n So you realize that all of those memories slid right through you all your life just to come back and remind you"
+	+"\n So you realize that all of those memories slid right through your entire existence just to come back and remind you"
 	+".\n "
 	+".\n "
 	+"\n how great life was and that now it's all over"

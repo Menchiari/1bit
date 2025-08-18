@@ -269,7 +269,7 @@ function scr_attack_system(attack_frame,radius,damage,damage_variation,push,push
 			    var charisma_fear	= ((self.charisma+abs(enemy.charisma))*-8); // low charisma causes more threat if charisma is near zero
 
 			    var flee_chance = (hp_factor+str_factor+charisma_fear)/(abs(enemy.charisma)+1);
-			    if random_range(0, 100)<flee_chance {enemy.ai_state=ai_states.flee;}
+			    if random_range(0, 100)<flee_chance && enemy.faction!=factions.zombie {enemy.ai_state=ai_states.flee;}
 				
 				show_debug_message("hp factor: "+string(hp_factor)+", str factor: "+string(str_factor)+", charisma fear: "+string(charisma_fear))
 			    show_debug_message("flee chance of " + string(enemy.name) + ": " + string(flee_chance));

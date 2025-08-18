@@ -43,7 +43,7 @@ function map_cube(_x,_y,_z) constructor{
 }
 
 function spawn_hex(_r,_q,_radius,_flat_top) constructor{
-	var this_hex = instance_create_depth(x,y,0,obj_hex);
+	var this_hex = instance_create_depth(real(x),real(y),0,obj_hex);
 	this_hex.radius = _radius;
 	this_hex.axial.r = _r;
 	this_hex.axial.q = _q;
@@ -180,7 +180,7 @@ function inverse_direction( _direction) constructor {
 
 
 
-function theme_strct(_name, _start, _finish, _count) constructor {
+function theme_strct(_name, _start, _finish, _count=0) constructor {
 	name = _name;
 	start = _start;
 	finish = _finish;
@@ -343,7 +343,7 @@ function create_region(_center, _region, _points) constructor{
 			set_hex_wall(_center,i,0);
 			set_hex_wall(hex_neighbor(_center,i), inverse_direction(i) ,0);
 		}
-		instance_create_depth(cntrHex.x,cntrHex.y,-y,center_obj);
+		instance_create_depth(cntrHex.x,cntrHex.y,real(-y),center_obj);
 
 	}
 	hex_ring(_center,1,_region.inner,_points,region_color);

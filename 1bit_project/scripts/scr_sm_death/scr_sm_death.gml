@@ -149,10 +149,12 @@ function scr_sm_death(){
 	{
 		dialogue_death_instance=instance_create_depth(x,y-16,-y,obj_ui_number)
 		scr_audio_yell(image_index,1);
+		dialogue_death_instance.text=dialogue_death;
 		if dialogue_death==""
 		&& animal==false
 		{
-			if faction=factions.enemy
+			if (faction == factions.enemy)
+
 			{
 				dialogue_death_instance.text = choose(
 					"damn\nyou!",

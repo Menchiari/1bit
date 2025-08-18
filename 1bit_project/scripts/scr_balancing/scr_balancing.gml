@@ -3,7 +3,7 @@ function scr_balancing(){
 	defence_speed=1-((armor.weight+helm.weight+weapon.weight)/100);
 	run_distance=run_distance_min/(spd*defence_speed);
 	
-	charisma=armor.charisma+helm.charisma;
+	charisma=cha+armor.charisma+helm.charisma;
 	
 	weapon_image_speed=animset_weapon_image_speed*weapon.atk_spd;
 	//attack_range=round(animset_attack_range*weapon.atk_spd);

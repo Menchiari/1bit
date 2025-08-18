@@ -619,6 +619,7 @@
     {"id":{"name":"snd_breakable_wood_5","path":"sounds/snd_breakable_wood_5/snd_breakable_wood_5.yy",},},
     {"id":{"name":"snd_breakable_wood_6","path":"sounds/snd_breakable_wood_6/snd_breakable_wood_6.yy",},},
     {"id":{"name":"snd_breakable_wood_7","path":"sounds/snd_breakable_wood_7/snd_breakable_wood_7.yy",},},
+    {"id":{"name":"snd_cinematic_ai","path":"sounds/snd_cinematic_ai/snd_cinematic_ai.yy",},},
     {"id":{"name":"snd_cinematic_intro_music","path":"sounds/snd_cinematic_intro_music/snd_cinematic_intro_music.yy",},},
     {"id":{"name":"snd_cinematic_intro_sfx","path":"sounds/snd_cinematic_intro_sfx/snd_cinematic_intro_sfx.yy",},},
     {"id":{"name":"snd_click","path":"sounds/snd_click/snd_click.yy",},},

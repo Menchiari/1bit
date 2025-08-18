@@ -2,19 +2,19 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 #region npc import and stuff
 
-function npc_struct(_obj_name, _name,_hp,_str,_res,_spd,_char,_weapon,_armor,_helm,_theme,_points,_count) constructor{
+function npc_struct(_obj_name, _name,_hp,_str,_res,_spd,_char,_weapon,_armor,_helm,_theme,_points,_count=0) constructor{
 	obj_name = _obj_name;
 	name = _name;
-	hp = _hp;
-	str = _str;
-	res = _res;
-	spd = _spd;
-	cha = _char;
+	hp = real(_hp);
+	str = real(_str);
+	res = real(_res);
+	spd = real(_spd);
+	cha = real(_char);
 	weapon = _weapon;
 	armor = _armor;
 	helm = _helm;
 	theme = _theme;
-	points = _points;
+	points = real(_points);
 	count = _count;
 }
 
@@ -58,7 +58,7 @@ function csv_npc_import() {
 		real(file_grid[# 4,j]),		//str
 		real(file_grid[# 5,j]),		//res
 		real(file_grid[# 6,j]),		//spd
-		file_grid[# 7,j],			//cha
+		real(file_grid[# 7,j]),		//cha
 		file_grid[# 8,j],			//weapon
 		file_grid[# 9,j],			//armor
 		file_grid[# 10,j],			//helm
@@ -130,7 +130,7 @@ function csv_npc_import() {
 		real(file_grid[# 4,j]),		//str
 		real(file_grid[# 5,j]),		//res
 		real(file_grid[# 6,j]),		//spd
-		file_grid[# 7,j],			//cha
+		real(file_grid[# 7,j]),			//cha
 		file_grid[# 8,j],			//weapon
 		file_grid[# 9,j],			//armor
 		file_grid[# 10,j],			//helm
@@ -172,7 +172,7 @@ function spawn_npc_test(_x, _y, _rnd_npc,_npc_list) {
 	this_npc.res=_npc.res;
 	this_npc.str=_npc.str;
 	this_npc.spd=_npc.spd;
-	this_npc.cha=_npc.cha;
+	this_npc.cha=real(_npc.cha);
 	this_npc.name=_npc.name;
 	show_debug_message("Spawned @ " +string(_x)+":"+string(_y)+" "+string(_npc));
 	with (this_npc)

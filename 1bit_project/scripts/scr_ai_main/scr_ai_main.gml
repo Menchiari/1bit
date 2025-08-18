@@ -293,4 +293,5 @@ function scr_ai_main(){
 	else if x_laststep >= x+.3 {dir=1};
 	if y_laststep <= y-.3 {back=false}
 	else if y_laststep >= y+1 {back=true};
+	
 }

@@ -13,3 +13,5 @@ with _fade
 {
 	fade_speed=.002;
 }
+
+audio_play_sound(snd_cinematic_ai,1,false,global.audio_music*.5,0,1);
