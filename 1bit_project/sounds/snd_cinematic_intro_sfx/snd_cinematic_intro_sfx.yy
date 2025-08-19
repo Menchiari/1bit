@@ -2,8 +2,8 @@
   "$GMSound":"",
   "%Name":"snd_cinematic_intro_sfx",
   "audioGroupId":{
-    "name":"ag_music",
-    "path":"audiogroups/ag_music",
+    "name":"ag_cinematics",
+    "path":"audiogroups/ag_cinematics",
   },
   "bitDepth":1,
   "bitRate":128,

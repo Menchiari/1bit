@@ -47,6 +47,7 @@ if speech_text=""
 && room!=rm_menu_deletesave
 && room!=rm_story_AI_2
 && room!=rm_story_AI
+&& room!=rm_boat
 {
 	scr_hero_dialogue();
 }

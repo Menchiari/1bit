@@ -52,3 +52,6 @@ var amults = [0.15, 0.30, 0.50, 0.70, 1.00];
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
 };
+
+if global.story_progress==4 {room_goto(rm_world);}
+if global.story_progress==5 && global.face_progress==0 {room_goto(rm_faces_default);}

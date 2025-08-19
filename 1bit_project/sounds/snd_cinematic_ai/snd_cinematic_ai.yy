@@ -2,14 +2,14 @@
   "$GMSound":"",
   "%Name":"snd_cinematic_ai",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"ag_cinematics",
+    "path":"audiogroups/ag_cinematics",
   },
   "bitDepth":1,
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":16.21177,
   "name":"snd_cinematic_ai",
   "parent":{
     "name":"Sounds",

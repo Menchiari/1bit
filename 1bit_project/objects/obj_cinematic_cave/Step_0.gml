@@ -3,7 +3,7 @@ if image_index>=lastframe
 {room_goto(nextroom);}
 
 // frames where we check sync
-if (image_index == 1 || image_index == 65 || image_index == 116 || image_index == 204) {
+if (round(image_index) == 1 || round(image_index) == 65 || round(image_index) == 130) {
     var pos = audio_sound_get_track_position(track);
     var target_pos = image_index / 10; // 10fps → seconds
 

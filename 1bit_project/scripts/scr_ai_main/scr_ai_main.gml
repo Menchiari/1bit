@@ -243,6 +243,7 @@ function scr_ai_main(){
 			#region FLEE
 				case ai_states.flee:
 					speech_text="help!";
+					walk_sp_mod=1.1;
 					var flee_distance=20
 					state=states.run;
 					if point_distance(x,y,dest_x,dest_y)<=flee_distance || collision_line(x,y,dest_x,dest_y,obj_collider,true,true)
