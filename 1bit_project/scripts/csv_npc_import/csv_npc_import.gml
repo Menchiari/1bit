@@ -218,57 +218,110 @@ function csv_level_import(csv_file) {
 	ds_grid_destroy(file_grid);
 }
 
-
 function get_lvl(_stat_list, _player_stat) {
-	
-	var current_lvl = ds_list_find_index(_stat_list, _player_stat);
-	
-	return current_lvl;
+    if (!ds_exists(_stat_list, ds_type_list)) return 0;
+    var n = ds_list_size(_stat_list);
+    if (n <= 0) return 0;
+
+    // Exact match first (keeps current behavior)
+    var idx = ds_list_find_index(_stat_list, _player_stat);
+    if (idx != -1) return idx;
+
+    // Fallback: threshold search (assumes ascending list)
+    var lvl = 0;
+    for (var i = 0; i < n; i++) {
+        var v = ds_list_find_value(_stat_list, i);
+        if (!is_real(v)) break;
+        if (_player_stat >= v) lvl = i; else break;
+    }
+    return lvl;
 }
 
 function get_lvl_gain(_stat_list, _player_stat) {
+    if (!variable_global_exists("xp")) global.xp = 0;
+    if (!ds_exists(global.lvl_xp, ds_type_list)) csv_level_import("CSV 1Bit Elements - Level Chart.csv");
 
-	if (!variable_global_exists("xp")) global.xp = 0;
-	if (!ds_exists(global.lvl_xp, ds_type_list)) csv_level_import("CSV 1Bit Elements - Level Chart.csv");
+    var n_xp = ds_list_size(global.lvl_xp);
+    if (n_xp <= 0) return 0;
 
-	var xp = max(0, real(global.xp));
+    var xp = max(0, real(global.xp));
+    var current_lvl = clamp(floor(get_lvl(_stat_list, _player_stat)), 0, n_xp - 1);
 
-	//var xp = global.xp;
-	var current_lvl = get_lvl(_stat_list, _player_stat);
-	var lvl_gain = 0;
-	
-	// ds_list_find_value(global.lvl_xp, jjj)
-	do{
-		if current_lvl >= ds_list_size(global.lvl_xp) {
-			break; // Prevent out-of-bounds access
-		}
-		xp -= ds_list_find_value(global.lvl_xp,current_lvl);
-		lvl_gain += 1;
-		current_lvl +=1;
-		show_debug_message("Lvl"+string(lvl_gain))
-	}
-	until(xp < 0)
-
-	return lvl_gain-1;
-
+    var lvl_gain = 0;
+    while (current_lvl < n_xp) {
+        var step = ds_list_find_value(global.lvl_xp, current_lvl);
+        if (!is_real(step)) break;     // corrupted or missing cell guard
+        xp -= step;
+        if (xp < 0) break;             // can’t afford next level
+        lvl_gain += 1;
+        current_lvl += 1;
+    }
+    return max(0, lvl_gain);
 }
 
 function get_xp_cost(_current_lvl, _lvl_gain) {
-	var xp_cost = 0;
-	
-	if _lvl_gain == 0
-	{return xp_cost;}
-	else
-	{
-		for(var i = 0; i < _lvl_gain ; i++) 
-		{
-			xp_cost += ds_list_find_value(global.lvl_xp,_current_lvl+i);
-		}
-		show_debug_message("XP cost:"+string(xp_cost))
-		return xp_cost;
-	}
+    if (!ds_exists(global.lvl_xp, ds_type_list)) return 0;
+    var n = ds_list_size(global.lvl_xp);
+    if (n <= 0 || _lvl_gain <= 0) return 0;
 
+    var cost = 0;
+    var start = clamp(floor(_current_lvl), 0, n - 1);
+    var _end = clamp(start + _lvl_gain - 1, 0, n - 1);
+
+    for (var i = start; i <= _end; i++) {
+        var step = ds_list_find_value(global.lvl_xp, i);
+        if (!is_real(step)) break;
+        cost += step;
+    }
+    return max(0, cost);
 }
+
+/////OLD CODE/////
+//function get_lvl_gain(_stat_list, _player_stat) {
+
+//	if (!variable_global_exists("xp")) global.xp = 0;
+//	if (!ds_exists(global.lvl_xp, ds_type_list)) csv_level_import("CSV 1Bit Elements - Level Chart.csv");
+
+//	var xp = max(0, real(global.xp));
+
+//	//var xp = global.xp;
+//	var current_lvl = get_lvl(_stat_list, _player_stat);
+//	var lvl_gain = 0;
+	
+//	// ds_list_find_value(global.lvl_xp, jjj)
+//	do{
+//		if current_lvl >= ds_list_size(global.lvl_xp) {
+//			break; // Prevent out-of-bounds access
+//		}
+//		xp -= ds_list_find_value(global.lvl_xp,current_lvl);
+//		lvl_gain += 1;
+//		current_lvl +=1;
+//		show_debug_message("Lvl"+string(lvl_gain))
+//	}
+//	until(xp < 0)
+
+//	return lvl_gain-1;
+
+//}
+
+
+//function get_xp_cost(_current_lvl, _lvl_gain) {
+//	var xp_cost = 0;
+	
+//	if _lvl_gain == 0
+//	{return xp_cost;}
+//	else
+//	{
+//		for(var i = 0; i < _lvl_gain ; i++) 
+//		{
+//			xp_cost += ds_list_find_value(global.lvl_xp,_current_lvl+i);
+//		}
+//		show_debug_message("XP cost:"+string(xp_cost))
+//		return xp_cost;
+//	}
+
+//}
+
 #endregion
 
 function decor_struct(_sprite, _type) constructor

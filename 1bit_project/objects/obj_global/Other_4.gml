@@ -96,3 +96,5 @@ if room==rm_world
 	//if global.story_progress!=4
 	//{layer_destroy("onlystory4")}
 }
+
+game_set_speed(global.room_speed_default,gamespeed_fps);
