@@ -1,4 +1,4 @@
-/// @description PUT CHANGES HERE
+/// @description obj_death_str destroy
 if activate==true
 {
 	event_inherited();

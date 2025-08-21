@@ -1,4 +1,4 @@
-/// @description PUT CHANGES HERE
+/// @description obj_death_hp destroy
 // Inherit the parent event
 if activate==true
 {

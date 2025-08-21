@@ -1,4 +1,4 @@
-/// @description COSTUME DESIGN
+/// @description obj_death_hp create
 // Inherit the parent event
 event_inherited();
 

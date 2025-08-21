@@ -1,4 +1,4 @@
-/// @description COSTUME DESIGN
+/// @description obj_death_spd step
 // Inherit the parent event
 event_inherited();
 
