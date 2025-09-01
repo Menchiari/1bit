@@ -85,13 +85,36 @@ function scr_block_controls(){
 				}
 				else
 				{
-					alarm[3]=blocking_timer;
-					if blocking==false
+					var temp_enemy=collision_circle(x,y,attack_range_strong*2,obj_enemy,true,true)
+					if instance_exists(temp_enemy)
 					{
-						blocking=true;
+						image_index=0;
+						var move_speed=0;
+						if timer>atk2_time {state=states.attack_strong;move_speed=atk2_sp;}
+						else if timer>atk1_time {state=states.attack;}
+						else
+						{
+							alarm[3]=blocking_timer;
+							if blocking==false
+							{
+								blocking=true;
+							}
+							timer=0;
+							state=states.idle;
+						}
+						dest_x=temp_enemy.x;
+						dest_y=temp_enemy.y;
 					}
-					timer=0;
-					state=states.idle;
+					else
+					{					
+						alarm[3]=blocking_timer;
+						if blocking==true
+						{
+							blocking=false;
+						}
+						timer=0;
+						state=states.idle;
+					}
 				}
 			}
 			else 
@@ -103,7 +126,7 @@ function scr_block_controls(){
 				else {state=states.roll;}
 				dest_x=x-(click_x-dest_x);
 				dest_y=y-(click_y-dest_y);
-			}		
+			}
 		}
 	}
 	else if control==controls.gamepad

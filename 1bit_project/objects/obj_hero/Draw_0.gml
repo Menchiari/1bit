@@ -20,6 +20,7 @@
 		{draw_ellipse_color(x-range_b,y-range_b/parallax,x+range_b,y+range_b/parallax,circle_color,circle_color,true);}
 		else if round(timer)==atk1_time
 		{circle_color=c_white;draw_ellipse_color(x-range_a,y-range_a/parallax,x+range_a,y+range_a/parallax,circle_color,circle_color,true);}
+		draw_line_width_color(x,y,x-click_x+mouse_x,y-click_y+mouse_y,1,c_black,choose(c_white,c_black,c_red));
 	}
 	
 //HP
