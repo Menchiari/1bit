@@ -6,9 +6,13 @@ if instance_exists(obj_hero)
 	|| obj_hero.state=states.spawn
 	|| obj_hero.state=states.sit
 	{
-		
+		textz="tap once\nto stand"
 	}
 	else
 	{
+		textz=text_v;
 	}
 }
+
+if mouse_check_button(mb_any){colorz=c_white;}
+else {colorz=c_red;}

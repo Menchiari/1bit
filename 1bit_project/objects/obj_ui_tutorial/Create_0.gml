@@ -1,4 +1,4 @@
 /// @description
 colorz=c_white;
 alphaz=1;
-textz="";
+textz=text_v;
