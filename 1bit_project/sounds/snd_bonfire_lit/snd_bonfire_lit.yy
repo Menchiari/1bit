@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_bonfire_lit",
   "audioGroupId":{
     "name":"ag_assets",
     "path":"audiogroups/ag_assets",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":1.9356916,
+  "exportDir":"",
   "name":"snd_bonfire_lit",
   "parent":{
     "name":"Sounds",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_bonfire_lit.wav",
-  "type":0,
   "volume":1.0,
 }

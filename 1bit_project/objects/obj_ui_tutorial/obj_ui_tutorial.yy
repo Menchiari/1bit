@@ -28,8 +28,8 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"text_v","filters":[],"listItems":[],"multiselect":false,"name":"text_v","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"tap once\\nto move\"","varType":4,},
-    {"$GMObjectProperty":"v1","%Name":"distancez","filters":[],"listItems":[],"multiselect":false,"name":"distancez","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"30","varType":4,},
+    {"$GMObjectProperty":"v2","%Name":"text_v","filters":[],"listItems":[],"multiselect":false,"name":"text_v","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"tap once\\nto move\"","varType":4,},
+    {"$GMObjectProperty":"v2","%Name":"distancez","filters":[],"listItems":[],"multiselect":false,"name":"distancez","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"30","varType":4,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

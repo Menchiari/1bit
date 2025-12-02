@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_music_chord_nostalgic1",
   "audioGroupId":{
     "name":"ag_music",
     "path":"audiogroups/ag_music",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":3.5499547,
+  "exportDir":"",
   "name":"snd_music_chord_nostalgic1",
   "parent":{
     "name":"music",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_music_chord_nostalgic1.wav",
-  "type":0,
   "volume":1.0,
 }

@@ -32,7 +32,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"material","filters":[],"listItems":[
+    {"$GMObjectProperty":"v2","%Name":"material","filters":[],"listItems":[
         "\"generic\"",
         "\"ceramic\"",
         "\"stone\"",

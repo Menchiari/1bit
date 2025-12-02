@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_wpn_sword_05",
   "audioGroupId":{
     "name":"ag_weapons",
     "path":"audiogroups/ag_weapons",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":1.1485034,
+  "exportDir":"",
   "name":"snd_wpn_sword_05",
   "parent":{
     "name":"sword",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_wpn_sword_05.wav",
-  "type":0,
   "volume":1.0,
 }

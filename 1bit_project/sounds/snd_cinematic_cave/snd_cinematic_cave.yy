@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_cinematic_cave",
   "audioGroupId":{
     "name":"ag_cinematics",
     "path":"audiogroups/ag_cinematics",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":43.477757,
+  "exportDir":"",
   "name":"snd_cinematic_cave",
   "parent":{
     "name":"Sounds",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_cinematic_cave.wav",
-  "type":0,
   "volume":1.0,
 }

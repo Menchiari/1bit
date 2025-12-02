@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_torch_activate",
   "audioGroupId":{
     "name":"ag_ui",
     "path":"audiogroups/ag_ui",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":1.0831293,
+  "exportDir":"",
   "name":"snd_torch_activate",
   "parent":{
     "name":"equip",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_torch_activate.wav",
-  "type":0,
   "volume":1.0,
 }

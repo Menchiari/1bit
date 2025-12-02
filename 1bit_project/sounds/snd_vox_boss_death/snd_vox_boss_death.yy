@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_vox_boss_death",
   "audioGroupId":{
     "name":"ag_character",
     "path":"audiogroups/ag_character",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":0.0,
+  "exportDir":"",
   "name":"snd_vox_boss_death",
   "parent":{
     "name":"vox",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_vox_boss_death.wav",
-  "type":0,
   "volume":1.0,
 }

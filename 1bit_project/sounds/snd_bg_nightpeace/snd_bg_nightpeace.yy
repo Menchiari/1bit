@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_bg_nightpeace",
   "audioGroupId":{
     "name":"ag_backgrounds",
     "path":"audiogroups/ag_backgrounds",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":18.286598,
+  "exportDir":"",
   "name":"snd_bg_nightpeace",
   "parent":{
     "name":"backgrounds",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_bg_nightpeace.wav",
-  "type":0,
   "volume":1.0,
 }

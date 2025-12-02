@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_dirt_10",
   "audioGroupId":{
     "name":"ag_character",
     "path":"audiogroups/ag_character",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":2.2710204,
+  "exportDir":"",
   "name":"snd_dirt_10",
   "parent":{
     "name":"dirt",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_dirt_10.wav",
-  "type":0,
   "volume":1.0,
 }

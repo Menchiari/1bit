@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_breakable_bushes_5",
   "audioGroupId":{
     "name":"ag_weapons",
     "path":"audiogroups/ag_weapons",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":0.0,
+  "exportDir":"",
   "name":"snd_breakable_bushes_5",
   "parent":{
     "name":"bushes",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_breakable_bushes_5.wav",
-  "type":0,
   "volume":1.0,
 }
