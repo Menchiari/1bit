@@ -1,4 +1,7 @@
 /// @description ADD HEALTH
+if global.debug==true
+{
+
 if instance_exists(obj_hero)
 {
 	with obj_hero
@@ -6,4 +9,5 @@ if instance_exists(obj_hero)
 		if keyboard_check(vk_control) {hp_max*=2;}
 		hp=hp_max;
 	}
+}
 }

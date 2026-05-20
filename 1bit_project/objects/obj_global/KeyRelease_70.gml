@@ -1,4 +1,7 @@
 /// @description switch Factions
+if global.debug==true
+{
+
 if instance_exists(obj_hero)
 {
 	with obj_hero
@@ -7,4 +10,6 @@ if instance_exists(obj_hero)
 		else if faction=factions.enemy {faction=factions.ally;}
 		else {faction=factions.enemy}
 	}
+}
+
 }

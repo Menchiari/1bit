@@ -135,7 +135,9 @@ function init_globals(){
 	#region GLOBAL VARIABLES
 	
 //setup
-	global.control_type=controls.gamepad;//probably unused? todo check and fix
+	global.control_type=controls.gamepad;//ignore, works automatically
+	
+	global.debug=false;
 
 	global.depth_ui_front=-8000;
 	global.depth_ui_shop=-7000;

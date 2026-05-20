@@ -1,4 +1,7 @@
 /// @description CHANGE TIME SPEED
+if global.debug==true
+{
+
 //if keyboard_check(vk_alt) && debug=true
 if debug==true
 {
@@ -21,4 +24,6 @@ if debug==true
 		game_set_speed(3333,gamespeed_microseconds); //room_speed=10;
 		break;
 	}
+}
+
 }
