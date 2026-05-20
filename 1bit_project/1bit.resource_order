@@ -81,6 +81,7 @@
     {"name":"NewImports","order":16,"path":"folders/Sprites/NewImports.yy",},
     {"name":"story","order":22,"path":"folders/Sprites/story.yy",},
     {"name":"UI","order":15,"path":"folders/Sprites/UI.yy",},
+    {"name":"SidePanels","order":6,"path":"folders/Sprites/UI/SidePanels.yy",},
     {"name":"world","order":21,"path":"folders/Sprites/world.yy",},
   ],
   "ResourceOrderSettings":[

@@ -1,4 +1,4 @@
-if display_mouse==true
+if display_mouse==true && !global.using_gamepad
 {
 	draw_circle_color(mouse_x,mouse_y,4,c_black,c_white,1)
 	draw_point_color(mouse_x,mouse_y,c_white);

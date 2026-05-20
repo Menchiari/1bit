@@ -11,6 +11,14 @@ if os_type==os_windows
 || os_type==os_linux
 {display_mouse=true}
 
+// widescreen mode for PC
+global.widescreen = (os_type != os_ios && os_type != os_android);
+if (global.widescreen)
+{
+	global.sidepanel_sprite = spr_sidepanel_default;
+	window_set_fullscreen(true);
+}
+
 ////////////////////////SHADER////////////////////////////
 /////////////disable application surface//////////////////
 application_surface_draw_enable(false);

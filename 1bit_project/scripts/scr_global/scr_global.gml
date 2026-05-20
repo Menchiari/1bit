@@ -155,6 +155,8 @@ function init_globals(){
 
 	global.blood_color=c_orange;//c_fuchsia;//c_red;
 	
+	global._panel_surf = -1;
+	
 	//////////////////////////Controls/////////////////////////////
 	// input system
 	global.using_gamepad = false;
@@ -166,6 +168,8 @@ function init_globals(){
 	global._prev_mouse_x = 0;
 	global._prev_mouse_y = 0;
 	global.direction_active = false;
+	global._prev_dmx = 0;
+	global._prev_dmy = 0;
 	//////////////////////////////////////////////////////////////
 
 	global.orientation=0;// 0=portrait, 90=landscape; //deprecated

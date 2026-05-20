@@ -148,6 +148,16 @@ function scr_input_update(){
 	}
 	global._prev_mouse_x = mouse_x;
 	global._prev_mouse_y = mouse_y;
+	
+	// mouse movement re-enables cursor
+	var _dmx = display_mouse_get_x();
+	var _dmy = display_mouse_get_y();
+	if (_dmx != global._prev_dmx || _dmy != global._prev_dmy)
+	{
+		global.using_gamepad = false;
+	}
+	global._prev_dmx = _dmx;
+	global._prev_dmy = _dmy;
 
 	// gamepad or keyboard activity switches to gamepad mode
 	if (gamepad_button_check(0, gp_face1)

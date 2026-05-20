@@ -122,6 +122,7 @@
     {"$GMFolder":"","%Name":"NewImports","folderPath":"folders/Sprites/NewImports.yy","name":"NewImports","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"story","folderPath":"folders/Sprites/story.yy","name":"story","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"UI","folderPath":"folders/Sprites/UI.yy","name":"UI","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"SidePanels","folderPath":"folders/Sprites/UI/SidePanels.yy","name":"SidePanels","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"shop","folderPath":"folders/Sprites/UI/shop.yy","name":"shop","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"world","folderPath":"folders/Sprites/world.yy","name":"world","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -1369,6 +1370,7 @@
     {"id":{"name":"spr_null","path":"sprites/spr_null/spr_null.yy",},},
     {"id":{"name":"spr_patrol_node","path":"sprites/spr_patrol_node/spr_patrol_node.yy",},},
     {"id":{"name":"spr_shadow","path":"sprites/spr_shadow/spr_shadow.yy",},},
+    {"id":{"name":"spr_sidepanel_default","path":"sprites/spr_sidepanel_default/spr_sidepanel_default.yy",},},
     {"id":{"name":"spr_story_hero_falling","path":"sprites/spr_story_hero_falling/spr_story_hero_falling.yy",},},
     {"id":{"name":"spr_tileset_backgrounds_fg","path":"sprites/spr_tileset_backgrounds_fg/spr_tileset_backgrounds_fg.yy",},},
     {"id":{"name":"spr_tileset_backgrounds","path":"sprites/spr_tileset_backgrounds/spr_tileset_backgrounds.yy",},},
@@ -1545,5 +1547,6 @@
     {"$GMTextureGroup":"","%Name":"tg_faces_boss","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"tg_faces_boss","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
     {"$GMTextureGroup":"","%Name":"cinematic_intro","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"cinematic_intro","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
     {"$GMTextureGroup":"","%Name":"cinematic_cave","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"cinematic_cave","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"SidePanels","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"SidePanels","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
   ],
 }
