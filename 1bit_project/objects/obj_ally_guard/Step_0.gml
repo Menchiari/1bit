@@ -14,6 +14,15 @@ else
 			sentence+=1;
 		}
 	}
+	
+	// gamepad
+	if (global.action_released && global.using_gamepad
+	&& speech_visible==true && instance_exists(obj_hero)
+	&& point_distance(obj_hero.x, obj_hero.y, x, y-16) < 20)
+	{
+		sentence+=1;
+	}
+	
 	switch sentence
 	{
 		case 0:

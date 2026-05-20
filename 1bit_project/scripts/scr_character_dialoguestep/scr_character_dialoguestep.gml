@@ -14,6 +14,14 @@ function scr_character_dialoguestep(){
 				else {sentence=0}
 			}
 		}
+		// gamepad: A advances if hero is within same range as mouse click
+		if (global.action_released && global.using_gamepad
+		&& speech_visible==true && instance_exists(obj_hero)
+		&& point_distance(obj_hero.x, obj_hero.y, x, y+_yoffset) < _range*2)
+		{
+			if sentence <= max_sentences-1 {sentence+=1;}
+			else {sentence=0}
+		}
 		switch sentence
 		{
 			case 0:

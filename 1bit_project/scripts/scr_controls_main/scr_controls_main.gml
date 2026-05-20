@@ -6,6 +6,10 @@ function scr_controls_main(){
 function scr_gamepad_move(_speed){
 	// don't move while A/Space is held (blocking/charging)
 	if (global.action_held) return;
+	// don't move while shop is open
+	var _shop_open = false;
+	if (instance_exists(obj_ui_shop)) { with (obj_ui_shop) { if (shop_active == 1) _shop_open = true; } }
+	if (_shop_open) return;
 
 	// read direction from stick + d-pad + WASD
 	var _h = gamepad_axis_value(0, gp_axislh);
@@ -136,7 +140,7 @@ function scr_button(_mouse_button=mb_any){
 function scr_input_update(){
 	// ---- detect which device is active ----
 	// mouse activity switches to mouse mode
-	if (mouse_check_button(mb_any)
+	if (mouse_check_button(mb_any) || mouse_check_button_pressed(mb_any) || mouse_check_button_released(mb_any)
 	|| abs(mouse_x - global._prev_mouse_x) > 1
 	|| abs(mouse_y - global._prev_mouse_y) > 1)
 	{
@@ -147,8 +151,8 @@ function scr_input_update(){
 
 	// gamepad or keyboard activity switches to gamepad mode
 	if (gamepad_button_check(0, gp_face1)
-	|| abs(gamepad_axis_value(0, gp_axislh)) > 0.1
-	|| abs(gamepad_axis_value(0, gp_axislv)) > 0.1
+	|| abs(gamepad_axis_value(0, gp_axislh)) > 0.5
+	|| abs(gamepad_axis_value(0, gp_axislv)) > 0.5
 	|| gamepad_button_check(0, gp_padu)
 	|| gamepad_button_check(0, gp_padd)
 	|| gamepad_button_check(0, gp_padl)

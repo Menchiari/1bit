@@ -19,7 +19,7 @@ if collision_circle(xoriginal,yoriginal,reactive_range,obj_enemy,false,true) {ac
 
 if active==1
 {
-	if mouse_check_button_released(mb_any) && point_in_circle(mouse_x,mouse_y,x,y,radius) && instance_exists(obj_hero)
+	if ((mouse_check_button_released(mb_any) && point_in_circle(mouse_x,mouse_y,x,y,radius)) || (global.action_released && global.using_gamepad && active==1)) && instance_exists(obj_hero)
 	{
 		instance_create_depth(obj_hero.x,obj_hero.y,obj_hero.depth,obj_torch);
 		instance_destroy();

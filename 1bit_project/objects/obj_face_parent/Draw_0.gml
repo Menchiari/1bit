@@ -19,7 +19,7 @@
 	draw_text_ext_color(txt_posx,txt_posy,string_copy(txt,1,floor(txt_progress)),_height,txt_width,txt_color,txt_color,txt_color,txt_color,1);
 	//draw_text(txt_posx,txt_posy,string_copy(txt,1,floor(txt_progress)));
 	//draw_text_color_outline(txt_posx,txt_posy,txt,txt_color,1);
-	if mouse_check_button(mb_any)
+	if (mouse_check_button(mb_any) || global.action_held)
 	{
 		draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,c_dkgray,.5)
 	}

@@ -9,10 +9,19 @@ var pressed_now =
    || device_mouse_check_button_pressed(0, mb_left)
    || keyboard_check_pressed(vk_anykey);
 
+// track whether a gamepad button was pressed in this room
+if (!variable_instance_exists(id, "_gp_ready")) _gp_ready = false;
+if (gamepad_button_check_pressed(0, gp_face1) || gamepad_button_check_pressed(0, gp_face2)
+|| gamepad_button_check_pressed(0, gp_start))
+{ _gp_ready = true; }
+
 var released_now =
       mouse_check_button_released(mb_left)
    || device_mouse_check_button_released(0, mb_left)
-   || keyboard_check_released(vk_anykey);
+   || keyboard_check_released(vk_anykey)
+   || (_gp_ready && (gamepad_button_check_released(0, gp_face1)
+   || gamepad_button_check_released(0, gp_face2)
+   || gamepad_button_check_released(0, gp_start)));
 
 switch (state) {
     case STATE_FADEIN:

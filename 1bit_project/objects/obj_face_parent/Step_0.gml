@@ -35,7 +35,7 @@ switch (state)
             }
         }
 
-        if (mouse_check_button_released(mb_any) && !question)
+        if ((mouse_check_button_released(mb_any) || global.action_released) && !question)
         {
             image_index  = 0;
             blink_hold   = 0;
@@ -83,7 +83,7 @@ switch (state)
 
 	    if (idle_grace > 0) {
 	        idle_grace -= 1; // eat the trailing click
-	    } else if (mouse_check_button_released(mb_any) || timer >= idle_time) {
+	    } else if ((mouse_check_button_released(mb_any) || global.action_released) || timer >= idle_time) {
 	        txt_phase   += 1;
 	        state        = "talk";
 	        timer        = 0;
@@ -101,7 +101,7 @@ switch (state)
 	    }
 
 	    // Click only REVEALS the text; advancing is handled by buttons elsewhere.
-	    if (mouse_check_button_released(mb_any) && txt_progress < string_length(txt)) {
+	    if ((mouse_check_button_released(mb_any) || global.action_released) && txt_progress < string_length(txt)) {
 	        txt_progress = string_length(txt);
 	        timer = 0;
 	    }
@@ -111,7 +111,7 @@ switch (state)
 		blink_hold = (blink_hold > 0) ? blink_hold - 1 : (irandom_range(0, 50) == 0 ? 5 : 0); //holds for 5 frames
 		image_index = (blink_hold > 0);
 		
-		if mouse_check_button_released(mb_any)
+		if (mouse_check_button_released(mb_any) || global.action_released)
 		|| timer>=wait_time
 		{
 			txt_phase+=1;
@@ -123,7 +123,7 @@ switch (state)
 	default: break;
 }
 
-if mouse_check_button_released(mb_any) {show_debug_message("state = "+string(state)+", text phase = "+string(txt_phase)+", face progress = "+string(face_progress)+", game progress = "+string(game_progress));}
+if (mouse_check_button_released(mb_any) || global.action_released) {show_debug_message("state = "+string(state)+", text phase = "+string(txt_phase)+", face progress = "+string(face_progress)+", game progress = "+string(game_progress));}
 
 // If we just LEFT the question state, neutralize and add a tiny grace
 if (prev_state == "question" && state != "question") {
