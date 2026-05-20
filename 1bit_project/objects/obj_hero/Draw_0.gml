@@ -25,7 +25,8 @@
 		{
 			circle_color=c_white;
 			if timer>atk2_time{circle_color=c_red;}
-			draw_line_dotted(x,y,x-click_x+mouse_x,y-click_y+mouse_y,2,choose(c_black,circle_color),.4,range_b);
+			//draw_line_dotted(x,y,x-click_x+mouse_x,y-click_y+mouse_y,2,choose(c_black,circle_color),.4,range_b);
+			draw_line_dotted(x,y,x-click_x+global.cursor_x,y-click_y+global.cursor_y,2,choose(c_black,circle_color),.4,range_b);
 		}
 	}
 	

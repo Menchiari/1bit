@@ -152,6 +152,18 @@ function init_globals(){
 	global.res_y=320//400;//380;
 
 	global.blood_color=c_orange;//c_fuchsia;//c_red;
+	
+	//////////////////////////Controls/////////////////////////////
+	// input system
+	global.using_gamepad = false;
+	global.action_pressed = false;
+	global.action_released = false;
+	global.action_held = false;
+	global.cursor_x = 0;
+	global.cursor_y = 0;
+	global._prev_mouse_x = 0;
+	global._prev_mouse_y = 0;
+	//////////////////////////////////////////////////////////////
 
 	global.orientation=0;// 0=portrait, 90=landscape; //deprecated
 

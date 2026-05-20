@@ -20,7 +20,8 @@ function scr_sm_idle(){
 	{
 		if mouse_pressed=true
 		{
-			click_x=mouse_x;click_y=mouse_y;
+			//click_x=mouse_x;click_y=mouse_y;
+			click_x=global.cursor_x;click_y=global.cursor_y;
 			scr_flip_check_mouse(dest_x,dest_y,1);
 			state=states.block;
 			idle_timer=idle_timer_setup;

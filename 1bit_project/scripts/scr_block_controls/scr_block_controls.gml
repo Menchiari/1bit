@@ -3,24 +3,32 @@
 function scr_block_controls(){
 	if control==controls.touch
 	{
-		if mouse_x < click_x {dir=1}
+		//if mouse_x < click_x {dir=1}
+		if global.cursor_x < click_x {dir=1}
 		else {dir=-1};
-		if mouse_y < click_y {back=true}
+		//if mouse_y < click_y {back=true}
+		if global.cursor_y < click_y {back=true}
 		else {back=false};
 			
-		if mouse_check_button_released(mb_any)
+		//if mouse_check_button_released(mb_any)
+		if global.action_released
 		{	
 			//click_x=mouse_x;click_y=mouse_y;
-			dest_x=mouse_x;dest_y=mouse_y;
+			//dest_x=mouse_x;dest_y=mouse_y;
+			dest_x=global.cursor_x;dest_y=global.cursor_y;
 			scr_flip_check_mouse(dest_x,dest_y,1);
-			dest_x=mouse_x;
-			dest_y=mouse_y;
+			//dest_x=mouse_x;
+			//dest_y=mouse_y;
+			dest_x=global.cursor_x;
+			dest_y=global.cursor_y;
 
-			if point_distance(click_x,click_y,mouse_x,mouse_y)<swipe_threshold
+			//if point_distance(click_x,click_y,mouse_x,mouse_y)<swipe_threshold
+			if point_distance(click_x,click_y,global.cursor_x,global.cursor_y)<swipe_threshold
 			{
 				if timer<roll_time
 				{
-					if point_distance(x,y,mouse_x,mouse_y)>run_distance
+					//if point_distance(x,y,mouse_x,mouse_y)>run_distance
+					if point_distance(x,y,global.cursor_x,global.cursor_y)>run_distance
 					{
 						state=states.run;
 					}

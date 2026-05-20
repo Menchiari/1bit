@@ -1,4 +1,5 @@
-if mouse_check_button_released(mb_any) //show click effect on ground
+//if mouse_check_button_released(mb_any) //show click effect on ground
+if global.action_released && !global.using_gamepad //show click effect on ground
 {
 	if instance_exists(obj_hero)
 	&& room!=rm_menu_main

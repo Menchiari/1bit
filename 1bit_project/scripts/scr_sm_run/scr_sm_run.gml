@@ -32,7 +32,8 @@ function scr_sm_run(){
 	//{state=states.idle;}
 	#endregion
 	
-	scr_character_move(dest_x,dest_y,move_speed,3);
+	//scr_character_move(dest_x,dest_y,move_speed,3);
+	if (!global.using_gamepad) { scr_character_move(dest_x,dest_y,move_speed,3); }
 
 //controls
 	if control==controls.touch
@@ -40,7 +41,8 @@ function scr_sm_run(){
 		if mouse_pressed==true
 		{
 			path_end();
-			click_x=mouse_x;click_y=mouse_y;
+			//click_x=mouse_x;click_y=mouse_y;
+			click_x=global.cursor_x;click_y=global.cursor_y;
 			scr_flip_check_mouse(dest_x,dest_y,1)
 			state=states.block;
 		}

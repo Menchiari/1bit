@@ -16,7 +16,8 @@ function scr_sm_block_hit(){
 	}
 	
 	//counter attack
-	if mouse_check_button_pressed(mb_any)
+	//if mouse_check_button_pressed(mb_any)
+	if global.action_pressed
 	{
 		state=states.attack_strong;
 	}

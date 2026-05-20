@@ -13,10 +13,15 @@ function scr_state_machine(){
 ////////////////////
 	if control==controls.touch
 	{
-		if mouse_check_button_pressed(mb_any)
+		//if mouse_check_button_pressed(mb_any)
+		//{timer=0; mouse_pressed=true;}
+		
+		//if mouse_check_button_released(mb_any)
+		//{mouse_pressed=false;}
+		if global.action_pressed
 		{timer=0; mouse_pressed=true;}
 		
-		if mouse_check_button_released(mb_any)
+		if global.action_released
 		{mouse_pressed=false;}
 	}
 	
