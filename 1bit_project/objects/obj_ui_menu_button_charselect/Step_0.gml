@@ -1,21 +1,23 @@
 if mouse_check_button(mb_any) && collision_point(mouse_x,mouse_y,self,true,false) {selected=true;}
 else {selected=false;}
-if mouse_check_button_released(mb_any)
+if mouse_check_button_released(mb_any) || nextdir!=0
 {
 	text=""
 	
-	if point_in_rectangle(mouse_x,mouse_y,x,y,x+sprite_width/3.5,y+sprite_height)
+	if point_in_rectangle(mouse_x,mouse_y,x,y,x+sprite_width/3.5,y+sprite_height) || nextdir==-1
 	{
 		//next
 		character_select-=1
 		scr_audio_play(snd_click,global.audio_ui*.66,.9);
 	}
-	if point_in_rectangle(mouse_x,mouse_y,x+sprite_width/3.5,y,x+sprite_width,y+sprite_height) 
+	if point_in_rectangle(mouse_x,mouse_y,x+sprite_width/3.5,y,x+sprite_width,y+sprite_height) || nextdir==1
 	{
 		//previous
 		character_select+=1
 		scr_audio_play(snd_click,global.audio_ui*.66,1);
 	}
+	
+	nextdir=0;
 	
 	var min_sel=0;
 	var max_sel=1;

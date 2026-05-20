@@ -17,6 +17,7 @@ linecx2=random_range(0,sprite_width);
 selected=false;
 
 nextclick=false;//for external clicking
+nextdir=0;//for gamepad
 
 text="";
 color=c_white;

@@ -30,4 +30,6 @@ if character_head_var=spr_head {character_select=6;}
 
 scr_ui_characters();
 
+nextdir=0;
+
 show_debug_message("story progress = "+string(global.story_progress));
