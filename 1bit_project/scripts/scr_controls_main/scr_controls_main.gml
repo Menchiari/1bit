@@ -4,22 +4,10 @@ function scr_controls_main(){
 }
 
 function scr_gamepad_move(_speed){
-	//if (abs(gamepad_axis_value(0, gp_axislh)) > 0.1)
-	//|| (abs(gamepad_axis_value(0, gp_axislv)) > 0.1)
-	//{
-	//	dest_x=x+(gamepad_axis_value(0,gp_axislh)*_speed*16)
-	//	dest_y=y+(gamepad_axis_value(0,gp_axislv)*_speed*8)
-	//	if gamepad_button_check(0,gp_shoulderrb)
-	//	|| (abs(gamepad_axis_value(0, gp_axislh)) > 0.5)
-	//	|| (abs(gamepad_axis_value(0, gp_axislv)) > 0.5)
-	//	{state=states.run;}
-	//	else {state=states.walk;}
-	//}
-function scr_gamepad_move(_speed){
 	// don't move while A/Space is held (blocking/charging)
 	if (global.action_held) return;
 
-	// read direction
+	// read direction from stick + d-pad + WASD
 	var _h = gamepad_axis_value(0, gp_axislh);
 	var _v = gamepad_axis_value(0, gp_axislv);
 	if (gamepad_button_check(0, gp_padl)) _h = -1;
@@ -31,29 +19,62 @@ function scr_gamepad_move(_speed){
 	if (keyboard_check(ord("W")) || keyboard_check(vk_up))    _v = -1;
 	if (keyboard_check(ord("S")) || keyboard_check(vk_down))  _v =  1;
 
-	// clamp to unit circle
 	var _mag = sqrt(_h * _h + _v * _v);
-	if (_mag < 0.15) return; // dead zone
+
+	// dead zone — force idle when stick is released
+	if (_mag < 0.15)
+	{
+		if (global.using_gamepad && (state == states.walk || state == states.run))
+		{
+			path_end();
+			speed = 0;
+			state = states.idle;
+		}
+		return;
+	}
+
+	// clamp to unit circle
 	if (_mag > 1) { _h /= _mag; _v /= _mag; _mag = 1; }
 
-	// stop any active path from mouse click movement
+	// compute speed from CHARACTER STATS — not from _speed parameter
+	// this matches the speed that scr_character_move uses for pathfinding
+	var _base_walk = (walk_sp + (spd * defence_speed * walk_sp_mod * 0.25)) * 2 * walk_sp_mod;
+	var _base_run  = (run_sp  + (spd * defence_speed * walk_sp_mod * 0.25)) * 2 * walk_sp_mod;
+	var _move_speed;
+
+	if (_mag > .99)
+	{
+		_move_speed = _base_run * _mag;
+		state = states.run;
+	}
+	else
+	{
+		_move_speed = _base_walk * (_mag / .99);
+		state = states.walk;
+	}
+
+	// stop any active pathfinding
 	path_end();
 	speed = 0;
 
-	// direct movement — scale by stick magnitude
-	var _move_speed = _speed * _mag * 2;
+	// direct movement with wall sliding
 	var _dx = _h * _move_speed;
-	var _dy = _v * _move_speed * 0.5; // isometric Y correction
+	var _dy = _v * _move_speed * 0.85; // isometric Y correction
 
-	// wall-sliding collision
 	if (!place_meeting(x + _dx, y + _dy, obj_collider))
-	{ x += _dx; y += _dy; }
-	else if (!place_meeting(x + _dx, y, obj_collider))
-	{ x += _dx; }
-	else if (!place_meeting(x, y + _dy, obj_collider))
-	{ y += _dy; }
+	{
+		x += _dx; y += _dy;
+	}
+	else if (_dx != 0 && !place_meeting(x + _dx, y, obj_collider))
+	{
+		x += _dx;
+	}
+	else if (_dy != 0 && !place_meeting(x, y + _dy, obj_collider))
+	{
+		y += _dy;
+	}
 
-	// keep dest at current position so scr_character_move doesn't interfere
+	// set dest to current pos so scr_character_move doesn't interfere
 	dest_x = x;
 	dest_y = y;
 
@@ -62,11 +83,6 @@ function scr_gamepad_move(_speed){
 	if (_h >  0.1) dir = -1;
 	if (_v < -0.1) back = true;
 	if (_v >  0.1) back = false;
-
-	// walk/run based on stick magnitude
-	if (_mag > 0.6) { state = states.run; }
-	else { state = states.walk; }
-}
 }
 
 
@@ -186,6 +202,7 @@ function scr_input_update(){
 		// cursor = hero position + direction * range
 		// range is 50px — well above swipe_threshold (10px)
 		var _range = 50;
+		global.direction_active = (_len > 0.15);
 		global.cursor_x = obj_hero.x + _h * _range;
 		global.cursor_y = obj_hero.y + _v * _range;
 	}
@@ -193,5 +210,6 @@ function scr_input_update(){
 	{
 		global.cursor_x = mouse_x;
 		global.cursor_y = mouse_y;
+		global.direction_active = false;
 	}
 }

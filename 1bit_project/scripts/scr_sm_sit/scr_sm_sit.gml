@@ -14,7 +14,7 @@ function scr_sm_sit(){
 		click_x=x;
 		click_y=y;
 		//if mouse_check_button_released(mb_any)
-		if global.action_released
+		if global.action_released || global.direction_active
 		{
 			image_speed=idle_speed;
 			image_index=trigger_spawn_idle_a;
@@ -36,7 +36,7 @@ function scr_sm_sit_idle(){
 		click_x=x;
 		click_y=y;
 		//if mouse_check_button_released(mb_any)
-		if global.action_released
+		if global.action_released || global.direction_active
 		{
 			image_speed=idle_speed;
 			image_index=trigger_spawn_idle_a;

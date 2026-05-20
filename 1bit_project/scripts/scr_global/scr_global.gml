@@ -163,6 +163,7 @@ function init_globals(){
 	global.cursor_y = 0;
 	global._prev_mouse_x = 0;
 	global._prev_mouse_y = 0;
+	global.direction_active = false;
 	//////////////////////////////////////////////////////////////
 
 	global.orientation=0;// 0=portrait, 90=landscape; //deprecated

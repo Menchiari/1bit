@@ -3,12 +3,13 @@
 function scr_block_controls(){
 	if control==controls.touch
 	{
-		//if mouse_x < click_x {dir=1}
-		if global.cursor_x < click_x {dir=1}
-		else {dir=-1};
-		//if mouse_y < click_y {back=true}
-		if global.cursor_y < click_y {back=true}
-		else {back=false};
+		if (!global.using_gamepad || point_distance(global.cursor_x, global.cursor_y, click_x, click_y) > 2)
+		{
+			if global.cursor_x < click_x {dir=1}
+			else {dir=-1};
+			if global.cursor_y < click_y {back=true}
+			else {back=false};
+		}
 			
 		//if mouse_check_button_released(mb_any)
 		if global.action_released

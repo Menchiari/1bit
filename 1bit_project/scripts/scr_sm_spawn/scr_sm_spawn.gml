@@ -21,7 +21,7 @@ function scr_sm_spawn(){
 	if control==controls.touch
 	{
 		//if mouse_check_button_released(mb_any)
-		if global.action_released
+		if global.action_released || global.direction_active
 		{
 			trigger_spawn=true;
 		}
