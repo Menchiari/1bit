@@ -243,8 +243,11 @@ function scr_input_update(){
 			var _vw = camera_get_view_width(view_camera[0]);
 			var _vh = camera_get_view_height(view_camera[0]);
 
-			global.cursor_x = _vx + _nx * _vw;
-			global.cursor_y = _vy + _ny * _vh;
+			// The visible area is res_x × res_y cropped from center of the full view
+			var _crop_x = (_vw - global.res_x) * 0.5;
+			var _crop_y = (_vh - global.res_y) * 0.5;
+			global.cursor_x = _vx + _crop_x + _nx * global.res_x;
+			global.cursor_y = _vy + _crop_y + _ny * global.res_y;
 		}
 		else
 		{

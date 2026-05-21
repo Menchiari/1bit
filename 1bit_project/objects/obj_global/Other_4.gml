@@ -3,9 +3,26 @@ scr_loadgame();
 
 if (global.widescreen)
 {
-	var _dw = display_get_width();
-	var _dh = display_get_height();
-	surface_resize(application_surface, round(global.res_y * _dw / _dh), global.res_y);
+    var _dw = display_get_width();
+    var _dh = display_get_height();
+    var _surf_w = round(global.res_y * _dw / _dh);
+    surface_resize(application_surface, _surf_w, global.res_y);
+    
+    // Fix viewport port to match surface — makes mouse_x/mouse_y uniform
+    if (view_get_visible(0))
+    {
+        view_set_xport(0, 0);
+        view_set_yport(0, 0);
+        view_set_wport(0, _surf_w);
+        view_set_hport(0, global.res_y);
+        
+        // Non-camera rooms: override view to match surface dimensions, centered on room
+        if (!instance_exists(obj_camera))
+        {
+            camera_set_view_size(view_camera[0], _surf_w, global.res_y);
+            camera_set_view_pos(view_camera[0], (room_width - _surf_w) / 2, (room_height - global.res_y) / 2);
+        }
+    }
 }
 else
 {

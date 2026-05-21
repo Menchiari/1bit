@@ -5,13 +5,15 @@ if global.action_released && !global.using_gamepad //show click effect on ground
 	&& room!=rm_menu_main
 	{
 		with obj_hero {
-			if can_character_navigate(mouse_x,mouse_y) {instance_create_depth(mouse_x,mouse_y,-y,obj_click);}
-			else
-			{
-				if obj_hero.state!=states.attack
-				&& obj_hero.state!=states.attack_strong
-				instance_create_depth(mouse_x,mouse_y,-y,obj_click_fail);
-			}
+		    if can_character_navigate(global.cursor_x, global.cursor_y) {
+		        instance_create_depth(global.cursor_x, global.cursor_y, -y, obj_click);
+		    }
+		    else
+		    {
+		        if obj_hero.state != states.attack
+		        && obj_hero.state != states.attack_strong
+		            instance_create_depth(global.cursor_x, global.cursor_y, -y, obj_click_fail);
+		    }
 		}
 	}
 }

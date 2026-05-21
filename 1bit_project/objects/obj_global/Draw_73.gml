@@ -1,8 +1,8 @@
 if display_mouse==true && !global.using_gamepad
 {
-	draw_circle_color(mouse_x,mouse_y,4,c_black,c_white,1)
-	draw_point_color(mouse_x,mouse_y,c_white);
-	draw_point_color(mouse_x,mouse_y+1,c_black);
+    draw_circle_color(global.cursor_x, global.cursor_y, 4, c_black, c_white, 1)
+    draw_point_color(global.cursor_x, global.cursor_y, c_white);
+    draw_point_color(global.cursor_x, global.cursor_y+1, c_black);
 }
 
 //Main UI - deactivate rooms with no UI here

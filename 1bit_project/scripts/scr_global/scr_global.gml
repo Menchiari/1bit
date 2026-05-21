@@ -159,7 +159,7 @@ function init_globals(){
 	
 	//////////////////////////Controls/////////////////////////////
 	// input system
-	global.using_gamepad = false;
+	global.using_gamepad = (os_type == os_windows || os_type == os_macosx || os_type == os_linux);
 	global.action_pressed = false;
 	global.action_released = false;
 	global.action_held = false;
@@ -168,8 +168,8 @@ function init_globals(){
 	global._prev_mouse_x = 0;
 	global._prev_mouse_y = 0;
 	global.direction_active = false;
-	global._prev_dmx = 0;
-	global._prev_dmy = 0;
+	global._prev_dmx = display_mouse_get_x();
+	global._prev_dmy = display_mouse_get_y();
 	//////////////////////////////////////////////////////////////
 
 	global.orientation=0;// 0=portrait, 90=landscape; //deprecated
