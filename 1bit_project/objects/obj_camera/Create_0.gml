@@ -9,6 +9,14 @@ var pm = matrix_build_projection_ortho(global_res_x,global_res_y,-100000,10000);
 camera_set_view_mat(camera,vm);
 camera_set_proj_mat(camera,pm);
 
+if (global.widescreen)
+{
+	var _dw = display_get_width();
+	var _dh = display_get_height();
+	pm = matrix_build_projection_ortho(round(global_res_y * _dw / _dh), global_res_y, -100000, 10000);
+	camera_set_proj_mat(camera, pm);
+}
+
 view_camera[0]=camera;
 
 follow=self;

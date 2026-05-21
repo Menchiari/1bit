@@ -1,6 +1,14 @@
 //set camera
 var vm = matrix_build_lookat(x,y,-10,x,y,0,0,1,0);
 camera_set_view_mat(camera,vm);
+if (global.widescreen)
+{
+	var _dw = display_get_width();
+	var _dh = display_get_height();
+	var _wide_w = round(global.res_y * _dw / _dh);
+	camera_set_view_size(camera, _wide_w, global.res_y);
+	camera_set_view_pos(camera, x - _wide_w / 2, y - global.res_y / 2);
+}
 
 //follow camera
 if followcam==true

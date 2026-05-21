@@ -1,39 +1,63 @@
 ///@description Shader effect
-#region fucked up code
-/*
-//original
-if(enable)
-&& room!=rm_menu
+
+draw_clear_alpha(c_black, 1);
+
+// section detection for rm_world
+if (room == rm_world && instance_exists(obj_camera))
 {
-	shader_set(shader);
-	shader_set_uniform_f(iResolution,res_x,res_y);
-	shader_set_uniform_f(iGlobalTime,time);
-	shader_set_uniform_f(palette,p);
-	shader_set_uniform_f(gamma,g);
-	shader_set_uniform_f(flicker,flk);
-	draw_surface(application_surface,0,0);
-	shader_reset();
-	display_set_gui_size(res_x,res_y);
+    // Zone grid: 11 columns × 6 rows (180px × 320px per cell)
+    // Edit values here — left to right, top to bottom. 0 = default.
+    var _grid = [
+        [0, 0, 6, 6, 6, 5, 5, 5, 5, 5, 5],  // Row 1
+        [0, 0, 6, 0, 5, 5, 5, 5, 5, 5, 5],  // Row 2
+        [7, 7, 7, 7, 5, 5, 1, 1, 4, 4,10],  // Row 3
+        [7, 7, 7, 1, 1, 1, 1, 8, 4, 4, 3],  // Row 4
+        [9, 8, 8, 1, 1, 8, 2, 8, 4, 4, 3],  // Row 5
+        [2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3],  // Row 6
+    ];
+
+    var _col = clamp(floor(obj_camera.x / 180), 0, 10);
+    var _row = clamp(floor(obj_camera.y / 320), 0, 5);
+    var _zone = _grid[_row][_col];
+
+    switch (_zone)
+    {
+        case 1:  global.sidepanel_sprite = spr_sidepanel_1;  break;
+        case 2:  global.sidepanel_sprite = spr_sidepanel_2;  break;
+        case 3:  global.sidepanel_sprite = spr_sidepanel_3;  break;
+        case 4:  global.sidepanel_sprite = spr_sidepanel_4;  break;
+        case 5:  global.sidepanel_sprite = spr_sidepanel_5;  break;
+        case 6:  global.sidepanel_sprite = spr_sidepanel_6;  break;
+        case 7:  global.sidepanel_sprite = spr_sidepanel_7;  break;
+        case 8:  global.sidepanel_sprite = spr_sidepanel_8;  break;
+        case 9:  global.sidepanel_sprite = spr_sidepanel_9;  break;
+        case 10: global.sidepanel_sprite = spr_sidepanel_10; break;
+        default: global.sidepanel_sprite = spr_sidepanel_default; break;
+    }
 }
 else
 {
-	draw_surface(application_surface,0,0);
-	display_set_gui_size(res_x,res_y);
-}
-*/
-///test 2
-//shader_set(shader);
-//shader_set_uniform_f(iResolution,res_x,res_y);
-//shader_set_uniform_f(iGlobalTime,time);
-//shader_set_uniform_f(palette,p);
-//shader_set_uniform_f(gamma,g);
-//shader_set_uniform_f(flicker,flk);
-//draw_surface(application_surface,0,0);
-//shader_reset();
-//display_set_gui_size(res_x,res_y);
-#endregion
+	if room == rm_faces_ai {global.sidepanel_sprite=spr_sidepanel_11;}
+	
+	else if room == rm_story_1 {global.sidepanel_sprite=spr_sidepanel_2;}
+	else if room == rm_story_1_stairs {global.sidepanel_sprite=spr_sidepanel_10;}
+	else if room == rm_story_1b {global.sidepanel_sprite=spr_sidepanel_2;}
+	else if room == rm_story_2 	|| room==rm_cinematic_cave {global.sidepanel_sprite=spr_sidepanel_10;}
+	else if room == rm_story_AI {global.sidepanel_sprite=spr_sidepanel_11;}
+	else if room == rm_story_AI_2 {global.sidepanel_sprite=spr_sidepanel_11;}
+	else if room == rm_story_caves {global.sidepanel_sprite=spr_sidepanel_7;}
+	else if room == rm_story_princess_fight {global.sidepanel_sprite=spr_sidepanel_6;}
+	else if room == rm_story_princess_raid {global.sidepanel_sprite=spr_sidepanel_6;}
+	
+	else if room == rm_faces_default {global.sidepanel_sprite=spr_sidepanel_1;}
+	else if room == rm_faces_princess {global.sidepanel_sprite=spr_sidepanel_6;}
+	else if room==rm_faces_boat || room==rm_boat {global.sidepanel_sprite=spr_sidepanel_9;}
+	else if room==rm_faces_boss_death || room==rm_faces_boss_intro || room==rm_boss {global.sidepanel_sprite=spr_sidepanel_10;}
 
-draw_clear_alpha(c_black, 1);
+	else if room==rm_death || room==rm_faces_death || room==rm_gameover || room==rm_glitch || room==rm_cinematic_intro {global.sidepanel_sprite=spr_null;}
+
+	else {global.sidepanel_sprite = spr_sidepanel_default;}
+}
 
 if (global.widescreen)
 {
@@ -85,12 +109,16 @@ if (global.widescreen)
 	// gameplay through shader (fade already baked by fade objects)
 	if instance_exists(obj_camera)
 	{
-		draw_surface_stretched(application_surface, _game_x, _game_y, _game_w, _game_h);
+		var _surf_w = surface_get_width(application_surface);
+		var _crop_x = floor((_surf_w - res_x) / 2);
+		draw_surface_part_ext(application_surface, _crop_x, 0, res_x, res_y, _game_x, _game_y, _scale, _scale, c_white, 1);
 	}
 	else
 	{
 		surface_resize(application_surface, room_width, room_height);
-		draw_surface_stretched(application_surface, _game_x, _game_y, _game_w, _game_h);
+		var _surf_w = surface_get_width(application_surface);
+		var _crop_x = floor((_surf_w - res_x) / 2);
+		draw_surface_part_ext(application_surface, _crop_x, 0, res_x, res_y, _game_x, _game_y, _scale, _scale, c_white, 1);
 	}
 
 	shader_reset();

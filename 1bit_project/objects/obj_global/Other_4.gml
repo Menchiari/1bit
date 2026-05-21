@@ -1,6 +1,17 @@
 //surface_resize(application_surface,room_width,room_height);
 scr_loadgame();
-surface_resize(application_surface,global.res_x,global.res_y);
+
+if (global.widescreen)
+{
+	var _dw = display_get_width();
+	var _dh = display_get_height();
+	surface_resize(application_surface, round(global.res_y * _dw / _dh), global.res_y);
+}
+else
+{
+	surface_resize(application_surface, global.res_x, global.res_y);
+}
+
 audio_master_gain(1);
 
 if room==rm_boat

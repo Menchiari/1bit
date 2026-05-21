@@ -149,13 +149,12 @@ function scr_input_update(){
 	global._prev_mouse_x = mouse_x;
 	global._prev_mouse_y = mouse_y;
 	
-	// mouse movement re-enables cursor
+	// mouse movement shows cursor
 	var _dmx = display_mouse_get_x();
 	var _dmy = display_mouse_get_y();
+	if (!variable_global_exists("_prev_dmx")) { global._prev_dmx = _dmx; global._prev_dmy = _dmy; }
 	if (_dmx != global._prev_dmx || _dmy != global._prev_dmy)
-	{
-		global.using_gamepad = false;
-	}
+	{ global.using_gamepad = false; }
 	global._prev_dmx = _dmx;
 	global._prev_dmy = _dmy;
 
@@ -222,8 +221,36 @@ function scr_input_update(){
 	}
 	else
 	{
-		global.cursor_x = mouse_x;
-		global.cursor_y = mouse_y;
+		if (global.widescreen && view_get_visible(0))
+		{
+			// calculate correct room coordinates from screen mouse position
+			var _wmx = window_mouse_get_x();
+			var _wmy = window_mouse_get_y();
+			var _dw = display_get_width();
+			var _dh = display_get_height();
+			var _scale = floor(_dh / 320);
+			if (_scale < 1) _scale = 1;
+			var _game_w = global.res_x * _scale;
+			var _game_h = global.res_y * _scale;
+			var _game_x = floor((_dw - _game_w) / 2);
+			var _game_y = floor((_dh - _game_h) / 2);
+
+			var _nx = (_wmx - _game_x) / _game_w;
+			var _ny = (_wmy - _game_y) / _game_h;
+
+			var _vx = camera_get_view_x(view_camera[0]);
+			var _vy = camera_get_view_y(view_camera[0]);
+			var _vw = camera_get_view_width(view_camera[0]);
+			var _vh = camera_get_view_height(view_camera[0]);
+
+			global.cursor_x = _vx + _nx * _vw;
+			global.cursor_y = _vy + _ny * _vh;
+		}
+		else
+		{
+			global.cursor_x = mouse_x;
+			global.cursor_y = mouse_y;
+		}
 		global.direction_active = false;
 	}
 }
