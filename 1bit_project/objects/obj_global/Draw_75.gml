@@ -135,7 +135,7 @@ else
     }
     else
     {
-        //surface_resize(application_surface, room_width, room_height);
+        surface_resize(application_surface, room_width, room_height);
         draw_surface_stretched(application_surface, 0, 0, res_x, res_y);
         display_set_gui_size(res_x, res_y);
     }

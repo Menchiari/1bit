@@ -64,7 +64,7 @@ if active==1
 		// --- GAMEPAD CONTROLS ---
 		if (global.using_gamepad && !_just_opened)
 		{
-			// d-pad / stick column navigation
+			// d-pad / stick column navigation (horizontal)
 			var _lsx = gamepad_axis_value(0, gp_axislh);
 			var _rsx = gamepad_axis_value(0, gp_axisrh);
 			var _ls_now = (_lsx < -0.5) ? -1 : ((_lsx > 0.5) ? 1 : 0);
@@ -85,12 +85,26 @@ if active==1
 				audio_play_sound(snd_click, 10, false, global.audio_ui * 0.07);
 			}
 
-			// A: confirm selection
+			// d-pad / stick vertical: up in description area closes menu
+			var _lsy = gamepad_axis_value(0, gp_axislv);
+			var _dp_u = gamepad_button_check_pressed(0, gp_padu);
+			if (_dp_u || (_lsy < -0.5 && !variable_instance_exists(id, "_ls_pv_held")))
+			{
+				if (chosen_column == 3)
+				{
+					shop_active = 0;
+					active = 0;
+					if (instance_exists(obj_hero)) { obj_hero.state = states.idle; obj_hero.dest_x = obj_hero.x; obj_hero.dest_y = obj_hero.y; }
+				}
+			}
+			if (!variable_instance_exists(id, "_ls_pv_held")) _ls_pv_held = false;
+			_ls_pv_held = (_lsy < -0.5);
+
+			// A: confirm selection (always hires regardless of column)
 			if (global.action_pressed)
 			{
 				_gamepad_equip = true;
-				if (chosen_column == 3) { button_pressed = 1; }
-				else { button_pressed = 0; }
+				button_pressed = 1;
 				audio_play_sound(snd_click, 10, false, global.audio_ui * 0.1);
 			}
 

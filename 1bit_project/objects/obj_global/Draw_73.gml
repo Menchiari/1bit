@@ -97,17 +97,8 @@ if UI==true
 	
 	else
 	{
-		// Offset camx/camy to the visible game area, not the raw view edge.
-		// In widescreen the view is wider than the game — the center is what's shown.
-		// On mobile the view matches the game, so the offset is zero. Works for both.
-		var _cam = view_get_camera(view_current);
-		var _vw  = camera_get_view_width(_cam);
-		var _vh  = camera_get_view_height(_cam);
-		camx += floor((_vw - global.res_x) / 2);
-		camy += floor((_vh - global.res_y) / 2);
-
-		camwidth=camx + global.res_x;
-		camheight=camy + global.res_y;
+		camwidth=room_width; //room_width//180//camera_get_view_width(view_get_camera(view_current));
+		camheight=room_height; //room_height//320//camera_get_view_height(view_get_camera(view_current));
 
 		draw_rectangle_color(camx+border,camy+border,camwidth-(border*2),camheight-(border*2),c_white,c_white,c_white,c_white,true);
 
@@ -131,8 +122,8 @@ if UI==true
 		//XP
 			draw_set_halign(fa_right);
 			draw_set_valign(fa_top);
-			draw_text_color_outline(camwidth-pos_x,camy+pos_a,"XP "+string(round(global_xp)),c_white,1);
-			//draw_text_color_outline(camwidth-pos_x,camy+pos_b,"LIVES "+string(global.player_lives),c_white,1);
+			draw_text_color_outline(camwidth-pos_x,camx+pos_a,"XP "+string(round(global_xp)),c_white,1);
+			//draw_text_color_outline(camwidth-pos_x,camx+pos_b,"LIVES "+string(global.player_lives),c_white,1);
 		//EQUIP
 			draw_set_halign(fa_left);
 			draw_text_color_outline(camx+pos_x,camy+pos_a,obj_hero.weapon.name,c_white,1);
