@@ -42,13 +42,22 @@ if collision_circle(xoriginal,yoriginal,reactive_range,obj_enemy,false,true) {ac
 
 if active==1
 {
+	// check if hero is in a combat state (used to prevent shop opening mid-attack)
+	var _hero_combat = false;
+	if (instance_exists(obj_hero))
+	{
+		var _hs = obj_hero.state;
+		_hero_combat = (_hs == states.block || _hs == states.attack || _hs == states.attack_strong
+		             || _hs == states.block_hit || _hs == states.roll || _hs == states.hit || _hs == states.collide_hit);
+	}
 	if mouse_check_button_released(mb_any)
 	&& point_in_circle(mouse_x,mouse_y,x,y,radius)
 	&& shop_active!=1
+	&& !_hero_combat
 	{shop_active=1;}
-	// gamepad: A opens shop when hero is near
+	// gamepad: A opens shop when hero is near (only if hero is NOT in a combat state)
 	var _just_opened = false;
-	if (global.action_released && global.using_gamepad && active==1 && shop_active!=1)
+	if (global.action_released && global.using_gamepad && active==1 && shop_active!=1 && !_hero_combat)
 	{
 		shop_active=1;
 		_just_opened = true;
@@ -124,11 +133,17 @@ if active==1
 			
 			if instance_exists(obj_hero)
 			{
-				//make hero still
-				if point_in_rectangle(mouse_x,mouse_y,x-xoff+19,y-yoff+13,x-xoff+110,by1)//y-yoff+85)
-				|| point_in_circle(mouse_x,mouse_y,x,y,radius)
-				{obj_hero.state=states.idle; obj_hero.dest_x=obj_hero.x;obj_hero.dest_y=obj_hero.y;}
-				else if (!_gamepad_equip) {active=0; shop_active=0;obj_hero.state=states.idle; obj_hero.dest_x=obj_hero.x;obj_hero.dest_y=obj_hero.y;}
+				//make hero still (only if hero is NOT in a combat state)
+				var _hs2 = obj_hero.state;
+				var _hero_fighting = (_hs2 == states.block || _hs2 == states.attack || _hs2 == states.attack_strong
+				                   || _hs2 == states.block_hit || _hs2 == states.roll || _hs2 == states.hit || _hs2 == states.collide_hit);
+				if (!_hero_fighting)
+				{
+					if point_in_rectangle(mouse_x,mouse_y,x-xoff+19,y-yoff+13,x-xoff+110,by1)//y-yoff+85)
+					|| point_in_circle(mouse_x,mouse_y,x,y,radius)
+					{obj_hero.state=states.idle; obj_hero.dest_x=obj_hero.x;obj_hero.dest_y=obj_hero.y;}
+					else if (!_gamepad_equip) {active=0; shop_active=0;obj_hero.state=states.idle; obj_hero.dest_x=obj_hero.x;obj_hero.dest_y=obj_hero.y;}
+				}
 				
 				if button_pressed==1
 				{

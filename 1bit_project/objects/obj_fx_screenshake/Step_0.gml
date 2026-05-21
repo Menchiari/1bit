@@ -3,6 +3,10 @@ if shake>max_shake {shake=max_shake;}
 
 else
 {
+	// Gamepad vibration proportional to shake (0-1 range)
+	var _vib = clamp(shake / max_shake, 0, 1);
+	gamepad_set_vibration(0, _vib, _vib * 0.6);
+
 	if instance_exists(obj_camera)
 	{
 		var range=shake;
@@ -13,6 +17,7 @@ else
 		{
 			obj_camera.x=view_x;
 			obj_camera.y=view_y;
+			gamepad_set_vibration(0, 0, 0);
 			instance_destroy();
 		}
 	}

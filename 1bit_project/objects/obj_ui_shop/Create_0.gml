@@ -35,6 +35,7 @@ radius=16;
 
 active_range=20;
 reactive_range=60;
+gamepad_open_mult=1.0; // multiplier on active_range for gamepad A to open shop (lower = must be closer)
 
 xoff=sprite_get_xoffset(sprite_index);
 yoff=sprite_get_yoffset(sprite_index);
