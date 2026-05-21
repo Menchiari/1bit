@@ -105,6 +105,59 @@ switch (state)
 	        txt_progress = string_length(txt);
 	        timer = 0;
 	    }
+		
+		// --- GAMEPAD: navigate face_buttons by x-position ---
+		// (buttons are recreated every frame by face_princess, so we track
+		//  the focused X position, not an instance index)
+		if (global.using_gamepad && instance_exists(obj_face_button))
+		{
+			// init focus x (-1 = unset)
+			if (!variable_global_exists("face_btn_focus_x")) global.face_btn_focus_x = -1;
+			
+			// collect unique x positions
+			var _positions = [];
+			with (obj_face_button)
+			{
+				var _found = false;
+				for (var _k = 0; _k < array_length(_positions); _k++)
+				{ if (_positions[_k] == x) { _found = true; break; } }
+				if (!_found) array_push(_positions, x);
+			}
+			array_sort(_positions, true); // left to right
+			var _count = array_length(_positions);
+			
+			// if focus_x doesn't match any current button, default to leftmost
+			var _cur = -1;
+			for (var _k = 0; _k < _count; _k++)
+			{ if (_positions[_k] == global.face_btn_focus_x) { _cur = _k; break; } }
+			if (_cur == -1) { _cur = 0; global.face_btn_focus_x = _positions[0]; }
+			
+			// stick edge detection (stored on this face_parent instance)
+			if (!variable_instance_exists(id, "_fb_rs_ph")) _fb_rs_ph = 0;
+			if (!variable_instance_exists(id, "_fb_ls_ph")) _fb_ls_ph = 0;
+			var _rh = gamepad_axis_value(0, gp_axisrh);
+			var _lh = gamepad_axis_value(0, gp_axislh);
+			var _rs_right = (_rh >  0.5 && _fb_rs_ph <=  0.5);
+			var _rs_left  = (_rh < -0.5 && _fb_rs_ph >= -0.5);
+			var _ls_right = (_lh >  0.5 && _fb_ls_ph <=  0.5);
+			var _ls_left  = (_lh < -0.5 && _fb_ls_ph >= -0.5);
+			_fb_rs_ph = _rh;
+			_fb_ls_ph = _lh;
+			
+			// d-pad / sticks / keyboard
+			if (_count > 1)
+			{
+				if (gamepad_button_check_pressed(0, gp_padr) || keyboard_check_pressed(vk_right) || _rs_right || _ls_right)
+				{ _cur = (_cur + 1) % _count; }
+				if (gamepad_button_check_pressed(0, gp_padl) || keyboard_check_pressed(vk_left) || _rs_left || _ls_left)
+				{ _cur = (_cur - 1 + _count) % _count; }
+				global.face_btn_focus_x = _positions[_cur];
+			}
+			
+			// set selected on all buttons matching the focused x
+			with (obj_face_button)
+			{ selected = (x == global.face_btn_focus_x); }
+		}
 	break;
 	case "wait":
 		image_speed = 0;
