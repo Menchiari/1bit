@@ -3,30 +3,9 @@ scr_loadgame();
 
 if (global.widescreen)
 {
-    var _dw = display_get_width();
-    var _dh = display_get_height();
-    var _surf_w = round(global.res_y * _dw / _dh);
-    surface_resize(application_surface, _surf_w, global.res_y);
-    
-    // Make sure view 0 is active (some face/cinematic rooms have it off)
-    if (!view_get_visible(0))
-    {
-        view_enabled = true;
-        view_set_visible(0, true);
-    }
-    
-    // Full-width port for all rooms
-    view_set_xport(0, 0);
-    view_set_yport(0, 0);
-    view_set_wport(0, _surf_w);
-    view_set_hport(0, global.res_y);
-    
-    // Non-camera rooms: widen view to match surface, centered on room
-    if (!instance_exists(obj_camera))
-    {
-        camera_set_view_size(view_camera[0], _surf_w, global.res_y);
-        camera_set_view_pos(view_camera[0], (room_width - _surf_w) / 2, (room_height - global.res_y) / 2);
-    }
+	var _dw = display_get_width();
+	var _dh = display_get_height();
+	surface_resize(application_surface, round(global.res_y * _dw / _dh), global.res_y);
 }
 else
 {
@@ -51,45 +30,82 @@ if !instance_exists(obj_audio_control) {instance_create(obj_audio_control);}
 if room==rm_world
 {
 	show_debug_message("world loaded");
+	//beginning of the game
 	if global.story_progress==1
 	{
+		//layer_destroy("onlystory1");
 		layer_destroy_instances("onlystory2and3");
 		layer_destroy_instances("onlystory3");
 		layer_destroy_instances("onlystory4");
 		layer_destroy_instances("onlystory5");
 	}
 	
+	//after you saw the boat
 	if global.story_progress==2
 	{
 		layer_destroy_instances("onlystory1");
+		//layer_destroy_instances("onlystory2and3");
 		layer_destroy_instances("onlystory3");
 		layer_destroy_instances("onlystory4");
 		layer_destroy_instances("onlystory5");
 	}
 	
+	//when you saw the boss
 	if global.story_progress==3
 	{
 		layer_destroy_instances("onlystory1");
+		//layer_destroy_instances("onlystory2and3");
+		//layer_destroy_instances("onlystory3");
 		layer_destroy_instances("onlystory4");
 		layer_destroy_instances("onlystory5");
 	}
 	
+	//beginning of the game
 	if global.story_progress==4
 	{
 		layer_destroy_instances("onlystory1");
 		layer_destroy_instances("onlystory2and3");
 		layer_destroy_instances("onlystory3");
+		//layer_destroy_instances("onlystory4");
 		layer_destroy_instances("onlystory5");
 		layer_destroy_instances("char_other");
 		layer_destroy_instances("char_spawn");
 	}
 	
+	//beginning of the game
 	if global.story_progress==5
 	{
 		layer_destroy_instances("onlystory1");
+		//layer_destroy_instances("onlystory2and3");
+		//layer_destroy_instances("onlystory3");
 		layer_destroy_instances("onlystory4");
+		//layer_destroy_instances("onlystory5");
+		
+		//layer_destroy_instances("char_other");
+		//layer_destroy_instances("char_spawn");
 		global.allheads=true;
 	}
+	
+	////beginning of the game
+	//if global.story_progress!=1
+	//&& global.story_progress!=5
+	//{layer_destroy("onlystory1")}
+	
+	////after reaching boat
+	//if global.story_progress!=2
+	//&& global.story_progress!=3
+	//&& global.story_progress!=5
+	//{layer_destroy("onlystory2and3")}
+	
+	////after seeing boss (addition to 2)
+	//if global.story_progress!=1
+	//&& global.story_progress!=2
+	//&& global.story_progress!=4
+	//{layer_destroy("onlystory3")}
+	
+	////after killing boss, ending things only
+	//if global.story_progress!=4
+	//{layer_destroy("onlystory4")}
 }
 
 game_set_speed(global.room_speed_default,gamespeed_fps);

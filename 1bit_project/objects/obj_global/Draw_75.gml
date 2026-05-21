@@ -37,108 +37,115 @@ if (room == rm_world && instance_exists(obj_camera))
 }
 else
 {
-    if room == rm_faces_ai {global.sidepanel_sprite=spr_sidepanel_11;}
-    
-    else if room == rm_story_1 {global.sidepanel_sprite=spr_sidepanel_2;}
-    else if room == rm_story_1_stairs {global.sidepanel_sprite=spr_sidepanel_10;}
-    else if room == rm_story_1b {global.sidepanel_sprite=spr_sidepanel_2;}
-    else if room == rm_story_2 || room==rm_cinematic_cave {global.sidepanel_sprite=spr_sidepanel_10;}
-    else if room == rm_story_AI {global.sidepanel_sprite=spr_sidepanel_11;}
-    else if room == rm_story_AI_2 {global.sidepanel_sprite=spr_sidepanel_11;}
-    else if room == rm_story_caves {global.sidepanel_sprite=spr_sidepanel_7;}
-    else if room == rm_story_princess_fight {global.sidepanel_sprite=spr_sidepanel_6;}
-    else if room == rm_story_princess_raid {global.sidepanel_sprite=spr_sidepanel_6;}
-    
-    else if room == rm_faces_default {global.sidepanel_sprite=spr_sidepanel_1;}
-    else if room == rm_faces_princess {global.sidepanel_sprite=spr_sidepanel_6;}
-    else if room==rm_faces_boat || room==rm_boat {global.sidepanel_sprite=spr_sidepanel_9;}
-    else if room==rm_faces_boss_death || room==rm_faces_boss_intro || room==rm_boss {global.sidepanel_sprite=spr_sidepanel_10;}
+	if room == rm_faces_ai {global.sidepanel_sprite=spr_sidepanel_11;}
+	
+	else if room == rm_story_1 {global.sidepanel_sprite=spr_sidepanel_2;}
+	else if room == rm_story_1_stairs {global.sidepanel_sprite=spr_sidepanel_10;}
+	else if room == rm_story_1b {global.sidepanel_sprite=spr_sidepanel_2;}
+	else if room == rm_story_2 	|| room==rm_cinematic_cave {global.sidepanel_sprite=spr_sidepanel_10;}
+	else if room == rm_story_AI {global.sidepanel_sprite=spr_sidepanel_11;}
+	else if room == rm_story_AI_2 {global.sidepanel_sprite=spr_sidepanel_11;}
+	else if room == rm_story_caves {global.sidepanel_sprite=spr_sidepanel_7;}
+	else if room == rm_story_princess_fight {global.sidepanel_sprite=spr_sidepanel_6;}
+	else if room == rm_story_princess_raid {global.sidepanel_sprite=spr_sidepanel_6;}
+	
+	else if room == rm_faces_default {global.sidepanel_sprite=spr_sidepanel_1;}
+	else if room == rm_faces_princess {global.sidepanel_sprite=spr_sidepanel_6;}
+	else if room==rm_faces_boat || room==rm_boat {global.sidepanel_sprite=spr_sidepanel_9;}
+	else if room==rm_faces_boss_death || room==rm_faces_boss_intro || room==rm_boss {global.sidepanel_sprite=spr_sidepanel_10;}
 
-    else if room==rm_death || room==rm_faces_death || room==rm_gameover || room==rm_glitch || room==rm_cinematic_intro {global.sidepanel_sprite=spr_null;}
+	else if room==rm_death || room==rm_faces_death || room==rm_gameover || room==rm_glitch || room==rm_cinematic_intro {global.sidepanel_sprite=spr_null;}
 
-    else {global.sidepanel_sprite = spr_sidepanel_default;}
+	else {global.sidepanel_sprite = spr_sidepanel_default;}
 }
 
 if (global.widescreen)
 {
-    var _dw = display_get_width();
-    var _dh = display_get_height();
-    var _scale = floor(_dh / 320);
-    if (_scale < 1) _scale = 1;
-    var _game_w = res_x * _scale;
-    var _game_h = res_y * _scale;
-    var _game_x = floor((_dw - _game_w) / 2);
-    var _game_y = floor((_dh - _game_h) / 2);
+	var _dw = display_get_width();
+	var _dh = display_get_height();
+	var _scale = floor(_dh / 320);
+	if (_scale < 1) _scale = 1;
+	var _game_w = res_x * _scale;
+	var _game_h = res_y * _scale;
+	var _game_x = floor((_dw - _game_w) / 2);
+	var _game_y = floor((_dh - _game_h) / 2);
 
-    // build panel surface: sprite + fade drawn raw (no shader yet)
-    var _spw = sprite_get_width(global.sidepanel_sprite);
-    var _sph = sprite_get_height(global.sidepanel_sprite);
-    if (!surface_exists(global._panel_surf))
-        global._panel_surf = surface_create(_spw, _sph);
+	// build panel surface: sprite + fade drawn raw (no shader yet)
+	var _spw = sprite_get_width(global.sidepanel_sprite);
+	var _sph = sprite_get_height(global.sidepanel_sprite);
+	if (!surface_exists(global._panel_surf))
+		global._panel_surf = surface_create(_spw, _sph);
 
-    surface_set_target(global._panel_surf);
-    draw_clear_alpha(c_black, 1);
-    draw_sprite(global.sidepanel_sprite, 0, 0, 0);
-    var _fade_alpha = 0;
-    if (instance_exists(obj_fx_fadein)) _fade_alpha = obj_fx_fadein.alpha;
-    if (instance_exists(obj_fx_fadeout)) _fade_alpha = obj_fx_fadeout.alpha;
-    if (_fade_alpha > 0)
-    {
-        draw_set_alpha(_fade_alpha);
-        draw_rectangle_color(0, 0, _spw, _sph, 0, 0, 0, 0, false);
-        draw_set_alpha(1);
-    }
-    surface_reset_target();
+	surface_set_target(global._panel_surf);
+	draw_clear_alpha(c_black, 1);
+	draw_sprite(global.sidepanel_sprite, 0, 0, 0);
+	var _fade_alpha = 0;
+	if (instance_exists(obj_fx_fadein)) _fade_alpha = obj_fx_fadein.alpha;
+	if (instance_exists(obj_fx_fadeout)) _fade_alpha = obj_fx_fadeout.alpha;
+	if (_fade_alpha > 0)
+	{
+		draw_set_alpha(_fade_alpha);
+		draw_rectangle_color(0, 0, _spw, _sph, 0, 0, 0, 0, false);
+		draw_set_alpha(1);
+	}
+	surface_reset_target();
 
-    // now set GUI size and shader
-    display_set_gui_size(_dw, _dh);
-    if enable
-    {
-        shader_set(shader);
-        shader_set_uniform_f(iResolution, res_x, res_y);
-        shader_set_uniform_f(iGlobalTime, time);
-        shader_set_uniform_f(palette, p);
-        shader_set_uniform_f(gamma, g);
-        shader_set_uniform_f(flicker, flk);
-    }
+	// now set GUI size and shader
+	display_set_gui_size(_dw, _dh);
+	if enable
+	{
+		shader_set(shader);
+		shader_set_uniform_f(iResolution, res_x, res_y);
+		shader_set_uniform_f(iGlobalTime, time);
+		shader_set_uniform_f(palette, p);
+		shader_set_uniform_f(gamma, g);
+		shader_set_uniform_f(flicker, flk);
+	}
 
-    // panels through shader (fade already baked into surface as gray values)
-    draw_surface_ext(global._panel_surf, _game_x, _game_y, -_scale, _scale, 0, c_white, 1);
-    draw_surface_ext(global._panel_surf, _game_x + _game_w, _game_y, _scale, _scale, 0, c_white, 1);
+	// panels through shader (fade already baked into surface as gray values)
+	draw_surface_ext(global._panel_surf, _game_x, _game_y, -_scale, _scale, 0, c_white, 1);
+	draw_surface_ext(global._panel_surf, _game_x + _game_w, _game_y, _scale, _scale, 0, c_white, 1);
 
-    // gameplay through shader (fade already baked by fade objects)
-    // NOTE: both branches are now identical — no surface_resize here.
-    // Other_4 already set the surface to widescreen dimensions on room start.
-    // Resizing it here was destroying the layout every frame for no-camera rooms.
-    var _surf_w = surface_get_width(application_surface);
-    var _crop_x = floor((_surf_w - res_x) / 2);
-    draw_surface_part_ext(application_surface, _crop_x, 0, res_x, res_y, _game_x, _game_y, _scale, _scale, c_white, 1);
+	// gameplay through shader (fade already baked by fade objects)
+	if instance_exists(obj_camera)
+	{
+		var _surf_w = surface_get_width(application_surface);
+		var _crop_x = floor((_surf_w - res_x) / 2);
+		draw_surface_part_ext(application_surface, _crop_x, 0, res_x, res_y, _game_x, _game_y, _scale, _scale, c_white, 1);
+	}
+	else
+	{
+		surface_resize(application_surface, room_width, room_height);
+		var _surf_w = surface_get_width(application_surface);
+		var _crop_x = floor((_surf_w - res_x) / 2);
+		draw_surface_part_ext(application_surface, _crop_x, 0, res_x, res_y, _game_x, _game_y, _scale, _scale, c_white, 1);
+	}
 
-    shader_reset();
+	shader_reset();
 }
 else
 {
-    if enable
-    {
-        shader_set(shader);
-        shader_set_uniform_f(iResolution, res_x, res_y);
-        shader_set_uniform_f(iGlobalTime, time);
-        shader_set_uniform_f(palette, p);
-        shader_set_uniform_f(gamma, g);
-        shader_set_uniform_f(flicker, flk);
-    }
+	if enable
+	{
+		shader_set(shader);
+		shader_set_uniform_f(iResolution, res_x, res_y);
+		shader_set_uniform_f(iGlobalTime, time);
+		shader_set_uniform_f(palette, p);
+		shader_set_uniform_f(gamma, g);
+		shader_set_uniform_f(flicker, flk);
+	}
 
-    if instance_exists(obj_camera)
-    {
-        draw_surface_stretched(application_surface, 0, 0, res_x, res_y);
-        display_set_gui_size(res_x, res_y);
-    }
-    else
-    {
-        surface_resize(application_surface, room_width, room_height);
-        draw_surface_stretched(application_surface, 0, 0, res_x, res_y);
-        display_set_gui_size(res_x, res_y);
-    }
+	if instance_exists(obj_camera)
+	{
+		draw_surface_stretched(application_surface, 0, 0, res_x, res_y);
+		display_set_gui_size(res_x, res_y);
+	}
+	else
+	{
+		surface_resize(application_surface, room_width, room_height);
+		draw_surface_stretched(application_surface, 0, 0, res_x, res_y);
+		display_set_gui_size(res_x, res_y);
+	}
 
-    shader_reset();
+	shader_reset();
 }
