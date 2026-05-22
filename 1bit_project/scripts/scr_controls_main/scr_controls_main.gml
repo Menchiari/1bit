@@ -221,9 +221,10 @@ function scr_input_update(){
 	}
 	else
 	{
-		if (global.widescreen && view_get_visible(0))
+		// BUG 5 FIX: handle widescreen cursor for ALL rooms, not just rooms with views enabled
+		if (global.widescreen)
 		{
-			// calculate correct room coordinates from screen mouse position
+			// shared widescreen math (must match Draw_75 exactly)
 			var _wmx = window_mouse_get_x();
 			var _wmy = window_mouse_get_y();
 			var _dw = display_get_width();
@@ -235,19 +236,34 @@ function scr_input_update(){
 			var _game_x = floor((_dw - _game_w) / 2);
 			var _game_y = floor((_dh - _game_h) / 2);
 
+			// normalize mouse position within the game area [0..1]
 			var _nx = (_wmx - _game_x) / _game_w;
 			var _ny = (_wmy - _game_y) / _game_h;
 
-			var _vx = camera_get_view_x(view_camera[0]);
-			var _vy = camera_get_view_y(view_camera[0]);
-			var _vw = camera_get_view_width(view_camera[0]);
-			var _vh = camera_get_view_height(view_camera[0]);
+			if (view_get_visible(0))
+			{
+				// views enabled: map to view coordinates with center-crop offset
+				var _vx = camera_get_view_x(view_camera[0]);
+				var _vy = camera_get_view_y(view_camera[0]);
+				var _vw = camera_get_view_width(view_camera[0]);
+				var _vh = camera_get_view_height(view_camera[0]);
 
-			// The visible area is res_x × res_y cropped from center of the full view
-			var _crop_x = (_vw - global.res_x) * 0.5;
-			var _crop_y = (_vh - global.res_y) * 0.5;
-			global.cursor_x = _vx + _crop_x + _nx * global.res_x;
-			global.cursor_y = _vy + _crop_y + _ny * global.res_y;
+				// The visible area is res_x × res_y cropped from center of the full view
+				var _crop_x = (_vw - global.res_x) * 0.5;
+				var _crop_y = (_vh - global.res_y) * 0.5;
+				global.cursor_x = _vx + _crop_x + _nx * global.res_x;
+				global.cursor_y = _vy + _crop_y + _ny * global.res_y;
+			}
+			else
+			{
+				// BUG 5: views disabled (e.g. rm_menu_character)
+				// room coordinates map directly — the application surface
+				// is resized to room_width × room_height in Draw_75
+				var _crop_x = (room_width - global.res_x) * 0.5;
+				var _crop_y = (room_height - global.res_y) * 0.5;
+				global.cursor_x = _crop_x + _nx * global.res_x;
+				global.cursor_y = _crop_y + _ny * global.res_y;
+			}
 		}
 		else
 		{

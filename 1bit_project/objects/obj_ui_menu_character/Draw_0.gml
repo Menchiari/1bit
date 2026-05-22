@@ -38,4 +38,19 @@ if (global.using_gamepad && variable_instance_exists(id, "menu_cursor"))
 		with (obj_ui_menu_button_room)
 		{ draw_rectangle(x-1, y-1, x+sprite_width+1, y+sprite_height+1, true); }
 	}
+	// BUG 4: highlight for cursor 5 (reset/random row)
+	if (menu_cursor == 5)
+	{
+		if (!variable_instance_exists(id, "menu_cursor_lr")) menu_cursor_lr = 0;
+		if (menu_cursor_lr == 0 && instance_exists(obj_ui_menu_button_gotoreset))
+		{
+			with (obj_ui_menu_button_gotoreset)
+			{ draw_rectangle(x-1, y-1, x+sprite_width+1, y+sprite_height+1, true); }
+		}
+		if (menu_cursor_lr == 1 && instance_exists(obj_ui_menu_button_random))
+		{
+			with (obj_ui_menu_button_random)
+			{ draw_rectangle(x-1, y-1, x+sprite_width+1, y+sprite_height+1, true); }
+		}
+	}
 }

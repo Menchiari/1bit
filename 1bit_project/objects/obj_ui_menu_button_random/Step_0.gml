@@ -1,9 +1,13 @@
 /// @description 
-if mouse_check_button(mb_any) && collision_point(mouse_x,mouse_y,self,true,false) {selected=true;}
+if (!variable_instance_exists(id, "nextclick")) nextclick = false;
+
+if mouse_check_button(mb_any) && collision_point(global.cursor_x, global.cursor_y, self, true, false) {selected=true;}
 else {selected=false;}
 
-if mouse_check_button_released(mb_any) && collision_point(mouse_x,mouse_y,self,true,false)
+if (mouse_check_button_released(mb_any) && collision_point(global.cursor_x, global.cursor_y, self, true, false))
+|| nextclick == true
 {
+	nextclick = false;
 	
 	var weaponsel=irandom_range(0,66);
 	var armorsel=irandom_range(0,42);

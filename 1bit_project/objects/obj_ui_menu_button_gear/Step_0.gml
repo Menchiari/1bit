@@ -1,4 +1,4 @@
-if mouse_check_button(mb_any) && collision_point(mouse_x,mouse_y,self,true,false) {selected=true;}
+if mouse_check_button(mb_any) && collision_point(global.cursor_x, global.cursor_y, self, true, false) {selected=true;}
 else {selected=false;}
 
 
@@ -8,7 +8,7 @@ if mouse_check_button_released(mb_any)
 || nextdir!=0
 {
 	nextclick=false;
-	if point_in_rectangle(mouse_x,mouse_y,x,y,x+sprite_width/3.5,y+sprite_height) || nextdir==-1
+	if point_in_rectangle(global.cursor_x, global.cursor_y, x, y, x+sprite_width/3.5, y+sprite_height) || nextdir==-1
 	{
 		scr_audio_play(snd_click,global.audio_ui*.3,1);
 
@@ -19,7 +19,7 @@ if mouse_check_button_released(mb_any)
 		hlm_button_select-=1;
 		if hlm_button_select==-1 {hlm_button_select=ds_list_size(global.unlock_hlm)-1;}
 	}
-	if point_in_rectangle(mouse_x,mouse_y,x+sprite_width/3.5,y,x+sprite_width,y+sprite_height) || nextdir==1
+	if point_in_rectangle(global.cursor_x, global.cursor_y, x+sprite_width/3.5, y, x+sprite_width, y+sprite_height) || nextdir==1
 	{
 		scr_audio_play(snd_click,global.audio_ui*.3,1.1);
 		
