@@ -109,3 +109,4 @@ if room==rm_world
 }
 
 game_set_speed(global.room_speed_default,gamespeed_fps);
+gamepad_set_vibration(0,0,0);

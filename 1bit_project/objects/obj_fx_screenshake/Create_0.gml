@@ -1,5 +1,6 @@
 shake = 1;
 max_shake = 5;
+destroyed=false;
 show_debug_message("Screenshake created at x:"+string(x)+", y:"+string(y));
 
 if instance_exists(obj_camera)

@@ -18,7 +18,11 @@ else
 			obj_camera.x=view_x;
 			obj_camera.y=view_y;
 			gamepad_set_vibration(0, 0, 0);
-			instance_destroy();
+			if destroyed==false
+			{
+				destroyed=true;
+				alarm[0]=1;
+			}
 		}
 	}
 }

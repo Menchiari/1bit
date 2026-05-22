@@ -19,6 +19,11 @@ if instance_exists(target)
 			if alpha<=0 instance_destroy();
 		}
 	}
+	if point_distance(x,y,target.x,target.y)>trigger_distance*8
+	&& point_distance(x,y,target.x,target.y)<trigger_distance*9
+	{
+		instance_destroy();
+	}
 }
 
 depth=text_depth;//-y-3000;
