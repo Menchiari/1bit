@@ -122,6 +122,9 @@ if (global.widescreen)
 	}
 
 	shader_reset();
+	// after shader_reset(); on line 124, add:
+draw_rectangle_color(_game_x, _game_y, _game_x, _game_y + _game_h - 1, c_black, c_black, c_black, c_black, false);  // left 1px
+draw_rectangle_color(_game_x + _game_w - 1, _game_y, _game_x + _game_w - 1, _game_y + _game_h - 1, c_black, c_black, c_black, c_black, false);  // right 1px
 }
 else
 {

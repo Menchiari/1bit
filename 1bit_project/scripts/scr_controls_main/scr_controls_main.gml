@@ -183,7 +183,7 @@ function scr_input_update(){
 	if (global.using_gamepad)
 	{
 		global.action_pressed  = gamepad_button_check_pressed(0, gp_face1) || keyboard_check_pressed(vk_space);
-		global.action_released = gamepad_button_check_released(0, gp_face1) || keyboard_check_released(vk_space);
+		global.action_released = gamepad_button_check_released(0, gp_face1) || keyboard_check_released(vk_space) || keyboard_check_released(vk_enter);
 		global.action_held     = gamepad_button_check(0, gp_face1) || keyboard_check(vk_space);
 	}
 	else

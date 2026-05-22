@@ -57,7 +57,8 @@ if active==1
 	{shop_active=1;}
 	// gamepad: A opens shop when hero is near (only if hero is NOT in a combat state)
 	var _just_opened = false;
-	if (global.action_released && global.using_gamepad && active==1 && shop_active!=1 && !_hero_combat)
+	if (global.action_released && global.using_gamepad && active==1 && shop_active!=1 && !_hero_combat
+    && point_distance(obj_hero.x, obj_hero.y, xoriginal, yoriginal) < radius * gamepad_open_mult)
 	{
 		shop_active=1;
 		_just_opened = true;
@@ -234,6 +235,13 @@ if active==1
 					button_pressed=0;
 					
 					scr_savegame();
+					if (_gamepad_equip && instance_exists(obj_hero))
+					{
+					    obj_hero.state = states.idle;
+					    obj_hero.dest_x = obj_hero.x;
+					    obj_hero.dest_y = obj_hero.y;
+					    obj_hero.speed = 0;
+					}
 				}
 			}
 			else

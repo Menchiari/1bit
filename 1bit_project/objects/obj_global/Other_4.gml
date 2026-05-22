@@ -110,3 +110,6 @@ if room==rm_world
 
 game_set_speed(global.room_speed_default,gamespeed_fps);
 gamepad_set_vibration(0,0,0);
+// reset mouse tracking to prevent false cursor-show on room transition
+global._prev_mouse_x = mouse_x;
+global._prev_mouse_y = mouse_y;
