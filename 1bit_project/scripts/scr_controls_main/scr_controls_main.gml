@@ -140,14 +140,10 @@ function scr_button(_mouse_button=mb_any){
 function scr_input_update(){
 	// ---- detect which device is active ----
 	// mouse activity switches to mouse mode
-	if (mouse_check_button(mb_any) || mouse_check_button_pressed(mb_any) || mouse_check_button_released(mb_any)
-	|| abs(mouse_x - global._prev_mouse_x) > 1
-	|| abs(mouse_y - global._prev_mouse_y) > 1)
+	if (mouse_check_button(mb_any) || mouse_check_button_pressed(mb_any) || mouse_check_button_released(mb_any))
 	{
-		global.using_gamepad = false;
+	    global.using_gamepad = false;
 	}
-	global._prev_mouse_x = mouse_x;
-	global._prev_mouse_y = mouse_y;
 	
 	// mouse movement shows cursor
 	var _dmx = display_mouse_get_x();
