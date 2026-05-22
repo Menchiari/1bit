@@ -118,13 +118,34 @@ if (global.widescreen)
 		surface_resize(application_surface, room_width, room_height);
 		var _surf_w = surface_get_width(application_surface);
 		var _crop_x = floor((_surf_w - res_x) / 2);
-		draw_surface_part_ext(application_surface, _crop_x, 0, res_x, res_y, _game_x, _game_y, _scale, _scale, c_white, 1);
+		
+		if (_crop_x >= 0)
+		{
+			// surface wider than or equal to game area — crop center
+			draw_surface_part_ext(application_surface, _crop_x, 0, res_x, res_y, _game_x, _game_y, _scale, _scale, c_white, 1);
+		}
+		else
+		{
+			// surface narrower than game area — draw centered, black fills the rest
+			var _pad = floor((res_x - _surf_w) / 2) * _scale;
+			draw_surface_ext(application_surface, _game_x + _pad, _game_y, _scale, _scale, 0, c_white, 1);
+		}
 	}
 
 	shader_reset();
-	// after shader_reset(); on line 124, add:
-draw_rectangle_color(_game_x, _game_y, _game_x, _game_y + _game_h - 1, c_black, c_black, c_black, c_black, false);  // left 1px
-draw_rectangle_color(_game_x + _game_w - 1, _game_y, _game_x + _game_w - 1, _game_y + _game_h - 1, c_black, c_black, c_black, c_black, false);  // right 1px
+
+	// draw edge borders (replicates obj_camera_pos borders for widescreen)
+	if (instance_exists(obj_camera_pos))
+	{
+	    var _bdr = 10 * _scale;
+	    draw_rectangle_color(_game_x, _game_y, _game_x + _bdr - 1, _game_y + _game_h - 1, c_black, c_black, c_black, c_black, false);
+	    draw_rectangle_color(_game_x + _game_w - _bdr, _game_y, _game_x + _game_w - 1, _game_y + _game_h - 1, c_black, c_black, c_black, c_black, false);
+	}
+	else
+	{
+	    draw_rectangle_color(_game_x, _game_y, _game_x + _scale - 1, _game_y + _game_h - 1, c_black, c_black, c_black, c_black, false);
+	    draw_rectangle_color(_game_x + _game_w - _scale, _game_y, _game_x + _game_w - 1, _game_y + _game_h - 1, c_black, c_black, c_black, c_black, false);
+	}
 }
 else
 {
