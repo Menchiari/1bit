@@ -7,7 +7,7 @@
   "managed":true,
   "name":"obj_asset_table",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_breakable","path":"objects/obj_breakable/obj_breakable.yy",},"propertyId":{"name":"material","path":"objects/obj_breakable/obj_breakable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"random\"",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_breakable","path":"objects/obj_breakable/obj_breakable.yy",},"propertyId":{"name":"material","path":"objects/obj_breakable/obj_breakable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"wood\"",},
   ],
   "parent":{
     "name":"assets",

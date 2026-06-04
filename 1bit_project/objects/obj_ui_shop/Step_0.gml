@@ -20,6 +20,9 @@ cy1=y-yoff+42;
 cx2=x-xoff+109;
 cy2=y-yoff+68;
 
+// gamepad slot alias (set by scr_input_update each frame)
+var _gp = variable_global_exists("gamepad_slot") ? global.gamepad_slot : 0;
+
 if mouse_check_button(mb_any) && point_in_rectangle(mouse_x,mouse_y,bx0,by0,bx1,by1) {selecting=true;}
 else {selecting=false;}
 
@@ -84,10 +87,10 @@ if active==1
 		{
 			// stick edge detection (both sticks)
 			if (!variable_instance_exists(id, "_ls_ph")) { _ls_ph = 0; _ls_pv = 0; _rs_ph = 0; _rs_pv = 0; }
-			var _lh = gamepad_axis_value(0, gp_axislh);
-			var _lv = gamepad_axis_value(0, gp_axislv);
-			var _rh = gamepad_axis_value(0, gp_axisrh);
-			var _rv = gamepad_axis_value(0, gp_axisrv);
+			var _lh = (_gp >= 0) ? gamepad_axis_value(_gp, gp_axislh) : 0;
+			var _lv = (_gp >= 0) ? gamepad_axis_value(_gp, gp_axislv) : 0;
+			var _rh = (_gp >= 0) ? gamepad_axis_value(_gp, gp_axisrh) : 0;
+			var _rv = (_gp >= 0) ? gamepad_axis_value(_gp, gp_axisrv) : 0;
 			var _stick_left  = (_lh < -0.5 && _ls_ph >= -0.5) || (_rh < -0.5 && _rs_ph >= -0.5);
 			var _stick_right = (_lh >  0.5 && _ls_ph <=  0.5) || (_rh >  0.5 && _rs_ph <=  0.5);
 			var _stick_up    = (_lv < -0.5 && _ls_pv >= -0.5) || (_rv < -0.5 && _rs_pv >= -0.5);
@@ -95,23 +98,23 @@ if active==1
 			_ls_ph = _lh; _ls_pv = _lv;
 			_rs_ph = _rh; _rs_pv = _rv;
 			// D-pad left/right selects column
-			if (gamepad_button_check_pressed(0, gp_padl) || keyboard_check_pressed(vk_left) || _stick_left)
+			if ((_gp >= 0 && gamepad_button_check_pressed(_gp, gp_padl)) || keyboard_check_pressed(vk_left) || _stick_left)
 			{
 				if (chosen_column == 3) chosen_column = 2;
 				else { chosen_column -= 1; if (chosen_column < 0) chosen_column = 2; }
 				audio_play_sound(snd_click,10,false,global.audio_ui*.07);
 			}
-			if (gamepad_button_check_pressed(0, gp_padr) || keyboard_check_pressed(vk_right) || _stick_right)
+			if ((_gp >= 0 && gamepad_button_check_pressed(_gp, gp_padr)) || keyboard_check_pressed(vk_right) || _stick_right)
 			{
 				if (chosen_column == 3) chosen_column = 0;
 				else { chosen_column += 1; if (chosen_column > 2) chosen_column = 0; }
 				audio_play_sound(snd_click,10,false,global.audio_ui*.07);
 			}
 			// D-pad up: deselect
-			if (gamepad_button_check_pressed(0, gp_padu) || keyboard_check_pressed(vk_up) || _stick_up)
+			if ((_gp >= 0 && gamepad_button_check_pressed(_gp, gp_padu)) || keyboard_check_pressed(vk_up) || _stick_up)
 			{ chosen_column = 3; }
 			// D-pad down: toggle stats
-			if (gamepad_button_check_pressed(0, gp_padd) || keyboard_check_pressed(vk_down) || _stick_down)
+			if ((_gp >= 0 && gamepad_button_check_pressed(_gp, gp_padd)) || keyboard_check_pressed(vk_down) || _stick_down)
 			{ stats = !stats; }
 			// A: equip or close if in description
 			if (global.action_released)
@@ -122,7 +125,7 @@ if active==1
 				{ shop_active = 0; if instance_exists(obj_hero) { obj_hero.state = states.idle; obj_hero.dest_x = obj_hero.x; obj_hero.dest_y = obj_hero.y; } }
 			}
 			// B: close
-			if (gamepad_button_check_released(0, gp_face2) || keyboard_check_released(vk_escape))
+			if ((_gp >= 0 && gamepad_button_check_released(_gp, gp_face2)) || keyboard_check_released(vk_escape))
 			{
 				shop_active = 0; chosen_column = 3;
 				if instance_exists(obj_hero) { obj_hero.state = states.idle; obj_hero.dest_x = obj_hero.x; obj_hero.dest_y = obj_hero.y; }

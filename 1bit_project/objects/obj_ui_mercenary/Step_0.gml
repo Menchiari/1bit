@@ -21,6 +21,9 @@ cy1=y-yoff+42;
 cx2=x-xoff+109;
 cy2=y-yoff+68;
 
+// gamepad slot alias (set by scr_input_update each frame)
+var _gp = variable_global_exists("gamepad_slot") ? global.gamepad_slot : 0;
+
 if mouse_check_button(mb_any) && point_in_rectangle(mouse_x,mouse_y,bx0,by0,bx1,by1) {selecting=true;}
 else {selecting=false;}
 
@@ -65,12 +68,12 @@ if active==1
 		if (global.using_gamepad && !_just_opened)
 		{
 			// d-pad / stick column navigation (horizontal)
-			var _lsx = gamepad_axis_value(0, gp_axislh);
-			var _rsx = gamepad_axis_value(0, gp_axisrh);
+			var _lsx = (_gp >= 0) ? gamepad_axis_value(_gp, gp_axislh) : 0;
+			var _rsx = (_gp >= 0) ? gamepad_axis_value(_gp, gp_axisrh) : 0;
 			var _ls_now = (_lsx < -0.5) ? -1 : ((_lsx > 0.5) ? 1 : 0);
 			var _rs_now = (_rsx < -0.5) ? -1 : ((_rsx > 0.5) ? 1 : 0);
-			var _dp_l = gamepad_button_check_pressed(0, gp_padl);
-			var _dp_r = gamepad_button_check_pressed(0, gp_padr);
+			var _dp_l = (_gp >= 0) && gamepad_button_check_pressed(_gp, gp_padl);
+			var _dp_r = (_gp >= 0) && gamepad_button_check_pressed(_gp, gp_padr);
 			var _move = 0;
 			if (_dp_l) _move = -1;
 			else if (_dp_r) _move = 1;
@@ -86,8 +89,8 @@ if active==1
 			}
 
 			// d-pad / stick vertical: up in description area closes menu
-			var _lsy = gamepad_axis_value(0, gp_axislv);
-			var _dp_u = gamepad_button_check_pressed(0, gp_padu);
+			var _lsy = (_gp >= 0) ? gamepad_axis_value(_gp, gp_axislv) : 0;
+			var _dp_u = (_gp >= 0) && gamepad_button_check_pressed(_gp, gp_padu);
 			if (_dp_u || (_lsy < -0.5 && !variable_instance_exists(id, "_ls_pv_held")))
 			{
 				if (chosen_column == 3)
@@ -109,7 +112,7 @@ if active==1
 			}
 
 			// B: close
-			if (gamepad_button_check_pressed(0, gp_face2))
+			if (_gp >= 0 && gamepad_button_check_pressed(_gp, gp_face2))
 			{
 				shop_active = 0;
 				active = 0;

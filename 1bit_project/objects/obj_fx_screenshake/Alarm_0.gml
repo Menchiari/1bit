@@ -1,3 +1,4 @@
 /// @description
-gamepad_set_vibration(0, 0, 0);
+var _gp = variable_global_exists("gamepad_slot") ? global.gamepad_slot : 0;
+if (_gp >= 0) gamepad_set_vibration(_gp, 0, 0);
 instance_destroy();

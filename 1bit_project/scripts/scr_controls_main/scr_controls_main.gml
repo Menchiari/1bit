@@ -4,6 +4,9 @@ function scr_controls_main(){
 }
 
 function scr_gamepad_move(_speed){
+	// no gamepad connected — skip
+	var _gp = global.gamepad_slot;
+	if (_gp < 0) return;
 	// don't move while A/Space is held (blocking/charging)
 	if (global.action_held) return;
 	// don't move while shop is open
@@ -12,12 +15,12 @@ function scr_gamepad_move(_speed){
 	if (_shop_open) return;
 
 	// read direction from stick + d-pad + WASD
-	var _h = gamepad_axis_value(0, gp_axislh);
-	var _v = gamepad_axis_value(0, gp_axislv);
-	if (gamepad_button_check(0, gp_padl)) _h = -1;
-	if (gamepad_button_check(0, gp_padr)) _h =  1;
-	if (gamepad_button_check(0, gp_padu)) _v = -1;
-	if (gamepad_button_check(0, gp_padd)) _v =  1;
+	var _h = gamepad_axis_value(_gp, gp_axislh);
+	var _v = gamepad_axis_value(_gp, gp_axislv);
+	if (gamepad_button_check(_gp, gp_padl)) _h = -1;
+	if (gamepad_button_check(_gp, gp_padr)) _h =  1;
+	if (gamepad_button_check(_gp, gp_padu)) _v = -1;
+	if (gamepad_button_check(_gp, gp_padd)) _v =  1;
 	if (keyboard_check(ord("A")) || keyboard_check(vk_left))  _h = -1;
 	if (keyboard_check(ord("D")) || keyboard_check(vk_right)) _h =  1;
 	if (keyboard_check(ord("W")) || keyboard_check(vk_up))    _v = -1;
@@ -138,31 +141,74 @@ function scr_button(_mouse_button=mb_any){
 }
 
 function scr_input_update(){
-	// ---- detect which device is active ----
-	// mouse activity switches to mouse mode
-	if (mouse_check_button(mb_any) || mouse_check_button_pressed(mb_any) || mouse_check_button_released(mb_any))
+	// ---- gamepad slot discovery ----
+	// gamepad_get_device_count() forces XInput re-enumeration internally,
+	// fixing gamepads that go unresponsive after alt+tab or were connected before launch
+	if (!variable_global_exists("gamepad_slot")) global.gamepad_slot = 0;
+	var _count = gamepad_get_device_count();
+	global.gamepad_slot = -1;
+	for (var _i = 0; _i < _count; _i++)
 	{
-	    global.using_gamepad = false;
+		if (gamepad_is_connected(_i))
+		{
+			global.gamepad_slot = _i;
+			break;
+		}
 	}
-	
-	// mouse movement shows cursor
-	var _dmx = display_mouse_get_x();
-	var _dmy = display_mouse_get_y();
-	if (!variable_global_exists("_prev_dmx")) { global._prev_dmx = _dmx; global._prev_dmy = _dmy; }
-	if (_dmx != global._prev_dmx || _dmy != global._prev_dmy)
-	{ global.using_gamepad = false; }
-	global._prev_dmx = _dmx;
-	global._prev_dmy = _dmy;
+	var _gp = global.gamepad_slot;
 
-	// gamepad or keyboard activity switches to gamepad mode
-	if (gamepad_button_check(0, gp_face1)
-	|| abs(gamepad_axis_value(0, gp_axislh)) > 0.5
-	|| abs(gamepad_axis_value(0, gp_axislv)) > 0.5
-	|| gamepad_button_check(0, gp_padu)
-	|| gamepad_button_check(0, gp_padd)
-	|| gamepad_button_check(0, gp_padl)
-	|| gamepad_button_check(0, gp_padr)
-	|| keyboard_check(vk_space)
+	// ---- focus regain: suppress phantom mouse movement ----
+	if (!variable_global_exists("_had_focus")) global._had_focus = true;
+	if (!variable_global_exists("_focus_grace")) global._focus_grace = 0;
+	var _focused = window_has_focus();
+	if (_focused && !global._had_focus)
+	{
+		global._focus_grace = 5;
+	}
+	global._had_focus = _focused;
+	if (global._focus_grace > 0) global._focus_grace -= 1;
+
+	// ---- detect which device is active ----
+	if (global._focus_grace <= 0)
+	{
+		// mouse activity switches to mouse mode
+		if (mouse_check_button(mb_any) || mouse_check_button_pressed(mb_any) || mouse_check_button_released(mb_any))
+		{
+		    global.using_gamepad = false;
+		}
+
+		// mouse movement shows cursor
+		var _dmx = display_mouse_get_x();
+		var _dmy = display_mouse_get_y();
+		if (!variable_global_exists("_prev_dmx")) { global._prev_dmx = _dmx; global._prev_dmy = _dmy; }
+		if (_dmx != global._prev_dmx || _dmy != global._prev_dmy)
+		{ global.using_gamepad = false; }
+		global._prev_dmx = _dmx;
+		global._prev_dmy = _dmy;
+	}
+	else
+	{
+		// during grace: update prev position so delta doesn't fire when grace ends
+		global._prev_dmx = display_mouse_get_x();
+		global._prev_dmy = display_mouse_get_y();
+	}
+
+	// gamepad activity switches to gamepad mode
+	if (_gp >= 0)
+	{
+		if (gamepad_button_check(_gp, gp_face1)
+		|| abs(gamepad_axis_value(_gp, gp_axislh)) > 0.5
+		|| abs(gamepad_axis_value(_gp, gp_axislv)) > 0.5
+		|| gamepad_button_check(_gp, gp_padu)
+		|| gamepad_button_check(_gp, gp_padd)
+		|| gamepad_button_check(_gp, gp_padl)
+		|| gamepad_button_check(_gp, gp_padr))
+		{
+			global.using_gamepad = true;
+		}
+	}
+	// keyboard activity also switches to gamepad mode
+	if (keyboard_check(vk_space)
 	|| keyboard_check(ord("W"))
 	|| keyboard_check(ord("A"))
 	|| keyboard_check(ord("S"))
@@ -178,9 +224,9 @@ function scr_input_update(){
 	// ---- action button (A / Space / mouse click) ----
 	if (global.using_gamepad)
 	{
-		global.action_pressed  = gamepad_button_check_pressed(0, gp_face1) || keyboard_check_pressed(vk_space);
-		global.action_released = gamepad_button_check_released(0, gp_face1) || keyboard_check_released(vk_space) || keyboard_check_released(vk_enter);
-		global.action_held     = gamepad_button_check(0, gp_face1) || keyboard_check(vk_space);
+		global.action_pressed  = (_gp >= 0 && gamepad_button_check_pressed(_gp, gp_face1)) || keyboard_check_pressed(vk_space);
+		global.action_released = (_gp >= 0 && gamepad_button_check_released(_gp, gp_face1)) || keyboard_check_released(vk_space) || keyboard_check_released(vk_enter);
+		global.action_held     = (_gp >= 0 && gamepad_button_check(_gp, gp_face1)) || keyboard_check(vk_space);
 	}
 	else
 	{
@@ -193,12 +239,15 @@ function scr_input_update(){
 	if (global.using_gamepad && instance_exists(obj_hero))
 	{
 		// read direction from stick + d-pad + WASD
-		var _h = gamepad_axis_value(0, gp_axislh);
-		var _v = gamepad_axis_value(0, gp_axislv);
-		if (gamepad_button_check(0, gp_padl)) _h = -1;
-		if (gamepad_button_check(0, gp_padr)) _h =  1;
-		if (gamepad_button_check(0, gp_padu)) _v = -1;
-		if (gamepad_button_check(0, gp_padd)) _v =  1;
+		var _h = (_gp >= 0) ? gamepad_axis_value(_gp, gp_axislh) : 0;
+		var _v = (_gp >= 0) ? gamepad_axis_value(_gp, gp_axislv) : 0;
+		if (_gp >= 0)
+		{
+			if (gamepad_button_check(_gp, gp_padl)) _h = -1;
+			if (gamepad_button_check(_gp, gp_padr)) _h =  1;
+			if (gamepad_button_check(_gp, gp_padu)) _v = -1;
+			if (gamepad_button_check(_gp, gp_padd)) _v =  1;
+		}
 		if (keyboard_check(ord("A")) || keyboard_check(vk_left))  _h = -1;
 		if (keyboard_check(ord("D")) || keyboard_check(vk_right)) _h =  1;
 		if (keyboard_check(ord("W")) || keyboard_check(vk_up))    _v = -1;
